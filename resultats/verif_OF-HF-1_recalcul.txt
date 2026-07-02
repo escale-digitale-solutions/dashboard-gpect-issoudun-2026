@@ -1,0 +1,19 @@
+Contre-expertise OF-HF-1 — double moyenne n=7 vs n=6 (hors financeur)
+Source : data/02_organismes_formation.xlsx (7 x 98) — financeur identifié par Q0.7 (rôle), 1 ligne
+
+repère item                                        m7 dash  m7 calc  m6 dash  m6 calc  OK7  OK6  n7  n6  reconst.
+Q2.2   Intelligence artificielle                       2.3      2.3      2.5      2.5  oui  oui   7   6    exacte
+Q2.2   Automatisation, cobotique                       2.7      2.7      3.0      3.0  oui  oui   7   6    exacte
+Q2.2   Maintenance avancée & prédictive                2.9      2.9      3.2      3.2  oui  oui   7   6    exacte
+Q2.2   Transition énergétique & décarbonation          2.4      2.4      2.7      2.7  oui  oui   7   6    exacte
+Q2.2   Cybersécurité industrielle                      1.1      1.1      1.2      1.2  oui  oui   7   6    exacte
+Q2.2   Management de la performance                    3.4      3.4      3.8      3.8  oui  oui   7   6    exacte
+Q2.2   Conduite du changement & projet                 3.3      3.3      3.7      3.7  oui  oui   7   6    exacte
+Q2.2   Transmission des savoir-faire & tutorat         3.3      3.3      3.7      3.7  oui  oui   7   6    exacte
+Q3.1   Connaissance des besoins entreprises            3.0      3.0      3.0      3.0  oui  oui   7   6    exacte
+Q4.1   Offre couvre bien les besoins                   4.0      4.0      4.3      4.3  oui  oui   7   6    exacte
+Q5.2   Maîtrise ingénierie AFEST                       2.6      2.6      2.8      2.8  oui  oui   7   6    exacte
+
+Toutes les moyennes du dashboard exactes : OUI
+Reconstitution de la note individuelle du financeur possible depuis les moyennes affichées (round(n7*m7 - n6*m6)) sur tous les items : OUI
+NB : les notes individuelles reconstituées ne sont volontairement PAS écrites ici.

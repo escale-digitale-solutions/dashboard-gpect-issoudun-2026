@@ -1,0 +1,962 @@
+{
+ "[0] Horodateur": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 7
+ },
+ "[1] J'ai pris connaissance que les informations recueillies sont confidentielles et ne seront utilisées que pour les besoins": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Oui, j'en prends acte": 7
+  }
+ },
+ "[2] Je consens à ce que mes données soient collectées et traitées de manière anonyme dans le cadre de cette démarche GPECT t": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Oui, je consens": 7
+  }
+ },
+ "[9] Q0.7 — Type d'organisme": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Organisme de formation privé, CFA (Centre de Formation d'Apprentis)": 1,
+   "Organisme de formation privé": 1,
+   "Lycée professionnel": 1,
+   "ETABLISSEMENT PUBLIC INDUSTRIELLE ET COMMERCIALE (soumis au code des marchés publiques)": 1,
+   "Université / IUT": 1,
+   "GRETA / CAFOC": 1,
+   "Collectivité régionale (financeur / acheteur de formations)": 1
+  }
+ },
+ "[10] Q0.7 — Autre type d'organisme, précisez": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 1
+ },
+ "[11] Q0.8 — Votre organisme est-il certifié Qualiopi ?": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Oui, certifié": 5,
+   "Non": 2
+  }
+ },
+ "[12] Q0.9 — Vos formations sont-elles éligibles au CPF ?": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Majoritairement éligibles": 3,
+   "Non renseigné": 2,
+   "Partiellement éligibles": 1,
+   "Aucune formation éligible": 1
+  }
+ },
+ "[13] Q0.10 — Votre organisme intervient principalement sur :": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Département de l'Indre (hors Issoudun)": 4,
+   "Issoudun et son agglomération": 3,
+   "Région Centre-Val de Loire": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 1
+ },
+ "[14] Q0.11 — Disposez-vous d'une antenne ou organisez-vous des sessions sur le bassin d'Issoudun ?": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Oui, antenne permanente": 3,
+   "Oui, sessions régulières": 2,
+   "Oui, sessions ponctuelles": 1,
+   "Non, aucune implantation locale": 1
+  }
+ },
+ "[15] Q1.1 — Quels publics accueillez-vous principalement ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Demandeurs d'emploi": 7,
+   "Jeunes en alternance (apprentissage / contrat pro)": 6,
+   "Personnes en reconversion professionnelle": 5,
+   "Publics en situation de handicap": 5,
+   "Salariés en poste (formation continue)": 4,
+   "Publics allophones / sous main de justice": 3,
+   "Travailleurs indépendants / dirigeants": 2,
+   "Scolaires / lycéens": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[16] Q1.2 — Vos formations sont principalement :": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "En alternance (apprentissage / Pro-A)": 6,
+   "Certifiantes / diplômantes": 6,
+   "Sur mesure / intra-entreprise": 5,
+   "Continues (salariés / adultes)": 5,
+   "Courtes / modulaires (< 70 h)": 4,
+   "VAE (Validation des Acquis de l'Expérience)": 4,
+   "Blocs de compétences": 3,
+   "Initiales (scolaires)": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[17] Q1.3 — Niveaux de certification proposés": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "BTS / BUT (niv. 5)": 6,
+   "CAP / BEP (niv. 3)": 6,
+   "Infra-bac (niv. 1 à 2)": 5,
+   "Baccalauréat (niv. 4)": 5,
+   "Licence / Bachelor (niv. 6)": 3
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[18] Q1.4 — Capacité d'accueil annuelle approximative": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "> 500 stagiaires/an": 5,
+   "50 à 200 stagiaires/an": 1,
+   "200 à 500 stagiaires/an": 1
+  }
+ },
+ "[19] Q1.5 — Nombre de formateurs internes (salariés)": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "11": 1,
+   "5": 1,
+   "50": 1,
+   "15": 1,
+   "45": 1,
+   "20 et 25 formateurs INDRE": 1,
+   "0": 1
+  }
+ },
+ "[20] Q1.6 — Nombre de formateurs externes / vacataires": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "11": 1,
+   "250": 1,
+   "50": 1,
+   "10": 1,
+   "70": 1,
+   "Entre 0 et 5 par an": 1,
+   "0": 1
+  }
+ },
+ "[21] Q1.7 — Disposez-vous de plateaux techniques adaptés à l'industrie ou aux métiers techniques ?": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Oui, totalement équipés": 6,
+   "Non, aucun plateau technique": 1
+  }
+ },
+ "[22] Q1.8 — Si oui, précisez les équipements ou domaines couverts": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 7
+ },
+ "[23] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Usinage, mécanique": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.7,
+  "ecart_type": 1.5,
+  "distribution": {
+   "1": 1,
+   "3": 2,
+   "4": 1,
+   "5": 3
+  }
+ },
+ "[24] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Maintenance indust": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.9,
+  "ecart_type": 1.57,
+  "distribution": {
+   "1": 1,
+   "3": 2,
+   "5": 4
+  }
+ },
+ "[25] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Programmation de m": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.4,
+  "ecart_type": 1.51,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 2,
+   "5": 2
+  }
+ },
+ "[26] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Qualité, contrôle ": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.7,
+  "ecart_type": 1.8,
+  "distribution": {
+   "1": 3,
+   "3": 2,
+   "5": 2
+  }
+ },
+ "[27] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Logistique, supply": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.7,
+  "ecart_type": 1.7,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "5": 4
+  }
+ },
+ "[28] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Numérique industri": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.7,
+  "ecart_type": 1.11,
+  "distribution": {
+   "1": 1,
+   "2": 2,
+   "3": 2,
+   "4": 2
+  }
+ },
+ "[29] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [CAO / DAO / lectur": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.3,
+  "ecart_type": 1.25,
+  "distribution": {
+   "2": 2,
+   "3": 3,
+   "5": 2
+  }
+ },
+ "[30] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Transition écologi": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.0,
+  "ecart_type": 1.29,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 3,
+   "4": 1,
+   "5": 1
+  }
+ },
+ "[31] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Sécurité et préven": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.1,
+  "ecart_type": 1.86,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "3": 1,
+   "5": 3
+  }
+ },
+ "[32] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Conduite de véhicu": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.0,
+  "ecart_type": 2.0,
+  "distribution": {
+   "1": 3,
+   "3": 1,
+   "5": 3
+  }
+ },
+ "[33] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Compétences commer": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.3,
+  "ecart_type": 1.5,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 1,
+   "5": 2
+  }
+ },
+ "[34] Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Management et gest": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.9,
+  "ecart_type": 1.46,
+  "distribution": {
+   "1": 1,
+   "3": 1,
+   "4": 2,
+   "5": 3
+  }
+ },
+ "[35] Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Intelligence artifici": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.3,
+  "ecart_type": 1.25,
+  "distribution": {
+   "1": 3,
+   "3": 3,
+   "4": 1
+  }
+ },
+ "[36] Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Automatisation, cobot": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.7,
+  "ecart_type": 1.8,
+  "distribution": {
+   "1": 3,
+   "3": 2,
+   "5": 2
+  }
+ },
+ "[37] Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Maintenance avancée e": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.9,
+  "ecart_type": 1.86,
+  "distribution": {
+   "1": 3,
+   "3": 1,
+   "4": 1,
+   "5": 2
+  }
+ },
+ "[38] Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Transition énergétiqu": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.4,
+  "ecart_type": 1.62,
+  "distribution": {
+   "1": 3,
+   "2": 1,
+   "3": 1,
+   "4": 1,
+   "5": 1
+  }
+ },
+ "[39] Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Cybersécurité industr": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 1.1,
+  "ecart_type": 0.38,
+  "distribution": {
+   "1": 6,
+   "2": 1
+  }
+ },
+ "[40] Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Management de la perf": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.4,
+  "ecart_type": 1.99,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "5": 4
+  }
+ },
+ "[41] Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Conduite du changemen": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.3,
+  "ecart_type": 1.89,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "4": 1,
+   "5": 3
+  }
+ },
+ "[42] Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Transmission des savo": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.3,
+  "ecart_type": 1.89,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "4": 1,
+   "5": 3
+  }
+ },
+ "[43] Q2.3 — Développez-vous des formations sur mesure pour des entreprises du territoire ?": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Oui, régulièrement": 4,
+   "Non, et ce n'est pas envisagé": 2,
+   "Oui, ponctuellement": 1
+  }
+ },
+ "[44] Q3.1 — Comment évaluez-vous votre connaissance des besoins en compétences des entreprises du bassin d'Issoudun ?": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.0,
+  "ecart_type": 0.82,
+  "distribution": {
+   "2": 2,
+   "3": 3,
+   "4": 2
+  }
+ },
+ "[45] Q3.2 — Quelles sources vous permettent d'identifier les besoins des entreprises ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Contacts directs avec les entreprises": 6,
+   "Données France Travail / observatoires": 6,
+   "branches)": 5,
+   "Veille sectorielle (OPCO": 5,
+   "Participation à des instances locales (clubs": 4,
+   "syndicats)": 4,
+   "Retours d'alternants ou de stagiaires": 4,
+   "Études sectorielles / rapports CCI": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[46] Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Industrie agroaliment": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 1.9,
+  "ecart_type": 1.21,
+  "distribution": {
+   "1": 4,
+   "2": 1,
+   "3": 1,
+   "4": 1
+  }
+ },
+ "[47] Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Métallurgie, usinage ": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.0,
+  "ecart_type": 1.53,
+  "distribution": {
+   "1": 2,
+   "3": 2,
+   "4": 2,
+   "5": 1
+  }
+ },
+ "[48] Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Aéronautique / Défens": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.3,
+  "ecart_type": 1.5,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 1,
+   "5": 2
+  }
+ },
+ "[49] Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Industrie automobile]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.4,
+  "ecart_type": 1.51,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 2,
+   "5": 2
+  }
+ },
+ "[50] Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Maroquinerie et indus": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.3,
+  "ecart_type": 1.89,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "4": 1,
+   "5": 3
+  }
+ },
+ "[51] Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Fabrication mécanique": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.4,
+  "ecart_type": 1.4,
+  "distribution": {
+   "1": 2,
+   "2": 2,
+   "3": 2,
+   "5": 1
+  }
+ },
+ "[52] Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Transport routier et ": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.9,
+  "ecart_type": 1.68,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "3": 2,
+   "5": 2
+  }
+ },
+ "[53] Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Services aux entrepri": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.1,
+  "ecart_type": 1.35,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 2,
+   "5": 1
+  }
+ },
+ "[54] Q3.4 — Quels métiers ou filières vous semblent aujourd'hui les plus en tension sur le territoire ?": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 7
+ },
+ "[55] Q4.1 — Selon vous, votre offre de formation couvre-t-elle bien les besoins des entreprises du territoire ?": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.0,
+  "ecart_type": 1.0,
+  "distribution": {
+   "2": 1,
+   "4": 4,
+   "5": 2
+  }
+ },
+ "[56] Q4.2 — Quels retours avez-vous reçus de vos clients entreprises sur l'adéquation de votre offre ?": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.0,
+  "ecart_type": 0.58,
+  "distribution": {
+   "3": 1,
+   "4": 5,
+   "5": 1
+  }
+ },
+ "[57] Q4.3 — Sur quels points votre offre vous semble-t-elle insuffisamment adaptée ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Éloignement géographique": 2,
+   "Coût pédagogique trop élevé pour les PME": 2,
+   "Niveaux de qualification non adaptés": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 4
+ },
+ "[58] Q4.3 — Autres lacunes, précisez": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 3
+ },
+ "[59] Q4.4 — Quels métiers ou compétences nécessiteraient une adaptation prioritaire de votre offre ?": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 5
+ },
+ "[60] Q5.1 — Avez-vous déjà conçu ou accompagné des parcours AFEST pour des entreprises ?": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Jamais": 3,
+   "Régulièrement": 2,
+   "1 à 2 cas ponctuels": 2
+  }
+ },
+ "[61] Q5.2 — Évaluez la maîtrise de l'ingénierie AFEST par votre équipe pédagogique": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.6,
+  "ecart_type": 1.81,
+  "distribution": {
+   "1": 3,
+   "2": 1,
+   "3": 1,
+   "5": 2
+  }
+ },
+ "[62] Q5.3 — Quels sont, selon vous, les principaux freins au déploiement de l'AFEST sur le territoire ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Résistance ou méconnaissance des entreprises": 3,
+   "Complexité du référentiel et de la traçabilité": 2,
+   "Absence de modèle économique viable": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 5
+ },
+ "[63] Q5.3 — Autres freins AFEST, précisez": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 1
+ },
+ "[64] Q5.4 — Sous quelles formes avez-vous déjà adapté votre offre pour des entreprises du territoire ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Création de nouveaux modules": 5,
+   "Révision de contenus existants": 4,
+   "Intervention directement en entreprise": 4,
+   "Formation sur mesure intra-entreprise": 3,
+   "Co-animation avec des professionnels": 3,
+   "Modularisation / blocs de compétences": 2,
+   "Renforcement de l'alternance": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 1
+ },
+ "[65] Q5.5 — Seriez-vous prêt(e) à faire évoluer votre offre pour mieux répondre aux besoins du territoire ?": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Oui, sans condition particulière": 4,
+   "Non, pas d'évolution envisagée": 2,
+   "Oui, sous certaines conditions": 1
+  }
+ },
+ "[66] Q5.6 — Si sous conditions, précisez lesquelles (financières, partenariales, réglementaires…)": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 1
+ },
+ "[67] Q6.1 — Comment qualifieriez-vous le niveau de coopération de votre organisme avec les entreprises du territoire ?": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.6,
+  "ecart_type": 0.98,
+  "distribution": {
+   "2": 1,
+   "3": 2,
+   "4": 3,
+   "5": 1
+  }
+ },
+ "[68] Q6.2 — Avec quels acteurs emploi-formation travaillez-vous sur le territoire ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Région)": 6,
+   "Collectivités (CC": 6,
+   "Entreprises locales (directement)": 6,
+   "Département": 6,
+   "France Travail (ex-Pôle Emploi)": 6,
+   "OPCO (précisez ci-dessous)": 5,
+   "Autres organismes de formation": 5,
+   "Mission Locale de l'Indre": 5,
+   "Cap Emploi (handicap)": 4,
+   "Chambres consulaires (CCI": 3,
+   "CMA)": 3
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[69] Q6.2 — OPCO / autres partenaires, précisez": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 6
+ },
+ "[70] Q6.3 — Sous quelles formes se traduit votre coopération avec les entreprises ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Accueil d'alternants": 6,
+   "Visites / immersions en entreprise": 6,
+   "Intervention de professionnels en formation": 6,
+   "Recrutement direct à l'issue des formations": 4,
+   "Co-construction de contenus pédagogiques": 4,
+   "Comités de pilotage / instances partagées": 2,
+   "Suivi de cohortes et d'insertion": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[71] Q6.4 — Avez-vous participé à des actions collectives territoriales (GPECT, CPRDFOP, SPRO…) ?": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Oui": 4,
+   "Non": 2,
+   "Je ne sais pas": 1
+  }
+ },
+ "[72] Q6.5 — Si oui, lesquelles et quel a été votre rôle ?": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 4
+ },
+ "[73] Q7.1 — Quels sont les principaux freins au développement ou à l'adaptation de votre offre ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Difficulté à mobiliser les entreprises": 5,
+   "Manque de financements pour l'ingénierie": 4,
+   "Faible attractivité de certains métiers": 4,
+   "Absence ou vétusté des plateaux techniques": 3,
+   "Concurrence entre organismes de formation": 2,
+   "Manque de ressources humaines internes": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 3
+ },
+ "[74] Q7.1 — Autres freins, précisez": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 1
+ },
+ "[75] Q7.2 — Quels leviers vous sembleraient les plus utiles pour mieux répondre aux besoins ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Observatoire local des métiers": 5,
+   "Financement dédié à l'adaptation pédagogique": 4,
+   "Outil de repérage et d'orientation des publics": 3,
+   "Cartographie partagée de l'offre de formation": 3,
+   "Construction de parcours communs entre OF": 3,
+   "Plateforme mutualisée de plateaux techniques": 3,
+   "Réseau structuré d'acteurs locaux": 3,
+   "Ingénierie partagée avec les entreprises": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[76] Q8.1 — Anticipez-vous une évolution significative des besoins de formation sur le territoire à horizon 2-5 ans ?": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.1,
+  "ecart_type": 1.21,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 4
+  }
+ },
+ "[77] Q8.2 — Sur quels domaines les évolutions seront-elles les plus marquées ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Intelligence artificielle": 7,
+   "Cybersécurité industrielle": 5,
+   "Automatisation / cobotique / robotique avancée": 5,
+   "Transition énergétique et décarbonation": 4,
+   "Maintenance avancée et prédictive": 3,
+   "Transmission des savoir-faire et tutorat": 2,
+   "Anglais et compétences transversales": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 2
+ },
+ "[78] Q8.3 — Pensez-vous que le territoire nécessite la création de nouvelles formations qui n'existent pas encore localement ": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Probablement": 4,
+   "Non": 2,
+   "Je ne sais pas": 1
+  }
+ },
+ "[79] Q8.4 — Si oui, dans quels domaines ? (formations manquantes)": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 2
+ },
+ "[80] Q8.5 — Votre organisme envisage-t-il des transformations internes à cet horizon ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Création de nouvelles filières / certifications": 5,
+   "Renforcement des partenariats entreprises": 5,
+   "Embauche de nouveaux formateurs": 4,
+   "Développement de l'offre digitale / e-learning": 3,
+   "Investissement plateaux techniques": 3,
+   "Extension géographique sur le territoire": 2,
+   "Mutualisation avec d'autres organismes": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 1
+ },
+ "[81] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Connaissance d": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.0,
+  "ecart_type": 0.58,
+  "distribution": {
+   "3": 1,
+   "4": 5,
+   "5": 1
+  }
+ },
+ "[82] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Aide au recrut": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.3,
+  "ecart_type": 1.5,
+  "distribution": {
+   "1": 3,
+   "2": 1,
+   "3": 2,
+   "5": 1
+  }
+ },
+ "[83] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Développement ": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.6,
+  "ecart_type": 1.4,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "3": 3,
+   "5": 1
+  }
+ },
+ "[84] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Mutualisation ": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.0,
+  "ecart_type": 1.15,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 3
+  }
+ },
+ "[85] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Attractivité d": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.3,
+  "ecart_type": 1.8,
+  "distribution": {
+   "1": 2,
+   "3": 2,
+   "5": 3
+  }
+ },
+ "[86] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Gestion des se": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.9,
+  "ecart_type": 1.68,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "3": 2,
+   "5": 2
+  }
+ },
+ "[87] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Développement ": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.9,
+  "ecart_type": 1.57,
+  "distribution": {
+   "1": 1,
+   "3": 2,
+   "5": 4
+  }
+ },
+ "[88] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Accompagnement": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.3,
+  "ecart_type": 1.25,
+  "distribution": {
+   "1": 1,
+   "3": 3,
+   "4": 2,
+   "5": 1
+  }
+ },
+ "[89] Q9.2 — Quel(s) rôle(s) pensez-vous pouvoir jouer dans la démarche GPECT territoriale ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Informer sur l'offre de formation existante": 5,
+   "Contribuer à l'attractivité des métiers (actions lycées)": 5,
+   "Co-construire des parcours avec les entreprises": 4,
+   "Adapter l'offre aux besoins identifiés": 3,
+   "Participer à des groupes de travail thématiques": 3,
+   "Accueillir des publics en alternance ou en VAE": 3,
+   "Déployer des parcours AFEST": 2,
+   "Animer des ateliers de sensibilisation": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[90] Q9.3 — Seriez-vous intéressé(e) par des ateliers de co-construction GPECT ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Atelier « Métiers sensibles et compétences clés du territoire »": 4,
+   "Atelier « Industrie 4.0 et compétences de demain »": 2,
+   "Atelier « Formation et ingénierie pédagogique mutualisée »": 2,
+   "Atelier « Transmission des savoir-faire et gestion des seniors »": 2,
+   "Atelier « Attractivité et recrutement territorial »": 2,
+   "je ne souhaite pas participer à des ateliers": 2,
+   "Non": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[91] Q10.1 — Comment évaluez-vous l'image d'Issoudun et de son bassin industriel auprès de vos stagiaires et alternants ?": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.1,
+  "ecart_type": 0.38,
+  "distribution": {
+   "3": 6,
+   "4": 1
+  }
+ },
+ "[92] Q10.2 — Quels freins territoriaux identifiez-vous auprès des publics que vous accueillez ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Image globale du territoire peu attractive": 5,
+   "Manque de transports en commun et de solutions de mobilité": 4,
+   "Offre de soins et de santé insuffisante": 3,
+   "Offre de logement insuffisante ou trop chère": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 6
+ },
+ "[93] Q10.3 — Sur quelles actions collectives d'attractivité seriez-vous prêt(e) à vous engager ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "comptage_par_segment_partage": {
+   "Visites d'entreprises et journées portes ouvertes coordonnées": 4,
+   "Promotion des métiers industriels auprès des lycéens/collégiens": 3,
+   "Campagne de communication commune sur les atouts du territoire": 3,
+   "Ateliers inter-entreprises sur les bonnes pratiques RH": 2,
+   "Participation à un groupement d'employeurs": 2,
+   "pas d'intérêt pour des actions collectives à ce stade": 2,
+   "Non": 2
+  },
+  "segments_uniques_non_publies (options rares ou texte libre)": 0
+ },
+ "[94] Q11.1 — Si une seule action concrète devait sortir de cette démarche GPECT pour votre organisme, laquelle serait la plus": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 7
+ },
+ "[95] Q11.2 — Y a-t-il une entreprise ou un acteur local que vous recommanderiez d'associer à cette démarche ?": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 4
+ },
+ "[96] Q11.3 — Souhaitez-vous recevoir une synthèse des résultats du diagnostic ?": {
+  "type": "fermee",
+  "n": 7,
+  "distribution": {
+   "Oui": 4,
+   "Non": 3
+  }
+ },
+ "[97] Q11.4 — Avez-vous des observations, suggestions ou besoins complémentaires à partager ?": {
+  "type": "texte_libre",
+  "n_reponses_non_vides": 3
+ }
+}

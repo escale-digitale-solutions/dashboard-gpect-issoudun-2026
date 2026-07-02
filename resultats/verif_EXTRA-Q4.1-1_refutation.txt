@@ -1,0 +1,16 @@
+Contre-expertise EXTRA — « 47% de seniors (45 ans et +) » (ENT Q4.1)
+Script : scripts/verif_EXTRA-Q4.1-1_refutation.py
+Source : data/01_entreprises.xlsx (21 lignes x 124 colonnes), colonnes Q4.1.1 à Q4.1.8
+
+Résultats agrégés (n = 21 entreprises, pyramide entièrement renseignée pour les 21) :
+- Pondéré (référence dashboard) : 1 460 seniors (45+) / 3 155 salariés = 46,29 % -> 46 % (half-up)
+- Base « effectif inscrit CDI+CDD » : 1 460 / 3 189 = 45,80 % -> 46 %
+- Moyenne non pondérée des % par entreprise : 48,31 % -> 48 % (n=20, une entreprise à pyramide nulle exclue)
+- Médiane : 48,01 % -> 48 %
+- Sans le plus gros employeur : 722 / 1 630 = 44,33 % -> 44 %
+- Hommes seniors / hommes : 46,50 % -> 47 % ; Femmes seniors / femmes : 45,92 % -> 46 %
+- Arrondi plafond (ceil) de 46,29 : 47 (seule voie mécanique vers 47 %)
+
+Conclusion : le 47 % affiché (4 emplacements du dashboard) n'est reproductible par
+aucune convention plausible (colonne, base, arrondi half-up). Valeur juste : 46 %
+(1 460/3 155, n=21). Écart confirmé, gravité mineure.

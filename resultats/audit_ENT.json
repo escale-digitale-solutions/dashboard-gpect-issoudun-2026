@@ -1,0 +1,2037 @@
+{
+ "section": "Entreprises (ENT)",
+ "n_controles": 290,
+ "n_ok": 282,
+ "controles": [
+  {
+   "q": "KPI",
+   "label": "48% métallurgie",
+   "dashboard": 48,
+   "calcule": 48.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI",
+   "label": "métallurgie 10/21 (effectif)",
+   "dashboard": 10,
+   "calcule": 10,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI",
+   "label": "71% investissent à 3 ans (Q2.4 Oui budgétés + à l'étude)",
+   "dashboard": 71,
+   "calcule": 71.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI",
+   "label": "95% en tension (Q3.2)",
+   "dashboard": 95,
+   "calcule": 95.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI",
+   "label": "29% dirigeants 55+ (Q1.8)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Q1.1 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Métallurgie / usinage / métaux (%)",
+   "dashboard": 48,
+   "calcule": 48.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Transport routier & logistique (%)",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Autre (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Agroalimentaire (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Imprimerie (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Maroquinerie / luxe (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Aéronautique (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.3",
+   "label": "Q1.3 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.3",
+   "label": "10 à 49 salariés (%)",
+   "dashboard": 38,
+   "calcule": 38.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.3",
+   "label": "50 à 249 salariés (%)",
+   "dashboard": 38,
+   "calcule": 38.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.3",
+   "label": "Moins de 10 (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.3",
+   "label": "250 et plus (%)",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.3",
+   "label": "76% entre 10 et 249 salariés (analysis)",
+   "dashboard": 76,
+   "calcule": 76.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.3",
+   "label": "plus gros employeur ~1 550 salariés (Q1.4)",
+   "dashboard": 1550,
+   "calcule": 1550,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.3",
+   "label": "effectif médian hors plus gros employeur = 28,5 (Q1.4)",
+   "dashboard": 28.5,
+   "calcule": 28.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.5",
+   "label": "Q1.5 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.5",
+   "label": "Intérim (%)",
+   "dashboard": 71,
+   "calcule": 71.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.5",
+   "label": "Prestation industrielle / logistique (%)",
+   "dashboard": 48,
+   "calcule": 48.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.5",
+   "label": "Aucun recours externe (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.8",
+   "label": "Q1.8 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.8",
+   "label": "45 à 54 ans (%)",
+   "dashboard": 52,
+   "calcule": 52.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.8",
+   "label": "55 à 59 ans (%)",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.8",
+   "label": "Moins de 45 ans (%)",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.8",
+   "label": "60 ans et + (%)",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.8",
+   "label": "19% projets de transmission (analysis, Q2.2)",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Q2.1 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Maintenir activité / compétitivité (coûts) (%)",
+   "dashboard": 67,
+   "calcule": 67.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Recruter des collaborateurs qualifiés (%)",
+   "dashboard": 62,
+   "calcule": 62.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Fidéliser les collaborateurs (%)",
+   "dashboard": 48,
+   "calcule": 48.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Développer de nouveaux marchés (%)",
+   "dashboard": 38,
+   "calcule": 38.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Transition écologique & énergétique (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Investir / moderniser l'outil (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Diversifier / nouveaux produits (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Évolutions technos (Industrie 4.0, IA) (%)",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Préparer la transmission (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.3",
+   "label": "Q2.3 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.3",
+   "label": "À la hausse (%)",
+   "dashboard": 62,
+   "calcule": 62.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.3",
+   "label": "Stable (%)",
+   "dashboard": 33,
+   "calcule": 33.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.3",
+   "label": "À la baisse (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.4",
+   "label": "Q2.4 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.4",
+   "label": "Oui, budgétés (%)",
+   "dashboard": 62,
+   "calcule": 62.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.4",
+   "label": "Non (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.4",
+   "label": "Oui, à l'étude (%)",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Q2.2 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Non (%)",
+   "dashboard": 81,
+   "calcule": 81.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Oui, défini / en cours (%)",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Oui, en réflexion (%)",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.5",
+   "label": "Q2.5 n=",
+   "dashboard": 16,
+   "calcule": 16,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.5",
+   "label": "Non, compétences suffisantes (%)",
+   "dashboard": 56,
+   "calcule": 56.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.5",
+   "label": "Oui, besoins de formation (%)",
+   "dashboard": 44,
+   "calcule": 44.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "Q3.1 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "thème « Usinage / réglage CN / mécanique » (%) [codage mots-clés]",
+   "dashboard": 33,
+   "calcule": 33.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "thème « Bureau études / méthodes / CAO » (%) [codage mots-clés]",
+   "dashboard": 29,
+   "calcule": 33.0,
+   "verdict": "ECART"
+  },
+  {
+   "q": "Q3.1",
+   "label": "thème « Encadrement / management » (%) [codage mots-clés]",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "thème « Qualité / contrôle / HSE » (%) [codage mots-clés]",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "thème « Conduite / transport » (%) [codage mots-clés]",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "thème « Maintenance » (%) [codage mots-clés]",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "thème « Logistique / cariste » (%) [codage mots-clés]",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "thème « Soudure / chaudronnerie » (%) [codage mots-clés]",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "citation « Règleur, contrôle qualité, technicien méthodes… » présente",
+   "dashboard": "citée",
+   "calcule": "retrouvée",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "citation « Chef de projet BE, technicien BE, technicien métho… » présente",
+   "dashboard": "citée",
+   "calcule": "retrouvée",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "citation « Tech méthodes & ingénieurs, tech qualité, responsa… » présente",
+   "dashboard": "citée",
+   "calcule": "retrouvée",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "citation « Électromécanicien, opérateur logistique/cariste, o… » présente",
+   "dashboard": "citée",
+   "calcule": "retrouvée",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Q3.2 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Oui, difficultés majeures (%)",
+   "dashboard": 62,
+   "calcule": 62.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Oui, difficultés ponctuelles (%)",
+   "dashboard": 33,
+   "calcule": 33.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Non, pas de tension (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.4",
+   "label": "Q3.4 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.4",
+   "label": "Non, stabilité prévue (%)",
+   "dashboard": 48,
+   "calcule": 48.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.4",
+   "label": "Oui, risque partiel (%)",
+   "dashboard": 33,
+   "calcule": 33.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.4",
+   "label": "Oui, transformation profonde (%)",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.4",
+   "label": "52% anticipent une transformation (analysis)",
+   "dashboard": 52,
+   "calcule": 52.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Pénurie de candidats sur le marché local (moyenne)",
+   "dashboard": 4.5,
+   "calcule": 4.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Concurrence salariale autres entreprises/secteurs (moyenne)",
+   "dashboard": 3.7,
+   "calcule": 3.7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Inadéquation des compétences / diplômes (moyenne)",
+   "dashboard": 3.1,
+   "calcule": 3.1,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Déficit d'image du métier / secteur (moyenne)",
+   "dashboard": 3.1,
+   "calcule": 3.2,
+   "verdict": "ECART"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Localisation de l'entreprise (moyenne)",
+   "dashboard": 2.8,
+   "calcule": 2.8,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Transport (moyenne)",
+   "dashboard": 2.5,
+   "calcule": 2.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Délais de formation initiale trop longs (moyenne)",
+   "dashboard": 2.4,
+   "calcule": 2.4,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Logement (moyenne)",
+   "dashboard": 1.7,
+   "calcule": 1.7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Emploi du conjoint (moyenne)",
+   "dashboard": 1.6,
+   "calcule": 1.6,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Garde d'enfant (moyenne)",
+   "dashboard": 1.5,
+   "calcule": 1.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.3",
+   "label": "Q3.3 n= (bloc)",
+   "dashboard": 20,
+   "calcule": "[19, 20]",
+   "verdict": "ECART"
+  },
+  {
+   "q": "Q3.5",
+   "label": "Changement attentes clients / marchés (moyenne)",
+   "dashboard": 3.5,
+   "calcule": 3.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.5",
+   "label": "Transition énergétique & décarbonation (moyenne)",
+   "dashboard": 3.5,
+   "calcule": 3.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.5",
+   "label": "Intégration de l'IA dans les process (moyenne)",
+   "dashboard": 3.1,
+   "calcule": 3.1,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.5",
+   "label": "Évolution normes & réglementations (moyenne)",
+   "dashboard": 3.1,
+   "calcule": 3.1,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.5",
+   "label": "Automatisation & robotisation (moyenne)",
+   "dashboard": 2.8,
+   "calcule": 2.8,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.5",
+   "label": "Q3.5 n= (bloc)",
+   "dashboard": 13,
+   "calcule": "13",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "têtes base BRUTE 21 répondants (non affiché)",
+   "dashboard": "3031 affiché",
+   "calcule": 3154.95,
+   "verdict": "ECART"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Avec plus gros employeur — têtes",
+   "dashboard": 3031,
+   "calcule": 3031.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Avec plus gros employeur — <30 ans %",
+   "dashboard": 18.0,
+   "calcule": 18.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Avec plus gros employeur — 31-44 %",
+   "dashboard": 35.0,
+   "calcule": 35.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Avec plus gros employeur — 45-59 %",
+   "dashboard": 41.7,
+   "calcule": 41.7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Avec plus gros employeur — 60+ %",
+   "dashboard": 5.3,
+   "calcule": 5.3,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Avec plus gros employeur — seniors 45+ %",
+   "dashboard": 47.0,
+   "calcule": 47.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Avec plus gros employeur — % femmes",
+   "dashboard": 36.5,
+   "calcule": 36.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Sans plus gros employeur — têtes",
+   "dashboard": 1506,
+   "calcule": 1506.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Sans plus gros employeur — <30 ans %",
+   "dashboard": 20.9,
+   "calcule": 20.9,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Sans plus gros employeur — 31-44 %",
+   "dashboard": 33.5,
+   "calcule": 33.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Sans plus gros employeur — 45-59 %",
+   "dashboard": 39.5,
+   "calcule": 39.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Sans plus gros employeur — 60+ %",
+   "dashboard": 6.1,
+   "calcule": 6.1,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Sans plus gros employeur — seniors 45+ %",
+   "dashboard": 45.6,
+   "calcule": 45.6,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "Sans plus gros employeur — % femmes",
+   "dashboard": 46.5,
+   "calcule": 46.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI4",
+   "label": "47% de seniors (45+) — KPI",
+   "dashboard": 47,
+   "calcule": 47.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI4",
+   "label": "136 départs retraite à 5 ans (cumul Q4.3)",
+   "dashboard": 136,
+   "calcule": 136.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI4",
+   "label": "Q4.3 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI4",
+   "label": "81% turnover faible & maîtrisé (Q4.5)",
+   "dashboard": 81,
+   "calcule": 81.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI4",
+   "label": "AFEST moyenne 1,0/5 (Q4.8)",
+   "dashboard": 1.0,
+   "calcule": 1.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI4",
+   "label": "AFEST écart-type nul (Q4.8)",
+   "dashboard": 0.0,
+   "calcule": 0.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "KPI4",
+   "label": "AFEST n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.5",
+   "label": "Q4.5 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.5",
+   "label": "Faible & maîtrisé (%)",
+   "dashboard": 81,
+   "calcule": 81.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.5",
+   "label": "En augmentation sur certains postes (%)",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8b",
+   "label": "Q4.8b n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8b",
+   "label": "Non, dispositifs suffisants (%)",
+   "dashboard": 67,
+   "calcule": 67.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8b",
+   "label": "Oui, besoin non traité (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8b",
+   "label": "Aucun dispositif ni besoin (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.4",
+   "label": "Q4.4 n=",
+   "dashboard": 20,
+   "calcule": 20,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.4",
+   "label": "Production / fabrication (%)",
+   "dashboard": 60,
+   "calcule": 60.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.4",
+   "label": "Logistique (%)",
+   "dashboard": 25,
+   "calcule": 25.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.4",
+   "label": "Commerce / ADV (%)",
+   "dashboard": 25,
+   "calcule": 25.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.4",
+   "label": "Conduite / transport (%)",
+   "dashboard": 20,
+   "calcule": 25.0,
+   "verdict": "ECART"
+  },
+  {
+   "q": "Q4.4",
+   "label": "Qualité (%)",
+   "dashboard": 15,
+   "calcule": 15.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.4",
+   "label": "Maintenance (%)",
+   "dashboard": 15,
+   "calcule": 15.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.4",
+   "label": "Bureau d'études (%)",
+   "dashboard": 15,
+   "calcule": 15.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.4",
+   "label": "Management de proximité (%)",
+   "dashboard": 15,
+   "calcule": 15.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8",
+   "label": "Documentation des procédures (moyenne)",
+   "dashboard": 3.5,
+   "calcule": 3.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8",
+   "label": "Formation interne structurée (moyenne)",
+   "dashboard": 3.3,
+   "calcule": 3.3,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8",
+   "label": "Tutorat / binôme junior-senior (moyenne)",
+   "dashboard": 3.2,
+   "calcule": 3.2,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8",
+   "label": "Dispositifs France Travail (POEI, PMSMP) (moyenne)",
+   "dashboard": 2.1,
+   "calcule": 2.1,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8",
+   "label": "AFEST (moyenne)",
+   "dashboard": 1.0,
+   "calcule": 1.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.8",
+   "label": "Q4.8 n= (bloc)",
+   "dashboard": 21,
+   "calcule": "21",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.7",
+   "label": "Départ vers la concurrence (moyenne)",
+   "dashboard": 2.8,
+   "calcule": 2.8,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.7",
+   "label": "Rémunération & avantages (moyenne)",
+   "dashboard": 2.7,
+   "calcule": 2.7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.7",
+   "label": "Conditions de travail (moyenne)",
+   "dashboard": 2.4,
+   "calcule": 2.4,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.7",
+   "label": "Qualité de vie / équilibre (moyenne)",
+   "dashboard": 2.2,
+   "calcule": 2.2,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.7",
+   "label": "Autre secteur (moyenne)",
+   "dashboard": 2.1,
+   "calcule": 2.1,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.7",
+   "label": "Horaires (moyenne)",
+   "dashboard": 2.0,
+   "calcule": 2.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.7",
+   "label": "Pénibilité (moyenne)",
+   "dashboard": 2.0,
+   "calcule": 2.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.7",
+   "label": "Manque de perspectives (moyenne)",
+   "dashboard": 1.9,
+   "calcule": 1.9,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.7",
+   "label": "Q4.7 n= (bloc)",
+   "dashboard": 21,
+   "calcule": "21",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.1",
+   "label": "Q5.1 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.1",
+   "label": "Oui (%)",
+   "dashboard": 95,
+   "calcule": 95.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.1",
+   "label": "Non (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.2",
+   "label": "difficulté de recrutement 3,8/5",
+   "dashboard": 3.8,
+   "calcule": 3.8,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.2",
+   "label": "Q5.2 n=",
+   "dashboard": 20,
+   "calcule": 20,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.4",
+   "label": "131 recrutements prévus (cumul)",
+   "dashboard": 131,
+   "calcule": 131.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.4",
+   "label": "médiane 5",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.4",
+   "label": "Q5.4 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.5",
+   "label": "Q5.5 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.5",
+   "label": "Remplacement départs retraite (%)",
+   "dashboard": 76,
+   "calcule": 76.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.5",
+   "label": "Accroissement de l'activité (%)",
+   "dashboard": 62,
+   "calcule": 62.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.5",
+   "label": "Remplacement départs volontaires (%)",
+   "dashboard": 43,
+   "calcule": 43.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.5",
+   "label": "Lancement nouvelle activité (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Manque de candidats sur le marché local (moyenne)",
+   "dashboard": 4.3,
+   "calcule": 4.3,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Concurrence d'autres employeurs locaux (moyenne)",
+   "dashboard": 3.2,
+   "calcule": 3.2,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Inadéquation compétences / diplômes (moyenne)",
+   "dashboard": 2.8,
+   "calcule": 2.8,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Prétentions salariales trop élevées (moyenne)",
+   "dashboard": 2.8,
+   "calcule": 2.8,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Déficit d'image de l'entreprise/secteur (moyenne)",
+   "dashboard": 2.7,
+   "calcule": 2.7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Mobilité (transports, véhicule) (moyenne)",
+   "dashboard": 2.1,
+   "calcule": 2.1,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Logement (moyenne)",
+   "dashboard": 1.4,
+   "calcule": 1.4,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Emploi du conjoint (moyenne)",
+   "dashboard": 1.4,
+   "calcule": 1.4,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Q5.3 n= (bloc)",
+   "dashboard": 21,
+   "calcule": "21",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.6",
+   "label": "Q5.6 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.6",
+   "label": "Relations écoles / CFA / lycées (%)",
+   "dashboard": 81,
+   "calcule": 81.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.6",
+   "label": "Communication réseaux sociaux (%)",
+   "dashboard": 76,
+   "calcule": 76.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.6",
+   "label": "Partenariat France Travail / ML / Cap Emploi (%)",
+   "dashboard": 71,
+   "calcule": 71.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.6",
+   "label": "Portes ouvertes / visites (%)",
+   "dashboard": 48,
+   "calcule": 48.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.6",
+   "label": "Ambassadeurs métiers (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.6",
+   "label": "Aucune action (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.1",
+   "label": "Q6.1 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.1",
+   "label": "Plutôt, avec quelques lacunes (%)",
+   "dashboard": 62,
+   "calcule": 62.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.1",
+   "label": "Tout à fait adaptées (%)",
+   "dashboard": 33,
+   "calcule": 33.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.1",
+   "label": "Plutôt inadaptées (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.3",
+   "label": "Q6.3 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.3",
+   "label": "Plutôt adaptées (%)",
+   "dashboard": 67,
+   "calcule": 67.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.3",
+   "label": "Tout à fait (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.3",
+   "label": "Plutôt inadaptées (%)",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Q6.2 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Qualité, contrôle & métrologie (%)",
+   "dashboard": 43,
+   "calcule": 43.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Management & gestion d'équipe (%)",
+   "dashboard": 33,
+   "calcule": 33.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Maintenance industrielle & automatismes (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "CAO / DAO / lecture de plans (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Aucun manque identifié (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Logistique / supply chain (%)",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Compétences commerciales (%)",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Usinage / mécanique (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Programmation machines (CNC, automates) (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.2",
+   "label": "Numérique industriel (ERP/GPAO) (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.4",
+   "label": "Q6.4 n=",
+   "dashboard": 11,
+   "calcule": 11,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.4",
+   "label": "Rigueur & respect des procédures (%)",
+   "dashboard": 91,
+   "calcule": 91.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.4",
+   "label": "Culture sécurité & vigilance (%)",
+   "dashboard": 45,
+   "calcule": 45.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.4",
+   "label": "Autonomie & initiative (%)",
+   "dashboard": 36,
+   "calcule": 36.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.4",
+   "label": "Travail en équipe (%)",
+   "dashboard": 36,
+   "calcule": 36.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.4",
+   "label": "Engagement & responsabilité (%)",
+   "dashboard": 36,
+   "calcule": 36.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.5",
+   "label": "Q6.5 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.5",
+   "label": "Intelligence artificielle (%)",
+   "dashboard": 38,
+   "calcule": 38.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.5",
+   "label": "Transition énergétique & décarbonation (%)",
+   "dashboard": 33,
+   "calcule": 33.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.5",
+   "label": "Transmission des savoir-faire & tutorat (%)",
+   "dashboard": 33,
+   "calcule": 33.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.5",
+   "label": "Animation d'équipes (agile/projet) (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.5",
+   "label": "Automatisation, cobotique (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.5",
+   "label": "Cybersécurité industrielle (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.5",
+   "label": "Conduite du changement (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q6.5",
+   "label": "Outils numériques collaboratifs (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "Q7.2 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "Oui, mobilisés régulièrement (%)",
+   "dashboard": 90,
+   "calcule": 90.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "Non, dispositifs mal connus (%)",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.4",
+   "label": "Q7.4 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.4",
+   "label": "Oui, régulièrement (%)",
+   "dashboard": 76,
+   "calcule": 76.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.4",
+   "label": "Non, pas envisagé (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.4",
+   "label": "Non, mais ouverts (%)",
+   "dashboard": 10,
+   "calcule": 10.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Q7.1 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Développement des compétences métiers (%)",
+   "dashboard": 90,
+   "calcule": 90.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Obligatoires (sécurité, habilitations) (%)",
+   "dashboard": 71,
+   "calcule": 71.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Management & développement personnel (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.5",
+   "label": "Q7.5 n=",
+   "dashboard": 18,
+   "calcule": 18,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.5",
+   "label": "Oui, majoritairement (%)",
+   "dashboard": 50,
+   "calcule": 50.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.5",
+   "label": "Partiellement (%)",
+   "dashboard": 28,
+   "calcule": 28.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.5",
+   "label": "Non, autres territoires (%)",
+   "dashboard": 22,
+   "calcule": 22.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.3",
+   "label": "Q7.3 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.3",
+   "label": "Difficulté à libérer les salariés (%)",
+   "dashboard": 38,
+   "calcule": 38.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.3",
+   "label": "Coût pédagogique trop élevé (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.3",
+   "label": "Aucun frein particulier (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.3",
+   "label": "Faible appétence des salariés (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.3",
+   "label": "Absence de formation adaptée localement (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.3",
+   "label": "Manque de temps pour organiser (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.8",
+   "label": "Q7.8 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.8",
+   "label": "Faible & ponctuelle (%)",
+   "dashboard": 43,
+   "calcule": 43.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.8",
+   "label": "Régulière & structurée (%)",
+   "dashboard": 38,
+   "calcule": 38.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.8",
+   "label": "Aucune coopération (%)",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.8",
+   "label": "62% coopération faible ou nulle (analysis)",
+   "dashboard": 62,
+   "calcule": 62.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.6",
+   "label": "offre formation locale 3,1/5",
+   "dashboard": 3.1,
+   "calcule": 3.1,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.6",
+   "label": "médiane 3",
+   "dashboard": 3,
+   "calcule": 3.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.6",
+   "label": "Q7.6 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.9",
+   "label": "Job datings & forums de recrutement (moyenne)",
+   "dashboard": 3.3,
+   "calcule": 3.3,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.9",
+   "label": "Découverte des métiers auprès des scolaires (moyenne)",
+   "dashboard": 3.2,
+   "calcule": 3.2,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.9",
+   "label": "Diffusion & présélection des offres (moyenne)",
+   "dashboard": 3.1,
+   "calcule": 3.1,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.9",
+   "label": "Parcours de pré-qualification (moyenne)",
+   "dashboard": 2.8,
+   "calcule": 2.8,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.9",
+   "label": "Suivi post-recrutement / intégration (moyenne)",
+   "dashboard": 2.7,
+   "calcule": 2.7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.9",
+   "label": "Partage de viviers entre entreprises (moyenne)",
+   "dashboard": 2.6,
+   "calcule": 2.6,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.9",
+   "label": "Parcours de formation sur mesure (CQP, titres pro) (moyenne)",
+   "dashboard": 2.5,
+   "calcule": 2.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.9",
+   "label": "Q7.9 n= (bloc)",
+   "dashboard": 21,
+   "calcule": "21",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.1",
+   "label": "Q8.1 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.1",
+   "label": "Image du territoire peu attractive (%)",
+   "dashboard": 95,
+   "calcule": 95.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.1",
+   "label": "Offre de soins / santé insuffisante (%)",
+   "dashboard": 67,
+   "calcule": 67.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.1",
+   "label": "Transports en commun / mobilité (%)",
+   "dashboard": 38,
+   "calcule": 38.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.1",
+   "label": "Services à la personne (crèches, gardes) (%)",
+   "dashboard": 24,
+   "calcule": 24.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.1",
+   "label": "Offre de logement insuffisante/chère (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.1",
+   "label": "Animation culturelle / loisirs (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "image d'Issoudun 2,3/5",
+   "dashboard": 2.3,
+   "calcule": 2.3,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "max observé : 3",
+   "dashboard": 3,
+   "calcule": 3.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "Q8.2 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Q8.3 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Campagne de communication territoriale (%)",
+   "dashboard": 76,
+   "calcule": 76.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Promotion des métiers (scolaires) (%)",
+   "dashboard": 67,
+   "calcule": 67.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Ateliers inter-entreprises RH (%)",
+   "dashboard": 62,
+   "calcule": 62.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Visites / portes ouvertes coordonnées (%)",
+   "dashboard": 57,
+   "calcule": 57.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Plateforme de recrutement mutualisée (%)",
+   "dashboard": 52,
+   "calcule": 52.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Groupement d'employeurs (temps partagé) (%)",
+   "dashboard": 29,
+   "calcule": 29.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Pas d'intérêt actuellement (%)",
+   "dashboard": 5,
+   "calcule": 5.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Attractivité du territoire & communication (moyenne)",
+   "dashboard": 3.9,
+   "calcule": 3.9,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Connaissance du marché du travail & métiers en tension (moyenne)",
+   "dashboard": 3.3,
+   "calcule": 3.3,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Aide au recrutement & sourcing (moyenne)",
+   "dashboard": 2.8,
+   "calcule": 2.8,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Développement de l'alternance & liens écoles (moyenne)",
+   "dashboard": 2.8,
+   "calcule": 2.8,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Transition numérique & Industrie 4.0 (moyenne)",
+   "dashboard": 2.7,
+   "calcule": 2.7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Développement de l'offre de formation locale (moyenne)",
+   "dashboard": 2.6,
+   "calcule": 2.6,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Mutualisation inter-entreprises (moyenne)",
+   "dashboard": 2.5,
+   "calcule": 2.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Gestion des seniors & transmission (moyenne)",
+   "dashboard": 2.5,
+   "calcule": 2.5,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Q9.1 n= (bloc)",
+   "dashboard": 21,
+   "calcule": "21",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Q9.2 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Attractivité & recrutement territorial (%)",
+   "dashboard": 48,
+   "calcule": 48.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Métiers sensibles & compétences clés (%)",
+   "dashboard": 38,
+   "calcule": 38.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Ne souhaite pas participer (%)",
+   "dashboard": 33,
+   "calcule": 33.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Transmission savoir-faire & seniors (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Industrie 4.0 & compétences de demain (%)",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.3",
+   "label": "Q9.3 n=",
+   "dashboard": 21,
+   "calcule": 21,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.3",
+   "label": "thème « Attractivité / image / com » (%) [codage mots-clés]",
+   "dashboard": 38,
+   "calcule": 43.0,
+   "verdict": "ECART"
+  },
+  {
+   "q": "Q9.3",
+   "label": "thème « Observatoire métiers en tension » (%) [codage mots-clés]",
+   "dashboard": 24,
+   "calcule": 14.0,
+   "verdict": "ECART"
+  },
+  {
+   "q": "Q9.3",
+   "label": "thème « Formation locale » (%) [codage mots-clés]",
+   "dashboard": 19,
+   "calcule": 19.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.3",
+   "label": "thème « Santé / sécurité / transport » (%) [codage mots-clés]",
+   "dashboard": 14,
+   "calcule": 14.0,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.3",
+   "label": "citation « Faire connaître nos métiers, améliorer l'image du … » présente",
+   "dashboard": "citée",
+   "calcule": "INTROUVABLE (reformulation)",
+   "verdict": "ECART"
+  },
+  {
+   "q": "Q9.3",
+   "label": "citation « Identifier précisément les métiers en tension du b… » présente",
+   "dashboard": "citée",
+   "calcule": "retrouvée",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.3",
+   "label": "citation « Ouvrir des formations locales (génie méca) pour le… » présente",
+   "dashboard": "citée",
+   "calcule": "retrouvée",
+   "verdict": "OK"
+  }
+ ]
+}

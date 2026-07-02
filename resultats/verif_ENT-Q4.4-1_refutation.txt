@@ -1,0 +1,15 @@
+Contre-expertise ENT Q4.4 - Services concentrant les departs en retraite
+Source : data/01_entreprises.xlsx (21x124), colonne index 52
+n question (reponses non vides) = 20 / college n=21
+
+Categorie ; effectif ; % (base n question, round half up) ; % dashboard
+Production / fabrication ; 12 ; 60% ; 60%
+Logistique ; 5 ; 25% ; 25%
+Commerce / ADV ; 5 ; 25% ; 25%
+Conduite / transport (strict) ; 5 ; 25% ; 20%
+Qualité ; 3 ; 15% ; 15%
+Maintenance ; 3 ; 15% ; 15%
+Bureau d'études ; 3 ; 15% ; 15%
+Management de proximité ; 3 ; 15% ; 15%
+
+Conduite/transport perimetre large : 5/20 = 25%

@@ -1,0 +1,18 @@
+Contre-expertise (recalcul independant) - OF Q11.1, bloc verbatims dashboard
+Source : data/02_organismes_formation.xlsx, colonne Q11.1
+n reponses non vides = 7 (sur 7 repondants) ; citations affichees = 5
+
+exacte = la citation normalisee est une sous-chaine d'une reponse
+couv. corpus = % des mots significatifs de la citation presents dans au moins une reponse
+couv. meilleure rep. = idem, restreint a la meilleure reponse unique
+
+Citation 1 : exacte=OUI | couv. corpus=100% | couv. meilleure rep.=100% | mots absents des 7 reponses = aucun
+Citation 2 : exacte=NON | couv. corpus=100% | couv. meilleure rep.=100% | mots absents des 7 reponses = aucun
+Citation 3 : exacte=NON | couv. corpus=75% | couv. meilleure rep.=75% | mots absents des 7 reponses = ['perennes']
+Citation 4 : exacte=NON | couv. corpus=100% | couv. meilleure rep.=75% | mots absents des 7 reponses = aucun
+Citation 5 : exacte=NON | couv. corpus=100% | couv. meilleure rep.=100% | mots absents des 7 reponses = aucun
+
+Racine 'etablir' presente (sous-chaine) dans 1/7 reponses
+Racine 'partenariat' presente (sous-chaine) dans 1/7 reponses
+Racine 'perenn' presente (sous-chaine) dans 0/7 reponses
+Racine 'entrepris' presente (sous-chaine) dans 3/7 reponses

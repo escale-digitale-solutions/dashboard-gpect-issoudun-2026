@@ -1,0 +1,1115 @@
+{
+ "section": "Organismes de formation",
+ "n_college": 7,
+ "nb_controles": 156,
+ "nb_ok": 155,
+ "nb_ecarts": 1,
+ "controles": [
+  {
+   "q": "Q0.8",
+   "label": "n",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q0.8",
+   "label": "Oui, certifié",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q0.8",
+   "label": "Non",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.4",
+   "label": "n",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.4",
+   "label": "> 500 stagiaires/an",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.4",
+   "label": "50 à 200",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.4",
+   "label": "200 à 500",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q0.11",
+   "label": "n",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q0.11",
+   "label": "Antenne permanente",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q0.11",
+   "label": "Sessions régulières",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q0.11",
+   "label": "Sessions ponctuelles",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q0.11",
+   "label": "Aucune",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.7",
+   "label": "n",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.7",
+   "label": "Oui, totalement équipés (KPI 86%)",
+   "dashboard": "86%",
+   "calcule": "86%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.7",
+   "label": "Aucun",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.1",
+   "label": "n",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.1",
+   "label": "Jamais",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.1",
+   "label": "Régulièrement",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.1",
+   "label": "1 à 2 cas ponctuels",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.5",
+   "label": "n",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.5",
+   "label": "Oui, sans condition",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.5",
+   "label": "Non",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.5",
+   "label": "Oui, sous conditions",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "n",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Probablement",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Non",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.3",
+   "label": "Je ne sais pas",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "connaissance besoins moyenne (n=7)",
+   "dashboard": "3,0",
+   "calcule": "3,0",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.1",
+   "label": "connaissance besoins moyenne hors financeur (n=6)",
+   "dashboard": "3,0",
+   "calcule": "3,0",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "offre couvre besoins moyenne (n=7)",
+   "dashboard": "4,0",
+   "calcule": "4,0",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.1",
+   "label": "offre couvre besoins moyenne hors financeur (n=6)",
+   "dashboard": "4,3",
+   "calcule": "4,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.2",
+   "label": "retours clients moyenne (n=7)",
+   "dashboard": "4,0",
+   "calcule": "4,0",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.2",
+   "label": "maîtrise AFEST moyenne (n=7)",
+   "dashboard": "2,6",
+   "calcule": "2,6",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.2",
+   "label": "maîtrise AFEST moyenne hors financeur (n=6)",
+   "dashboard": "2,8",
+   "calcule": "2,8",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Maintenance industrielle (n=7)",
+   "dashboard": "3,9",
+   "calcule": "3,9",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Management & gestion d'équipe (n=7)",
+   "dashboard": "3,9",
+   "calcule": "3,9",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Usinage, mécanique & métaux (n=7)",
+   "dashboard": "3,7",
+   "calcule": "3,7",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Logistique & supply chain (n=7)",
+   "dashboard": "3,7",
+   "calcule": "3,7",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Programmation machines (CNC, robots) (n=7)",
+   "dashboard": "3,4",
+   "calcule": "3,4",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "CAO / DAO / lecture de plans (n=7)",
+   "dashboard": "3,3",
+   "calcule": "3,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Compétences commerciales (n=7)",
+   "dashboard": "3,3",
+   "calcule": "3,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Sécurité & prévention (n=7)",
+   "dashboard": "3,1",
+   "calcule": "3,1",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Qualité, contrôle & métrologie (n=7)",
+   "dashboard": "2,7",
+   "calcule": "2,7",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "Numérique industriel (ERP/GPAO) (n=7)",
+   "dashboard": "2,7",
+   "calcule": "2,7",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.1",
+   "label": "NON AFFICHÉ dashboard — oire [Transition écologique et énergétique (éco-conception)]",
+   "dashboard": "absent",
+   "calcule": "3,0 (n=7)",
+   "verdict": "INFO"
+  },
+  {
+   "q": "Q2.1",
+   "label": "NON AFFICHÉ dashboard — e territoire [Conduite de véhicules et engins (SPL, CACES…)]",
+   "dashboard": "absent",
+   "calcule": "3,0 (n=7)",
+   "verdict": "INFO"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Management de la performance ensemble (n=7)",
+   "dashboard": "3,4",
+   "calcule": "3,4",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Management de la performance hors financeur (n=6)",
+   "dashboard": "3,8",
+   "calcule": "3,8",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Conduite du changement & projet ensemble (n=7)",
+   "dashboard": "3,3",
+   "calcule": "3,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Conduite du changement & projet hors financeur (n=6)",
+   "dashboard": "3,7",
+   "calcule": "3,7",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Transmission des savoir-faire & tutorat ensemble (n=7)",
+   "dashboard": "3,3",
+   "calcule": "3,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Transmission des savoir-faire & tutorat hors financeur (n=6)",
+   "dashboard": "3,7",
+   "calcule": "3,7",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Maintenance avancée & prédictive ensemble (n=7)",
+   "dashboard": "2,9",
+   "calcule": "2,9",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Maintenance avancée & prédictive hors financeur (n=6)",
+   "dashboard": "3,2",
+   "calcule": "3,2",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Automatisation, cobotique ensemble (n=7)",
+   "dashboard": "2,7",
+   "calcule": "2,7",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Automatisation, cobotique hors financeur (n=6)",
+   "dashboard": "3,0",
+   "calcule": "3,0",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Transition énergétique & décarbonation ensemble (n=7)",
+   "dashboard": "2,4",
+   "calcule": "2,4",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Transition énergétique & décarbonation hors financeur (n=6)",
+   "dashboard": "2,7",
+   "calcule": "2,7",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Intelligence artificielle ensemble (n=7)",
+   "dashboard": "2,3",
+   "calcule": "2,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Intelligence artificielle hors financeur (n=6)",
+   "dashboard": "2,5",
+   "calcule": "2,5",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Cybersécurité industrielle ensemble (n=7)",
+   "dashboard": "1,1",
+   "calcule": "1,1",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q2.2",
+   "label": "Cybersécurité industrielle hors financeur (n=6)",
+   "dashboard": "1,2",
+   "calcule": "1,2",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Connaissance du marché & métiers en tension (n=7)",
+   "dashboard": "4,0",
+   "calcule": "4,0",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Développement de l'alternance & liens écoles (n=7)",
+   "dashboard": "3,9",
+   "calcule": "3,9",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Attractivité du territoire & communication (n=7)",
+   "dashboard": "3,3",
+   "calcule": "3,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Transition numérique & Industrie 4.0 (n=7)",
+   "dashboard": "3,3",
+   "calcule": "3,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Mutualisation inter-entreprises (n=7)",
+   "dashboard": "3,0",
+   "calcule": "3,0",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Gestion des seniors & transmission (n=7)",
+   "dashboard": "2,9",
+   "calcule": "2,9",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Développement de l'offre de formation locale (n=7)",
+   "dashboard": "2,6",
+   "calcule": "2,6",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.1",
+   "label": "Aide au recrutement & sourcing (n=7)",
+   "dashboard": "2,3",
+   "calcule": "2,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Demandeurs d'emploi",
+   "dashboard": "100%",
+   "calcule": "100%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Jeunes en alternance",
+   "dashboard": "86%",
+   "calcule": "86%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Reconversion professionnelle",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Situation de handicap",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Salariés en poste (continue)",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Allophones / sous main de justice",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.1",
+   "label": "Scolaires / lycéens",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.2",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.2",
+   "label": "En alternance",
+   "dashboard": "86%",
+   "calcule": "86%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.2",
+   "label": "Certifiantes / diplômantes",
+   "dashboard": "86%",
+   "calcule": "86%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.2",
+   "label": "Continues (adultes)",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.2",
+   "label": "Sur mesure / intra",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.2",
+   "label": "Courtes / modulaires",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.2",
+   "label": "VAE",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q1.2",
+   "label": "Blocs de compétences",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Contacts directs entreprises",
+   "dashboard": "86%",
+   "calcule": "86%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Données France Travail / observatoires",
+   "dashboard": "86%",
+   "calcule": "86%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Veille sectorielle (OPCO, branches)",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Instances locales (clubs, syndicats)",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Retours d'alternants",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q3.2",
+   "label": "Études CCI",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.3",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.3",
+   "label": "Éloignement géographique",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.3",
+   "label": "Coût pédagogique trop élevé (PME)",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.3",
+   "label": "Niveaux de qualification non adaptés",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.3",
+   "label": "Durée des parcours trop rigide",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.3",
+   "label": "Volume de sessions insuffisant",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q4.3",
+   "label": "Aucune lacune identifiée",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Résistance / méconnaissance des entreprises",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Complexité du référentiel & traçabilité",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Absence de modèle économique viable",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Difficulté à identifier les situations apprenantes",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q5.3",
+   "label": "Méconnaissance par les OPCO locaux",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Difficulté à mobiliser les entreprises",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Manque de financements ingénierie",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Faible attractivité de certains métiers",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Plateaux techniques absents / vétustes",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Concurrence entre OF",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.1",
+   "label": "Faible volume de demande",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "Observatoire local des métiers",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "Financement dédié à l'adaptation pédago",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "Plateforme mutualisée de plateaux techniques",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "Parcours communs entre OF",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "Réseau structuré d'acteurs locaux",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q7.2",
+   "label": "Cartographie partagée de l'offre",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "Intelligence artificielle",
+   "dashboard": "100%",
+   "calcule": "100%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "Automatisation / cobotique / robotique",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "Cybersécurité industrielle",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "Transition énergétique & décarbonation",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "Maintenance avancée & prédictive",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.2",
+   "label": "Transmission des savoir-faire",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.5",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.5",
+   "label": "Nouvelles filières / certifications",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.5",
+   "label": "Renforcement partenariats entreprises",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.5",
+   "label": "Embauche de formateurs",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.5",
+   "label": "Offre digitale / e-learning",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q8.5",
+   "label": "Investissement plateaux techniques",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Informer sur l'offre existante",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Contribuer à l'attractivité (lycées)",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Co-construire des parcours",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Adapter l'offre aux besoins",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Accueillir alternance / VAE",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q9.2",
+   "label": "Participer aux groupes de travail",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q10.2",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "Q10.2",
+   "label": "Image du territoire peu attractive",
+   "dashboard": "71%",
+   "calcule": "71%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q10.2",
+   "label": "Transports / mobilité",
+   "dashboard": "57%",
+   "calcule": "57%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q10.2",
+   "label": "Soins et santé insuffisants",
+   "dashboard": "43%",
+   "calcule": "43%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q10.2",
+   "label": "Logement insuffisant / cher",
+   "dashboard": "29%",
+   "calcule": "29%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q10.2",
+   "label": "Emploi du conjoint",
+   "dashboard": "14%",
+   "calcule": "14%",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q11.1",
+   "label": "quote 1 (communication/atouts)",
+   "dashboard": "cité au dashboard",
+   "calcule": "retrouvé dans les données",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q11.1",
+   "label": "quote 2 (lister les besoins)",
+   "dashboard": "cité au dashboard",
+   "calcule": "retrouvé dans les données",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q11.1",
+   "label": "quote 4 (embarquer les entreprises)",
+   "dashboard": "cité au dashboard",
+   "calcule": "retrouvé dans les données",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q11.1",
+   "label": "quote 5 (bâton de pèlerin / pyramide des âges)",
+   "dashboard": "cité au dashboard",
+   "calcule": "retrouvé dans les données",
+   "verdict": "OK"
+  },
+  {
+   "q": "Q11.1",
+   "label": "quote 3 (partenariats pérennes)",
+   "dashboard": "cité au dashboard comme verbatim",
+   "calcule": "retrouvé en substance mais reformulé (« pérennes » absent des données)",
+   "verdict": "ECART"
+  },
+  {
+   "q": "Q11.1",
+   "label": "n (non vides)",
+   "dashboard": 7,
+   "calcule": 7,
+   "verdict": "OK"
+  },
+  {
+   "q": "croisé ACT Q6.1",
+   "label": "acteurs emploi notent l'offre locale (n=7)",
+   "dashboard": "2,3",
+   "calcule": "2,3",
+   "verdict": "OK"
+  },
+  {
+   "q": "croisé ENT Q7.6",
+   "label": "entreprises notent l'offre (n=21)",
+   "dashboard": "3,1",
+   "calcule": "3,1",
+   "verdict": "OK"
+  },
+  {
+   "q": "croisé ENT Q4.8",
+   "label": "AFEST chez entreprises (n=21)",
+   "dashboard": "1,0",
+   "calcule": "1,0",
+   "verdict": "OK"
+  },
+  {
+   "q": "croisé SYN col14",
+   "label": "partenaires sociaux « peu/partiellement » (n=7)",
+   "dashboard": "71%",
+   "calcule": "71% (5/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "croisé SYN col20",
+   "label": "engagement entreprises « faible » (n=7)",
+   "dashboard": "57%",
+   "calcule": "57% (4/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "croisé ENT Q6.2",
+   "label": "qualité/métrologie manque n°1 entreprises (n=21)",
+   "dashboard": "43%",
+   "calcule": "43% (9/21)",
+   "verdict": "OK"
+  }
+ ]
+}

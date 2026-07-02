@@ -1,0 +1,441 @@
+{
+  "zone": "Pages leviers, plan d'action et comparaison nationale",
+  "source": "exports xlsx 30/06/2026 + liste de cadrage externe validée",
+  "nb_controles": 53,
+  "controles": [
+    {
+      "q": "ENT-Q9.1",
+      "label": "Priorité 'connaissance du marché' — moyenne entreprises (n=21)",
+      "dashboard": "3,3",
+      "calcule": "3,3",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q9.1-rang",
+      "label": "Rang de 'connaissance du marché' dans les priorités entreprises",
+      "dashboard": "2e",
+      "calcule": "2e",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.2",
+      "label": "Image d'Issoudun auprès des candidats — moyenne /5 (n=21)",
+      "dashboard": "2,3",
+      "calcule": "2,3",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.1",
+      "label": "Image du territoire citée comme frein territorial (n=21)",
+      "dashboard": "95%",
+      "calcule": "95% (20/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.1-rang",
+      "label": "Rang du frein 'image du territoire'",
+      "dashboard": "1er",
+      "calcule": "1er",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.3",
+      "label": "Prêts à s'engager : campagne de communication territoriale (n=21)",
+      "dashboard": "76%",
+      "calcule": "76% (16/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.3",
+      "label": "Prêts à s'engager : promotion des métiers (scolaires) (n=21)",
+      "dashboard": "67%",
+      "calcule": "67% (14/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.3",
+      "label": "Prêts à s'engager : ateliers inter-entreprises RH (n=21)",
+      "dashboard": "62%",
+      "calcule": "62% (13/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.3",
+      "label": "Prêts à s'engager : plateforme de recrutement mutualisée (n=21)",
+      "dashboard": "52%",
+      "calcule": "52% (11/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.3",
+      "label": "Prêts à s'engager : groupement d'employeurs (n=21)",
+      "dashboard": "29%",
+      "calcule": "29% (6/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q6.5",
+      "label": "IA citée dans les compétences à développer 3-5 ans (n=21)",
+      "dashboard": "38%",
+      "calcule": "38% (8/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q4.1",
+      "label": "Part des 45 ans et + dans l'effectif cumulé (3154 salariés déclarés)",
+      "dashboard": "47%",
+      "calcule": "46% (1460/3154)",
+      "verdict": "ECART"
+    },
+    {
+      "q": "ENT-Q4.1-robustesse",
+      "label": "Part des 45 ans et + HORS plus gros employeur (contrôle de sensibilité, non affiché)",
+      "dashboard": "(non affiché)",
+      "calcule": "44%",
+      "verdict": "INFO"
+    },
+    {
+      "q": "ENT-Q4.3",
+      "label": "Départs retraite prévisibles à 5 ans — cumul déclaré (n=21)",
+      "dashboard": "136",
+      "calcule": "136",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q4.4",
+      "label": "Départs concentrés sur la production/fabrication (n=20)",
+      "dashboard": "60%",
+      "calcule": "60% (12/20)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q4.8-AFEST",
+      "label": "Mise en place AFEST — moyenne /5 (n=21, écart-type=0,0)",
+      "dashboard": "1,0",
+      "calcule": "1,0",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q9.2",
+      "label": "'Ne souhaite pas participer' aux ateliers (n=21)",
+      "dashboard": "33%",
+      "calcule": "33% (7/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q1.8",
+      "label": "Dirigeants de 55 ans et + (n=21)",
+      "dashboard": "29%",
+      "calcule": "29% (6/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q9.1",
+      "label": "Priorité 'connaissance du marché' — moyenne OF (n=7)",
+      "dashboard": "4,0",
+      "calcule": "4,0",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q9.1-rang",
+      "label": "Rang de 'connaissance du marché' dans les priorités OF",
+      "dashboard": "1er",
+      "calcule": "1er",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q7.2",
+      "label": "Levier 'observatoire local des métiers' (n=7)",
+      "dashboard": "71%",
+      "calcule": "71% (5/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q7.2b",
+      "label": "Levier 'plateaux techniques mutualisés' (n=7)",
+      "dashboard": "43%",
+      "calcule": "43% (3/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q4.1",
+      "label": "'Notre offre couvre les besoins' — moyenne /5 (n=7)",
+      "dashboard": "4,0",
+      "calcule": "4,0",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q2.2-IA",
+      "label": "Capacité à former à l'IA — moyenne /5 (n=7)",
+      "dashboard": "2,3",
+      "calcule": "2,3",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q2.2-cyber",
+      "label": "Capacité à former à la cybersécurité — moyenne /5 (n=7)",
+      "dashboard": "1,1",
+      "calcule": "1,1",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q8.2",
+      "label": "IA citée dans les évolutions les plus marquées (n=7)",
+      "dashboard": "100%",
+      "calcule": "100% (7/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q7.1",
+      "label": "Frein 'difficulté à mobiliser les entreprises' (n=7)",
+      "dashboard": "71%",
+      "calcule": "71% (5/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q5.2",
+      "label": "Maîtrise de l'ingénierie AFEST — moyenne /5 (n=7)",
+      "dashboard": "2,6",
+      "calcule": "2,6",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q5.3",
+      "label": "Frein AFEST 'résistance/méconnaissance des entreprises' (n=7)",
+      "dashboard": "43%",
+      "calcule": "43% (3/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q7.1-interim",
+      "label": "Anticipation des besoins — moyenne intérim (n=3)",
+      "dashboard": "4,7",
+      "calcule": "4,7",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q7.1-public",
+      "label": "Anticipation des besoins — moyenne public (n=4)",
+      "dashboard": "2,0",
+      "calcule": "2,0",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q6.1",
+      "label": "'L'offre de formation locale répond aux besoins' — moyenne /5 (n=7)",
+      "dashboard": "2,3",
+      "calcule": "2,3",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q4.1-qualif",
+      "label": "Frein 'niveau de qualification insuffisant' — moyenne /5 (n=7)",
+      "dashboard": "4,3",
+      "calcule": "4,3",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q4.1-mobilite",
+      "label": "Frein 'mobilité et accès aux transports' — moyenne /5 (n=7)",
+      "dashboard": "3,7",
+      "calcule": "3,7",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q5.2",
+      "label": "Efficacité 'formation qualifiante' — moyenne /5 (n=7)",
+      "dashboard": "4,3",
+      "calcule": "4,3",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q5.3",
+      "label": "Durée/stabilité des emplois obtenus — moyenne /5 (n=7)",
+      "dashboard": "4,1",
+      "calcule": "4,1",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q6.2",
+      "label": "Manque de formation 'robotique/cobotique' — moyenne /5 (n=7)",
+      "dashboard": "4,6",
+      "calcule": "4,6",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q8.2",
+      "label": "Disposition 'campagne de communication commune' — moyenne /5 (n=7)",
+      "dashboard": "4,7",
+      "calcule": "4,7",
+      "verdict": "OK"
+    },
+    {
+      "q": "SYN-Q13",
+      "label": "Thème 'savoirs de base (lire/écrire/compter)' — codage lexical (n=7)",
+      "dashboard": "57%",
+      "calcule": "57% (4/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "SYN-Q17",
+      "label": "Frein 'mobilité rurale' (n=7)",
+      "dashboard": "86%",
+      "calcule": "86% (6/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "SYN-Q17-rang",
+      "label": "Rang du frein 'mobilité rurale'",
+      "dashboard": "1er",
+      "calcule": "1er",
+      "verdict": "OK"
+    },
+    {
+      "q": "SYN-Q17b",
+      "label": "Frein 'orientation' (n=7)",
+      "dashboard": "29%",
+      "calcule": "29% (2/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "SYN-Q20",
+      "label": "Engagement des entreprises jugé 'faible' (n=7)",
+      "dashboard": "57%",
+      "calcule": "57% (4/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "SYN-Q24",
+      "label": "Transmission-reprise '(très) prioritaire' (n=7)",
+      "dashboard": "71%",
+      "calcule": "71% (5/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-hab",
+      "label": "Habitants Pays d'Issoudun (dashboard vs liste validée)",
+      "dashboard": "18 899",
+      "calcule": "18 899",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-actifs",
+      "label": "Actifs (dashboard vs liste validée)",
+      "dashboard": "8 153",
+      "calcule": "8 153",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-salaries",
+      "label": "Salariés tous secteurs (dashboard vs liste validée)",
+      "dashboard": "7 151",
+      "calcule": "7 151",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-industrie",
+      "label": "Part des salariés dans l'industrie (dashboard vs liste validée)",
+      "dashboard": "63%",
+      "calcule": "63%",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-chomage",
+      "label": "Taux de chômage Indre (dashboard vs liste validée)",
+      "dashboard": "7,2%",
+      "calcule": "7,2%",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-coh-diplomes",
+      "label": "66% ≤ CAP/BEP = 33% (sans diplôme/<CAP) + 33% (CAP/BEP)",
+      "dashboard": "66",
+      "calcule": "66",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-coh-3x",
+      "label": "« plus de 3× la moyenne » : 63/19",
+      "dashboard": "plus de 3x",
+      "calcule": "plus de 3x",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-coh-15pts",
+      "label": "« 15 points d'écart » : 62% - 47%",
+      "dashboard": "15",
+      "calcule": "15",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-coh-doughnut",
+      "label": "Nature des embauches : somme des parts",
+      "dashboard": "100",
+      "calcule": "100",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-coh-secteurs",
+      "label": "Poids des secteurs (local) : somme",
+      "dashboard": "100",
+      "calcule": "100",
+      "verdict": "OK"
+    },
+    {
+      "q": "NAT-INV-reperes",
+      "label": "Repères hors liste validée : France 7,9% (T4 2025) · 43%/33% 55 ans et + · 66%/50% ≤ CAP/BEP · -2,1% pop. depuis 2020 · 19% industrie France · dynamisme 'Faible'",
+      "dashboard": "(voir label)",
+      "calcule": "non vérifiable depuis les xlsx — à sourcer (capture Data Emploi 30/06/2026)",
+      "verdict": "INVERIFIABLE"
+    },
+    {
+      "q": "NAT-INV-ages",
+      "label": "Pyramide des âges détaillée (9,4/9,2/16/8,2/43 vs 12/12/19/6,7/33) · actifs 55-64 : 20% vs 17%",
+      "dashboard": "(voir label)",
+      "calcule": "non vérifiable depuis les xlsx — à sourcer (capture Data Emploi 30/06/2026)",
+      "verdict": "INVERIFIABLE"
+    },
+    {
+      "q": "NAT-INV-diplomes",
+      "label": "Diplômes détaillés (33/33/16/8,5/5,8/4,4 vs 26/24/18/11/9,7/12)",
+      "dashboard": "(voir label)",
+      "calcule": "non vérifiable depuis les xlsx — à sourcer (capture Data Emploi 30/06/2026)",
+      "verdict": "INVERIFIABLE"
+    },
+    {
+      "q": "NAT-INV-secteurs",
+      "label": "Secteurs hors 63% validé (20/11/4/2 local ; 19/55/17/8/1 France)",
+      "dashboard": "(voir label)",
+      "calcule": "non vérifiable depuis les xlsx — à sourcer (capture Data Emploi 30/06/2026)",
+      "verdict": "INVERIFIABLE"
+    },
+    {
+      "q": "NAT-INV-marche",
+      "label": "Marché du travail : 1 610 DE ABC · 910 cat.A · +8,8% · 3 570 offres · -6,8% · 51% CDI · 2 030 embauches/trim · +22% · 30% >1 mois · 575 établissements · +1,6%",
+      "dashboard": "(voir label)",
+      "calcule": "non vérifiable depuis les xlsx — à sourcer (capture Data Emploi 30/06/2026)",
+      "verdict": "INVERIFIABLE"
+    },
+    {
+      "q": "NAT-INV-metiers",
+      "label": "Tables métiers candidats/recruteurs (20 valeurs demandeurs/offres)",
+      "dashboard": "(voir label)",
+      "calcule": "non vérifiable depuis les xlsx — à sourcer (capture Data Emploi 30/06/2026)",
+      "verdict": "INVERIFIABLE"
+    },
+    {
+      "q": "NAT-INV-embauches",
+      "label": "Embauches par secteur (670/490/280/210/110 ; +40%/+44%/-4,6%) · nature (70/17/9/4 ; France 65%)",
+      "dashboard": "(voir label)",
+      "calcule": "non vérifiable depuis les xlsx — à sourcer (capture Data Emploi 30/06/2026)",
+      "verdict": "INVERIFIABLE"
+    },
+    {
+      "q": "NAT-INV-formation",
+      "label": "Accès emploi post-formation 47% vs 62% · ménages imposés 45% vs 53%",
+      "dashboard": "(voir label)",
+      "calcule": "non vérifiable depuis les xlsx — à sourcer (capture Data Emploi 30/06/2026)",
+      "verdict": "INVERIFIABLE"
+    }
+  ]
+}

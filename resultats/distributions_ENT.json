@@ -1,0 +1,1252 @@
+{
+ "source": "01_entreprises.xlsx (30/06/2026)",
+ "n_repondants": 21,
+ "colonnes": {
+  "[11] Q1.1 — Secteur d'activité principal": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Métallurgie, usinage et travail des métaux": 10,
+    "Transport routier et logistique": 4,
+    "Autre (préciser ci-dessous)": 3,
+    "Industrie agroalimentaire": 1,
+    "Imprimerie et communication": 1,
+    "Maroquinerie et industrie du luxe": 1,
+    "Aéronautique": 1
+   }
+  },
+  "[12] Q1.2 — Si autre secteur, précisez": {
+   "type": "texte_libre",
+   "n_non_vides": 4
+  },
+  "[13] Q1.3 — Effectif total de l'entreprise au 31/12/2025": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "10 à 49 salariés": 8,
+    "50 à 249 salariés": 8,
+    "Moins de 10 salariés": 3,
+    "250 salariés et plus": 2
+   }
+  },
+  "[14] Q1.4 — Effectif inscrit (CDI + CDD)": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 3189.0,
+   "moyenne": 151.86,
+   "mediane": 31.0
+  },
+  "[15] Q1.5 — Votre entreprise a-t-elle recours à des ressources externes de manière régulière ?": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Intérim (préciser le volume moyen en ETP ci-dessous)": 15,
+    "Prestation de services industriels ou logistiques": 10,
+    "Aucun recours à des ressources externes": 5
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[16] Q1.6 — Si recours à l'intérim : volume moyen annuel (en ETP ou en nombre de missions)": {
+   "type": "texte_libre",
+   "n_non_vides": 20
+  },
+  "[17] Q1.7 — Si recours à la prestation : volume moyen annuel (en ETP ou en nombre de missions)": {
+   "type": "texte_libre",
+   "n_non_vides": 12
+  },
+  "[18] Q1.8 — Tranche d'âge du dirigeant ou du responsable de site": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "45 à 54 ans": 11,
+    "55 à 59 ans": 4,
+    "Moins de 45 ans": 4,
+    "60 ans et plus": 2
+   }
+  },
+  "[19] Q2.1 — Quelles sont vos 3 préoccupations principales pour les 24 prochains mois ? (Sélectionnez 3 maximum)": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Maintenir l'activité et la compétitivité face à la hausse des coûts": 14,
+    "Recruter des collaborateurs qualifiés": 13,
+    "Fidéliser les collaborateurs en poste": 10,
+    "Développer de nouveaux marchés ou clients": 8,
+    "Répondre aux enjeux de transition écologique et énergétique": 6,
+    "Investir pour moderniser les équipements et l'outil de production": 5,
+    "Diversifier l'activité ou lancer de nouveaux produits/services": 3,
+    "Faire face aux évolutions technologiques (Industrie 4.0": 2,
+    "IA": 2,
+    "automatisation)": 2
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[20] Q2.2 — Un projet de transmission ou de cession est-il envisagé d'ici 5 ans ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Non": 17,
+    "Oui, projet déjà défini ou en cours": 2,
+    "Oui, en cours de réflexion": 2
+   }
+  },
+  "[21] Q2.3 — Comment anticipez-vous l'évolution de vos effectifs d'ici 3 ans ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "À la hausse (recrutements prévus)": 13,
+    "Stable (pas de variation significative)": 7,
+    "À la baisse (réduction d'effectifs envisagée)": 1
+   }
+  },
+  "[22] Q2.4 — Des investissements matériels ou technologiques majeurs sont-ils prévus d'ici 3 ans (machines, robots, ": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Oui, investissements planifiés et budgétés": 13,
+    "Non": 6,
+    "Oui, à l'étude": 2
+   }
+  },
+  "[23] Q2.5 — Si oui (Q2.4), ces investissements vont-ils nécessiter de nouvelles compétences chez vos salariés ?": {
+   "type": "choix_unique",
+   "n": 16,
+   "distribution": {
+    "Non, les compétences actuelles sont suffisantes": 9,
+    "Oui, des besoins de formation sont identifiés": 7
+   }
+  },
+  "[24] Q3.1 — Listez vos 3 à 5 métiers clés ou en tension pour votre activité": {
+   "type": "texte_libre",
+   "n_non_vides": 21
+  },
+  "[25] Q3.2 — Ces métiers sont-ils actuellement en tension de recrutement ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Oui, difficultés majeures": 13,
+    "Oui, difficultés ponctuelles": 7,
+    "Non, pas de tension actuellement": 1
+   }
+  },
+  "[26] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Pénurie de candida": {
+   "type": "echelle",
+   "n": 20,
+   "moyenne": 4.45,
+   "ecart_type": 0.8,
+   "distribution": {
+    "3": 4,
+    "4": 3,
+    "5": 13
+   }
+  },
+  "[27] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Inadéquation des c": {
+   "type": "echelle",
+   "n": 20,
+   "moyenne": 3.1,
+   "ecart_type": 1.14,
+   "distribution": {
+    "1": 2,
+    "2": 3,
+    "3": 9,
+    "4": 3,
+    "5": 3
+   }
+  },
+  "[28] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Déficit d'image du": {
+   "type": "echelle",
+   "n": 20,
+   "moyenne": 3.15,
+   "ecart_type": 1.24,
+   "distribution": {
+    "1": 3,
+    "2": 3,
+    "3": 4,
+    "4": 8,
+    "5": 2
+   }
+  },
+  "[29] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Concurrence salari": {
+   "type": "echelle",
+   "n": 20,
+   "moyenne": 3.7,
+   "ecart_type": 1.38,
+   "distribution": {
+    "1": 1,
+    "2": 5,
+    "3": 2,
+    "4": 3,
+    "5": 9
+   }
+  },
+  "[30] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Contraintes liées ": {
+   "type": "echelle",
+   "n": 19,
+   "moyenne": 1.74,
+   "ecart_type": 0.78,
+   "distribution": {
+    "1": 8,
+    "2": 9,
+    "3": 1,
+    "4": 1
+   }
+  },
+  "[31] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Contraintes liées ": {
+   "type": "echelle",
+   "n": 20,
+   "moyenne": 2.5,
+   "ecart_type": 1.16,
+   "distribution": {
+    "1": 6,
+    "2": 3,
+    "3": 6,
+    "4": 5
+   }
+  },
+  "[32] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Contraintes liées ": {
+   "type": "echelle",
+   "n": 20,
+   "moyenne": 1.6,
+   "ecart_type": 0.97,
+   "distribution": {
+    "1": 14,
+    "2": 1,
+    "3": 4,
+    "4": 1
+   }
+  },
+  "[33] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Contraintes liées ": {
+   "type": "echelle",
+   "n": 19,
+   "moyenne": 1.53,
+   "ecart_type": 0.99,
+   "distribution": {
+    "1": 14,
+    "2": 2,
+    "3": 1,
+    "4": 2
+   }
+  },
+  "[34] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Contraintes liées ": {
+   "type": "echelle",
+   "n": 20,
+   "moyenne": 2.75,
+   "ecart_type": 1.34,
+   "distribution": {
+    "1": 6,
+    "2": 2,
+    "3": 4,
+    "4": 7,
+    "5": 1
+   }
+  },
+  "[35] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Délais de formatio": {
+   "type": "echelle",
+   "n": 20,
+   "moyenne": 2.35,
+   "ecart_type": 1.24,
+   "distribution": {
+    "1": 7,
+    "2": 4,
+    "3": 5,
+    "4": 3,
+    "5": 1
+   }
+  },
+  "[36] Q3.4 — Ces métiers sont-ils considérés comme \"sensibles\" (risque de disparition ou transformation profonde d'i": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Non, stabilité prévue": 10,
+    "Oui, risque partiel identifié": 7,
+    "Oui, transformation profonde attendue": 4
+   }
+  },
+  "[37] Q3.5 — Si transformation attendue (Q3.4), quels facteurs en sont responsables ? (1 = Faible impact, 5 = Fort i": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 2.85,
+   "ecart_type": 1.46,
+   "distribution": {
+    "1": 4,
+    "2": 1,
+    "3": 3,
+    "4": 3,
+    "5": 2
+   }
+  },
+  "[38] Q3.5 — Si transformation attendue (Q3.4), quels facteurs en sont responsables ? (1 = Faible impact, 5 = Fort i": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 3.08,
+   "ecart_type": 1.38,
+   "distribution": {
+    "1": 3,
+    "3": 6,
+    "4": 1,
+    "5": 3
+   }
+  },
+  "[39] Q3.5 — Si transformation attendue (Q3.4), quels facteurs en sont responsables ? (1 = Faible impact, 5 = Fort i": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 3.08,
+   "ecart_type": 1.14,
+   "distribution": {
+    "1": 1,
+    "2": 4,
+    "3": 2,
+    "4": 5,
+    "5": 1
+   }
+  },
+  "[40] Q3.5 — Si transformation attendue (Q3.4), quels facteurs en sont responsables ? (1 = Faible impact, 5 = Fort i": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 3.54,
+   "ecart_type": 1.28,
+   "distribution": {
+    "1": 2,
+    "3": 3,
+    "4": 5,
+    "5": 3
+   }
+  },
+  "[41] Q3.5 — Si transformation attendue (Q3.4), quels facteurs en sont responsables ? (1 = Faible impact, 5 = Fort i": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 3.46,
+   "ecart_type": 1.22,
+   "distribution": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 3
+   }
+  },
+  "[42] Q4.1.1 — Hommes de moins de 30 ans": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 416.5,
+   "moyenne": 19.83,
+   "mediane": 5.0
+  },
+  "[43] Q4.1.2 — Femmes de moins de 30 ans": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 209.2,
+   "moyenne": 9.96,
+   "mediane": 1.0
+  },
+  "[44] Q4.1.3 — Hommes de 31 à 44 ans": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 665.25,
+   "moyenne": 31.68,
+   "mediane": 7.0
+  },
+  "[45] Q4.1.4 — Femmes de 31 à 44 ans": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 403.5,
+   "moyenne": 19.21,
+   "mediane": 3.0
+  },
+  "[46] Q4.1.5 — Hommes de 45 à 59 ans": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 849.15,
+   "moyenne": 40.44,
+   "mediane": 10.0
+  },
+  "[47] Q4.1.6 — Femmes de 45 à 59 ans": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 446.15,
+   "moyenne": 21.25,
+   "mediane": 5.0
+  },
+  "[48] Q4.1.7 — Hommes de 60 ans et +": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 91.1,
+   "moyenne": 4.34,
+   "mediane": 1.0
+  },
+  "[49] Q4.1.8 — Femmes de 60 ans et +": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 74.1,
+   "moyenne": 3.53,
+   "mediane": 0.0
+  },
+  "[50] Q4.2 — Nombre de départs à la retraite prévisibles d'ici 2 ans": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 90.0,
+   "moyenne": 4.29,
+   "mediane": 2.0
+  },
+  "[51] Q4.3 — Nombre de départs à la retraite prévisibles d'ici 5 ans": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 136.0,
+   "moyenne": 6.48,
+   "mediane": 2.0
+  },
+  "[52] Q4.4 — Sur quels services ou métiers ces départs à la retraite vont-ils se concentrer ?": {
+   "type": "texte_libre",
+   "n_non_vides": 20
+  },
+  "[53] Q4.5 — Comment qualifieriez-vous votre situation en matière de turnover (rotation du personnel) ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Faible et maîtrisé (ancienneté élevée, peu de départs)": 17,
+    "En augmentation sur certains postes": 4
+   }
+  },
+  "[54] Q4.6 — Sur quels postes le turnover est-il le plus marqué ?": {
+   "type": "texte_libre",
+   "n_non_vides": 21
+  },
+  "[55] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.67,
+   "ecart_type": 1.46,
+   "distribution": {
+    "1": 7,
+    "2": 3,
+    "3": 4,
+    "4": 4,
+    "5": 3
+   }
+  },
+  "[56] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.38,
+   "ecart_type": 1.53,
+   "distribution": {
+    "1": 10,
+    "2": 2,
+    "3": 3,
+    "4": 3,
+    "5": 3
+   }
+  },
+  "[57] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 1.95,
+   "ecart_type": 1.36,
+   "distribution": {
+    "1": 13,
+    "2": 1,
+    "3": 4,
+    "4": 1,
+    "5": 2
+   }
+  },
+  "[58] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.0,
+   "ecart_type": 1.35,
+   "distribution": {
+    "1": 12,
+    "2": 2,
+    "3": 4,
+    "4": 1,
+    "5": 2
+   }
+  },
+  "[59] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 1.86,
+   "ecart_type": 0.89,
+   "distribution": {
+    "1": 9,
+    "2": 7,
+    "3": 4,
+    "4": 1
+   }
+  },
+  "[60] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 1.33,
+   "ecart_type": 0.56,
+   "distribution": {
+    "1": 15,
+    "2": 5,
+    "3": 1
+   }
+  },
+  "[61] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 1.19,
+   "ecart_type": 0.5,
+   "distribution": {
+    "1": 18,
+    "2": 2,
+    "3": 1
+   }
+  },
+  "[62] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.19,
+   "ecart_type": 1.47,
+   "distribution": {
+    "1": 11,
+    "2": 2,
+    "3": 4,
+    "4": 1,
+    "5": 3
+   }
+  },
+  "[63] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.76,
+   "ecart_type": 1.74,
+   "distribution": {
+    "1": 9,
+    "2": 2,
+    "3": 1,
+    "4": 3,
+    "5": 6
+   }
+  },
+  "[64] Q4.7 — Évaluez les principaux motifs de départ constatés dans votre entreprise (1 = Faible impact, 5 = Fort im": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.1,
+   "ecart_type": 1.48,
+   "distribution": {
+    "1": 11,
+    "2": 5,
+    "4": 2,
+    "5": 3
+   }
+  },
+  "[65] Q4.8 — Avez-vous mis en place des dispositifs de transmission des savoir-faire  face aux départs  ? (1 = Pas d": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.24,
+   "ecart_type": 1.54,
+   "distribution": {
+    "1": 5,
+    "2": 2,
+    "3": 3,
+    "4": 5,
+    "5": 6
+   }
+  },
+  "[66] Q4.8 — Avez-vous mis en place des dispositifs de transmission des savoir-faire  face aux départs  ? (1 = Pas d": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 1.0,
+   "ecart_type": 0.0,
+   "distribution": {
+    "1": 21
+   }
+  },
+  "[67] Q4.8 — Avez-vous mis en place des dispositifs de transmission des savoir-faire  face aux départs  ? (1 = Pas d": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.14,
+   "ecart_type": 1.42,
+   "distribution": {
+    "1": 11,
+    "2": 2,
+    "3": 5,
+    "5": 3
+   }
+  },
+  "[68] Q4.8 — Avez-vous mis en place des dispositifs de transmission des savoir-faire  face aux départs  ? (1 = Pas d": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.48,
+   "ecart_type": 1.43,
+   "distribution": {
+    "1": 4,
+    "2": 1,
+    "3": 3,
+    "4": 7,
+    "5": 6
+   }
+  },
+  "[69] Q4.8 — Avez-vous mis en place des dispositifs de transmission des savoir-faire  face aux départs  ? (1 = Pas d": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.33,
+   "ecart_type": 1.46,
+   "distribution": {
+    "1": 4,
+    "2": 2,
+    "3": 4,
+    "4": 5,
+    "5": 6
+   }
+  },
+  "[70] Q4.8b — Avez-vous un besoin identifié en matière de transmission des savoir-faire ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Non, les dispositifs en place sont suffisants": 14,
+    "Oui, un besoin est identifié mais non traité": 6,
+    "Aucun dispositif en place et aucun besoin identifié": 1
+   }
+  },
+  "[71] Q5.1 — Avez-vous réalisé des recrutements au cours des 2 dernières années (2024-2025) ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Oui": 20,
+    "Non": 1
+   }
+  },
+  "[72] Q5.2 — Si oui (Q5.1), quel niveau de difficulté avez-vous rencontré pour recruter ?": {
+   "type": "echelle",
+   "n": 20,
+   "moyenne": 3.75,
+   "ecart_type": 0.89,
+   "distribution": {
+    "2": 1,
+    "3": 8,
+    "4": 6,
+    "5": 5
+   }
+  },
+  "[73] Q5.3 — Quels sont les principaux freins à vos recrutements ? (1 = Faible impact, 5 = Fort impact) [Manque de c": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 4.33,
+   "ecart_type": 0.78,
+   "distribution": {
+    "2": 1,
+    "3": 1,
+    "4": 9,
+    "5": 10
+   }
+  },
+  "[74] Q5.3 — Quels sont les principaux freins à vos recrutements ? (1 = Faible impact, 5 = Fort impact) [Inadéquatio": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.76,
+   "ecart_type": 1.11,
+   "distribution": {
+    "1": 3,
+    "2": 6,
+    "3": 6,
+    "4": 5,
+    "5": 1
+   }
+  },
+  "[75] Q5.3 — Quels sont les principaux freins à vos recrutements ? (1 = Faible impact, 5 = Fort impact) [Prétentions": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.76,
+   "ecart_type": 1.34,
+   "distribution": {
+    "1": 5,
+    "2": 5,
+    "3": 3,
+    "4": 6,
+    "5": 2
+   }
+  },
+  "[76] Q5.3 — Quels sont les principaux freins à vos recrutements ? (1 = Faible impact, 5 = Fort impact) [Problèmes d": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 1.43,
+   "ecart_type": 0.66,
+   "distribution": {
+    "1": 14,
+    "2": 5,
+    "3": 2
+   }
+  },
+  "[77] Q5.3 — Quels sont les principaux freins à vos recrutements ? (1 = Faible impact, 5 = Fort impact) [Problèmes d": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.1,
+   "ecart_type": 1.15,
+   "distribution": {
+    "1": 9,
+    "2": 5,
+    "3": 3,
+    "4": 4
+   }
+  },
+  "[78] Q5.3 — Quels sont les principaux freins à vos recrutements ? (1 = Faible impact, 5 = Fort impact) [Emploi du c": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 1.38,
+   "ecart_type": 0.72,
+   "distribution": {
+    "1": 16,
+    "2": 2,
+    "3": 3
+   }
+  },
+  "[79] Q5.3 — Quels sont les principaux freins à vos recrutements ? (1 = Faible impact, 5 = Fort impact) [Déficit d'i": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.67,
+   "ecart_type": 1.25,
+   "distribution": {
+    "1": 5,
+    "2": 5,
+    "3": 4,
+    "4": 6,
+    "5": 1
+   }
+  },
+  "[80] Q5.3 — Quels sont les principaux freins à vos recrutements ? (1 = Faible impact, 5 = Fort impact) [Concurrence": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.19,
+   "ecart_type": 1.84,
+   "distribution": {
+    "1": 8,
+    "2": 1,
+    "4": 3,
+    "5": 9
+   }
+  },
+  "[81] Q5.4 — Combien de recrutements prévoyez-vous d'ici 3 ans ?": {
+   "type": "numerique",
+   "n": 21,
+   "somme": 131.0,
+   "moyenne": 6.24,
+   "mediane": 5.0
+  },
+  "[82] Q5.5 — Quelle est la principale motivation de ces futurs recrutements ?": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Remplacement de départs à la retraite": 16,
+    "Accroissement de l'activité actuelle": 13,
+    "Remplacement de départs volontaires (démissions": 9,
+    "mutations)": 9
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[83] Q5.6 — Quelles actions d'attractivité avez-vous déjà mises en place ?": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Relations avec les écoles": 17,
+    "CFA et lycées professionnels du territoire": 17,
+    "Communication sur les réseaux sociaux (LinkedIn": 16,
+    "Indeed...)": 16,
+    "Partenariat avec France Travail": 15,
+    "Mission Locale ou Cap Emploi": 15,
+    "Portes ouvertes": 10,
+    "visites d'entreprise": 10,
+    "journées découverte": 10,
+    "Programme d'ambassadeurs métiers": 5
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[84] Q6.1 — Les compétences techniques de vos équipes sont-elles adaptées à vos besoins actuels ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Plutôt adaptées, avec quelques lacunes": 13,
+    "Tout à fait adaptées": 7,
+    "Plutôt inadaptées, des besoins importants existent": 1
+   }
+  },
+  "[85] Q6.2 — Quelles compétences techniques manquent le plus dans votre entreprise aujourd'hui ?": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Qualité": 9,
+    "contrôle et métrologie": 9,
+    "Management et gestion d'équipe": 7,
+    "CAO / DAO / lecture de plans techniques": 6,
+    "Maintenance industrielle et automatismes": 6,
+    "Aucun manque identifié à ce jour": 5,
+    "Logistique": 4,
+    "supply chain et gestion des flux": 4,
+    "Compétences commerciales et relation client": 4,
+    "Sécurité et prévention des risques professionnels": 3,
+    "Programmation de machines (robots": 3,
+    "automates": 3,
+    "CNC)": 3,
+    "Numérique industriel": 3,
+    "data et traçabilité (ERP": 3,
+    "GPAO)": 3,
+    "Usinage": 3,
+    "mécanique et travail des métaux": 3
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[86] Q6.3 — Les compétences comportementales (savoir-être) sont-elles adaptées à vos besoins ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Plutôt adaptées": 14,
+    "Tout à fait adaptées": 5,
+    "Plutôt inadaptées": 2
+   }
+  },
+  "[87] Q6.4 — Si inadaptées (Q6.3), quels savoir-être nécessitent un renforcement ?": {
+   "type": "choix_multiple",
+   "n": 11,
+   "options_frequentes_split_virgule": {
+    "Rigueur et respect des procédures": 10,
+    "Culture sécurité et vigilance": 5,
+    "Autonomie et prise d'initiative": 4,
+    "Travail en équipe et coopération": 4,
+    "Engagement et sens des responsabilités": 4,
+    "Adaptabilité au changement technologique": 2
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[88] Q6.5 — Quelles compétences devront être développées dans votre entreprise d'ici 3 à 5 ans ?": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Intelligence artificielle": 8,
+    "Transition énergétique et décarbonation": 7,
+    "Transmission des savoir-faire et tutorat": 7,
+    "Animation d'équipes en mode agile ou projet": 6,
+    "Cybersécurité industrielle": 5,
+    "Maîtrise des outils numériques collaboratifs": 5,
+    "Conduite du changement et gestion de projet": 5,
+    "Automatisation": 5,
+    "cobotique et robotique avancée": 5,
+    "Anglais": 4,
+    "Communication professionnelle écrite et orale": 4,
+    "Management de la performance et pilotage par indicateurs": 3,
+    "Maintenance avancée": 2
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[89] Q7.1 — Avez-vous organisé des formations pour vos salariés au cours des 2 dernières années ?": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Oui": 40,
+    "des formations de développement des compétences métiers": 19,
+    "des formations obligatoires uniquement (sécurité": 15,
+    "habilitations...)": 15,
+    "des formations management et développement personnel": 6
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[90] Q7.2 — Connaissez-vous vos droits de financement de la formation via votre OPCO ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Oui, nous les mobilisons régulièrement": 19,
+    "Non, nous ne connaissons pas bien les dispositifs disponibles": 2
+   }
+  },
+  "[91] Q7.3 — Quels sont les principaux freins à la formation dans votre entreprise ?": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Difficulté à libérer les salariés sur le temps de travail": 8,
+    "Coût pédagogique trop élevé": 6,
+    "Aucun frein particulier": 6,
+    "Faible appétence des salariés pour la formation": 5,
+    "Absence de formation adaptée disponible localement": 3,
+    "Manque de temps pour identifier et organiser les formations": 3,
+    "Coût des déplacements et hébergements (formations hors territoire)": 2
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[92] Q7.4 — Avez-vous recours à l'alternance (apprentissage ou contrat de professionnalisation) ?": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Oui, régulièrement": 16,
+    "Non, et ce n'est pas envisagé": 3,
+    "Non, mais nous y sommes ouverts": 2
+   }
+  },
+  "[93] Q7.5 — Si oui (Q7.4), les alternants sont-ils issus du territoire d'Issoudun ?": {
+   "type": "choix_unique",
+   "n": 18,
+   "distribution": {
+    "Oui, majoritairement": 9,
+    "Partiellement": 5,
+    "Non, ils viennent d'autres territoires": 4
+   }
+  },
+  "[94] Q7.6 — L'offre de formation disponible sur le territoire est-elle adaptée à vos besoins ?": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.1,
+   "ecart_type": 1.02,
+   "distribution": {
+    "1": 2,
+    "2": 3,
+    "3": 8,
+    "4": 7,
+    "5": 1
+   }
+  },
+  "[95] Q7.7 — Si inadaptée (Q7.6 ≤ 3), quelles en sont les raisons ? (1 = Faible impact, 5 = Fort impact) [Contenus t": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 2.38,
+   "ecart_type": 1.55,
+   "distribution": {
+    "1": 6,
+    "2": 2,
+    "3": 1,
+    "4": 2,
+    "5": 2
+   }
+  },
+  "[96] Q7.7 — Si inadaptée (Q7.6 ≤ 3), quelles en sont les raisons ? (1 = Faible impact, 5 = Fort impact) [Niveau de ": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 2.62,
+   "ecart_type": 1.21,
+   "distribution": {
+    "1": 4,
+    "2": 1,
+    "3": 4,
+    "4": 4
+   }
+  },
+  "[97] Q7.7 — Si inadaptée (Q7.6 ≤ 3), quelles en sont les raisons ? (1 = Faible impact, 5 = Fort impact) [Manque de ": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 2.38,
+   "ecart_type": 1.55,
+   "distribution": {
+    "1": 6,
+    "2": 2,
+    "3": 1,
+    "4": 2,
+    "5": 2
+   }
+  },
+  "[98] Q7.7 — Si inadaptée (Q7.6 ≤ 3), quelles en sont les raisons ? (1 = Faible impact, 5 = Fort impact) [Éloignemen": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 3.0,
+   "ecart_type": 1.52,
+   "distribution": {
+    "1": 3,
+    "2": 3,
+    "3": 1,
+    "4": 3,
+    "5": 3
+   }
+  },
+  "[99] Q7.7 — Si inadaptée (Q7.6 ≤ 3), quelles en sont les raisons ? (1 = Faible impact, 5 = Fort impact) [Coût pédag": {
+   "type": "echelle",
+   "n": 12,
+   "moyenne": 1.58,
+   "ecart_type": 0.76,
+   "distribution": {
+    "1": 7,
+    "2": 3,
+    "3": 2
+   }
+  },
+  "[100] Q7.7 — Si inadaptée (Q7.6 ≤ 3), quelles en sont les raisons ? (1 = Faible impact, 5 = Fort impact) [Absence de": {
+   "type": "echelle",
+   "n": 13,
+   "moyenne": 2.92,
+   "ecart_type": 1.64,
+   "distribution": {
+    "1": 5,
+    "3": 2,
+    "4": 3,
+    "5": 3
+   }
+  },
+  "[101] Q7.8 — Quel est le degré de coopération actuel avec les acteurs de l'emploi locaux (France Travail, Mission Lo": {
+   "type": "choix_unique",
+   "n": 21,
+   "distribution": {
+    "Coopération faible et ponctuelle": 9,
+    "Coopération régulière et structurée": 8,
+    "Aucune coopération": 4
+   }
+  },
+  "[102] Q7.9 — Quelles attentes avez-vous vis-à-vis des acteurs de l'emploi du territoire ? (1 = Faible attente, 5 = T": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.14,
+   "ecart_type": 1.32,
+   "distribution": {
+    "1": 4,
+    "2": 2,
+    "3": 5,
+    "4": 7,
+    "5": 3
+   }
+  },
+  "[103] Q7.9 — Quelles attentes avez-vous vis-à-vis des acteurs de l'emploi du territoire ? (1 = Faible attente, 5 = T": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.29,
+   "ecart_type": 1.35,
+   "distribution": {
+    "1": 3,
+    "2": 3,
+    "3": 5,
+    "4": 5,
+    "5": 5
+   }
+  },
+  "[104] Q7.9 — Quelles attentes avez-vous vis-à-vis des acteurs de l'emploi du territoire ? (1 = Faible attente, 5 = T": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.76,
+   "ecart_type": 1.31,
+   "distribution": {
+    "1": 5,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": 2
+   }
+  },
+  "[105] Q7.9 — Quelles attentes avez-vous vis-à-vis des acteurs de l'emploi du territoire ? (1 = Faible attente, 5 = T": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.38,
+   "ecart_type": 1.21,
+   "distribution": {
+    "1": 7,
+    "2": 4,
+    "3": 6,
+    "4": 3,
+    "5": 1
+   }
+  },
+  "[106] Q7.9 — Quelles attentes avez-vous vis-à-vis des acteurs de l'emploi du territoire ? (1 = Faible attente, 5 = T": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.52,
+   "ecart_type": 1.5,
+   "distribution": {
+    "1": 9,
+    "2": 2,
+    "3": 2,
+    "4": 6,
+    "5": 2
+   }
+  },
+  "[107] Q7.9 — Quelles attentes avez-vous vis-à-vis des acteurs de l'emploi du territoire ? (1 = Faible attente, 5 = T": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.57,
+   "ecart_type": 1.62,
+   "distribution": {
+    "1": 10,
+    "3": 4,
+    "4": 3,
+    "5": 4
+   }
+  },
+  "[108] Q7.9 — Quelles attentes avez-vous vis-à-vis des acteurs de l'emploi du territoire ? (1 = Faible attente, 5 = T": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.24,
+   "ecart_type": 1.15,
+   "distribution": {
+    "1": 3,
+    "2": 1,
+    "3": 7,
+    "4": 8,
+    "5": 2
+   }
+  },
+  "[109] Q7.9 — Quelles attentes avez-vous vis-à-vis des acteurs de l'emploi du territoire ? (1 = Faible attente, 5 = T": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.71,
+   "ecart_type": 1.45,
+   "distribution": {
+    "1": 7,
+    "2": 3,
+    "3": 2,
+    "4": 7,
+    "5": 2
+   }
+  },
+  "[110] Q8.1 — Quels facteurs liés au territoire freinent vos recrutements ou la fidélisation de vos salariés ?": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Image globale du territoire peu attractive pour les candidats extérieurs": 20,
+    "Offre de soins et de santé insuffisante": 14,
+    "Manque de transports en commun et de solutions de mobilité": 8,
+    "Offre de services à la personne insuffisante (crèches": 5,
+    "gardes d'enfants)": 5,
+    "Offre de logement insuffisante ou trop chère": 3,
+    "Manque d'animation culturelle": 3,
+    "sportive et de loisirs": 3,
+    "Difficulté à trouver un emploi pour le conjoint": 2
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[111] Q8.2 — Comment évaluez-vous l'image d'Issoudun et de son bassin industriel auprès des candidats potentiels ?": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.29,
+   "ecart_type": 0.63,
+   "distribution": {
+    "1": 2,
+    "2": 11,
+    "3": 8
+   }
+  },
+  "[112] Q8.3 — Seriez-vous prêt à vous engager dans des actions collectives territoriales pour améliorer l'attractivit": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Campagne de communication commune sur les atouts du territoire": 16,
+    "Actions de promotion des métiers industriels auprès des lycéens et collégiens": 14,
+    "Ateliers inter-entreprises sur les bonnes pratiques RH": 13,
+    "Visites d'entreprises et journées portes ouvertes coordonnées": 12,
+    "Plateforme de recrutement mutualisée pour le bassin d'Issoudun": 11,
+    "Groupement d'employeurs pour partager des salariés à temps partagé": 6
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[113] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? (1 = ": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.29,
+   "ecart_type": 1.42,
+   "distribution": {
+    "1": 5,
+    "2": 1,
+    "3": 1,
+    "4": 11,
+    "5": 3
+   }
+  },
+  "[114] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? (1 = ": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.81,
+   "ecart_type": 1.47,
+   "distribution": {
+    "1": 7,
+    "2": 1,
+    "3": 5,
+    "4": 5,
+    "5": 3
+   }
+  },
+  "[115] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? (1 = ": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.62,
+   "ecart_type": 1.33,
+   "distribution": {
+    "1": 6,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": 2
+   }
+  },
+  "[116] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? (1 = ": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.48,
+   "ecart_type": 1.53,
+   "distribution": {
+    "1": 9,
+    "2": 3,
+    "3": 2,
+    "4": 4,
+    "5": 3
+   }
+  },
+  "[117] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? (1 = ": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 3.9,
+   "ecart_type": 1.34,
+   "distribution": {
+    "1": 3,
+    "3": 2,
+    "4": 7,
+    "5": 9
+   }
+  },
+  "[118] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? (1 = ": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.48,
+   "ecart_type": 1.37,
+   "distribution": {
+    "1": 7,
+    "2": 5,
+    "3": 3,
+    "4": 4,
+    "5": 2
+   }
+  },
+  "[119] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? (1 = ": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.81,
+   "ecart_type": 1.4,
+   "distribution": {
+    "1": 6,
+    "2": 3,
+    "3": 3,
+    "4": 7,
+    "5": 2
+   }
+  },
+  "[120] Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? (1 = ": {
+   "type": "echelle",
+   "n": 21,
+   "moyenne": 2.67,
+   "ecart_type": 1.58,
+   "distribution": {
+    "1": 9,
+    "2": 1,
+    "3": 2,
+    "4": 6,
+    "5": 3
+   }
+  },
+  "[121] Q9.2 — Seriez-vous intéressé par des ateliers de co-construction dans le cadre de la GPECT ?": {
+   "type": "choix_multiple",
+   "n": 21,
+   "options_frequentes_split_virgule": {
+    "Atelier \"Attractivité et recrutement territorial\"": 10,
+    "Atelier \"Métiers sensibles et compétences clés du territoire\"": 8,
+    "Non": 7,
+    "je ne souhaite pas participer à des ateliers": 7,
+    "Atelier \"Transmission des savoir-faire et gestion des seniors\"": 3,
+    "Atelier \"Industrie 4.0 et compétences de demain\"": 3,
+    "Atelier \"Formation et ingénierie pédagogique mutualisée\"": 2
+   },
+   "note": "options écrites libres uniques non listées (anonymat)"
+  },
+  "[122] Q9.3 — Si une seule action concrète devait sortir de cette démarche GPECT pour votre entreprise, laquelle sera": {
+   "type": "texte_libre",
+   "n_non_vides": 21
+  },
+  "[123] Q9.4 — Avez-vous des remarques, suggestions ou informations complémentaires à partager ?": {
+   "type": "texte_libre",
+   "n_non_vides": 12
+  }
+ }
+}

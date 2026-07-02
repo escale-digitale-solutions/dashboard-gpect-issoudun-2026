@@ -1,0 +1,42 @@
+Fichier lu : /home/user/dashboard-gpect-issoudun-2026/data/02_organismes_formation.xlsx
+Dimensions : 7 lignes x 98 colonnes
+Colonne Q11.1 trouvee a l'index 94 (attendu : 94)
+Q11.1 : n=7 reponses non vides (college n=7)
+
+=== Test 1 : chaque citation dashboard vs reponses Q11.1 ===
+(couverture = % des mots significatifs de la citation presents
+ dans la meilleure reponse ; sous-chaine exacte testee aussi)
+
+Citation 1 (3 mots significatifs) :
+  sous-chaine exacte trouvee : True
+  meilleure couverture lexicale : 100% (repondant OF1 anonymise)
+
+Citation 2 (5 mots significatifs) :
+  sous-chaine exacte trouvee : False
+  meilleure couverture lexicale : 100% (repondant OF2 anonymise)
+
+Citation 3 (4 mots significatifs) :
+  sous-chaine exacte trouvee : False
+  meilleure couverture lexicale : 75% (repondant OF3 anonymise)
+  mots de la citation ABSENTS de la meilleure reponse : ['perennes']
+
+Citation 4 (4 mots significatifs) :
+  sous-chaine exacte trouvee : False
+  meilleure couverture lexicale : 75% (repondant OF4 anonymise)
+  mots de la citation ABSENTS de la meilleure reponse : ['territoire']
+
+Citation 5 (17 mots significatifs) :
+  sous-chaine exacte trouvee : False
+  meilleure couverture lexicale : 100% (repondant OF7 anonymise)
+
+=== Test 2 : le mot 'perenne(s)' existe-t-il quelque part ? ===
+Occurrences de 'perenn*' dans Q11.1 : 0 / 7
+Occurrences de 'perenn*' dans TOUT le fichier OF : 0 (colonnes touchees, par index : [])
+
+=== Test 3 : mots-cles 'partenariat' et 'etablir' dans Q11.1 ===
+  'partenariat' present dans 1 / 7 reponses Q11.1
+  'etablir' present dans 1 / 7 reponses Q11.1
+  'entreprise' present dans 3 / 7 reponses Q11.1
+
+=== Test 4 : citation 3 vs TOUTES les colonnes texte libre ===
+Meilleure couverture de la citation 3 sur l'ensemble des colonnes texte libre : 75% (colonne index 94)

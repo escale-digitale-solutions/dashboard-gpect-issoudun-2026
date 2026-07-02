@@ -1,0 +1,779 @@
+[
+ {
+  "q": "ACT",
+  "label": "n collège",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.1",
+  "label": "sub : nb agences d'intérim",
+  "dashboard": "3",
+  "calcule": "3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.1",
+  "label": "sub : nb opérateurs publics",
+  "dashboard": "4",
+  "calcule": "4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "KPI difficulté maintenance industrielle",
+  "dashboard": "4,9",
+  "calcule": "4,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "KPI difficulté programmation CNC/robots",
+  "dashboard": "4,9",
+  "calcule": "4,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q2.2",
+  "label": "KPI manque de compétences techniques",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.1",
+  "label": "KPI offre de formation locale adaptée",
+  "dashboard": "2,3",
+  "calcule": "2,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q5.3",
+  "label": "KPI durée/stabilité des emplois obtenus",
+  "dashboard": "4,1",
+  "calcule": "4,1",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.1",
+  "label": "n bloc type de structure",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.1",
+  "label": "Agence d'intérim",
+  "dashboard": "43%",
+  "calcule": "43%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.1",
+  "label": "France Travail",
+  "dashboard": "14%",
+  "calcule": "14%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.1",
+  "label": "Mission Locale",
+  "dashboard": "14%",
+  "calcule": "14%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.1",
+  "label": "Cap Emploi",
+  "dashboard": "14%",
+  "calcule": "14%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.1",
+  "label": "APEC",
+  "dashboard": "14%",
+  "calcule": "14%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.3",
+  "label": "n bloc personnes accompagnées/an",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.3",
+  "label": "500 à 1000",
+  "dashboard": "43%",
+  "calcule": "43%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.3",
+  "label": "100 à 500",
+  "dashboard": "29%",
+  "calcule": "29%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.3",
+  "label": "1000 à 3000",
+  "dashboard": "14%",
+  "calcule": "14%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q0.3",
+  "label": "< 100",
+  "dashboard": "14%",
+  "calcule": "14%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.3",
+  "label": "n bloc niveau de qualification dominant",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.3",
+  "label": "CAP / BEP",
+  "dashboard": "57%",
+  "calcule": "57%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.3",
+  "label": "Bac",
+  "dashboard": "14%",
+  "calcule": "14%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.3",
+  "label": "Sans diplôme",
+  "dashboard": "14%",
+  "calcule": "14%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.3",
+  "label": "Bac +3 et plus",
+  "dashboard": "14%",
+  "calcule": "14%",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "n bloc importance des publics",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Seniors de 50 ans et + — intérim",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Seniors de 50 ans et + — public",
+  "dashboard": "3,5",
+  "calcule": "3,5",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Jeunes de moins de 26 ans — intérim",
+  "dashboard": "4,7",
+  "calcule": "4,7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Jeunes de moins de 26 ans — public",
+  "dashboard": "2,8",
+  "calcule": "2,8",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Personnes en reconversion — intérim",
+  "dashboard": "3,7",
+  "calcule": "3,7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Personnes en reconversion — public",
+  "dashboard": "2,8",
+  "calcule": "2,8",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Travailleurs handicapés — intérim",
+  "dashboard": "2,7",
+  "calcule": "2,7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Travailleurs handicapés — public",
+  "dashboard": "3,0",
+  "calcule": "3,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Demandeurs d'emploi longue durée — intérim",
+  "dashboard": "2,3",
+  "calcule": "2,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Demandeurs d'emploi longue durée — public",
+  "dashboard": "3,0",
+  "calcule": "3,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Réfugiés / primo-arrivants — intérim",
+  "dashboard": "2,3",
+  "calcule": "2,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q1.2",
+  "label": "Réfugiés / primo-arrivants — public",
+  "dashboard": "2,2",
+  "calcule": "2,3",
+  "verdict": "ECART"
+ },
+ {
+  "q": "Q2.1",
+  "label": "KPI adéquation profils/besoins",
+  "dashboard": "2,9",
+  "calcule": "2,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "KPI niveau de qualification insuffisant",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "n bloc difficulté à trouver",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Maintenance industrielle",
+  "dashboard": "4,9",
+  "calcule": "4,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Programmation CNC/robots",
+  "dashboard": "4,9",
+  "calcule": "4,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Usinage & mécanique",
+  "dashboard": "4,4",
+  "calcule": "4,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "CAO/DAO & lecture de plans",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Numérique industriel",
+  "dashboard": "4,0",
+  "calcule": "4,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Transition énergétique",
+  "dashboard": "4,0",
+  "calcule": "4,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Qualité & métrologie",
+  "dashboard": "3,9",
+  "calcule": "3,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Sécurité & prévention",
+  "dashboard": "3,3",
+  "calcule": "3,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Management d'équipe",
+  "dashboard": "3,1",
+  "calcule": "3,1",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Logistique & supply chain",
+  "dashboard": "3,0",
+  "calcule": "3,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "Conduite véhicules/engins",
+  "dashboard": "2,4",
+  "calcule": "2,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "écart-type cité 0,4 — Maintenance industrielle",
+  "dashboard": "0,4",
+  "calcule": "0,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q3.1",
+  "label": "écart-type cité 0,4 — Programmation CNC/robots",
+  "dashboard": "0,4",
+  "calcule": "0,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "n bloc freins accès emploi",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "Niveau de qualification insuffisant",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "Mobilité & transports",
+  "dashboard": "3,7",
+  "calcule": "3,7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "Difficulté d'intégration",
+  "dashboard": "3,3",
+  "calcule": "3,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "Image des métiers industriels",
+  "dashboard": "3,0",
+  "calcule": "3,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "Compétences de base",
+  "dashboard": "2,9",
+  "calcule": "2,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "Accès aux soins/santé",
+  "dashboard": "2,7",
+  "calcule": "2,7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "Accès au logement",
+  "dashboard": "2,3",
+  "calcule": "2,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q4.1",
+  "label": "Garde d'enfants",
+  "dashboard": "1,7",
+  "calcule": "1,7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q5.2",
+  "label": "n bloc efficacité dispositifs",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q5.2",
+  "label": "Formation qualifiante",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q5.2",
+  "label": "Parcours individualisés",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q5.2",
+  "label": "PMSMP (immersion)",
+  "dashboard": "3,6",
+  "calcule": "3,6",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q5.2",
+  "label": "POEI",
+  "dashboard": "3,3",
+  "calcule": "3,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.1",
+  "label": "n bloc offre de formation locale",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.1",
+  "label": "offre formation locale — intérim",
+  "dashboard": "2,3",
+  "calcule": "2,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.1",
+  "label": "offre formation locale — public",
+  "dashboard": "2,2",
+  "calcule": "2,3",
+  "verdict": "ECART"
+ },
+ {
+  "q": "Q6.2",
+  "label": "n bloc manque de formation",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.2",
+  "label": "Robotique / cobotique",
+  "dashboard": "4,6",
+  "calcule": "4,6",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.2",
+  "label": "Maintenance industrielle",
+  "dashboard": "4,4",
+  "calcule": "4,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.2",
+  "label": "Usinage / mécanique",
+  "dashboard": "4,1",
+  "calcule": "4,1",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.2",
+  "label": "Industrie 4.0 / IA",
+  "dashboard": "4,1",
+  "calcule": "4,1",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.2",
+  "label": "Exploitation transport",
+  "dashboard": "4,0",
+  "calcule": "4,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.2",
+  "label": "Management industriel",
+  "dashboard": "3,4",
+  "calcule": "3,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.2",
+  "label": "Savoir-être",
+  "dashboard": "2,9",
+  "calcule": "2,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q6.2",
+  "label": "Sécurité industrielle",
+  "dashboard": "2,9",
+  "calcule": "2,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "n bloc coopération entreprises",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Suivi des candidats après intégration — intérim",
+  "dashboard": "4,0",
+  "calcule": "4,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Suivi des candidats après intégration — public",
+  "dashboard": "4,0",
+  "calcule": "4,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Qualité des relations avec les entreprises — intérim",
+  "dashboard": "5,0",
+  "calcule": "5,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Qualité des relations avec les entreprises — public",
+  "dashboard": "2,8",
+  "calcule": "2,8",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Partage d'infos compétences attendues — intérim",
+  "dashboard": "4,7",
+  "calcule": "4,7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Partage d'infos compétences attendues — public",
+  "dashboard": "3,0",
+  "calcule": "3,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Anticipation des besoins de recrutement — intérim",
+  "dashboard": "4,7",
+  "calcule": "4,7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Anticipation des besoins de recrutement — public",
+  "dashboard": "2,0",
+  "calcule": "2,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Construction de parcours sur mesure — intérim",
+  "dashboard": "3,0",
+  "calcule": "3,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q7.1",
+  "label": "Construction de parcours sur mesure — public",
+  "dashboard": "2,0",
+  "calcule": "2,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.1",
+  "label": "n bloc actions territoriales",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.1",
+  "label": "Formations courtes métiers en tension",
+  "dashboard": "4,4",
+  "calcule": "4,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.1",
+  "label": "Solutions de mobilité",
+  "dashboard": "4,4",
+  "calcule": "4,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.1",
+  "label": "Pré-qualification industrielle",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.1",
+  "label": "Mutualisation entre entreprises",
+  "dashboard": "4,1",
+  "calcule": "4,1",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.1",
+  "label": "Campagnes de communication métiers",
+  "dashboard": "4,0",
+  "calcule": "4,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.1",
+  "label": "Plateforme de recrutement",
+  "dashboard": "2,1",
+  "calcule": "2,1",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.2",
+  "label": "n bloc participation actions collectives",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.2",
+  "label": "Campagne de communication commune",
+  "dashboard": "4,7",
+  "calcule": "4,7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.2",
+  "label": "Ateliers inter-entreprises RH",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.2",
+  "label": "Visites d'entreprises coordonnées",
+  "dashboard": "3,9",
+  "calcule": "3,9",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.2",
+  "label": "Promotion métiers lycéens/collégiens",
+  "dashboard": "3,3",
+  "calcule": "3,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.2",
+  "label": "Groupement d'employeurs",
+  "dashboard": "3,1",
+  "calcule": "3,1",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.2",
+  "label": "Aucune participation envisagée",
+  "dashboard": "1,4",
+  "calcule": "1,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.3",
+  "label": "n bloc ateliers GPECT",
+  "dashboard": "n=7",
+  "calcule": "n=7",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.3",
+  "label": "Atelier métiers sensibles",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.3",
+  "label": "Atelier attractivité & recrutement",
+  "dashboard": "4,3",
+  "calcule": "4,3",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.3",
+  "label": "Atelier transmission savoir-faire",
+  "dashboard": "4,0",
+  "calcule": "4,0",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.3",
+  "label": "Atelier ingénierie pédagogique",
+  "dashboard": "3,4",
+  "calcule": "3,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "Q8.3",
+  "label": "Atelier Industrie 4.0",
+  "dashboard": "3,4",
+  "calcule": "3,4",
+  "verdict": "OK"
+ },
+ {
+  "q": "insight Q6.1",
+  "label": "auto-éval OF (fichier OF, col: Q4.1 — Selon vous, votre offre de formation couvre-t-elle bi...)",
+  "dashboard": "4,0",
+  "calcule": "4,0",
+  "verdict": "OK"
+ }
+]

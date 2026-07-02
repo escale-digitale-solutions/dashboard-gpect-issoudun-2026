@@ -1,0 +1,969 @@
+{
+ "_meta": {
+  "fichier": "data/03_acteurs_emploi.xlsx",
+  "n_repondants": 7,
+  "n_colonnes": 88,
+  "colonnes_exclues": "0-3 (horodateur, consentements, nom de structure)"
+ },
+ "[4] Q0.1 — Quel type de structure représentez-vous ?": {
+  "type": "categorielle",
+  "n": 7,
+  "distribution": {
+   "Agence d’intérim": 3,
+   "France Travail": 1,
+   "Mission Locale": 1,
+   "Cap Emploi": 1,
+   "APEC": 1
+  }
+ },
+ "[5] Q0.2 — Combien de conseillers ou chargés d’accompagnement travaillent dans votre structure ?": {
+  "type": "categorielle",
+  "n": 7,
+  "distribution": {
+   "1 à 5 conseillers": 4,
+   "6 à 10 conseillers": 2,
+   "11 à 20 conseillers": 1
+  }
+ },
+ "[6] Q0.3 — Combien de personnes votre structure accompagne-t-elle en moyenne chaque année ?": {
+  "type": "categorielle",
+  "n": 7,
+  "distribution": {
+   "500 à 1000 personnes": 3,
+   "100 à 500 personnes": 2,
+   "1000 à 3000 personnes": 1,
+   "Moins de 100 personnes": 1
+  }
+ },
+ "[7] Q1.1 — Parmi les publics suivants, lesquels accompagnez-vous au cours des 12 derniers mois ?": {
+  "type": "choix_multiple",
+  "n": 7,
+  "options": {
+   "Jeunes de moins de 26 ans": 6,
+   "Seniors de 50 ans et plus": 6,
+   "Publics issus des QPV": 4,
+   "Travailleurs handicapés": 5,
+   "Personnes en reconversion professionnelle": 5,
+   "Demandeurs d’emploi longue durée": 4,
+   "Réfugiés / primo-arrivants": 2
+  }
+ },
+ "[8] Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Jeunes de moins de 26 ans]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.571,
+  "ecart_type": 1.618,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 1,
+   "5": 3
+  }
+ },
+ "[9] Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Seniors de 50 ans et plus]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.857,
+  "ecart_type": 1.345,
+  "distribution": {
+   "1": 1,
+   "4": 4,
+   "5": 2
+  }
+ },
+ "[10] Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Publics issus des QPV]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.286,
+  "ecart_type": 1.496,
+  "distribution": {
+   "1": 3,
+   "2": 1,
+   "3": 2,
+   "5": 1
+  }
+ },
+ "[11] Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Travailleurs handicapés]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.857,
+  "ecart_type": 1.574,
+  "distribution": {
+   "1": 1,
+   "2": 3,
+   "3": 1,
+   "5": 2
+  }
+ },
+ "[12] Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Personnes en reconversion professionnelle]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.143,
+  "ecart_type": 1.464,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 3,
+   "5": 2
+  }
+ },
+ "[13] Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Demandeurs d’emploi longue durée]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.714,
+  "ecart_type": 1.89,
+  "distribution": {
+   "1": 3,
+   "2": 1,
+   "4": 1,
+   "5": 2
+  }
+ },
+ "[14] Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Réfugiés / primo-arrivants]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.286,
+  "ecart_type": 1.89,
+  "distribution": {
+   "1": 4,
+   "2": 1,
+   "5": 2
+  }
+ },
+ "[15] Q1.3 — Quel est le niveau de qualification dominant parmi les publics que vous accompagnez ?": {
+  "type": "categorielle",
+  "n": 7,
+  "distribution": {
+   "CAP / BEP": 4,
+   "Bac": 1,
+   "Sans diplôme": 1,
+   "Bac +3 et plus": 1
+  }
+ },
+ "[16] Q2.1 — Dans quelle mesure les profils des candidats que vous accompagnez correspondent-ils aux besoins actuels des entreprises du territoire ?": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.857,
+  "ecart_type": 0.69,
+  "distribution": {
+   "2": 2,
+   "3": 4,
+   "4": 1
+  }
+ },
+ "[17] Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Manque de compétences techniques]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.286,
+  "ecart_type": 0.756,
+  "distribution": {
+   "3": 1,
+   "4": 3,
+   "5": 3
+  }
+ },
+ "[18] Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Manque de savoir-être professionnel]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.286,
+  "ecart_type": 1.254,
+  "distribution": {
+   "1": 1,
+   "3": 3,
+   "4": 2,
+   "5": 1
+  }
+ },
+ "[19] Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Manque de mobilité ou de transport]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.571,
+  "ecart_type": 1.397,
+  "distribution": {
+   "1": 1,
+   "3": 2,
+   "4": 2,
+   "5": 2
+  }
+ },
+ "[20] Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Contraintes horaires ou organisation du travail]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.0,
+  "ecart_type": 1.155,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 3
+  }
+ },
+ "[21] Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Image négative des métiers industriels]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.571,
+  "ecart_type": 1.272,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "3": 2,
+   "4": 2
+  }
+ },
+ "[22] Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Prétentions salariales trop élevées]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.286,
+  "ecart_type": 1.38,
+  "distribution": {
+   "1": 3,
+   "2": 1,
+   "3": 1,
+   "4": 2
+  }
+ },
+ "[23] Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Manque de certifications ou habilitations]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.286,
+  "ecart_type": 1.113,
+  "distribution": {
+   "2": 2,
+   "3": 2,
+   "4": 2,
+   "5": 1
+  }
+ },
+ "[24] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Usinage et mécanique industrielle]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.429,
+  "ecart_type": 0.787,
+  "distribution": {
+   "3": 1,
+   "4": 2,
+   "5": 4
+  }
+ },
+ "[25] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Maintenance industrielle]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.857,
+  "ecart_type": 0.378,
+  "distribution": {
+   "4": 1,
+   "5": 6
+  }
+ },
+ "[26] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Programmation de machines CNC ou robots]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.857,
+  "ecart_type": 0.378,
+  "distribution": {
+   "4": 1,
+   "5": 6
+  }
+ },
+ "[27] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Qualité industrielle et métrologie]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.857,
+  "ecart_type": 0.69,
+  "distribution": {
+   "3": 2,
+   "4": 4,
+   "5": 1
+  }
+ },
+ "[28] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Logistique industrielle et supply chain]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.0,
+  "ecart_type": 1.0,
+  "distribution": {
+   "2": 2,
+   "3": 4,
+   "5": 1
+  }
+ },
+ "[29] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Numérique industriel (ERP, GPAO, data)]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.0,
+  "ecart_type": 1.0,
+  "distribution": {
+   "3": 3,
+   "4": 1,
+   "5": 3
+  }
+ },
+ "[30] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [CAO / DAO et lecture de plans techniques]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.286,
+  "ecart_type": 0.756,
+  "distribution": {
+   "3": 1,
+   "4": 3,
+   "5": 3
+  }
+ },
+ "[31] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Compétences liées à la transition énergétique]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.0,
+  "ecart_type": 1.155,
+  "distribution": {
+   "2": 1,
+   "3": 1,
+   "4": 2,
+   "5": 3
+  }
+ },
+ "[32] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Sécurité et prévention des risques industriels]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.286,
+  "ecart_type": 1.113,
+  "distribution": {
+   "2": 2,
+   "3": 2,
+   "4": 2,
+   "5": 1
+  }
+ },
+ "[33] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Conduite de véhicules ou d’engins (CACES, SPL…)]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.429,
+  "ecart_type": 0.787,
+  "distribution": {
+   "1": 1,
+   "2": 2,
+   "3": 4
+  }
+ },
+ "[34] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Compétences commerciales et relation client]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.0,
+  "ecart_type": 0.816,
+  "distribution": {
+   "2": 2,
+   "3": 3,
+   "4": 2
+  }
+ },
+ "[35] Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Management d’équipe]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.143,
+  "ecart_type": 1.345,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 2,
+   "5": 1
+  }
+ },
+ "[36] Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Mobilité et accès aux transports]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.714,
+  "ecart_type": 0.951,
+  "distribution": {
+   "2": 1,
+   "3": 1,
+   "4": 4,
+   "5": 1
+  }
+ },
+ "[37] Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Accès au logement]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.286,
+  "ecart_type": 1.254,
+  "distribution": {
+   "1": 3,
+   "3": 3,
+   "4": 1
+  }
+ },
+ "[38] Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Garde d’enfants]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 1.714,
+  "ecart_type": 1.254,
+  "distribution": {
+   "1": 5,
+   "3": 1,
+   "4": 1
+  }
+ },
+ "[39] Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Accès aux soins et à la santé]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.714,
+  "ecart_type": 1.704,
+  "distribution": {
+   "1": 3,
+   "3": 1,
+   "4": 2,
+   "5": 1
+  }
+ },
+ "[40] Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Niveau de qualification insuffisant]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.286,
+  "ecart_type": 1.113,
+  "distribution": {
+   "2": 1,
+   "4": 2,
+   "5": 4
+  }
+ },
+ "[41] Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Difficultés avec les compétences de base (lecture, écriture, numérique)]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.857,
+  "ecart_type": 1.215,
+  "distribution": {
+   "1": 1,
+   "2": 2,
+   "3": 1,
+   "4": 3
+  }
+ },
+ "[42] Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Image des métiers industriels]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.0,
+  "ecart_type": 1.528,
+  "distribution": {
+   "1": 2,
+   "3": 2,
+   "4": 2,
+   "5": 1
+  }
+ },
+ "[43] Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Difficulté d’intégration en entreprise]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.286,
+  "ecart_type": 1.113,
+  "distribution": {
+   "1": 1,
+   "3": 2,
+   "4": 4
+  }
+ },
+ "[44] Q5.1 — Dans quelle mesure utilisez-vous les dispositifs suivants pour accompagner les publics vers les métiers de l’industrie ? [POEI]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.857,
+  "ecart_type": 1.773,
+  "distribution": {
+   "1": 2,
+   "2": 2,
+   "4": 1,
+   "5": 2
+  }
+ },
+ "[45] Q5.1 — Dans quelle mesure utilisez-vous les dispositifs suivants pour accompagner les publics vers les métiers de l’industrie ? [PMSMP]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.714,
+  "ecart_type": 1.604,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "4": 2,
+   "5": 3
+  }
+ },
+ "[46] Q5.1 — Dans quelle mesure utilisez-vous les dispositifs suivants pour accompagner les publics vers les métiers de l’industrie ? [Formation qualifiante]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.714,
+  "ecart_type": 1.496,
+  "distribution": {
+   "1": 1,
+   "3": 2,
+   "4": 1,
+   "5": 3
+  }
+ },
+ "[47] Q5.1 — Dans quelle mesure utilisez-vous les dispositifs suivants pour accompagner les publics vers les métiers de l’industrie ? [Parcours individualisés]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.571,
+  "ecart_type": 1.902,
+  "distribution": {
+   "1": 2,
+   "3": 1,
+   "5": 4
+  }
+ },
+ "[48] Q5.2 — Selon votre expérience, quel est le niveau d’efficacité des dispositifs suivants pour favoriser l’accès à l’emploi industriel ? [POEI]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.286,
+  "ecart_type": 1.496,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 1,
+   "5": 2
+  }
+ },
+ "[49] Q5.2 — Selon votre expérience, quel est le niveau d’efficacité des dispositifs suivants pour favoriser l’accès à l’emploi industriel ? [PMSMP]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.571,
+  "ecart_type": 1.134,
+  "distribution": {
+   "2": 2,
+   "4": 4,
+   "5": 1
+  }
+ },
+ "[50] Q5.2 — Selon votre expérience, quel est le niveau d’efficacité des dispositifs suivants pour favoriser l’accès à l’emploi industriel ? [Formation qualifiante]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.286,
+  "ecart_type": 0.756,
+  "distribution": {
+   "3": 1,
+   "4": 3,
+   "5": 3
+  }
+ },
+ "[51] Q5.2 — Selon votre expérience, quel est le niveau d’efficacité des dispositifs suivants pour favoriser l’accès à l’emploi industriel ? [Parcours individualisés]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.286,
+  "ecart_type": 1.113,
+  "distribution": {
+   "2": 1,
+   "4": 2,
+   "5": 4
+  }
+ },
+ "[52] Q5.3 — Quelle est généralement la durée des emplois obtenus par les personnes après la mobilisation de ces dispositifs ?": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.143,
+  "ecart_type": 0.9,
+  "distribution": {
+   "3": 2,
+   "4": 2,
+   "5": 3
+  }
+ },
+ "[53] Q6.1 — Dans quelle mesure l’offre de formation locale répond-elle aux besoins des entreprises industrielles du territoire ?": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.286,
+  "ecart_type": 0.488,
+  "distribution": {
+   "2": 5,
+   "3": 2
+  }
+ },
+ "[54] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Maintenance industrielle]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.429,
+  "ecart_type": 0.787,
+  "distribution": {
+   "3": 1,
+   "4": 2,
+   "5": 4
+  }
+ },
+ "[55] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Usinage / mécanique]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.143,
+  "ecart_type": 1.215,
+  "distribution": {
+   "2": 1,
+   "3": 1,
+   "4": 1,
+   "5": 4
+  }
+ },
+ "[56] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Logistique industrielle]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.429,
+  "ecart_type": 1.134,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "3": 3,
+   "4": 1
+  }
+ },
+ "[57] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Robotique / cobotique]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.571,
+  "ecart_type": 0.787,
+  "distribution": {
+   "3": 1,
+   "4": 1,
+   "5": 5
+  }
+ },
+ "[58] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Industrie 4.0 / intelligence artificielle]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.143,
+  "ecart_type": 1.574,
+  "distribution": {
+   "1": 1,
+   "3": 1,
+   "5": 5
+  }
+ },
+ "[59] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Management industriel]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.429,
+  "ecart_type": 1.718,
+  "distribution": {
+   "1": 2,
+   "4": 3,
+   "5": 2
+  }
+ },
+ "[60] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Savoir-être]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.857,
+  "ecart_type": 1.464,
+  "distribution": {
+   "1": 2,
+   "3": 3,
+   "4": 1,
+   "5": 1
+  }
+ },
+ "[61] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Sécurité industrielle]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.857,
+  "ecart_type": 1.215,
+  "distribution": {
+   "1": 1,
+   "2": 2,
+   "3": 1,
+   "4": 3
+  }
+ },
+ "[62] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Métiers du transport routier]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.714,
+  "ecart_type": 1.38,
+  "distribution": {
+   "1": 1,
+   "2": 3,
+   "3": 1,
+   "4": 1,
+   "5": 1
+  }
+ },
+ "[63] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Exploitation transport]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.0,
+  "ecart_type": 1.414,
+  "distribution": {
+   "2": 2,
+   "4": 1,
+   "5": 4
+  }
+ },
+ "[64] Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Affrètement et logistique transport]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.714,
+  "ecart_type": 1.38,
+  "distribution": {
+   "1": 1,
+   "2": 3,
+   "3": 1,
+   "4": 1,
+   "5": 1
+  }
+ },
+ "[65] Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Qualité des relations avec les entreprises]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.714,
+  "ecart_type": 1.496,
+  "distribution": {
+   "1": 1,
+   "3": 2,
+   "4": 1,
+   "5": 3
+  }
+ },
+ "[66] Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Anticipation des besoins de recrutement]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.143,
+  "ecart_type": 1.574,
+  "distribution": {
+   "1": 1,
+   "2": 2,
+   "3": 1,
+   "4": 1,
+   "5": 2
+  }
+ },
+ "[67] Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Construction de parcours sur mesure]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.429,
+  "ecart_type": 1.813,
+  "distribution": {
+   "1": 3,
+   "2": 2,
+   "5": 2
+  }
+ },
+ "[68] Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Partage d’informations sur les compétences attendues]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.714,
+  "ecart_type": 1.38,
+  "distribution": {
+   "1": 1,
+   "3": 1,
+   "4": 3,
+   "5": 2
+  }
+ },
+ "[69] Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Suivi des candidats après leur intégration]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.0,
+  "ecart_type": 1.155,
+  "distribution": {
+   "2": 1,
+   "3": 1,
+   "4": 2,
+   "5": 3
+  }
+ },
+ "[70] Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Plateforme de recrutement mutualisée]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.143,
+  "ecart_type": 1.464,
+  "distribution": {
+   "1": 3,
+   "2": 2,
+   "3": 1,
+   "5": 1
+  }
+ },
+ "[71] Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Parcours de pré-qualification industrielle]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.286,
+  "ecart_type": 0.756,
+  "distribution": {
+   "3": 1,
+   "4": 3,
+   "5": 3
+  }
+ },
+ "[72] Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Formations courtes pour les métiers en tension]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.429,
+  "ecart_type": 0.787,
+  "distribution": {
+   "3": 1,
+   "4": 2,
+   "5": 4
+  }
+ },
+ "[73] Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Solutions territoriales de mobilité]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.429,
+  "ecart_type": 0.787,
+  "distribution": {
+   "3": 1,
+   "4": 2,
+   "5": 4
+  }
+ },
+ "[74] Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Campagnes de communication sur les métiers industriels]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.0,
+  "ecart_type": 0.577,
+  "distribution": {
+   "3": 1,
+   "4": 5,
+   "5": 1
+  }
+ },
+ "[75] Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Mutualisation d’actions entre entreprises]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.143,
+  "ecart_type": 1.464,
+  "distribution": {
+   "1": 1,
+   "4": 2,
+   "5": 4
+  }
+ },
+ "[76] Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Plateforme de recrutement mutualisée pour le bassin d'Issoudun]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 2.714,
+  "ecart_type": 1.799,
+  "distribution": {
+   "1": 3,
+   "3": 2,
+   "5": 2
+  }
+ },
+ "[77] Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Actions de promotion des métiers industriels auprès des lycéens et collégiens]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.286,
+  "ecart_type": 1.38,
+  "distribution": {
+   "1": 1,
+   "3": 4,
+   "5": 2
+  }
+ },
+ "[78] Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Visites d'entreprises et journées portes ouvertes coordonnées]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.857,
+  "ecart_type": 1.676,
+  "distribution": {
+   "1": 1,
+   "2": 1,
+   "4": 1,
+   "5": 4
+  }
+ },
+ "[79] Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Campagne de communication commune sur les atouts du territoire]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.714,
+  "ecart_type": 0.488,
+  "distribution": {
+   "4": 2,
+   "5": 5
+  }
+ },
+ "[80] Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Groupement d'employeurs pour partager des salariés à temps partagé]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.143,
+  "ecart_type": 1.773,
+  "distribution": {
+   "1": 2,
+   "2": 1,
+   "4": 2,
+   "5": 2
+  }
+ },
+ "[81] Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Ateliers inter-entreprises sur les bonnes pratiques RH]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.286,
+  "ecart_type": 0.756,
+  "distribution": {
+   "3": 1,
+   "4": 3,
+   "5": 3
+  }
+ },
+ "[82] Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Aucune participation envisagée à ce stade]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 1.429,
+  "ecart_type": 1.134,
+  "distribution": {
+   "1": 6,
+   "4": 1
+  }
+ },
+ "[83] Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier métiers sensibles]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.286,
+  "ecart_type": 0.756,
+  "distribution": {
+   "3": 1,
+   "4": 3,
+   "5": 3
+  }
+ },
+ "[84] Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier attractivité et recrutement]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.286,
+  "ecart_type": 1.113,
+  "distribution": {
+   "2": 1,
+   "4": 2,
+   "5": 4
+  }
+ },
+ "[85] Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier ingénierie pédagogique]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.429,
+  "ecart_type": 1.813,
+  "distribution": {
+   "1": 2,
+   "3": 1,
+   "4": 1,
+   "5": 3
+  }
+ },
+ "[86] Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier transmission des savoir-faire]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 4.0,
+  "ecart_type": 1.528,
+  "distribution": {
+   "1": 1,
+   "3": 1,
+   "4": 1,
+   "5": 4
+  }
+ },
+ "[87] Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier industrie 4.0]": {
+  "type": "echelle",
+  "n": 7,
+  "moyenne": 3.429,
+  "ecart_type": 1.813,
+  "distribution": {
+   "1": 2,
+   "3": 1,
+   "4": 1,
+   "5": 3
+  }
+ }
+}

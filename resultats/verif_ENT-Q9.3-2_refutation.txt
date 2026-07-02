@@ -1,0 +1,9 @@
+Contre-expertise ENT Q9.3 - theme 'Attractivite / image / com'
+Fichier lu : data/01_entreprises.xlsx (21x124)
+Colonne 122 = Q9.3 (texte libre). Reponses non vides : n=21/21
+Dashboard : 8/21 = 38%
+Comptage mots-cles auditeur (attractivite, image, visibilite,
+communication, video, atout) : 9/21 = 43%
+Variantes de grille (exclusion cas frontieres) : A=9 B=7 C=7 sur 21
+Conclusion : l'ecart d'1 repondant tient a la frontiere de codage
+qualitatif, pas a une erreur de colonne, de base ou d'arrondi.

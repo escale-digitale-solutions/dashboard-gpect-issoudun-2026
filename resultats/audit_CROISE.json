@@ -1,0 +1,547 @@
+{
+ "section": "Page analyse croisée (PAGES_EXTRA.croise)",
+ "sources": [
+  "data/01_entreprises.xlsx",
+  "data/02_organismes_formation.xlsx",
+  "data/03_acteurs_emploi.xlsx",
+  "data/04_syndicats.xlsx"
+ ],
+ "conventions": "moyennes 1 décimale half-up ; % entiers half-up ; n = réponses non vides",
+ "nb_controles": 76,
+ "nb_ok": 72,
+ "nb_ecarts": 3,
+ "controles": [
+  {
+   "q": "HEAD",
+   "label": "42 répondants (21+7+7+7)",
+   "dashboard": "42",
+   "calcule": "42",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV1/ENT-Q3.2",
+   "label": "Entreprises : 95% en tension (Oui maj.+ponct.)",
+   "dashboard": "95",
+   "calcule": "95 (20/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV1/ACT-Q3.1",
+   "label": "Acteurs : difficulté maintenance /5",
+   "dashboard": "4,9",
+   "calcule": "4.9 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV1/ACT-Q3.1",
+   "label": "Acteurs : difficulté programmation CNC/robots /5",
+   "dashboard": "4,9",
+   "calcule": "4.9 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV1/SYN-C10",
+   "label": "Syndicats : usinage cité (métiers en tension, texte libre)",
+   "dashboard": "43",
+   "calcule": "43 (3/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV1/SYN-C10",
+   "label": "Syndicats : qualité/méthodes cité (texte libre)",
+   "dashboard": "43",
+   "calcule": "43 (3/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV2/ACT-Q6.1",
+   "label": "Acteurs : offre formation locale /5",
+   "dashboard": "2,3",
+   "calcule": "2.3 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV2/ENT-Q7.6",
+   "label": "Entreprises : offre formation adaptée /5",
+   "dashboard": "3,1",
+   "calcule": "3.1 (n=21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV2/SYN-C14",
+   "label": "Syndicats : 71% « peu/partiellement adaptée »",
+   "dashboard": "71",
+   "calcule": "71 (5/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV3/ENT-Q8.1",
+   "label": "Entreprises : image citée comme frein territorial",
+   "dashboard": "95",
+   "calcule": "95 (20/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV3/ENT-Q8.1",
+   "label": "Image = frein n°1 des entreprises",
+   "dashboard": "frein n°1",
+   "calcule": "n°1 = Image globale du territoire",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV3/ENT-Q8.2",
+   "label": "Entreprises : image auprès des candidats /5",
+   "dashboard": "2,3",
+   "calcule": "2.3 (n=21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV3/ACT-Q8.2",
+   "label": "Acteurs : disposition campagne commune /5",
+   "dashboard": "4,7",
+   "calcule": "4.7 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV3/SYN-C23",
+   "label": "Syndicats : « attractivité » 1er thème ouvert (thèmes d'engagement, texte libre)",
+   "dashboard": "43% · 1er thème",
+   "calcule": "43% (3/7) · comptages thèmes = {'attractivité': 3, 'formation': 1, 'transmission': 1, 'mobilité/transport': 0, 'recrutement': 0}",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV4/OF-Q9.1",
+   "label": "OF : priorité connaissance du marché /5",
+   "dashboard": "4,0",
+   "calcule": "4.0 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV4/OF-Q9.1",
+   "label": "Connaissance du marché = priorité n°1 des OF",
+   "dashboard": "n°1",
+   "calcule": "max des 8 thématiques = 4.0 (col 81 = 4.0)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV4/OF-Q7.2",
+   "label": "OF : levier observatoire local",
+   "dashboard": "71% · levier n°1",
+   "calcule": "71% (5/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV4/ENT-Q9.1",
+   "label": "Entreprises : priorité connaissance du marché /5",
+   "dashboard": "3,3",
+   "calcule": "3.3 (n=21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV4/ENT-Q9.1",
+   "label": "Connaissance du marché = 2e priorité des entreprises",
+   "dashboard": "2e",
+   "calcule": "rang 2 sur 8",
+   "verdict": "OK"
+  },
+  {
+   "q": "CV4/SYN-C11",
+   "label": "Syndicats : besoins « partiellement formalisés » 71% (= agrégat Partiellement identifiés 57% + Peu formalisés 14%)",
+   "dashboard": "71",
+   "calcule": "71 (5/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E1/OF-Q4.1",
+   "label": "gapBars OF auto-évaluation /5",
+   "dashboard": "4,0",
+   "calcule": "4.0 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E1/ENT-Q7.6",
+   "label": "gapBars Entreprises /5",
+   "dashboard": "3,1",
+   "calcule": "3.1 (n=21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E1/ACT-Q6.1",
+   "label": "gapBars Acteurs de l'emploi /5",
+   "dashboard": "2,3",
+   "calcule": "2.3 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E1",
+   "label": "Écart affiché 1,7 pt entre OF et acteurs",
+   "dashboard": "1,7",
+   "calcule": "1.7",
+   "verdict": "OK"
+  },
+  {
+   "q": "E1/OF-Q3.1",
+   "label": "OF : connaissance des besoins des entreprises /5",
+   "dashboard": "3,0",
+   "calcule": "3.0 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E2/ENT-Q3.3",
+   "label": "Entreprises : pénurie de candidats /5",
+   "dashboard": "4,5",
+   "calcule": "4.5 (n=20)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E2/ENT-Q3.3",
+   "label": "Pénurie = cause n°1 des tensions",
+   "dashboard": "cause n°1",
+   "calcule": "max des 10 causes = 4.5 (col 26 = 4.5)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E2/ENT-Q5.3",
+   "label": "Entreprises : manque de candidats au recrutement /5",
+   "dashboard": "4,3",
+   "calcule": "4.3 (n=21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E2/ENT",
+   "label": "Inadéquation des compétences « reléguée à 2,8-3,1 »",
+   "dashboard": "2,8-3,1",
+   "calcule": "Q5.3=2.8 · Q3.3=3.1",
+   "verdict": "OK"
+  },
+  {
+   "q": "E2/ACT-Q2.2",
+   "label": "Acteurs : manque de compétences techniques /5",
+   "dashboard": "4,3",
+   "calcule": "4.3 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E2/ACT-Q2.2",
+   "label": "Compétences techniques = facteur n°1 d'inadéquation (cohérence narrative)",
+   "dashboard": "implicite n°1",
+   "calcule": "max des 7 facteurs = 4.3 (col 17 = 4.3)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E2/ACT-Q4.1",
+   "label": "Acteurs : niveau de qualification insuffisant /5",
+   "dashboard": "4,3",
+   "calcule": "4.3 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E2/SYN-C13",
+   "label": "Syndicats : savoirs de base (lire/écrire/compter) cités — thème publié page Syndicats",
+   "dashboard": "57",
+   "calcule": "57 (4/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E3/SYN-C17",
+   "label": "Syndicats : mobilité rurale frein structurant",
+   "dashboard": "86",
+   "calcule": "86 (6/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E3/SYN-C18",
+   "label": "gapBars Syndicats 4,3/5 (« équivalent » du 86%) vs échelle 1-5 réellement posée (question mobilité, affichée 3,3/5 sur la page Syndicats)",
+   "dashboard": "4,3",
+   "calcule": "3.3 (n=7) sur l'échelle réelle",
+   "verdict": "ECART"
+  },
+  {
+   "q": "E3/ACT-Q4.1",
+   "label": "gapBars Acteurs /5",
+   "dashboard": "3,7",
+   "calcule": "3.7 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E3/ENT-Q3.3",
+   "label": "gapBars Entreprises (contrainte transport) /5",
+   "dashboard": "2,5",
+   "calcule": "2.5 (n=20)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E3",
+   "label": "Cohérence narrative « verrou n°1 pour les syndicats, au-dessus des acteurs » : sur les échelles 1-5 réelles, syndicats vs acteurs",
+   "dashboard": "SYN 4,3 > ACT 3,7",
+   "calcule": "SYN 3.3 < ACT 3.7 (l'ordre s'inverse avec l'échelle réelle)",
+   "verdict": "ECART"
+  },
+  {
+   "q": "E4/SYN-C24",
+   "label": "Syndicats : transmission-reprise (très) prioritaire",
+   "dashboard": "71",
+   "calcule": "71 (5/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E4/ENT-Q4.1",
+   "label": "47% de seniors (45 ans et +) — cohérent avec la pyramide de la page Entreprises (base nettoyée, lignes incohérentes exclues) ; 46% sur base brute",
+   "dashboard": "47",
+   "calcule": "base nettoyée : 47% (3031 têtes, 4 ligne(s) exclue(s)) · base brute : 46% (3155 têtes)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E4/ENT-Q4.3",
+   "label": "136 départs retraite à 5 ans (cumul)",
+   "dashboard": "136",
+   "calcule": "136 (n=21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E4/ENT-Q4.4",
+   "label": "Départs « concentrés à 60% sur la production » (base = entreprises répondantes citant la production, pas % des départs)",
+   "dashboard": "60",
+   "calcule": "60 (12/20)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E4/ENT-Q2.1",
+   "label": "Transmission = préoccupation pour 5% seulement",
+   "dashboard": "5",
+   "calcule": "5 (1/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E4/ENT-Q9.1",
+   "label": "Priorité GPECT transmission/seniors /5",
+   "dashboard": "2,5",
+   "calcule": "2.5 (n=21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E4/ENT-Q9.1",
+   "label": "« priorité GPECT la plus basse » (2,5)",
+   "dashboard": "la plus basse",
+   "calcule": "minimum = 2.5, atteint par 2 thématique(s) (cols [116, 118])",
+   "verdict": "ECART"
+  },
+  {
+   "q": "E4/ENT-Q4.8",
+   "label": "AFEST /5",
+   "dashboard": "1,0",
+   "calcule": "1.0 (n=21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E4/ENT-Q4.8b",
+   "label": "67% jugent leurs dispositifs « suffisants »",
+   "dashboard": "67",
+   "calcule": "67 (14/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E4/ENT-Q4.5",
+   "label": "Turnover faible : 81%",
+   "dashboard": "81",
+   "calcule": "81 (17/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E5/ENT-Q8.3",
+   "label": "Campagne commune : 76%",
+   "dashboard": "76",
+   "calcule": "76 (16/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E5/ENT-Q8.3",
+   "label": "Ateliers RH inter-entreprises : 62%",
+   "dashboard": "62",
+   "calcule": "62 (13/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E5/ENT-Q8.3",
+   "label": "Visites coordonnées : 57%",
+   "dashboard": "57",
+   "calcule": "57 (12/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E5/ENT-Q9.2",
+   "label": "33% ne souhaitent pas participer aux ateliers",
+   "dashboard": "33",
+   "calcule": "33 (7/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E5/SYN-C20",
+   "label": "Syndicats : engagement des entreprises « faible » 57%",
+   "dashboard": "57",
+   "calcule": "57 (4/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E5/OF-Q7.1",
+   "label": "OF : difficulté à mobiliser les entreprises 71%",
+   "dashboard": "71",
+   "calcule": "71 (5/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "E5/OF-Q7.1",
+   "label": "Difficulté à mobiliser = frein n°1 des OF",
+   "dashboard": "frein n°1",
+   "calcule": "comptages = {'mobiliser entreprises': 5, 'financements': 4, 'attractivité métiers': 4, 'plateaux techniques': 3}",
+   "verdict": "OK"
+  },
+  {
+   "q": "E5/SYN-C22",
+   "label": "« ateliers de 2h, thématiques, à résultat concret » (formats cités par les syndicats)",
+   "dashboard": "présent (qualitatif)",
+   "calcule": "mention « 2h » : 1/7 · ateliers courts/thématiques : 4/7",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/OF-Q10.2",
+   "label": "Matrice : OF mobilité 57%",
+   "dashboard": "57",
+   "calcule": "57 (4/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/OF-Q10.2",
+   "label": "Matrice : OF image 71%",
+   "dashboard": "71",
+   "calcule": "71 (5/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/OF-Q2.2",
+   "label": "Matrice : OF capacité transmission savoir-faire /5",
+   "dashboard": "3,3",
+   "calcule": "3.3 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/ACT-Q8.3",
+   "label": "Matrice : acteurs intérêt atelier transmission /5",
+   "dashboard": "4,0",
+   "calcule": "4.0 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/ENT-Q6.5",
+   "label": "Matrice : IA à développer 38% (entreprises)",
+   "dashboard": "38",
+   "calcule": "38 (8/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/OF-Q2.2",
+   "label": "Matrice + R3 : OF capacité IA /5",
+   "dashboard": "2,3",
+   "calcule": "2.3 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/OF-Q2.2",
+   "label": "Matrice + R3 : OF capacité cybersécurité /5",
+   "dashboard": "1,1",
+   "calcule": "1.1 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/ACT-Q6.2",
+   "label": "Matrice : acteurs manque formation Industrie 4.0/IA /5",
+   "dashboard": "4,1",
+   "calcule": "4.1 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/SYN-C12",
+   "label": "Matrice : syndicats IA/digitalisation 14% (compétences techniques, texte libre)",
+   "dashboard": "14",
+   "calcule": "14 (1/7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "MAT/OF-Q2.1",
+   "label": "Matrice : « Reconnue (offre solide) » (qualitatif) — niveaux d'offre usinage/maintenance",
+   "dashboard": "qualitatif",
+   "calcule": "usinage 3.7/5 · maintenance 3.9/5",
+   "verdict": "OK"
+  },
+  {
+   "q": "R2/ENT-Q2.4",
+   "label": "71% des entreprises investissent",
+   "dashboard": "71",
+   "calcule": "71 (15/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "R2/ENT-Q2.5",
+   "label": "56% jugent leurs compétences « suffisantes » (base n=16 répondants Q2.5)",
+   "dashboard": "56",
+   "calcule": "56 (9/16)",
+   "verdict": "OK"
+  },
+  {
+   "q": "R4/ENT-Q2.1",
+   "label": "Compétitivité 1ère préoccupation à 67%",
+   "dashboard": "67",
+   "calcule": "67 (14/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "R4/ENT-Q2.1",
+   "label": "Compétitivité = préoccupation n°1",
+   "dashboard": "n°1",
+   "calcule": "comptages = {'compétitivité': 14, 'Recruter': 13, 'Fidéliser': 10}",
+   "verdict": "OK"
+  },
+  {
+   "q": "R4/ENT-Q8.1",
+   "label": "Désertification médicale 67% (offre de soins insuffisante)",
+   "dashboard": "67",
+   "calcule": "67 (14/21)",
+   "verdict": "OK"
+  },
+  {
+   "q": "S1/ENT-Q4.8",
+   "label": "AFEST écart-type nul",
+   "dashboard": "0",
+   "calcule": "0.0",
+   "verdict": "OK"
+  },
+  {
+   "q": "S1/OF-Q5.2",
+   "label": "Maîtrise AFEST des OF /5",
+   "dashboard": "2,6",
+   "calcule": "2.6 (n=7)",
+   "verdict": "OK"
+  },
+  {
+   "q": "S2/SYN",
+   "label": "Puissance électrique insuffisante / ligne HT (verbatim syndicat) — présence",
+   "dashboard": "présent (verbatim)",
+   "calcule": "mentions électricité/puissance/HT dans réponses ouvertes SYN : 1",
+   "verdict": "OK"
+  },
+  {
+   "q": "S4/SYN",
+   "label": "Restauration collective absente (verbatim) — présence",
+   "dashboard": "présent (verbatim)",
+   "calcule": "mentions cantine/restauration dans réponses ouvertes SYN : 2",
+   "verdict": "OK"
+  },
+  {
+   "q": "S4/SYN+ENT",
+   "label": "« grands employeurs (2 000+ salariés) » : aucun répondant n'atteint 2 000 (max ~1 550) ; lecture possible = cumul des grands sites",
+   "dashboard": "2 000+",
+   "calcule": "mention « 2 000 » dans verbatims SYN : 1 · cumul effectifs des entreprises 250+ répondantes ≥ 2 000 : oui",
+   "verdict": "NUANCE"
+  }
+ ]
+}

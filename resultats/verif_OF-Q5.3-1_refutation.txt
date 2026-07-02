@@ -1,0 +1,22 @@
+Contre-expertise OF Q5.3 — Freins AFEST (choix multiple)
+Source : data/02_organismes_formation.xlsx (7 lignes x 98 colonnes), colonne [62]
+Script : scripts/verif_OF-Q5.3-1_refutation.py — exécuté le 02/07/2026
+
+Cellules non vides : 7/7
+Répondants ayant coché >= 1 option officielle : 5
+Répondants non vides sans option officielle : 2
+  - 1 cellule = "na" (2 caractères)
+  - 1 cellule = texte libre uniquement (option "Autre" de Google Forms, aucun frein listé)
+Colonne [63] "Autres freins, précisez" : 1 réponse non vide
+
+Option (libellé dashboard)                            brut   % base n=7   dashboard   % base n=5
+Résistance / méconnaissance des entreprises             3        43%         43%         60%
+Complexité du référentiel & traçabilité                 2        29%         29%         40%
+Absence de modèle économique viable                     2        29%         29%         40%
+Difficulté à identifier les situations apprenantes      1        14%         14%         20%
+Méconnaissance par les OPCO locaux                      1        14%         14%         20%
+
+Conclusion : les % du dashboard sont arithmétiquement exacts sur la base déclarée
+n=7 (= cellules non vides, conforme à la convention du projet). Le constat de
+l'auditeur (2 répondants sur 7 sans frein listé) est également exact. Question de
+convention à documenter dans la note méthodologique.

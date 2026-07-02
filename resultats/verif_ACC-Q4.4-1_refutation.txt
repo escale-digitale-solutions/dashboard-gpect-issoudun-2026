@@ -1,0 +1,20 @@
+CONTRE-EXPERTISE ACC-Q4.4-1 — « 136 départs (concentrés à 60% sur la production) »
+Fichier : 01_entreprises.xlsx — 21 lignes x 124 colonnes
+
+1) Q4.3 (départs retraite à 5 ans) : somme = 136 (n=21/21)
+   -> le « 136 » du dashboard est EXACT.
+
+2) Q4.4 base ENTREPRISES : 12/20 répondants citent « Production / Fabrication »
+   = 60 % (n=20 répondants à Q4.4 ; 1 non-réponse sur 21)
+   Mentions « production » hors option exacte : 0
+
+3) Q4.4 base DÉPARTS (pondération Q4.3) : les entreprises citant la production
+   portent 124/136 départs déclarés = 91 %.
+   NB : ces entreprises citent en moyenne 2.9 service(s) dans Q4.4
+   (min 1, max 7) ; la répartition des départs PAR service
+   n'est pas collectée -> « X % des départs EN production » est incalculable.
+
+CONCLUSION : le 60 % existe (base entreprises, 12/20) mais la formulation du
+dashboard le présente comme une part des 136 départs, ce que les données ne
+mesurent pas. Part des départs portée par les entreprises citant la production :
+91 % (borne haute, multi-services).

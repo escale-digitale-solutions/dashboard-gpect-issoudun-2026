@@ -1,0 +1,20 @@
+Dimensions lues : SYN (7, 30), ACT (7, 88), ENT (21, 124)
+
+[SYN col18] Sur une échelle de 1 à 5, à quel point la mobilité vous semble-t-elle un frein majeur à l’accès à l’emploi local ?
+  n=7, valeurs min=2 max=5, moyenne brute=3.285714, moyenne affichable=3.3/5
+  distribution (note: effectif) = {2: 1, 3: 4, 4: 1, 5: 1}
+
+[SYN col17] Parmi les freins suivants, lesquels vous semblent les plus structurants pour l’accès à l’emploi sur le territoire ?
+  n répondants à la question = 7
+  cellules contenant 'mobilit' = 6 -> 86%
+  cellules contenant 'rural'   = 6 -> 86%
+  conversion dashboard : 86% x 5 = 4.3/5 (procédé du gapBars)
+
+[ACT col36] Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Mobilité et accès aux transports]
+  n=7, moyenne brute=3.714286, affichable=3.7/5
+
+[ENT col31] Q3.3 — Évaluez les causes principales de ces tensions (1 = Faible impact, 5 = Fort impact) [Contraintes liées au Transport]
+  n=20, moyenne brute=2.500000, affichable=2.5/5
+
+Comparaison sur échelles 1-5 réellement posées :
+  SYN 3.3 (n=7) | ACT 3.7 (n=7) | ENT 2.5 (n=20)

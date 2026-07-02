@@ -1,0 +1,6 @@
+Contre-expertise ACC-ANON-1 — Q1.4 Effectif inscrit (CDI+CDD), college Entreprises
+n = 21
+effectif_max = 1550
+effectif_cumule = 3189
+effectif_cumule_sans_max = 1639
+part_max_pct = 49 %

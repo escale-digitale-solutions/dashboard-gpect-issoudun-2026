@@ -1,0 +1,26 @@
+Fichier : 01_entreprises.xlsx — 21 lignes x 124 colonnes
+n collège (H2) = 21
+Colonnes Q3.3 détectées : 10
+
+Item (dashboard)                                     n_item moy(n_item)  dash  égal? moy(n=20) moy(n=21)            valeurs
+---------------------------------------------------------------------------------------------------------------------------
+Pénurie de candidats sur le marché local                 20         4.5   4.5    OUI       4.5       4.2    [3.0, 4.0, 5.0]
+Concurrence salariale autres entreprises/secteurs        20         3.7   3.7    OUI       3.7       3.5 [1.0, 2.0, 3.0, 4.0, 5.0]
+Inadéquation des compétences / diplômes                  20         3.1   3.1    OUI       3.1       3.0 [1.0, 2.0, 3.0, 4.0, 5.0]
+Déficit d'image du métier / secteur                      20         3.2   3.1    NON       3.2       3.0 [1.0, 2.0, 3.0, 4.0, 5.0]
+Localisation de l'entreprise                             20         2.8   2.8    OUI       2.8       2.6 [1.0, 2.0, 3.0, 4.0, 5.0]
+Transport                                                20         2.5   2.5    OUI       2.5       2.4 [1.0, 2.0, 3.0, 4.0]
+Délais de formation initiale trop longs                  20         2.4   2.4    OUI       2.4       2.2 [1.0, 2.0, 3.0, 4.0, 5.0]
+Logement                                                 19         1.7   1.7    OUI       1.7       1.6 [1.0, 2.0, 3.0, 4.0]
+Emploi du conjoint                                       20         1.6   1.6    OUI       1.6       1.5 [1.0, 2.0, 3.0, 4.0]
+Garde d'enfant                                           19         1.5   1.5    OUI       1.5       1.4 [1.0, 2.0, 3.0, 4.0]
+
+n par item : {'Pénurie de candidats sur le marché local': 20, 'Concurrence salariale autres entreprises/secteurs': 20, 'Inadéquation des compétences / diplômes': 20, "Déficit d'image du métier / secteur": 20, "Localisation de l'entreprise": 20, 'Transport': 20, 'Délais de formation initiale trop longs': 20, 'Logement': 19, 'Emploi du conjoint': 20, "Garde d'enfant": 19}
+Valeurs distinctes de n sur les 10 items : [19, 20]
+Items à n=20 : 8
+Items à n != 20 : {'Logement': 19, "Garde d'enfant": 19}
+
+Complétude par répondant (nb d'items Q3.3 notés -> nb de répondants) :
+  0 items notés : 1 répondant(s)
+  9 items notés : 2 répondant(s)
+  10 items notés : 18 répondant(s)

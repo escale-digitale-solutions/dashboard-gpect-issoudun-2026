@@ -1,0 +1,218 @@
+{
+  "zone": "Page accueil (pageAccueil)",
+  "source": "exports xlsx du 30/06/2026 (data/01 à 04)",
+  "nb_controles": 30,
+  "nb_ok": 29,
+  "controles": [
+    {
+      "q": "HERO",
+      "label": "42 répondants (chip hero)",
+      "dashboard": "42",
+      "calcule": "42",
+      "verdict": "OK"
+    },
+    {
+      "q": "HERO",
+      "label": "Entreprises : 21 répondants (carte + pied de page)",
+      "dashboard": "21",
+      "calcule": "21",
+      "verdict": "OK"
+    },
+    {
+      "q": "HERO",
+      "label": "Organismes de formation : 7 répondants",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "HERO",
+      "label": "Acteurs de l'emploi : 7 répondants",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "HERO",
+      "label": "Syndicats & org. pro. : 7 répondants",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "HERO",
+      "label": "Collecte 2026 (chip hero)",
+      "dashboard": "2026",
+      "calcule": "2026",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q3.2",
+      "label": "95% des entreprises en tension de recrutement (majeures ou ponctuelles)",
+      "dashboard": "95%",
+      "calcule": "95% (20/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.2",
+      "label": "Image du bassin auprès des candidats : 2,3/5",
+      "dashboard": "2,3/5",
+      "calcule": "2.3/5 (n=21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q4.1",
+      "label": "47% de seniors (45 ans et +) dans la pyramide des âges",
+      "dashboard": "47%",
+      "calcule": "46% (46.29% ; effectif pyramide=3155)",
+      "verdict": "ECART"
+    },
+    {
+      "q": "ENT-Q4.8-AFEST",
+      "label": "Recours à l'AFEST : 1,0/5",
+      "dashboard": "1,0/5",
+      "calcule": "1.0/5 (n=21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q3.1-maint",
+      "label": "Difficulté maintenance industrielle (acteurs emploi) : 4,9/5",
+      "dashboard": "4,9/5",
+      "calcule": "4.9/5 (n=7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q3.1-CNC",
+      "label": "Difficulté programmation machines CNC/robots (acteurs emploi) : 4,9/5",
+      "dashboard": "4,9/5",
+      "calcule": "4.9/5 (n=7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q4.1",
+      "label": "OF : « notre offre couvre les besoins » 4,0/5",
+      "dashboard": "4,0/5",
+      "calcule": "4.0/5 (n=7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q6.1",
+      "label": "Acteurs emploi : offre de formation locale adaptée 2,3/5",
+      "dashboard": "2,3/5",
+      "calcule": "2.3/5 (n=7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q7.6",
+      "label": "Entreprises : offre de formation adaptée 3,1/5",
+      "dashboard": "3,1/5",
+      "calcule": "3.1/5 (n=21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "SYN-offre",
+      "label": "71% des partenaires sociaux : offre « peu » ou « partiellement » adaptée",
+      "dashboard": "71%",
+      "calcule": "71% (5/7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q4.3",
+      "label": "136 départs en retraite déclarés à 5 ans (cumul)",
+      "dashboard": "136",
+      "calcule": "136 (n=21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q4.4",
+      "label": "Départs « concentrés à 60% sur la production »",
+      "dashboard": "60% (formulé comme part des départs)",
+      "calcule": "60% des entreprises répondantes citent la production (12/20) ; les entreprises citant la production portent 91% des 136 départs",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q4.8b",
+      "label": "67% jugent leurs dispositifs de transmission suffisants",
+      "dashboard": "67%",
+      "calcule": "67% (14/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q4.5",
+      "label": "Turnover faible : 81%",
+      "dashboard": "81%",
+      "calcule": "81% (17/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q8.2",
+      "label": "IA citée comme évolution n°1 par 100% des OF",
+      "dashboard": "100% (n°1)",
+      "calcule": "100% (7/7) ; option la plus citée : oui",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q2.2-IA",
+      "label": "Capacité des OF à former à l'IA : 2,3/5",
+      "dashboard": "2,3/5",
+      "calcule": "2.3/5 (n=7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q2.2-cyber",
+      "label": "Capacité des OF à former à la cybersécurité : 1,1/5",
+      "dashboard": "1,1/5",
+      "calcule": "1.1/5 (n=7)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.3-camp",
+      "label": "76% des entreprises prêtes à une campagne de communication territoriale",
+      "dashboard": "76%",
+      "calcule": "76% (16/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q8.3-atel",
+      "label": "62% prêtes à des ateliers RH inter-entreprises",
+      "dashboard": "62%",
+      "calcule": "62% (13/21)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q8.2-camp",
+      "label": "Acteurs de l'emploi « disposés à 4,7/5 » (item campagne de communication)",
+      "dashboard": "4,7/5",
+      "calcule": "4.7/5 sur l'item campagne (n=7) ; moyenne des 6 actions : 3.7/5",
+      "verdict": "OK"
+    },
+    {
+      "q": "ENT-Q1.4-max",
+      "label": "Plus gros employeur ≈ 1 550 salariés",
+      "dashboard": "~1 550",
+      "calcule": "1550 (part de l'effectif cumulé : 49%)",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q0.1-interim",
+      "label": "Sous-groupe intérim n=3 (acteurs de l'emploi)",
+      "dashboard": "n=3",
+      "calcule": "n=3",
+      "verdict": "OK"
+    },
+    {
+      "q": "ACT-Q0.1-public",
+      "label": "Sous-groupe « public » n=4 (acteurs de l'emploi hors intérim)",
+      "dashboard": "n=4",
+      "calcule": "n=4",
+      "verdict": "OK"
+    },
+    {
+      "q": "OF-Q0.7-horsfin",
+      "label": "Sous-groupe « hors financeur » n=6 (OF)",
+      "dashboard": "n=6",
+      "calcule": "n=6 (1 financeur identifié)",
+      "verdict": "OK"
+    }
+  ]
+}

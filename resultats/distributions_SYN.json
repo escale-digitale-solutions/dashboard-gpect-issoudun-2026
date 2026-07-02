@@ -1,0 +1,440 @@
+{
+  "fichier": "data/04_syndicats.xlsx",
+  "n_repondants": 7,
+  "n_colonnes": 30,
+  "note": "Agrégats anonymes uniquement. Colonnes 0-4 exclues des distributions (horodateur + identifiantes : nom, structure, fonction, type d'acteur à modalités identifiantes). Texte libre : uniquement le nombre de réponses non vides.",
+  "colonnes": {
+    "Horodateur": {
+      "index": 0,
+      "n_non_vides": 7,
+      "type": "exclue (horodateur / identifiante)"
+    },
+    "Nom et prénom": {
+      "index": 1,
+      "n_non_vides": 7,
+      "type": "exclue (horodateur / identifiante)"
+    },
+    "Organisation / structure": {
+      "index": 2,
+      "n_non_vides": 7,
+      "type": "exclue (horodateur / identifiante)"
+    },
+    "Fonction": {
+      "index": 3,
+      "n_non_vides": 7,
+      "type": "exclue (horodateur / identifiante)"
+    },
+    "Type d’acteur": {
+      "index": 4,
+      "n_non_vides": 7,
+      "type": "exclue (horodateur / identifiante)"
+    },
+    "Territoire principalement couvert": {
+      "index": 5,
+      "n_non_vides": 7,
+      "type": "fermee",
+      "n": 7,
+      "distribution": {
+        "Département": 5,
+        "Intercommunalité": 1,
+        "Communauté de Communes du Pays d'Issoudun (12 communes)": 1
+      },
+      "pourcentages": {
+        "Département": 71,
+        "Intercommunalité": 14,
+        "Communauté de Communes du Pays d'Issoudun (12 communes)": 14
+      }
+    },
+    "Comment évaluez-vous la dynamique économique globale du bassin d’emploi de l’Indre ?": {
+      "index": 6,
+      "n_non_vides": 7,
+      "type": "echelle_1_5",
+      "n": 7,
+      "moyenne": 2.857,
+      "moyenne_affichee": 2.9,
+      "ecart_type": 0.378,
+      "mediane": 3.0,
+      "min": 2,
+      "max": 3,
+      "distribution": {
+        "2": 1,
+        "3": 6
+      }
+    },
+    "Comment évaluez-vous la coordination entre les différents acteurs économiques (industrie, ": {
+      "index": 7,
+      "n_non_vides": 7,
+      "type": "echelle_1_5",
+      "n": 7,
+      "moyenne": 2.857,
+      "moyenne_affichee": 2.9,
+      "ecart_type": 0.69,
+      "mediane": 3.0,
+      "min": 2,
+      "max": 4,
+      "distribution": {
+        "2": 2,
+        "3": 4,
+        "4": 1
+      }
+    },
+    "Selon vous, quels sont les principaux atouts du territoire pour l’industrie et les TPE/PME": {
+      "index": 8,
+      "n_non_vides": 7,
+      "type": "texte_libre",
+      "themes_recomptes_mots_cles": {
+        "Foncier disponible / prix": {
+          "n_repondants": 4,
+          "pct": 57
+        },
+        "Axes routiers / logistique": {
+          "n_repondants": 3,
+          "pct": 43
+        },
+        "Tissu industriel implanté": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Proximité pouvoirs publics": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Data center / numérique": {
+          "n_repondants": 1,
+          "pct": 14
+        }
+      }
+    },
+    "Selon vous, quels sont les principaux freins ou fragilités pour le développement des entre": {
+      "index": 9,
+      "n_non_vides": 7,
+      "type": "texte_libre",
+      "themes_recomptes_mots_cles": {
+        "Qualification / main d'œuvre absente": {
+          "n_repondants": 4,
+          "pct": 57
+        },
+        "Transport / accessibilité": {
+          "n_repondants": 3,
+          "pct": 43
+        },
+        "Logement": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Désertification médicale": {
+          "n_repondants": 1,
+          "pct": 14
+        },
+        "Orientation / image des métiers": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Énergie (puissance électrique)": {
+          "n_repondants": 1,
+          "pct": 14
+        }
+      }
+    },
+    "Sur quels types de métiers constatez-vous aujourd’hui les plus fortes tensions de recrutem": {
+      "index": 10,
+      "n_non_vides": 7,
+      "type": "texte_libre",
+      "themes_recomptes_mots_cles": {
+        "Usinage / fraiseur / tourneur / ajusteur": {
+          "n_repondants": 3,
+          "pct": 43
+        },
+        "Qualité / méthodes / contrôle": {
+          "n_repondants": 3,
+          "pct": 43
+        },
+        "Maintenance": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Encadrement / management": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Restauration / services": {
+          "n_repondants": 2,
+          "pct": 29
+        }
+      }
+    },
+    "Les besoins en compétences des entreprises industrielles vous semblent aujourd’hui :": {
+      "index": 11,
+      "n_non_vides": 7,
+      "type": "fermee",
+      "n": 7,
+      "distribution": {
+        "Partiellement identifiés": 4,
+        "Bien identifiés et formalisés": 2,
+        "Peu formalisés": 1
+      },
+      "pourcentages": {
+        "Partiellement identifiés": 57,
+        "Bien identifiés et formalisés": 29,
+        "Peu formalisés": 14
+      }
+    },
+    "Selon vous, quelles compétences techniques doivent être prioritairement renforcées dans l’": {
+      "index": 12,
+      "n_non_vides": 7,
+      "type": "texte_libre"
+    },
+    "Selon vous, quelles compétences transversales / socles doivent être prioritairement renfor": {
+      "index": 13,
+      "n_non_vides": 7,
+      "type": "texte_libre",
+      "themes_recomptes_mots_cles": {
+        "Savoirs de base (lire / écrire / compter)": {
+          "n_repondants": 4,
+          "pct": 57
+        },
+        "Savoir-être": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Motivation / valeur travail": {
+          "n_repondants": 1,
+          "pct": 14
+        },
+        "Anglais": {
+          "n_repondants": 1,
+          "pct": 14
+        },
+        "Mobilité (permis, véhicule)": {
+          "n_repondants": 1,
+          "pct": 14
+        }
+      }
+    },
+    "L’offre de formation actuelle (formation initiale, apprentissage, formation continue) vous": {
+      "index": 14,
+      "n_non_vides": 7,
+      "type": "fermee",
+      "n": 7,
+      "distribution": {
+        "Peu adaptée": 3,
+        "Partiellement adaptée": 2,
+        "Globalement adaptée": 2
+      },
+      "pourcentages": {
+        "Peu adaptée": 43,
+        "Partiellement adaptée": 29,
+        "Globalement adaptée": 29
+      }
+    },
+    "Quels sont, selon vous, les principaux freins rencontrés par les structures de formation ?": {
+      "index": 15,
+      "n_non_vides": 7,
+      "type": "texte_libre",
+      "themes_recomptes_mots_cles": {
+        "Intégration / maintien en formation": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Débouchés / concurrence CFA": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Orientation (Éducation nationale)": {
+          "n_repondants": 1,
+          "pct": 14
+        },
+        "Disparition AFPA → AFPI": {
+          "n_repondants": 1,
+          "pct": 14
+        }
+      }
+    },
+    "Quelles évolutions de l’offre de formation vous semblent prioritaires pour les 3 prochaine": {
+      "index": 16,
+      "n_non_vides": 7,
+      "type": "texte_libre"
+    },
+    "Parmi les freins suivants, lesquels vous semblent les plus structurants pour l’accès à l’e": {
+      "index": 17,
+      "n_non_vides": 7,
+      "type": "choix_multiple",
+      "n": 7,
+      "comptage_options": {
+        "Mobilité rurale": 6,
+        "Logement cher ou en mauvais état": 3,
+        "Compétences de base": 3,
+        "Orientation": 2,
+        "Motivation des personnes": 1,
+        "Freins sociaux": 1
+      },
+      "reponses_libres": {
+        "niveau scolaire (affichee dashboard)": 1,
+        "autres libres non affichees": 1
+      },
+      "pourcentages": {
+        "Mobilité rurale": 86,
+        "Logement cher ou en mauvais état": 43,
+        "Compétences de base": 43,
+        "Orientation": 29,
+        "Motivation des personnes": 14,
+        "Freins sociaux": 14
+      }
+    },
+    "Sur une échelle de 1 à 5, à quel point la mobilité vous semble-t-elle un frein majeur à l’": {
+      "index": 18,
+      "n_non_vides": 7,
+      "type": "echelle_1_5",
+      "n": 7,
+      "moyenne": 3.286,
+      "moyenne_affichee": 3.3,
+      "ecart_type": 0.951,
+      "mediane": 3.0,
+      "min": 2,
+      "max": 5,
+      "distribution": {
+        "2": 1,
+        "3": 4,
+        "4": 1,
+        "5": 1
+      }
+    },
+    "Quelles solutions concrètes vous semblent les plus pertinentes pour lever ces freins ?": {
+      "index": 19,
+      "n_non_vides": 7,
+      "type": "texte_libre",
+      "themes_recomptes_mots_cles": {
+        "Transport adapté / navette gare-zones": {
+          "n_repondants": 3,
+          "pct": 43
+        },
+        "Hébergement / colocation": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Aides financières mobilité": {
+          "n_repondants": 2,
+          "pct": 29
+        }
+      }
+    },
+    "Selon vous, le niveau d’engagement des entreprises dans les démarches collectives (GPECT, ": {
+      "index": 20,
+      "n_non_vides": 7,
+      "type": "fermee",
+      "n": 7,
+      "distribution": {
+        "Faible": 4,
+        "Plutôt satisfaisant": 2,
+        "Moyen": 1
+      },
+      "pourcentages": {
+        "Faible": 57,
+        "Plutôt satisfaisant": 29,
+        "Moyen": 14
+      }
+    },
+    "Quels sont, selon vous, les principaux freins à la mobilisation des entreprises ?": {
+      "index": 21,
+      "n_non_vides": 7,
+      "type": "texte_libre",
+      "themes_recomptes_mots_cles": {
+        "Manque de temps / sursollicitation": {
+          "n_repondants": 3,
+          "pct": 43
+        },
+        "Réunions sans résultat": {
+          "n_repondants": 1,
+          "pct": 14
+        },
+        "Concurrence inter-entreprises": {
+          "n_repondants": 1,
+          "pct": 14
+        },
+        "Autarcie / méfiance historique": {
+          "n_repondants": 1,
+          "pct": 14
+        }
+      }
+    },
+    "Quels formats d’animation seraient les plus susceptibles de mobiliser les entreprises ?": {
+      "index": 22,
+      "n_non_vides": 7,
+      "type": "texte_libre",
+      "themes_recomptes_mots_cles": {
+        "Ateliers courts / par thème": {
+          "n_repondants": 4,
+          "pct": 57
+        },
+        "Avec représentants institutionnels / élus": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Conditionné à un résultat concret": {
+          "n_repondants": 1,
+          "pct": 14
+        }
+      }
+    },
+    "Sur quels thèmes les entreprises industrielles seraient, selon vous, prêtes à s’engager pr": {
+      "index": 23,
+      "n_non_vides": 7,
+      "type": "texte_libre"
+    },
+    "Le sujet de la transmission–reprise d’entreprise vous semble-t-il :": {
+      "index": 24,
+      "n_non_vides": 7,
+      "type": "fermee",
+      "n": 7,
+      "distribution": {
+        "Prioritaire": 3,
+        "Secondaire": 2,
+        "Très prioritaire": 2
+      },
+      "pourcentages": {
+        "Prioritaire": 43,
+        "Secondaire": 29,
+        "Très prioritaire": 29
+      }
+    },
+    "Quels besoins identifiez-vous sur la transmission / reprise d’entreprises artisanales ?": {
+      "index": 25,
+      "n_non_vides": 7,
+      "type": "texte_libre",
+      "themes_recomptes_mots_cles": {
+        "Accompagnement": {
+          "n_repondants": 5,
+          "pct": 71
+        },
+        "Viviers de repreneurs / détection": {
+          "n_repondants": 2,
+          "pct": 29
+        },
+        "Formation gestion / RH": {
+          "n_repondants": 2,
+          "pct": 29
+        }
+      }
+    },
+    "Si vous ne pouviez proposer qu’une seule action prioritaire à mettre en œuvre dans le cadr": {
+      "index": 26,
+      "n_non_vides": 7,
+      "type": "texte_libre"
+    },
+    "Quelles actions à résultats rapides vous paraissent les plus utiles pour crédibiliser la d": {
+      "index": 27,
+      "n_non_vides": 7,
+      "type": "texte_libre"
+    },
+    "Quels résultats concrets attendez-vous de la démarche GPECT sur les 12 à 24 prochains mois": {
+      "index": 28,
+      "n_non_vides": 7,
+      "type": "texte_libre"
+    },
+    "Souhaitez-vous ajouter des remarques, alertes ou propositions complémentaires pour nourrir": {
+      "index": 29,
+      "n_non_vides": 7,
+      "type": "texte_libre"
+    }
+  }
+}

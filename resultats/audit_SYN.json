@@ -1,0 +1,660 @@
+{
+  "section": "SYN — Syndicats & organisations professionnelles",
+  "source": "data/04_syndicats.xlsx (7x30) + croisements 01/02/03",
+  "nb_controles": 93,
+  "nb_ok": 90,
+  "nb_ecarts": 3,
+  "controles": [
+    {
+      "q": "Q08",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q09",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q10",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q11",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q13",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q14",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q15",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q19",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q20",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q21",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q22",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q24",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q25",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q26",
+      "label": "n= du bloc (réponses non vides)",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "header",
+      "label": "n global du collège",
+      "dashboard": "7",
+      "calcule": "7",
+      "verdict": "OK"
+    },
+    {
+      "q": "header",
+      "label": "composition annoncée 3 patronales / 2 syndicats salariés / 2 consulaires",
+      "dashboard": "3/2/2",
+      "calcule": "3/2/2",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q06",
+      "label": "dynamique économique — moyenne /5",
+      "dashboard": "2,9",
+      "calcule": "2,9",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q06",
+      "label": "dynamique économique — médiane",
+      "dashboard": "3",
+      "calcule": "3",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q06",
+      "label": "dynamique économique — plage « resserré [2-3] »",
+      "dashboard": "[2-3]",
+      "calcule": "[2-3]",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q07",
+      "label": "coordination acteurs — moyenne /5",
+      "dashboard": "2,9",
+      "calcule": "2,9",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q18",
+      "label": "mobilité frein — moyenne /5",
+      "dashboard": "3,3",
+      "calcule": "3,3",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q18",
+      "label": "mobilité frein — « jusqu'à 5/5 »",
+      "dashboard": "5",
+      "calcule": "5",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q11",
+      "label": "« Partiellement identifiés » (%)",
+      "dashboard": "57",
+      "calcule": "57",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q11",
+      "label": "« Bien identifiés et formalisés » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q11",
+      "label": "« Peu formalisés » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q11",
+      "label": "analysis : 71% « partiellement » ou « peu » formalisés",
+      "dashboard": "71",
+      "calcule": "71",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q14",
+      "label": "« Peu adaptée » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q14",
+      "label": "« Partiellement adaptée » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q14",
+      "label": "« Globalement adaptée » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q14",
+      "label": "analysis : 71% « peu » ou « partiellement » adaptée",
+      "dashboard": "71",
+      "calcule": "71",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q20",
+      "label": "« Faible » (%)",
+      "dashboard": "57",
+      "calcule": "57",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q20",
+      "label": "« Plutôt satisfaisant » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q20",
+      "label": "« Moyen » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q20",
+      "label": "KPI : 57% engagement « faible »",
+      "dashboard": "57",
+      "calcule": "57",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q24",
+      "label": "« Prioritaire » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q24",
+      "label": "« Très prioritaire » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q24",
+      "label": "« Secondaire » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q24",
+      "label": "KPI/analysis : 71% (très) prioritaire",
+      "dashboard": "71",
+      "calcule": "71",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17",
+      "label": "bars « Mobilité rurale » (%)",
+      "dashboard": "86",
+      "calcule": "86",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17",
+      "label": "bars « Logement cher ou en mauvais état » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17",
+      "label": "bars « Compétences de base » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17",
+      "label": "bars « Orientation » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17",
+      "label": "bars « Motivation des personnes » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17",
+      "label": "bars « Niveau scolaire faible (jeunes) » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17",
+      "label": "KPI : 86% mobilité rurale frein n°1",
+      "dashboard": "86",
+      "calcule": "86",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17",
+      "label": "exhaustivité : réponses non affichées dans les bars",
+      "dashboard": "0 (implicite)",
+      "calcule": "14% « Freins sociaux » + 1 réponse(s) libre(s) non affichée(s)",
+      "verdict": "ECART"
+    },
+    {
+      "q": "Q08",
+      "label": "thème « Foncier disponible / prix » (%)",
+      "dashboard": "43",
+      "calcule": "57",
+      "verdict": "ECART"
+    },
+    {
+      "q": "Q08",
+      "label": "thème « Axes routiers / logistique » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q08",
+      "label": "thème « Tissu industriel implanté » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q08",
+      "label": "thème « Proximité pouvoirs publics » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q08",
+      "label": "thème « Data center / numérique » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q09",
+      "label": "thème « Qualification / main d'œuvre absente » (%)",
+      "dashboard": "57",
+      "calcule": "57",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q09",
+      "label": "thème « Transport / accessibilité » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q09",
+      "label": "thème « Logement » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q09",
+      "label": "thème « Désertification médicale » (%)",
+      "dashboard": "29",
+      "calcule": "14",
+      "verdict": "ECART"
+    },
+    {
+      "q": "Q09",
+      "label": "thème « Orientation / image des métiers » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q09",
+      "label": "thème « Énergie (puissance électrique) » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q10",
+      "label": "thème « Usinage / fraiseur / tourneur / ajusteur » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q10",
+      "label": "thème « Qualité / méthodes / contrôle » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q10",
+      "label": "thème « Maintenance » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q10",
+      "label": "thème « Encadrement / management » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q10",
+      "label": "thème « Restauration / services » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q13",
+      "label": "thème « Savoirs de base (lire / écrire / compter) » (%)",
+      "dashboard": "57",
+      "calcule": "57",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q13",
+      "label": "thème « Savoir-être » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q13",
+      "label": "thème « Motivation / valeur travail » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q13",
+      "label": "thème « Anglais » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q13",
+      "label": "thème « Mobilité (permis, véhicule) » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q15",
+      "label": "thème « Intégration / maintien en formation » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q15",
+      "label": "thème « Débouchés / concurrence CFA » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q15",
+      "label": "thème « Orientation (Éducation nationale) » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q15",
+      "label": "thème « Disparition AFPA → AFPI » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q19",
+      "label": "thème « Transport adapté / navette gare-zones » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q19",
+      "label": "thème « Hébergement / colocation » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q19",
+      "label": "thème « Aides financières mobilité » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q21",
+      "label": "thème « Manque de temps / sursollicitation » (%)",
+      "dashboard": "43",
+      "calcule": "43",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q21",
+      "label": "thème « Réunions sans résultat » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q21",
+      "label": "thème « Concurrence inter-entreprises » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q21",
+      "label": "thème « Autarcie / méfiance historique » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q22",
+      "label": "thème « Ateliers courts / par thème » (%)",
+      "dashboard": "57",
+      "calcule": "57",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q22",
+      "label": "thème « Avec représentants institutionnels / élus » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q22",
+      "label": "thème « Conditionné à un résultat concret » (%)",
+      "dashboard": "14",
+      "calcule": "14",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q25",
+      "label": "thème « Accompagnement » (%)",
+      "dashboard": "71",
+      "calcule": "71",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q25",
+      "label": "thème « Viviers de repreneurs / détection » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q25",
+      "label": "thème « Formation gestion / RH » (%)",
+      "dashboard": "29",
+      "calcule": "29",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q09",
+      "label": "KPI : 57% « qualification / main d'œuvre absente »",
+      "dashboard": "57",
+      "calcule": "57",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q14-txt",
+      "label": "acteurs emploi : offre formation 2,3/5",
+      "dashboard": "2,3",
+      "calcule": "2,3",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q14-txt",
+      "label": "entreprises : offre formation 3,1/5",
+      "dashboard": "3,1",
+      "calcule": "3,1",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q14-txt",
+      "label": "OF : auto-évaluation 4,0/5",
+      "dashboard": "4,0",
+      "calcule": "4,0",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q17-txt",
+      "label": "entreprises : transport 2,5/5 (cause de tensions, n=20)",
+      "dashboard": "2,5",
+      "calcule": "2,5",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q20-txt",
+      "label": "OF : 71% difficulté à mobiliser les entreprises",
+      "dashboard": "71",
+      "calcule": "71",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q24-txt",
+      "label": "entreprises : 19% projet de transmission d'ici 5 ans",
+      "dashboard": "19",
+      "calcule": "19",
+      "verdict": "OK"
+    },
+    {
+      "q": "Q24-txt",
+      "label": "entreprises : 5% transmission en préoccupation principale",
+      "dashboard": "5",
+      "calcule": "5",
+      "verdict": "OK"
+    }
+  ]
+}

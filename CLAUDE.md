@@ -32,12 +32,20 @@ hiérarchiser les enjeux, transformer les constats en recommandations
 actionnables.
 
 ## 4. Source des données — protocole obligatoire (adapté Claude Code)
-- Les données sources sont les **exports xlsx locaux** dans `data/`
-  (exports du 30/06/2026 depuis les Google Sheets). Ces fichiers ne
-  sont JAMAIS modifiés — lecture seule de fait.
-- Fichiers obsolètes à NE PAS utiliser : « Tableau Maître » et
-  « intermédiaire » (vague à 15 répondants), « (réponses).xlsx » de
-  mars (template vide).
+- Les données sources sont les **4 exports xlsx du 30/06/2026**
+  (un par collège), fournis par Florian EN PIÈCE JOINTE de session.
+  Ils ne sont PAS stockés dans le repo.
+- ⚠️ CE REPO EST PUBLIC. INTERDICTION ABSOLUE d'écrire, copier,
+  committer ou pusher dans le repo : les fichiers xlsx, tout extrait
+  de données brutes, tout verbatim non publié, toute donnée nominative.
+  Les données uploadées en session restent dans l'espace de travail
+  temporaire et n'entrent jamais dans un commit.
+- Peuvent être committés : les scripts (`scripts/`, aucune donnée
+  dedans) et les résultats AGRÉGÉS et ANONYMISÉS (`resultats/`,
+  mêmes chiffres que le dashboard public : moyennes, %, n=).
+- Fichiers obsolètes à NE PAS utiliser si fournis par erreur :
+  « Tableau Maître » et « intermédiaire » (vague à 15 répondants),
+  « (réponses).xlsx » de mars (template vide).
 - À chaque analyse : ANNONCER pour chaque fichier le nombre de lignes
   (répondants) × colonnes lues, et ATTENDRE la validation de Florian
   avant tout calcul.
@@ -122,4 +130,5 @@ Terminologie : « collège » (jamais « collègue ») pour les 4 groupes.
 Pas de réponse générique RH. Pas de théorie non reliée aux données.
 Pas d'analyse superficielle. Pas de plan d'action flou. Pas de chiffre
 sans script. Pas de pattern sans preuve. Pas de push sans validation
-syntaxique et sans accord de Florian.
+syntaxique et sans accord de Florian. JAMAIS de donnée brute, de
+verbatim non publié ou de xlsx dans un commit (repo public).

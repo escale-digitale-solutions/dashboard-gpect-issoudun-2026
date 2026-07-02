@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPECT Bassin d'Issoudun 2026 — Diagnostic emploi-compétences</title>
+<script>window.addEventListener('error',function(e){try{var p=document.getElementById('page')||document.body;if(!p)return;p.innerHTML='<div style="padding:22px;margin:18px;border:2px solid #D2562F;border-radius:12px;background:#fff;font:13px/1.6 ui-monospace,monospace;color:#b00;white-space:pre-wrap">⚠ Erreur JavaScript&#10;'+((e&&(e.message||e.error))||'?')+'&#10;ligne '+((e&&e.lineno)||'?')+' · colonne '+((e&&e.colno)||'?')+'</div>';}catch(_){}}, true);</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{
+  --petrole:#0C3B43; --petrole-2:#114E58; --petrole-3:#0A2C32; --petrole-deep:#072025;
+  --emeraude:#0FA37F; --emeraude-2:#13BD92; --emeraude-soft:#D6F0E7;
+  --ambre:#E0A22B; --ambre-2:#F2B544; --ambre-soft:#FBEAC9;
+  --corail:#D2562F; --corail-soft:#F7DDD2;
+  --cream:#F6F3EC; --cream-2:#EFEAE0; --paper:#FFFFFF;
+  --ink:#13211F; --ink-soft:#4A5754; --line:#E2DCCF; --line-2:#ECE7DB;
+  --shadow:0 1px 2px rgba(12,59,67,.04),0 8px 26px rgba(12,59,67,.07);
+  --shadow-lg:0 24px 60px rgba(12,59,67,.16);
+  --r:18px; --r-sm:12px; --sidebar:280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;font-size:15px}
+h1,h2,h3,h4,.serif{font-family:'Fraunces',Georgia,serif}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--emeraude);color:#fff}
+
+/* ---------- Layout ---------- */
+#app{display:flex;min-height:100vh}
+#sidebar{width:var(--sidebar);flex:0 0 var(--sidebar);background:linear-gradient(180deg,var(--petrole-3),var(--petrole-deep));color:#EAF4F1;position:fixed;top:0;left:0;bottom:0;display:flex;flex-direction:column;z-index:60;border-right:1px solid rgba(255,255,255,.06)}
+.brand{padding:26px 24px 18px;border-bottom:1px solid rgba(255,255,255,.08)}
+.brand .logo{display:flex;align-items:center;gap:11px}
+.brand .mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--emeraude),var(--ambre));display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:700;color:#06262b;font-size:20px;flex:0 0 auto;box-shadow:0 6px 16px rgba(15,163,127,.35)}
+.brand .t1{font-family:'Fraunces';font-weight:600;font-size:16px;letter-spacing:.2px;line-height:1.15;color:#fff}
+.brand .t2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ambre-2);margin-top:3px;font-weight:600}
+nav{flex:1;overflow-y:auto;padding:14px 14px 10px}
+nav::-webkit-scrollbar{width:7px}nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.13);border-radius:8px}
+.nav-group{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(234,244,241,.42);margin:16px 12px 7px;font-weight:700}
+.nav-item{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:11px;cursor:pointer;color:#CFE2DD;font-weight:500;font-size:13.7px;transition:.16s;position:relative;margin-bottom:2px}
+.nav-item:hover{background:rgba(255,255,255,.07);color:#fff}
+.nav-item.active{background:linear-gradient(100deg,rgba(15,163,127,.26),rgba(15,163,127,.08));color:#fff}
+.nav-item.active::before{content:"";position:absolute;left:-14px;top:50%;transform:translateY(-50%);width:4px;height:24px;border-radius:0 4px 4px 0;background:var(--emeraude-2)}
+.nav-item .ni-ic{width:24px;height:24px;border-radius:7px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:13px;flex:0 0 auto}
+.nav-item.active .ni-ic{background:var(--emeraude);color:#06262b}
+.nav-item .ni-badge{margin-left:auto;font-size:10px;font-weight:700;background:rgba(255,255,255,.12);padding:2px 7px;border-radius:20px;letter-spacing:.02em}
+.nav-item .soon{margin-left:auto;font-size:9px;font-weight:700;background:var(--ambre);color:#3a2a05;padding:2px 7px;border-radius:20px;text-transform:uppercase;letter-spacing:.05em}
+.side-foot{padding:14px 22px 20px;border-top:1px solid rgba(255,255,255,.08);font-size:11px;color:rgba(234,244,241,.5);line-height:1.5}
+.side-foot b{color:#cfe2dd;font-weight:600}
+
+#main{margin-left:var(--sidebar);flex:1;min-width:0}
+.wrap{max-width:1180px;margin:0 auto;padding:38px 44px 90px}
+.topbar{display:none}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;border-radius:26px;overflow:hidden;background:linear-gradient(125deg,var(--petrole-3) 0%,var(--petrole) 52%,var(--petrole-2) 100%);color:#fff;padding:46px 46px 42px;box-shadow:var(--shadow-lg);margin-bottom:30px}
+.hero::after{content:"";position:absolute;right:-90px;top:-90px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(15,163,127,.55),transparent 62%)}
+.hero::before{content:"";position:absolute;right:60px;bottom:-120px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(224,162,43,.4),transparent 60%)}
+.hero .eyebrow{position:relative;z-index:2;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ambre-2);font-weight:700;margin-bottom:14px}
+.hero h1{position:relative;z-index:2;font-size:clamp(30px,4.2vw,50px);line-height:1.04;font-weight:600;letter-spacing:-.5px;max-width:18ch}
+.hero p.lead{position:relative;z-index:2;margin-top:16px;max-width:62ch;color:#CFE6DF;font-size:16.5px}
+.hero .hero-meta{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero .chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:7px 14px;border-radius:30px;font-size:12.5px;font-weight:600;backdrop-filter:blur(4px)}
+.hero .chip b{color:var(--ambre-2)}
+
+/* ---------- Page header ---------- */
+.page-head{margin:6px 0 26px;position:relative}
+.page-head .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--emeraude);margin-bottom:8px}
+.page-head h2{font-size:clamp(26px,3.3vw,38px);font-weight:600;letter-spacing:-.4px;line-height:1.08;color:var(--petrole-3)}
+.page-head .sub{margin-top:10px;color:var(--ink-soft);max-width:74ch;font-size:15.5px}
+.page-head .nbadge{display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:var(--paper);border:1px solid var(--line);padding:6px 13px;border-radius:30px;font-size:12.5px;font-weight:600;color:var(--petrole);box-shadow:var(--shadow)}
+.page-head .nbadge .dot{width:8px;height:8px;border-radius:50%;background:var(--emeraude)}
+
+/* ---------- Sections / cards ---------- */
+.section{margin:34px 0}
+.section-title{display:flex;align-items:center;gap:13px;font-size:20px;font-weight:600;color:var(--petrole-3);margin-bottom:4px;letter-spacing:-.2px}
+.section-title .st-num{font-family:'Fraunces';font-weight:600;font-size:14px;color:#fff;background:linear-gradient(135deg,var(--petrole),var(--petrole-2));min-width:30px;height:30px;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
+.section-desc{color:var(--ink-soft);margin:7px 0 18px;max-width:80ch;font-size:14.5px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;box-shadow:var(--shadow)}
+.card.tight{padding:18px 20px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.span2{grid-column:span 2}
+@media(max-width:1100px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+
+/* chart card */
+.ch-head{margin-bottom:6px}
+.ch-q{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--emeraude);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ch-q .qn{background:var(--emeraude-soft);color:#0a6b53;padding:2px 8px;border-radius:6px}
+.ch-title{font-size:16px;font-weight:600;color:var(--petrole-3);margin:7px 0 2px;line-height:1.25;font-family:'Fraunces'}
+.ch-note{font-size:12px;color:var(--ink-soft);margin-bottom:10px}
+.chart-wrap{position:relative;width:100%}
+.analysis{margin-top:14px;padding:13px 15px 13px 16px;background:var(--cream);border-radius:12px;border-left:3px solid var(--emeraude);font-size:13.7px;color:#27433d}
+.analysis b{color:var(--petrole-3);font-weight:700}
+.src{margin-top:9px;font-size:11px;color:#8a948f;font-style:italic}
+
+/* KPI */
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;right:-26px;top:-26px;width:80px;height:80px;border-radius:50%;opacity:.1;background:var(--emeraude)}
+.kpi.amber::after{background:var(--ambre)}.kpi.petrol::after{background:var(--petrole)}.kpi.coral::after{background:var(--corail)}
+.kpi .kv{font-family:'Fraunces';font-size:38px;font-weight:600;line-height:1;color:var(--petrole-3);letter-spacing:-1px}
+.kpi.amber .kv{color:var(--ambre)}.kpi.emer .kv{color:var(--emeraude)}.kpi.coral .kv{color:var(--corail)}
+.kpi .kl{font-size:13px;color:var(--ink);margin-top:9px;font-weight:600;line-height:1.25}
+.kpi .ks{font-size:11.5px;color:var(--ink-soft);margin-top:4px}
+
+/* insight callouts */
+.insight{border-radius:var(--r);padding:18px 20px 18px 22px;position:relative;border:1px solid var(--line);background:var(--paper);box-shadow:var(--shadow)}
+.insight .ih{display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px;margin-bottom:6px}
+.insight .ih .tag{font-size:10px;text-transform:uppercase;letter-spacing:.1em;padding:3px 9px;border-radius:20px;font-weight:800}
+.insight p{font-size:13.8px;color:#2c3a37}
+.insight.gap{border-left:5px solid var(--ambre)} .insight.gap .tag{background:var(--ambre-soft);color:#8a5e07}
+.insight.risk{border-left:5px solid var(--corail)} .insight.risk .tag{background:var(--corail-soft);color:#9a3414}
+.insight.signal{border-left:5px solid var(--emeraude)} .insight.signal .tag{background:var(--emeraude-soft);color:#0a6b53}
+.insight.lever{border-left:5px solid var(--petrole)} .insight.lever .tag{background:#d9e6e6;color:var(--petrole-3)}
+.hyp{display:inline-block;font-size:10.5px;font-weight:700;background:var(--ambre-soft);color:#8a5e07;padding:2px 9px;border-radius:6px;letter-spacing:.03em;margin-left:6px;vertical-align:middle}
+
+/* verbatim */
+.vb{background:linear-gradient(180deg,#fff,#fbf9f3);border:1px solid var(--line);border-left:4px solid var(--emeraude);border-radius:12px;padding:13px 16px 13px 17px;font-size:13.6px;color:#33433f;font-style:italic;position:relative}
+.vb::before{content:"\201C";font-family:'Fraunces';position:absolute;top:-6px;left:8px;font-size:30px;color:var(--emeraude);opacity:.28;font-style:normal}
+.vb-grid{display:grid;gap:11px}
+
+/* theme chips */
+.themes{display:flex;flex-wrap:wrap;gap:8px}
+.theme{display:inline-flex;align-items:center;gap:8px;background:var(--cream);border:1px solid var(--line);border-radius:30px;padding:6px 8px 6px 13px;font-size:12.8px;font-weight:600;color:var(--petrole-3)}
+.theme .tn{background:var(--petrole);color:#fff;border-radius:20px;padding:2px 8px;font-size:11px;font-weight:700}
+.theme.hot .tn{background:var(--corail)} .theme.warm .tn{background:var(--ambre);color:#3a2a05}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--paper)}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--line-2)}
+th{background:var(--petrole-3);color:#eaf4f1;font-weight:600;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;position:sticky;top:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr:nth-child(even){background:#fbfaf6}
+tbody tr:hover{background:var(--emeraude-soft)}
+.bar-cell{position:relative}
+.mini-bar{height:7px;border-radius:5px;background:var(--emeraude);display:inline-block;vertical-align:middle}
+
+/* convergence/divergence list */
+.cd{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px dashed var(--line)}
+.cd:last-child{border-bottom:none}
+.cd .ic{width:34px;height:34px;border-radius:10px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:15px}
+.cd .ic.cv{background:var(--emeraude)} .cd .ic.dv{background:var(--ambre);color:#3a2a05}
+.cd h4{font-size:15px;font-weight:700;color:var(--petrole-3);margin-bottom:3px;font-family:'Hanken Grotesk'}
+.cd p{font-size:13.6px;color:#33433f}
+
+/* gap viz */
+.gapviz{display:grid;grid-template-columns:1fr;gap:9px;margin-top:6px}
+.gaprow{display:grid;grid-template-columns:200px 1fr 54px;align-items:center;gap:12px}
+.gaprow .gl{font-size:13px;font-weight:600;color:var(--petrole-3)}
+.gaptrack{height:14px;background:var(--cream-2);border-radius:10px;position:relative;overflow:hidden}
+.gapfill{height:100%;border-radius:10px}
+.gaprow .gv{font-weight:700;font-variant-numeric:tabular-nums;text-align:right;font-size:13.5px}
+@media(max-width:680px){.gaprow{grid-template-columns:120px 1fr 44px}.gaprow .gl{font-size:11.5px}}
+
+/* levier cards */
+.levier{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:0;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.levier .lh{padding:18px 20px;background:linear-gradient(120deg,var(--petrole-3),var(--petrole-2));color:#fff;position:relative}
+.levier .lh .ln{font-family:'Fraunces';font-size:13px;font-weight:600;color:var(--ambre-2);letter-spacing:.05em}
+.levier .lh h4{font-size:17px;font-weight:600;margin-top:4px;font-family:'Fraunces';line-height:1.2}
+.levier .lb{padding:16px 20px 20px;flex:1;display:flex;flex-direction:column;gap:11px}
+.levier .lb p{font-size:13.6px;color:#33433f}
+.levier .ev{margin-top:auto;padding-top:11px;border-top:1px solid var(--line-2);font-size:12px;color:var(--ink-soft)}
+.levier .ev b{color:var(--petrole-3)}
+.tagrow{display:flex;flex-wrap:wrap;gap:6px}
+.minitag{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;background:var(--emeraude-soft);color:#0a6b53;letter-spacing:.02em}
+
+/* action plan */
+.axis{margin:22px 0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:var(--paper)}
+.axis .ax-head{padding:20px 24px;background:linear-gradient(120deg,var(--petrole-3),var(--petrole));color:#fff;display:flex;gap:16px;align-items:center}
+.axis .ax-head .axn{font-family:'Fraunces';font-size:26px;font-weight:600;width:54px;height:54px;border-radius:14px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex:0 0 auto;border:1px solid rgba(255,255,255,.18)}
+.axis .ax-head h3{font-size:21px;font-weight:600;font-family:'Fraunces'}
+.axis .ax-head .axs{font-size:13px;color:#cfe6df;margin-top:3px}
+.fiche{padding:20px 24px;border-top:1px solid var(--line-2)}
+.fiche .ft{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-bottom:5px}
+.fiche .fcode{font-size:11px;font-weight:800;letter-spacing:.06em;background:var(--ambre);color:#3a2a05;padding:3px 9px;border-radius:6px}
+.fiche h4{font-size:17px;font-weight:700;color:var(--petrole-3);font-family:'Fraunces'}
+.fiche .obj{font-size:14px;color:#2c3a37;margin:8px 0 14px}
+.fiche .meta-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:760px){.fiche .meta-grid{grid-template-columns:1fr}.axis .ax-head{padding:16px}}
+.mline{font-size:13px;display:flex;gap:9px}
+.mline .mk{font-weight:700;color:var(--petrole);min-width:104px;flex:0 0 auto;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;padding-top:1px}
+.mline .mv{color:#33433f}
+.pri{display:inline-block;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:20px}
+.pri.p1{background:var(--corail-soft);color:#9a3414}.pri.p2{background:var(--ambre-soft);color:#8a5e07}.pri.p3{background:var(--emeraude-soft);color:#0a6b53}
+.horizon{display:inline-block;font-size:11px;font-weight:700;color:var(--petrole);background:#d9e6e6;padding:3px 10px;border-radius:20px}
+
+/* misc */
+.divider{height:1px;background:var(--line);margin:30px 0}
+.note-box{background:var(--ambre-soft);border:1px solid #e9cf95;border-radius:14px;padding:15px 18px;font-size:13.4px;color:#6a4a08}
+.note-box b{color:#553a06}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-soft);margin-top:4px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.soon-wrap{text-align:center;padding:70px 30px}
+.soon-wrap .ic{font-size:46px;margin-bottom:14px}
+.soon-wrap h2{font-size:30px;color:var(--petrole-3);font-weight:600}
+.soon-wrap p{max-width:60ch;margin:14px auto 0;color:var(--ink-soft)}
+.fade{animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* mobile */
+.hamb{display:none}
+.backdrop{display:none}
+@media(max-width:1000px){
+  #sidebar{transform:translateX(-100%);transition:.28s;box-shadow:var(--shadow-lg)}
+  #sidebar.open{transform:none}
+  #main{margin-left:0}
+  .wrap{padding:18px 18px 80px}
+  .topbar{display:flex;align-items:center;gap:13px;position:sticky;top:0;z-index:40;background:rgba(246,243,236,.92);backdrop-filter:blur(8px);padding:12px 16px;border-bottom:1px solid var(--line)}
+  .hamb{display:flex;flex-direction:column;gap:4px;cursor:pointer;padding:8px;border-radius:9px;background:var(--petrole-3)}
+  .hamb i{width:20px;height:2.4px;background:#fff;border-radius:2px;display:block}
+  .topbar .tb-t{font-family:'Fraunces';font-weight:600;color:var(--petrole-3);font-size:15px}
+  .backdrop.show{display:block;position:fixed;inset:0;background:rgba(7,32,37,.45);z-index:55}
+  .g2{grid-template-columns:1fr}.span2{grid-column:auto}
+  .hero{padding:32px 24px}
+}
+@media(max-width:560px){.g3,.g4{grid-template-columns:1fr}}
+
+/* ═══════════════ PREMIUM OVERRIDES v10 ═══════════════ */
+:root{--shadow-md:0 3px 8px rgba(12,59,67,.06),0 14px 38px rgba(12,59,67,.10);--ease:cubic-bezier(.22,.8,.32,1)}
+
+/* — interactions générales — */
+.card,.kpi,.insight{transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s var(--ease)}
+.card:hover,.kpi:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+button{transition:transform .15s var(--ease),box-shadow .15s var(--ease),filter .15s var(--ease)}
+button:hover{filter:brightness(1.06);transform:translateY(-1px)}
+button:active{transform:translateY(0)}
+:focus-visible{outline:3px solid var(--emeraude-2);outline-offset:2px;border-radius:6px}
+.fade{animation:pageIn .45s var(--ease) both}
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* — hero : motif discret — */
+.hero{background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.5px),linear-gradient(125deg,var(--petrole-3) 0%,var(--petrole) 52%,var(--petrole-2) 100%);background-size:26px 26px,cover}
+
+/* — page head : trait dégradé — */
+.page-head h2{position:relative;padding-bottom:14px}
+.page-head h2::after{content:"";position:absolute;left:0;bottom:0;width:64px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--emeraude),var(--ambre))}
+
+/* — sections : pastille + filet — */
+.section-title .st-num{background:linear-gradient(135deg,var(--emeraude) 0%,var(--petrole) 90%);box-shadow:0 4px 12px rgba(15,163,127,.28);border-radius:10px}
+.section-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent);margin-left:6px}
+
+/* — KPI : liseré + chiffre plus fort — */
+.kpi{padding-left:23px}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--emeraude);border-radius:0 4px 4px 0;opacity:.9}
+.kpi.amber::before{background:var(--ambre)}.kpi.petrol::before{background:var(--petrole)}.kpi.coral::before{background:var(--corail)}
+.kpi .kv{font-size:42px}
+.kpi .ks{line-height:1.35}
+
+/* — insights : icône par tonalité — */
+.insight{position:relative;padding-left:56px!important;background:var(--paper)}
+.insight::before{position:absolute;left:16px;top:16px;width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;line-height:30px;text-align:center}
+.insight.gap::before{content:"⇄";background:var(--ambre-soft);color:#8a5f0d}
+.insight.risk::before{content:"⚠";background:var(--corail-soft);color:var(--corail)}
+.insight.signal::before{content:"◉";background:#DCE9F5;color:#2C5F8A}
+.insight.lever::before{content:"⚿";background:var(--emeraude-soft);color:#0a6b53}
+.insight:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+
+/* — verbatims : guillemet décoratif — */
+.vb{position:relative;padding-left:34px!important}
+.vb::before{content:"“";position:absolute;left:10px;top:2px;font-family:'Fraunces';font-size:30px;line-height:1;color:var(--emeraude);opacity:.55}
+
+/* — badges thèmes — */
+.theme{transition:transform .18s var(--ease),box-shadow .18s var(--ease)}
+.theme:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(12,59,67,.10)}
+.theme .tn{box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+
+/* — tables — */
+.tbl-wrap table{border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden}
+.tbl-wrap thead th{background:var(--petrole-3)!important;color:#EAF4F1!important;font-weight:700;letter-spacing:.03em}
+.tbl-wrap tbody tr:nth-child(even){background:#FAF8F2}
+.tbl-wrap tbody tr{transition:background .15s}
+.tbl-wrap tbody tr:hover{background:var(--emeraude-soft)}
+
+/* — analysis & note-box — */
+.analysis{border-left-width:4px;box-shadow:inset 0 1px 0 rgba(12,59,67,.03)}
+.note-box{border-radius:12px}
+
+/* — scrollbars du contenu — */
+#main ::-webkit-scrollbar{width:9px;height:9px}
+#main ::-webkit-scrollbar-thumb{background:#CFC8B8;border-radius:8px}
+#main ::-webkit-scrollbar-thumb:hover{background:#B8B09C}
+
+/* — bouton remonter — */
+#toTop{position:fixed;right:22px;bottom:22px;z-index:80;width:44px;height:44px;border-radius:50%;border:none;background:var(--petrole);color:#fff;font-size:18px;cursor:pointer;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:opacity .25s var(--ease),transform .25s var(--ease)}
+#toTop.show{opacity:1;pointer-events:auto}
+#toTop:hover{background:var(--emeraude)}
+
+/* — bouton imprimer sidebar — */
+.side-print{margin:10px 14px 0;display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);color:#EAF4F1;padding:9px 12px;border-radius:11px;font-family:'Hanken Grotesk';font-weight:600;font-size:12.5px;cursor:pointer;width:calc(100% - 28px)}
+.side-print:hover{background:var(--emeraude);border-color:var(--emeraude)}
+
+/* — impression / export PDF — */
+@media print{
+  #sidebar,.topbar,#toTop,.side-print,button{display:none!important}
+  #main{margin-left:0!important}
+  .wrap{max-width:100%;padding:0 6mm}
+  body{background:#fff;font-size:12px}
+  .card,.kpi,.insight{box-shadow:none!important;border:1px solid #ddd;break-inside:avoid}
+  .section{break-inside:avoid-page;margin:18px 0}
+  .hero{box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page-head h2{font-size:24px}
+  a{text-decoration:none}
+}
+
+.acc{background:#fff;border:1px solid #E4DECF;border-radius:14px;margin:12px 0;overflow:hidden}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:13px;padding:15px 18px;user-select:none;transition:background .15s}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:hover{background:#FAF8F2}
+.acc-ic{font-size:20px}
+.acc-tt{font-weight:800;color:#11302c;font-size:14.5px;display:flex;flex-direction:column;gap:2px;flex:1;font-family:'Fraunces',serif}
+.acc-tt small{font-weight:600;color:#8a978f;font-size:11.5px;letter-spacing:.02em;font-family:'Hanken Grotesk',sans-serif}
+.acc-ch{color:#8a978f;transition:transform .2s;font-size:15px}
+.acc[open] .acc-ch{transform:rotate(180deg)}
+.acc[open] summary{border-bottom:1px solid #EFEADD}
+.acc-body{padding:16px 18px 18px}
+</style>
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <div class="brand">
+      <div class="logo">
+        <div class="mark">G</div>
+        <div><div class="t1">GPECT&nbsp;·&nbsp;Issoudun</div><div class="t2">Diagnostic 2026</div></div>
+      </div>
+    </div>
+    <nav id="nav"></nav>
+    <button class="side-print" onclick="window.print()">🖨 Imprimer / PDF</button>
+    <div class="side-foot">
+      <b>Escale Digitale Solutions</b><br>F. Rousseau · Ceterha · La Fabrique RH<br>
+      <span style="opacity:.7">42 répondants · 4 collèges · données anonymisées</span><br>
+      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v12 · accordéons · financements · décisions attendues ✓</span>
+    </div>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+  <div id="main">
+    <div class="topbar">
+      <div class="hamb" id="hamb"><i></i><i></i><i></i></div>
+      <div class="tb-t">GPECT Bassin d'Issoudun</div>
+    </div>
+    <div class="wrap" id="page"></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   GPECT ISSOUDUN 2026 — Dashboard (source unique = scripts pandas)
+   Toutes les valeurs proviennent des rapports de résultats :
+   02_analyse_entreprises.py / 05_analyse_of.py /
+   08_analyse_acteurs.py / 11_analyse_syndicats.py
+   ============================================================ */
+const PAL={petrole:'#0C3B43',petrole2:'#114E58',emeraude:'#0FA37F',emeraude2:'#13BD92',ambre:'#E0A22B',ambre2:'#F2B544',corail:'#D2562F',ink:'#13211F',soft:'#9aa7a3',
+  scale:['#0C3B43','#13718a','#0FA37F','#E0A22B','#D2562F']};
+const chartReg=[];
+function destroyCharts(){chartReg.forEach(c=>{try{c.destroy()}catch(e){}});chartReg.length=0;}
+
+/* value-label plugin */
+const VL={id:'vl',afterDatasetsDraw(ch,a,o){const{ctx}=ch;const horiz=ch.options.indexAxis==='y';ch.data.datasets.forEach((ds,di)=>{const m=ch.getDatasetMeta(di);if(m.hidden)return;m.data.forEach((el,i)=>{const v=ds.data[i];if(v==null||v==='')return;ctx.save();ctx.font='700 11px "Hanken Grotesk",sans-serif';ctx.fillStyle=o.color||'#33433f';ctx.textBaseline='middle';const lab=(o.fmt?o.fmt(v):v);if(horiz){ctx.textAlign='left';ctx.fillText(lab,el.x+6,el.y);}else{ctx.textAlign='center';ctx.fillText(lab,el.x,el.y-7);}ctx.restore();});});}};
+
+function el(tag,cls,html){const e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+/* ---- chart factories ---- */
+function hbar(container,{labels,values,values2,leg,leg2,unit='%',color,color2,max}){
+  const h=Math.max(120,labels.length*(values2?40:30)+(values2?44:34));
+  const wrap=el('div','chart-wrap');wrap.style.height=h+'px';
+  const cv=el('canvas');wrap.appendChild(cv);container.appendChild(wrap);
+  const ds=[{label:leg||'',data:values,backgroundColor:color||grad(cv,values,max),borderRadius:6,barPercentage:.78,categoryPercentage:.82}];
+  if(values2)ds.push({label:leg2||'',data:values2,backgroundColor:color2||PAL.ambre,borderRadius:6,barPercentage:.78,categoryPercentage:.82});
+  const fmt=unit==='%'?(v=>String(v).replace('.',',')+'%'):(unit==='/5'?(v=>Number(v).toFixed(1).replace('.',',')):(v=>v));
+  const c=new Chart(cv,{type:'bar',data:{labels,datasets:ds},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,layout:{padding:{right:38}},
+    plugins:{legend:{display:!!values2,position:'top',align:'end',labels:{boxWidth:12,boxHeight:12,font:{family:'Hanken Grotesk',size:12,weight:'600'},color:'#4A5754'}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label?c.dataset.label+': ':''}${fmt(c.parsed.x)}`}},vl:{fmt}},
+    scales:{x:{beginAtZero:true,max:max||undefined,grid:{color:'#ECE7DB'},ticks:{font:{family:'Hanken Grotesk',size:11},color:'#9aa7a3',callback:v=>unit==='%'?v+'%':v}},
+      y:{grid:{display:false},ticks:{font:{family:'Hanken Grotesk',size:12.3,weight:'600'},color:'#27433d',crossAlign:'far'}}}},plugins:[VL]});
+  chartReg.push(c);return c;
+}
+function grad(cv,values,max){const top=Math.max(...values);return values.map(v=>{const r=v/(max||top||1);if(r>=.8)return PAL.petrole;if(r>=.55)return PAL.emeraude;if(r>=.32)return PAL.ambre;return '#b9c7c2';});}
+function doughnut(container,{labels,values,unit='%'}){
+  const wrap=el('div','chart-wrap');wrap.style.height='230px';wrap.style.display='flex';wrap.style.alignItems='center';
+  const cv=el('canvas');wrap.appendChild(cv);container.appendChild(wrap);
+  const cols=[PAL.petrole,PAL.emeraude,PAL.ambre,PAL.corail,PAL.petrole2,'#8FB7AE','#caa86a'];
+  const c=new Chart(cv,{type:'doughnut',data:{labels,datasets:[{data:values,backgroundColor:cols,borderColor:'#fff',borderWidth:2.5,hoverOffset:6}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'right',labels:{boxWidth:11,boxHeight:11,font:{family:'Hanken Grotesk',size:12,weight:'500'},color:'#27433d',padding:9}},
+      tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}${unit==='%'?'%':''}`}}}}});
+  chartReg.push(c);return c;
+}
+function radar(container,{labels,sets,max=5}){
+  const wrap=el('div','chart-wrap');wrap.style.height='340px';
+  const cv=el('canvas');wrap.appendChild(cv);container.appendChild(wrap);
+  const cols=[PAL.petrole,PAL.ambre,PAL.emeraude,PAL.corail];
+  const ds=sets.map((s,i)=>({label:s.label,data:s.data,borderColor:cols[i%4],backgroundColor:cols[i%4]+'22',borderWidth:2,pointBackgroundColor:cols[i%4],pointRadius:3}));
+  const c=new Chart(cv,{type:'radar',data:{labels,datasets:ds},options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'top',labels:{boxWidth:12,font:{family:'Hanken Grotesk',size:12,weight:'600'},color:'#27433d'}}},
+    scales:{r:{min:0,max,ticks:{stepSize:1,font:{size:10},color:'#9aa7a3',backdropColor:'transparent'},grid:{color:'#E2DCCF'},angleLines:{color:'#E2DCCF'},pointLabels:{font:{family:'Hanken Grotesk',size:11.5,weight:'600'},color:'#27433d'}}}}});
+  chartReg.push(c);return c;
+}
+/* ---- block renderers ---- */
+function blockChartCard(b){
+  const card=el('div','card');
+  const head=el('div','ch-head');
+  let q=`<div class="ch-q">`+(b.q?`<span class="qn">${esc(b.q)}</span>`:'')+(b.kind?`<span>${esc(b.kind)}</span>`:'')+(b.n!=null?`<span>n=${b.n}</span>`:'')+`</div>`;
+  head.innerHTML=q+`<div class="ch-title">${esc(b.title)}</div>`+(b.note?`<div class="ch-note">${esc(b.note)}</div>`:'');
+  card.appendChild(head);
+  const host=el('div');card.appendChild(host);
+  // defer chart creation until in DOM
+  card._draw=()=>{
+    try{
+    if(typeof Chart==='undefined'){host.innerHTML='<div style="padding:16px;color:#9aa7a3;font-size:12.5px;text-align:center">📊 Graphique indisponible (librairie Chart.js non chargée — vérifiez la connexion internet).</div>';return;}
+    if(b.type==='bars')hbar(host,{labels:b.items.map(i=>i.label),values:b.items.map(i=>i.v),values2:b.items.some(i=>i.v2!=null)?b.items.map(i=>i.v2):null,leg:b.leg,leg2:b.leg2,unit:b.unit||'%',max:b.max,color:b.color,color2:b.color2});
+    else if(b.type==='scale')hbar(host,{labels:b.items.map(i=>i.label),values:b.items.map(i=>i.v),values2:b.items.some(i=>i.v2!=null)?b.items.map(i=>i.v2):null,leg:b.leg||'Moyenne',leg2:b.leg2,unit:'/5',max:5,color:b.color,color2:b.color2});
+    else if(b.type==='doughnut')doughnut(host,{labels:b.items.map(i=>i.label),values:b.items.map(i=>i.v),unit:b.unit||'%'});
+    else if(b.type==='radar')radar(host,{labels:b.labels,sets:b.sets,max:b.max||5});
+    }catch(e){console.error('chart',e);host.innerHTML='<div style="padding:14px;color:#9aa7a3;font-size:12px">Graphique indisponible.</div>';}
+  };
+  if(b.legend){const lg=el('div','legend');lg.innerHTML=b.legend.map(l=>`<span><i style="background:${l.c}"></i>${esc(l.t)}</span>`).join('');card.appendChild(lg);}
+  if(b.analysis){const a=el('div','analysis');a.innerHTML=b.analysis;card.appendChild(a);}
+  if(b.src){const s=el('div','src');s.textContent=b.src;card.appendChild(s);}
+  return card;
+}
+function kpiCard(k){const c=el('div','kpi '+(k.tone||''));c.innerHTML=`<div class="kv">${k.v}</div><div class="kl">${k.l}</div>`+(k.s?`<div class="ks">${k.s}</div>`:'');return c;}
+function blockKpis(items){if(items.length===1)return kpiCard(items[0]);const g=el('div','grid g4');items.forEach(k=>g.appendChild(kpiCard(k)));return g;}
+function blockInsight(b){const d=el('div','insight '+b.tone);const tags={gap:'Écart de perception',risk:'Risque 3-5 ans',signal:'Signal faible',lever:'Levier'};d.innerHTML=`<div class="ih"><span class="tag">${tags[b.tone]||''}</span><span>${esc(b.title)}</span></div><p>${b.text}</p>`;return d;}
+function blockVerbatims(b){const w=el('div','card');
+  const noteHtml=b.note?esc(b.note):(b.themes&&b.n!=null?`Chaque chiffre = <b>% des ${b.n} ${b.base||'répondants'}</b> ayant cité ce thème · plusieurs réponses possibles`:'');
+  w.innerHTML=`<div class="ch-q">`+(b.q?`<span class="qn">${esc(b.q)}</span>`:'')+`<span>verbatims anonymisés</span>`+(b.n!=null?`<span>n=${b.n}</span>`:'')+`</div><div class="ch-title">${esc(b.title)}</div>`+(noteHtml?`<div class="ch-note">${noteHtml}</div>`:'');
+  if(b.themes){const t=el('div','themes');t.style.margin='12px 0';t.innerHTML=b.themes.map(x=>`<span class="theme ${x.cls||''}"><span class="tn">${x.n}%</span>${esc(x.label)}</span>`).join('');w.appendChild(t);}
+  const vg=el('div','vb-grid');vg.innerHTML=b.quotes.map(q=>`<div class="vb">${esc(q)}</div>`).join('');w.appendChild(vg);
+  if(b.analysis){const a=el('div','analysis');a.innerHTML=b.analysis;w.appendChild(a);}return w;}
+function blockText(b){const c=el('div','card');c.innerHTML=(b.title?`<div class="ch-title" style="margin-bottom:8px">${esc(b.title)}</div>`:'')+b.html;return c;}
+function blockTable(b){const w=el('div','tbl-wrap');let h='<table><thead><tr>'+b.headers.map((x,i)=>`<th class="${i>0&&b.numCols!==false?'num':''}">${esc(x)}</th>`).join('')+'</tr></thead><tbody>';
+  b.rows.forEach(r=>{h+='<tr>'+r.map((c,i)=>`<td class="${i>0&&b.numCols!==false?'num':''}">${c}</td>`).join('')+'</tr>';});h+='</tbody></table>';w.innerHTML=h;return w;}
+
+/* render a list of blocks into a container, then draw charts */
+function renderBlocks(host,blocks){
+  blocks.forEach(b=>{
+    if(b.type==='section'){const s=el('div','section');if(b.aid)s.id=b.aid;s.innerHTML=`<div class="section-title"><span class="st-num">${b.num||'•'}</span>${esc(b.title)}</div>`+(b.desc?`<div class="section-desc">${b.desc}</div>`:'');(host._acc||host).appendChild(s);return;}
+    if(b.type==='accStart'){const d=document.createElement('details');d.className='acc';if(b.aid)d.id=b.aid;if(b.open)d.open=true;const su=document.createElement('summary');su.innerHTML=`<span class="acc-ic">${b.icon||'▸'}</span><span class="acc-tt">${esc(b.title)}${b.sub?`<small>${esc(b.sub)}</small>`:''}</span><span class="acc-ch">⌄</span>`;d.appendChild(su);const body=el('div','acc-body');d.appendChild(body);host.appendChild(d);host._acc=body;return;}
+    if(b.type==='accEnd'){host._acc=null;return;}
+    if(b.type==='gridStart'){const g=el('div','grid '+(b.cols||'g2'));g.dataset.grid='1';(host._acc||host).appendChild(g);host._cur=g;return;}
+    if(b.type==='gridEnd'){host._cur=null;return;}
+    let node;
+    if(b.type==='bars'||b.type==='scale'||b.type==='doughnut'||b.type==='radar')node=blockChartCard(b);
+    else if(b.type==='kpis')node=blockKpis(b.items);
+    else if(b.type==='insight')node=blockInsight(b);
+    else if(b.type==='verbatims')node=blockVerbatims(b);
+    else if(b.type==='text')node=blockText(b);
+    else if(b.type==='table'){node=el('div','');node.appendChild(b.title?(()=>{const t=el('div','ch-title');t.style.margin='2px 0 10px';t.textContent=b.title;return t;})():el('span'));node.appendChild(blockTable(b));}
+    else if(b.type==='html'){node=el('div','');node.innerHTML=b.html;}
+    if(!node)return;
+    (host._cur||host._acc||host).appendChild(node);
+    if(b.span2&&node.classList)node.classList.add('span2');
+  });
+  // draw charts after layout
+  requestAnimationFrame(()=>{host.querySelectorAll('.card').forEach(c=>{if(c._draw){try{c._draw();}catch(e){console.error(e);}}});});
+}
+</script>
+<script>
+/* ===================== DATA ===================== */
+const META={n_total:42, colleges:4};
+const ENT={label:'Entreprises', n:21,
+ headline:"Un socle industriel dynamique face à un choc démographique non anticipé",
+ sub:"Tissu à dominante métallurgie/usinage : <b>95%</b> des entreprises en tension de recrutement, une dynamique d'investissement forte (71%) — mais un choc démographique et un déficit d'attractivité encore peu adressés.",
+ blocks:[
+  {type:'kpis',items:[
+    {v:'48%',l:'Métallurgie, usinage & métaux',s:'secteur dominant (10/21, Q1.1)',tone:'petrol'},
+    {v:'71%',l:'investissent à 3 ans',s:'machines, robots, ERP… (Q2.4)',tone:'emer'},
+    {v:'95%',l:'en tension de recrutement',s:'majeure ou ponctuelle (Q3.2)',tone:'coral'},
+    {v:'29%',l:'de dirigeants de 55 ans et +',s:'enjeu de transmission (Q1.8)',tone:'amber'},
+  ]},
+
+  {type:'section',num:'1',title:"Profil de l'entreprise",desc:"Un panel couvrant le cœur du tissu industriel local : PME/ETI de la métallurgie et de la sous-traitance, complétées par le transport-logistique."},
+  {type:'gridStart',cols:'g2'},
+  {type:'doughnut',q:'Q1.1',n:21,title:"Secteur d'activité principal",items:[{label:'Métallurgie / usinage / métaux',v:48},{label:'Transport routier & logistique',v:19},{label:'Autre',v:14},{label:'Agroalimentaire',v:5},{label:'Imprimerie',v:5},{label:'Maroquinerie / luxe',v:5},{label:'Aéronautique',v:5}],analysis:`La <b>métallurgie-usinage</b> structure le bassin (10/21). Le diagnostic doit se lire avant tout comme celui d'un territoire <b>industriel de sous-traitance des métaux</b>, complété par la logistique.`},
+  {type:'doughnut',q:'Q1.3',n:21,title:"Effectif total de l'entreprise",items:[{label:'10 à 49 salariés',v:38},{label:'50 à 249 salariés',v:38},{label:'Moins de 10',v:14},{label:'250 et plus',v:10}],analysis:`Dominante <b>PME/ETI</b> (76% entre 10 et 249 salariés). Effectif médian hors plus gros employeur : <b>28,5 salariés</b> (Q1.4). Un employeur d'environ 1 550 salariés est traité à part pour neutraliser son poids.`},
+  {type:'gridEnd'},
+  {type:'gridStart',cols:'g2'},
+  {type:'bars',q:'Q1.5',n:21,title:"Recours à des ressources externes régulières",note:'% de répondants — choix multiple',items:[{label:'Intérim',v:71},{label:'Prestation industrielle / logistique',v:48},{label:'Aucun recours externe',v:24}],analysis:`<b>71% recourent à l'intérim</b> de façon régulière : l'intérim est un amortisseur structurel du tissu, ce qui explique le rôle clé des agences dans le collège « acteurs de l'emploi ».`},
+  {type:'doughnut',q:'Q1.8',n:21,title:"Tranche d'âge du dirigeant / responsable de site",items:[{label:'45 à 54 ans',v:52},{label:'55 à 59 ans',v:19},{label:'Moins de 45 ans',v:19},{label:'60 ans et +',v:10}],analysis:`<b>29% des dirigeants ont 55 ans ou plus</b>. Couplé au faible taux de projets de transmission déclarés (19%, Q2.2), c'est un signal précoce sur la reprise d'entreprises à 5-10 ans.`},
+  {type:'gridEnd'},
+
+  {type:'section',num:'2',title:"Stratégie & anticipation",desc:"Une dynamique offensive (croissance, investissement) mais une anticipation RH partielle."},
+  {type:'bars',q:'Q2.1',n:21,title:"3 préoccupations principales pour les 24 prochains mois",note:'% de répondants — 3 choix maximum',items:[{label:'Maintenir activité / compétitivité (coûts)',v:67},{label:'Recruter des collaborateurs qualifiés',v:62},{label:'Fidéliser les collaborateurs',v:48},{label:'Développer de nouveaux marchés',v:38},{label:'Transition écologique & énergétique',v:29},{label:"Investir / moderniser l'outil",v:24},{label:'Diversifier / nouveaux produits',v:14},{label:'Évolutions technos (Industrie 4.0, IA)',v:10},{label:'Préparer la transmission',v:5}],analysis:`Les deux premières préoccupations — <b>compétitivité-coûts (67%)</b> et <b>recrutement qualifié (62%)</b> — sont indissociables : sans compétences, pas de compétitivité. La transmission ferme la marche (5%), ce qui contraste fortement avec la réalité démographique (section 4).`},
+  {type:'gridStart',cols:'g4'},
+  {type:'doughnut',q:'Q2.3',n:21,title:"Évolution des effectifs d'ici 3 ans",items:[{label:'À la hausse',v:62},{label:'Stable',v:33},{label:'À la baisse',v:5}]},
+  {type:'doughnut',q:'Q2.4',n:21,title:"Investissements majeurs d'ici 3 ans",items:[{label:'Oui, budgétés',v:62},{label:'Non',v:29},{label:"Oui, à l'étude",v:10}]},
+  {type:'doughnut',q:'Q2.2',n:21,title:"Projet de transmission / cession d'ici 5 ans",items:[{label:'Non',v:81},{label:'Oui, défini / en cours',v:10},{label:'Oui, en réflexion',v:10}]},
+  {type:'doughnut',q:'Q2.5',n:16,title:"Ces investissements exigent-ils de nouvelles compétences ?",items:[{label:'Non, compétences suffisantes',v:56},{label:'Oui, besoins de formation',v:44}]},
+  {type:'gridEnd'},
+  {type:'insight',tone:'signal',title:"Un angle mort potentiel entre investissement et compétences",text:`71% des entreprises investissent dans des machines, robots ou ERP, mais <b>56% estiment que les compétences actuelles suffiront</b> (Q2.5, n=16). Or moderniser l'outil sans plan de montée en compétences est un facteur d'échec classique des projets Industrie 4.0. <span class="hyp">hypothèse à vérifier en atelier</span>`},
+
+  {type:'section',num:'3',title:"Métiers clés & tensions de recrutement",desc:"Le cœur du diagnostic : quels métiers, quelle intensité, quelles causes, quelle exposition au changement."},
+  {type:'verbatims',q:'Q3.1',n:21,base:'entreprises',title:"Métiers clés ou en tension cités par les entreprises",themes:[{label:'Usinage / réglage CN / mécanique',n:33,cls:'hot'},{label:'Bureau études / méthodes / CAO',n:29,cls:'hot'},{label:'Encadrement / management',n:29,cls:'warm'},{label:'Qualité / contrôle / HSE',n:24,cls:'warm'},{label:'Conduite / transport',n:24,cls:'warm'},{label:'Maintenance',n:19},{label:'Logistique / cariste',n:19},{label:'Soudure / chaudronnerie',n:10}],quotes:["Règleur, contrôle qualité, technicien méthodes","Chef de projet BE, technicien BE, technicien méthodes industrialisation","Tech méthodes & ingénieurs, tech qualité, responsable QHSE, tech maintenance, responsable supply","Électromécanicien, opérateur logistique/cariste, opérateur de production"],analysis:`Les tensions se concentrent sur la <b>chaîne technique de l'usinage</b> (réglage CN, méthodes, qualité) et sur l'<b>encadrement de proximité</b>. <b>Usinage / réglage CN</b> arrive en tête (33% des entreprises). Ces familles se retrouvent chez les acteurs de l'emploi (maintenance/CNC à 4,9/5) et les syndicats (usinage/qualité 43%) : convergence forte.`},
+  {type:'gridStart',cols:'g2'},
+  {type:'doughnut',q:'Q3.2',n:21,title:"Ces métiers sont-ils en tension ?",items:[{label:'Oui, difficultés majeures',v:62},{label:'Oui, difficultés ponctuelles',v:33},{label:'Non, pas de tension',v:5}],analysis:`<b>95% en tension</b>, dont 62% en difficultés <b>majeures</b>. La tension n'est pas un risque futur : c'est la situation présente.`},
+  {type:'doughnut',q:'Q3.4',n:21,title:'Métiers « sensibles » (disparition / transformation d\'ici 5 ans)',items:[{label:'Non, stabilité prévue',v:48},{label:'Oui, risque partiel',v:33},{label:'Oui, transformation profonde',v:19}],analysis:`<b>52% anticipent une transformation</b> (partielle ou profonde) de leurs métiers clés. La moitié du tissu se sait exposée au changement — une porte d'entrée pour la GPECT.`},
+  {type:'gridEnd'},
+  {type:'scale',q:'Q3.3',n:20,title:"Causes des tensions de recrutement",note:'note moyenne 1 (faible) → 5 (fort impact)',items:[{label:'Pénurie de candidats sur le marché local',v:4.5},{label:'Concurrence salariale autres entreprises/secteurs',v:3.7},{label:'Inadéquation des compétences / diplômes',v:3.1},{label:'Déficit d\'image du métier / secteur',v:3.1},{label:'Localisation de l\'entreprise',v:2.8},{label:'Transport',v:2.5},{label:'Délais de formation initiale trop longs',v:2.4},{label:'Logement',v:1.7},{label:'Emploi du conjoint',v:1.6},{label:'Garde d\'enfant',v:1.5}],analysis:`Pour les entreprises, la cause n°1 est la <b>pénurie de candidats (4,5/5)</b> — un problème perçu de <b>quantité</b>. À comparer avec les acteurs de l'emploi et les syndicats, qui pointent d'abord un déficit de <b>qualification</b> et de <b>savoirs de base</b> : même symptôme, diagnostic différent (voir Analyse croisée).`},
+  {type:'scale',q:'Q3.5',n:13,title:"Facteurs de transformation des métiers",note:'note moyenne 1→5 · sous-échantillon n=13',items:[{label:'Changement attentes clients / marchés',v:3.5},{label:'Transition énergétique & décarbonation',v:3.5},{label:'Intégration de l\'IA dans les process',v:3.1},{label:'Évolution normes & réglementations',v:3.1},{label:'Automatisation & robotisation',v:2.8}],analysis:`La transformation est tirée par le <b>marché</b> et la <b>transition énergétique</b> autant que par la technologie. L'IA (3,1) progresse mais reste derrière les enjeux marché.`},
+
+  {type:'section',num:'4',title:"Démographie, turnover & transmission",desc:"L'enjeu le plus structurant à 5 ans — et le plus sous-estimé par les répondants."},
+  {type:'kpis',items:[
+    {v:'47%',l:'de seniors (45 ans et +)',s:'pyramide des âges (Q4.1)',tone:'amber'},
+    {v:'136',l:'départs retraite à 5 ans',s:'cumul déclaré (Q4.3)',tone:'coral'},
+    {v:'81%',l:'turnover faible & maîtrisé',s:'ancienneté élevée (Q4.5)',tone:'emer'},
+    {v:'1,0/5',l:'recours à l\'AFEST',s:'écart-type nul (Q4.8)',tone:'petrol'},
+  ]},
+  {type:'table',title:"Pyramide des âges — effet de poids du plus gros employeur (Q4.1)",headers:['Base','Têtes','<30 ans','31-44','45-59','60+','Seniors 45+','% femmes'],numCols:true,rows:[
+    ['Avec plus gros employeur','3 031','18,0%','35,0%','41,7%','5,3%','<b>47,0%</b>','36,5%'],
+    ['Sans plus gros employeur','1 506','20,9%','33,5%','39,5%','6,1%','<b>45,6%</b>','46,5%'],
+  ]},
+  {type:'gridStart',cols:'g2'},
+  {type:'doughnut',q:'Q4.5',n:21,title:"Situation en matière de turnover",items:[{label:'Faible & maîtrisé',v:81},{label:'En augmentation sur certains postes',v:19}],analysis:`Un turnover faible est un <b>atout de fidélisation</b>… mais aussi un <b>piège cognitif</b> : il rassure et masque le mur des départs en retraite. C'est précisément cette stabilité qui explique le faible sentiment d'urgence sur la transmission.`},
+  {type:'doughnut',q:'Q4.8b',n:21,title:"Besoin identifié en transmission des savoir-faire",items:[{label:'Non, dispositifs suffisants',v:67},{label:'Oui, besoin non traité',v:29},{label:'Aucun dispositif ni besoin',v:5}]},
+  {type:'gridEnd'},
+  {type:'bars',q:'Q4.4',n:20,title:"Services concentrant les départs en retraite",note:'% de répondants — choix multiple',items:[{label:'Production / fabrication',v:60},{label:'Logistique',v:25},{label:'Commerce / ADV',v:25},{label:'Conduite / transport',v:20},{label:'Qualité',v:15},{label:'Maintenance',v:15},{label:'Bureau d\'études',v:15},{label:'Management de proximité',v:15}],analysis:`Les départs frappent d'abord la <b>production (60%)</b> — là où se trouvent les savoir-faire techniques difficiles à remplacer. Le risque de perte de compétence est maximal sur le cœur de métier.`},
+  {type:'scale',q:'Q4.8',n:21,title:"Maturité des dispositifs de transmission en place",note:'note moyenne 1 (pas du tout) → 5 (très bien outillé)',items:[{label:'Documentation des procédures',v:3.5},{label:'Formation interne structurée',v:3.3},{label:'Tutorat / binôme junior-senior',v:3.2},{label:'Dispositifs France Travail (POEI, PMSMP)',v:2.1},{label:'AFEST (formation en situation de travail)',v:1.0}],analysis:`Les entreprises transmettent « à l'ancienne » (doc, tutorat). Les dispositifs <b>outillés et finançables</b> sont sous-mobilisés : France Travail à 2,1 et surtout <b>AFEST à 1,0/5 (écart-type nul : personne ne l'utilise)</b>. Or l'AFEST est l'outil le plus adapté à la transmission de gestes techniques en production. Levier d'action immédiat.`},
+  {type:'scale',q:'Q4.7',n:21,title:"Motifs de départ des salariés",note:'note moyenne 1→5',items:[{label:'Départ vers la concurrence',v:2.8},{label:'Rémunération & avantages',v:2.7},{label:'Conditions de travail',v:2.4},{label:'Qualité de vie / équilibre',v:2.2},{label:'Autre secteur',v:2.1},{label:'Horaires',v:2.0},{label:'Pénibilité',v:2.0},{label:'Manque de perspectives',v:1.9}],analysis:`Tous les motifs restent <b>sous 3/5</b> : cohérent avec un turnover faible. Quand un départ survient, c'est d'abord <b>la concurrence locale</b> et <b>la rémunération</b> — un signal de concurrence salariale entre employeurs du bassin.`},
+
+  {type:'section',num:'5',title:"Recrutement",desc:"Une activité de recrutement quasi systématique, difficile, tirée par le remplacement des départs."},
+  {type:'gridStart',cols:'g4'},
+  {type:'doughnut',q:'Q5.1',n:21,title:'Recrutements en 2024-2025',items:[{label:'Oui',v:95},{label:'Non',v:5}]},
+  {type:'kpis',items:[{v:'3,8/5',l:'Difficulté de recrutement ressentie',s:'Q5.2 · n=20',tone:'coral'}]},
+  {type:'kpis',items:[{v:'131',l:'recrutements prévus à 3 ans',s:'cumul · médiane 5 (Q5.4)',tone:'emer'}]},
+  {type:'kpis',items:[{v:'76%',l:'pour remplacer des départs retraite',s:'1ère motivation (Q5.5)',tone:'amber'}]},
+  {type:'gridEnd'},
+  {type:'scale',q:'Q5.3',n:21,title:"Freins au recrutement",note:'note moyenne 1→5',items:[{label:'Manque de candidats sur le marché local',v:4.3},{label:'Concurrence d\'autres employeurs locaux',v:3.2},{label:'Inadéquation compétences / diplômes',v:2.8},{label:'Prétentions salariales trop élevées',v:2.8},{label:'Déficit d\'image de l\'entreprise/secteur',v:2.7},{label:'Mobilité (transports, véhicule)',v:2.1},{label:'Logement',v:1.4},{label:'Emploi du conjoint',v:1.4}],analysis:`Le <b>manque de candidats (4,3)</b> domine très nettement, loin devant l'inadéquation des compétences (2,8). Confirme la lecture « pénurie » côté entreprises.`},
+  {type:'gridStart',cols:'g2'},
+  {type:'bars',q:'Q5.5',n:21,title:"Motivation des futurs recrutements",note:'% de répondants — choix multiple',items:[{label:'Remplacement départs retraite',v:76},{label:'Accroissement de l\'activité',v:62},{label:'Remplacement départs volontaires',v:43},{label:'Lancement nouvelle activité',v:5}],analysis:`Le recrutement est d'abord <b>défensif</b> (remplacer les retraites, 76%), ce qui reconnecte au choc démographique : recruter ne suffira pas, il faut aussi <b>transmettre</b>.`},
+  {type:'bars',q:'Q5.6',n:21,title:"Actions d'attractivité déjà mises en place",note:'% de répondants — choix multiple',items:[{label:'Relations écoles / CFA / lycées',v:81},{label:'Communication réseaux sociaux',v:76},{label:'Partenariat France Travail / ML / Cap Emploi',v:71},{label:'Portes ouvertes / visites',v:48},{label:'Ambassadeurs métiers',v:24},{label:'Aucune action',v:5}],analysis:`Le tissu est déjà <b>actif et outillé</b> (écoles 81%, réseaux sociaux 76%). Les marges sont moins sur « faire » que sur <b>mutualiser et coordonner</b> ces actions à l'échelle du bassin.`},
+  {type:'gridEnd'},
+
+  {type:'section',num:'6',title:"Compétences",desc:"Des compétences globalement adaptées mais avec des lacunes ciblées, et un cap clair vers l'IA et l'énergie."},
+  {type:'gridStart',cols:'g2'},
+  {type:'doughnut',q:'Q6.1',n:21,title:"Compétences techniques adaptées aux besoins actuels ?",items:[{label:'Plutôt, avec quelques lacunes',v:62},{label:'Tout à fait adaptées',v:33},{label:'Plutôt inadaptées',v:5}]},
+  {type:'doughnut',q:'Q6.3',n:21,title:"Compétences comportementales (savoir-être) adaptées ?",items:[{label:'Plutôt adaptées',v:67},{label:'Tout à fait',v:24},{label:'Plutôt inadaptées',v:10}]},
+  {type:'gridEnd'},
+  {type:'bars',q:'Q6.2',n:21,title:"Compétences techniques qui manquent le plus aujourd'hui",note:'% de répondants — choix multiple',items:[{label:'Qualité, contrôle & métrologie',v:43},{label:'Management & gestion d\'équipe',v:33},{label:'Maintenance industrielle & automatismes',v:29},{label:'CAO / DAO / lecture de plans',v:29},{label:'Aucun manque identifié',v:24},{label:'Logistique / supply chain',v:19},{label:'Compétences commerciales',v:19},{label:'Usinage / mécanique',v:14},{label:'Programmation machines (CNC, automates)',v:14},{label:'Numérique industriel (ERP/GPAO)',v:14}],analysis:`Le manque n°1 est la <b>qualité/métrologie (43%)</b>, suivi du <b>management (33%)</b> : deux compétences « pivots » qui sécurisent la production et encadrent les équipes vieillissantes.`},
+  {type:'gridStart',cols:'g2'},
+  {type:'bars',q:'Q6.4',n:11,title:"Savoir-être à renforcer",note:'% de répondants — sous-échantillon n=11',items:[{label:'Rigueur & respect des procédures',v:91},{label:'Culture sécurité & vigilance',v:45},{label:'Autonomie & initiative',v:36},{label:'Travail en équipe',v:36},{label:'Engagement & responsabilité',v:36}],analysis:`Sur le sous-ensemble concerné, la <b>rigueur/respect des procédures (91%)</b> écrase tout : enjeu d'intégration et de culture industrielle plus que de personnalité.`},
+  {type:'bars',q:'Q6.5',n:21,title:"Compétences à développer d'ici 3-5 ans",note:'% de répondants — choix multiple',items:[{label:'Intelligence artificielle',v:38},{label:'Transition énergétique & décarbonation',v:33},{label:'Transmission des savoir-faire & tutorat',v:33},{label:'Animation d\'équipes (agile/projet)',v:29},{label:'Automatisation, cobotique',v:24},{label:'Cybersécurité industrielle',v:24},{label:'Conduite du changement',v:24},{label:'Outils numériques collaboratifs',v:24}],analysis:`L'<b>IA arrive en tête (38%)</b> des compétences d'avenir, devant la transition énergétique et la transmission. La demande existe — reste l'offre locale, quasi absente sur ces sujets (voir collège Organismes de formation).`},
+  {type:'gridEnd'},
+
+  {type:'section',num:'7',title:"Formation & coopération",desc:"Une culture formation mature côté financement, mais une coopération avec les acteurs de l'emploi à structurer."},
+  {type:'gridStart',cols:'g2'},
+  {type:'doughnut',q:'Q7.2',n:21,title:"Connaissance des droits de financement (OPCO)",items:[{label:'Oui, mobilisés régulièrement',v:90},{label:'Non, dispositifs mal connus',v:10}],analysis:`<b>90% mobilisent leur OPCO</b> : la maturité « financement formation » est élevée. Le frein n'est donc pas l'argent de la formation, mais l'<b>ingénierie</b> et la <b>disponibilité</b>.`},
+  {type:'doughnut',q:'Q7.4',n:21,title:"Recours à l'alternance",items:[{label:'Oui, régulièrement',v:76},{label:'Non, pas envisagé',v:14},{label:'Non, mais ouverts',v:10}]},
+  {type:'bars',q:'Q7.1',n:21,title:"Formations organisées (2 dernières années)",note:'% de répondants — choix multiple',items:[{label:'Développement des compétences métiers',v:90},{label:'Obligatoires (sécurité, habilitations)',v:71},{label:'Management & développement personnel',v:29}],analysis:`<b>90% forment au métier</b> au-delà des seules obligations : la culture formation est réelle. Le <b>management</b> reste le parent pauvre (29%), alors qu'il figure parmi les compétences les plus manquantes (Q6.2 : 33%).`},
+  {type:'doughnut',q:'Q7.5',n:18,title:"Les alternants sont-ils issus du territoire ?",items:[{label:'Oui, majoritairement',v:50},{label:'Partiellement',v:28},{label:'Non, autres territoires',v:22}],analysis:`La moitié des alternants viennent du bassin ; <b>50% en partie ou hors territoire</b> : un vivier local de jeunes à consolider (lien écoles, orientation).`},
+  {type:'gridEnd'},
+  {type:'bars',q:'Q7.3',n:21,title:"Freins à la formation",note:'% de répondants — choix multiple',items:[{label:'Difficulté à libérer les salariés',v:38},{label:'Coût pédagogique trop élevé',v:29},{label:'Aucun frein particulier',v:29},{label:'Faible appétence des salariés',v:24},{label:'Absence de formation adaptée localement',v:14},{label:'Manque de temps pour organiser',v:14}],analysis:`Le frein n°1 est <b>organisationnel</b> (libérer les salariés, 38%), pas financier. D'où l'intérêt des formats <b>en situation de travail (AFEST)</b> et <b>courts</b>, qui ne désorganisent pas la production.`},
+  {type:'gridStart',cols:'g2'},
+  {type:'doughnut',q:'Q7.8',n:21,title:"Coopération avec les acteurs de l'emploi locaux",items:[{label:'Faible & ponctuelle',v:43},{label:'Régulière & structurée',v:38},{label:'Aucune coopération',v:19}],analysis:`<b>62% des entreprises ont une coopération faible ou nulle</b> avec France Travail, Mission Locale, Cap Emploi… Un gisement d'efficacité immédiat, d'autant que ces acteurs se disent très disponibles (collège dédié).`},
+  {type:'kpis',items:[{v:'3,1/5',l:"Offre de formation locale jugée adaptée",s:'Q7.6 · note tiède, médiane 3',tone:'amber'}]},
+  {type:'gridEnd'},
+  {type:'scale',q:'Q7.9',n:21,title:"Attentes vis-à-vis des acteurs de l'emploi",note:'note moyenne 1→5',items:[{label:'Job datings & forums de recrutement',v:3.3},{label:'Découverte des métiers auprès des scolaires',v:3.2},{label:'Diffusion & présélection des offres',v:3.1},{label:'Parcours de pré-qualification (profils sans expérience)',v:2.8},{label:'Suivi post-recrutement / intégration',v:2.7},{label:'Partage de viviers entre entreprises',v:2.6},{label:'Parcours de formation sur mesure (CQP, titres pro)',v:2.5}],analysis:`Les attentes restent <b>modérées (toutes ≤ 3,3)</b> : reflet d'une coopération encore distante. Les entreprises attendent surtout du <b>sourcing</b> (job datings, scolaires, offres) plus que de l'ingénierie de parcours — un signe qu'elles n'imaginent pas encore ce que la coopération pourrait produire.`},
+
+  {type:'section',num:'8',title:"Territoire & attractivité",desc:"Le point noir le plus net du diagnostic, et paradoxalement le plus mobilisateur."},
+  {type:'bars',q:'Q8.1',n:21,title:"Freins territoriaux au recrutement / à la fidélisation",note:'% de répondants — choix multiple',items:[{label:'Image du territoire peu attractive',v:95},{label:'Offre de soins / santé insuffisante',v:67},{label:'Transports en commun / mobilité',v:38},{label:'Services à la personne (crèches, gardes)',v:24},{label:'Offre de logement insuffisante/chère',v:14},{label:'Animation culturelle / loisirs',v:14}],analysis:`L'<b>image du territoire (95%)</b> est le frein le plus partagé de tout le diagnostic, suivie de la <b>désertification médicale (67%)</b>. Deux sujets qui dépassent l'entreprise et appellent une réponse <b>collective et territoriale</b>.`},
+  {type:'gridStart',cols:'g2'},
+  {type:'kpis',items:[{v:'2,3/5',l:"Image d'Issoudun auprès des candidats",s:'Q8.2 · note la plus basse du diagnostic (max observé : 3)',tone:'coral'}]},
+  {type:'kpis',items:[{v:'76%',l:'prêts à une campagne de communication territoriale commune',s:'Q8.3 · 1ère action collective plébiscitée',tone:'emer'}]},
+  {type:'gridEnd'},
+  {type:'bars',q:'Q8.3',n:21,title:"Actions collectives territoriales : disposition à s'engager",note:'% de répondants — choix multiple',items:[{label:'Campagne de communication territoriale',v:76},{label:'Promotion des métiers (scolaires)',v:67},{label:'Ateliers inter-entreprises RH',v:62},{label:'Visites / portes ouvertes coordonnées',v:57},{label:'Plateforme de recrutement mutualisée',v:52},{label:'Groupement d\'employeurs (temps partagé)',v:29},{label:'Pas d\'intérêt actuellement',v:5}],analysis:`Contraste fécond : l'image est mauvaise (2,3/5) <b>mais la volonté d'agir ensemble est forte</b> — 5 actions sur 6 dépassent 50% d'adhésion. La matière première d'un plan collectif est là.`},
+
+  {type:'section',num:'9',title:"Priorités GPECT",desc:"Ce que les entreprises attendent en premier de la démarche."},
+  {type:'scale',q:'Q9.1',n:21,title:"Priorités d'action GPECT (hiérarchisées)",note:'note moyenne 1 (faible) → 5 (très haute priorité)',items:[{label:'Attractivité du territoire & communication',v:3.9},{label:'Connaissance du marché du travail & métiers en tension',v:3.3},{label:'Aide au recrutement & sourcing',v:2.8},{label:'Développement de l\'alternance & liens écoles',v:2.8},{label:'Transition numérique & Industrie 4.0',v:2.7},{label:'Développement de l\'offre de formation locale',v:2.6},{label:'Mutualisation inter-entreprises',v:2.5},{label:'Gestion des seniors & transmission',v:2.5}],analysis:`L'<b>attractivité (3,9)</b> et la <b>connaissance du marché (3,3)</b> dominent. À l'inverse, <b>seniors/transmission ferme la marche (2,5)</b> : c'est l'illustration la plus nette du décalage entre la priorité perçue et l'enjeu réel mesuré en section 4. Le rôle du diagnostic est de réintroduire ce sujet.`},
+  {type:'gridStart',cols:'g2'},
+  {type:'bars',q:'Q9.2',n:21,title:"Ateliers de co-construction : thèmes souhaités",note:'% de répondants — choix multiple',items:[{label:'Attractivité & recrutement territorial',v:48},{label:'Métiers sensibles & compétences clés',v:38},{label:'Ne souhaite pas participer',v:33},{label:'Transmission savoir-faire & seniors',v:14},{label:'Industrie 4.0 & compétences de demain',v:14}],analysis:`<b>33% ne souhaitent pas participer</b> : à prendre au sérieux. La mobilisation devra être « gagnée » par des formats utiles et courts, pas présupposée.`},
+  {type:'verbatims',q:'Q9.3',n:21,base:'entreprises',title:"Attentes ouvertes — verbatims",themes:[{label:'Attractivité / image / com',n:38,cls:'hot'},{label:'Observatoire métiers en tension',n:24,cls:'warm'},{label:'Formation locale',n:19},{label:'Santé / sécurité / transport',n:14}],quotes:["Faire connaître nos métiers, améliorer l'image du territoire","Identifier précisément les métiers en tension du bassin","Ouvrir des formations locales (génie méca) pour les jeunes"],analysis:`Les attentes ouvertes confirment les fermées : <b>image</b> et <b>observatoire des métiers</b> en tête.`},
+  {type:'gridEnd'},
+ ]
+};
+const OF={label:'Organismes de formation', n:7,
+ headline:"Une offre solide sur les métiers historiques, un trou sur les compétences émergentes",
+ sub:"Panel diversifié (OF privé, CFA, lycée pro, GRETA, IUT, financeur régional). Bons plateaux techniques (86%) — mais une capacité quasi nulle sur l'IA (2,3/5) et la cybersécurité (1,1/5), et une auto-évaluation de l'adéquation très supérieure à celle des utilisateurs.",
+ blocks:[
+  {type:'html',html:`<div class="note-box" style="margin-bottom:6px"><b>Prudence — n=7.</b> Aucune généralisation : les pourcentages sont des <b>ordres de grandeur</b> (1 répondant ≈ 14 points). Effectifs bruts prioritaires. Pour les questions sensibles au poids du financeur régional, la moyenne « hors financeur » (n=6) est affichée en complément.</div>`},
+  {type:'kpis',items:[
+    {v:'86%',l:'disposent de plateaux techniques équipés',s:'industrie / métiers techniques (Q1.7)',tone:'emer'},
+    {v:'4,0/5',l:'s\'estiment couvrir les besoins',s:'auto-évaluation (Q4.1) — à confronter',tone:'amber'},
+    {v:'2,3/5',l:'capacité à former à l\'IA',s:'compétence émergente n°1 demandée (Q2.2)',tone:'coral'},
+    {v:'1,1/5',l:'capacité sur la cybersécurité',s:'quasi inexistante (Q2.2)',tone:'coral'},
+  ]},
+
+  {type:'section',num:'0-1',title:"Identité & offre",desc:"Un collège hétérogène mais bien implanté localement, tourné vers les demandeurs d'emploi et l'alternance."},
+  {type:'gridStart',cols:'g4'},
+  {type:'doughnut',q:'Q0.8',n:7,title:'Certification Qualiopi',items:[{label:'Oui, certifié',v:71},{label:'Non',v:29}]},
+  {type:'doughnut',q:'Q1.4',n:7,title:"Capacité d'accueil annuelle",items:[{label:'> 500 stagiaires/an',v:71},{label:'50 à 200',v:14},{label:'200 à 500',v:14}]},
+  {type:'doughnut',q:'Q0.11',n:7,title:"Implantation sur le bassin d'Issoudun",items:[{label:'Antenne permanente',v:43},{label:'Sessions régulières',v:29},{label:'Sessions ponctuelles',v:14},{label:'Aucune',v:14}]},
+  {type:'doughnut',q:'Q1.7',n:7,title:'Plateaux techniques industrie',items:[{label:'Oui, totalement équipés',v:86},{label:'Aucun',v:14}]},
+  {type:'gridEnd'},
+  {type:'gridStart',cols:'g2'},
+  {type:'bars',q:'Q1.1',n:7,title:'Publics principalement accueillis',note:'% de répondants — choix multiple',items:[{label:'Demandeurs d\'emploi',v:100},{label:'Jeunes en alternance',v:86},{label:'Reconversion professionnelle',v:71},{label:'Situation de handicap',v:71},{label:'Salariés en poste (continue)',v:57},{label:'Allophones / sous main de justice',v:43},{label:'Scolaires / lycéens',v:29}],analysis:`<b>100% accueillent des demandeurs d'emploi</b> : l'offre est branchée sur l'insertion. Le lien avec les <b>salariés en poste (57%)</b> — cœur de cible de la formation continue d'entreprise — est plus ténu.`},
+  {type:'bars',q:'Q1.2',n:7,title:'Nature des formations',note:'% de répondants — choix multiple',items:[{label:'En alternance',v:86},{label:'Certifiantes / diplômantes',v:86},{label:'Continues (adultes)',v:71},{label:'Sur mesure / intra',v:71},{label:'Courtes / modulaires',v:57},{label:'VAE',v:57},{label:'Blocs de compétences',v:43}],analysis:`Offre orientée <b>alternance et certification</b>. Le « sur mesure intra » (71%) et le « court/modulaire » (57%) montrent une capacité d'adaptation réelle — sous-exploitée faute de demande structurée.`},
+  {type:'gridEnd'},
+
+  {type:'section',num:'2',title:"Niveau de l'offre & compétences émergentes",desc:"Le contraste central de ce collège : robuste sur l'industrie classique, fragile sur le futur."},
+  {type:'scale',q:'Q2.1',n:7,title:"Niveau de l'offre actuelle par domaine",note:'note moyenne 1 (faible) → 5 (fort)',items:[{label:'Maintenance industrielle & automatismes',v:3.9},{label:'Management & gestion d\'équipe',v:3.9},{label:'Usinage, mécanique & métaux',v:3.7},{label:'Logistique & supply chain',v:3.7},{label:'Programmation machines (CNC, robots)',v:3.4},{label:'CAO / DAO / lecture de plans',v:3.3},{label:'Compétences commerciales',v:3.3},{label:'Sécurité & prévention',v:3.1},{label:'Qualité, contrôle & métrologie',v:2.7},{label:'Numérique industriel (ERP/GPAO)',v:2.7}],analysis:`L'offre est <b>solide sur les fondamentaux industriels</b> (maintenance, usinage, logistique). Faiblesse notable : la <b>qualité/métrologie (2,7)</b> — précisément le manque n°1 cité par les entreprises (Q6.2 : 43%). Un point de rencontre offre/demande à activer.`},
+  {type:'scale',q:'Q2.2',n:7,title:"Capacité à former aux compétences émergentes",note:'moyenne globale (n=7) vs hors financeur (n=6)',leg:'Ensemble (n=7)',leg2:'Hors financeur (n=6)',items:[{label:'Management de la performance',v:3.4,v2:3.8},{label:'Conduite du changement & projet',v:3.3,v2:3.7},{label:'Transmission des savoir-faire & tutorat',v:3.3,v2:3.7},{label:'Maintenance avancée & prédictive',v:2.9,v2:3.2},{label:'Automatisation, cobotique',v:2.7,v2:3.0},{label:'Transition énergétique & décarbonation',v:2.4,v2:2.7},{label:'Intelligence artificielle',v:2.3,v2:2.5},{label:'Cybersécurité industrielle',v:1.1,v2:1.2}],analysis:`Effondrement progressif vers les sujets d'avenir : <b>IA à 2,3 et cybersécurité à 1,1/5</b>. Même en retirant le financeur, le constat tient. Or l'IA est l'évolution n°1 anticipée par 100% de ce même collège (Q8.2) : <b>les OF voient venir la vague mais ne sont pas équipés pour y répondre</b>.`},
+  {type:'insight',tone:'signal',title:"Trou structurant : demande émergente forte, offre locale quasi nulle",text:`IA, cybersécurité, robotique, maintenance prédictive sont demandées par les entreprises (Q6.5) et anticipées par les OF eux-mêmes — mais la capacité locale à former y est la plus faible mesurée. Sans investissement d'ingénierie (formation de formateurs, partenariats), le territoire devra « importer » ces compétences. Levier prioritaire du plan d'action.`},
+
+  {type:'section',num:'3-4',title:"Connaissance des besoins & adéquation de l'offre",desc:"Là se loge l'écart de perception le plus important de tout le diagnostic."},
+  {type:'gridStart',cols:'g3'},
+  {type:'kpis',items:[{v:'3,0/5',l:'Connaissance des besoins des entreprises du bassin',s:'Q3.1 · auto-évaluée, identique hors financeur',tone:'amber'}]},
+  {type:'kpis',items:[{v:'4,0/5',l:'« Notre offre couvre bien les besoins »',s:'Q4.1 · 4,3 hors financeur',tone:'emer'}]},
+  {type:'kpis',items:[{v:'4,0/5',l:'Retours clients sur l\'adéquation',s:'Q4.2 · auto-déclaré',tone:'emer'}]},
+  {type:'gridEnd'},
+  {type:'insight',tone:'gap',title:"Les OF se jugent adéquats (4,0) ; leurs « clients » ne les suivent pas",text:`Les organismes estiment couvrir les besoins à <b>4,0/5</b>, mais ne déclarent connaître ces besoins qu'à <b>3,0/5</b> — on peut difficilement bien couvrir ce qu'on connaît moyennement. En face, les <b>acteurs de l'emploi notent l'offre locale 2,3/5</b>, les <b>entreprises 3,1/5</b>, et <b>71% des partenaires sociaux</b> la jugent « peu » ou « partiellement » adaptée. Écart de 1 à 1,7 point. <span class="hyp">Hypothèse : angle mort sur les compétences émergentes et les publics infra-CAP</span>`},
+  {type:'gridStart',cols:'g2'},
+  {type:'bars',q:'Q3.2',n:7,title:"Sources d'identification des besoins entreprises",note:'% de répondants — choix multiple',items:[{label:'Contacts directs entreprises',v:86},{label:'Données France Travail / observatoires',v:86},{label:'Veille sectorielle (OPCO, branches)',v:71},{label:'Instances locales (clubs, syndicats)',v:57},{label:'Retours d\'alternants',v:57},{label:'Études CCI',v:29}]},
+  {type:'bars',q:'Q4.3',n:7,title:"Points où l'offre est jugée insuffisante",note:'% de répondants — choix multiple',items:[{label:'Éloignement géographique',v:29},{label:'Coût pédagogique trop élevé (PME)',v:29},{label:'Niveaux de qualification non adaptés',v:29},{label:'Durée des parcours trop rigide',v:14},{label:'Volume de sessions insuffisant',v:14},{label:'Aucune lacune identifiée',v:14}]},
+  {type:'gridEnd'},
+
+  {type:'section',num:'5',title:"AFEST & adaptation de l'offre",desc:"Un dispositif clé pour la transmission, peu maîtrisé localement."},
+  {type:'gridStart',cols:'g3'},
+  {type:'doughnut',q:'Q5.1',n:7,title:'Parcours AFEST déjà conçus / accompagnés',items:[{label:'Jamais',v:43},{label:'Régulièrement',v:29},{label:'1 à 2 cas ponctuels',v:29}]},
+  {type:'kpis',items:[{v:'2,6/5',l:'Maîtrise de l\'ingénierie AFEST',s:'Q5.2 · 2,8 hors financeur',tone:'amber'}]},
+  {type:'doughnut',q:'Q5.5',n:7,title:'Prêts à faire évoluer leur offre ?',items:[{label:'Oui, sans condition',v:57},{label:'Non',v:29},{label:'Oui, sous conditions',v:14}]},
+  {type:'gridEnd'},
+  {type:'bars',q:'Q5.3',n:7,title:"Freins au déploiement de l'AFEST sur le territoire",note:'% de répondants — choix multiple',items:[{label:'Résistance / méconnaissance des entreprises',v:43},{label:'Complexité du référentiel & traçabilité',v:29},{label:'Absence de modèle économique viable',v:29},{label:'Difficulté à identifier les situations apprenantes',v:14},{label:'Méconnaissance par les OPCO locaux',v:14}],analysis:`Le frein AFEST n°1 est la <b>méconnaissance côté entreprises (43%)</b> — cohérent avec l'AFEST à 1,0/5 chez les entreprises. C'est un sujet de <b>sensibilisation et d'ingénierie partagée</b>, pas de capacité technique.`},
+
+  {type:'section',num:'6-7',title:"Coopération, freins & leviers",desc:"Un collège connecté aux acteurs, mais qui peine à mobiliser les entreprises."},
+  {type:'gridStart',cols:'g2'},
+  {type:'bars',q:'Q7.1',n:7,title:"Freins au développement / à l'adaptation de l'offre",note:'% de répondants — choix multiple',items:[{label:'Difficulté à mobiliser les entreprises',v:71},{label:'Manque de financements ingénierie',v:57},{label:'Faible attractivité de certains métiers',v:57},{label:'Plateaux techniques absents / vétustes',v:43},{label:'Concurrence entre OF',v:29},{label:'Faible volume de demande',v:29}],analysis:`Frein n°1 : <b>mobiliser les entreprises (71%)</b> — exactement le miroir de la difficulté que les entreprises ont à coopérer (Q7.8) et que les syndicats constatent (engagement faible, 57%). Boucle à casser.`},
+  {type:'bars',q:'Q7.2',n:7,title:'Leviers jugés les plus utiles',note:'% de répondants — choix multiple',items:[{label:'Observatoire local des métiers',v:71},{label:'Financement dédié à l\'adaptation pédago',v:57},{label:'Plateforme mutualisée de plateaux techniques',v:43},{label:'Parcours communs entre OF',v:43},{label:'Réseau structuré d\'acteurs locaux',v:43},{label:'Cartographie partagée de l\'offre',v:43}],analysis:`L'<b>observatoire local des métiers (71%)</b> est le levier n°1 — convergent avec la priorité « connaissance du marché » des entreprises (Q9.1) et des OF (Q9.1 : 4,0). Un consensus inter-collèges rare et précieux.`},
+  {type:'gridEnd'},
+
+  {type:'section',num:'8',title:"Prospective",desc:"Une lecture lucide de l'avenir, dominée par l'IA."},
+  {type:'bars',q:'Q8.2',n:7,title:"Domaines où les évolutions seront les plus marquées",note:'% de répondants — choix multiple',items:[{label:'Intelligence artificielle',v:100},{label:'Automatisation / cobotique / robotique',v:71},{label:'Cybersécurité industrielle',v:71},{label:'Transition énergétique & décarbonation',v:57},{label:'Maintenance avancée & prédictive',v:43},{label:'Transmission des savoir-faire',v:29}],analysis:`<b>100% citent l'IA</b> comme l'évolution majeure. Rapproché de la capacité à former (2,3/5), c'est la définition même d'un besoin d'investissement prioritaire.`},
+  {type:'gridStart',cols:'g2'},
+  {type:'bars',q:'Q8.5',n:7,title:'Transformations internes envisagées (2-5 ans)',note:'% de répondants — choix multiple',items:[{label:'Nouvelles filières / certifications',v:71},{label:'Renforcement partenariats entreprises',v:71},{label:'Embauche de formateurs',v:57},{label:'Offre digitale / e-learning',v:43},{label:'Investissement plateaux techniques',v:43}],analysis:`Les OF sont en <b>posture d'évolution</b> (nouvelles filières 71%, partenariats 71%) : un terrain favorable pour co-construire une réponse aux compétences émergentes.`},
+  {type:'doughnut',q:'Q8.3',n:7,title:'Faut-il créer des formations absentes localement ?',items:[{label:'Probablement',v:57},{label:'Non',v:29},{label:'Je ne sais pas',v:14}]},
+  {type:'gridEnd'},
+
+  {type:'section',num:'9-11',title:"Priorités, rôles & territoire",desc:"Ce que les OF veulent porter dans la GPECT."},
+  {type:'scale',q:'Q9.1',n:7,title:"Priorités GPECT vues par les OF",note:'note moyenne 1→5',items:[{label:'Connaissance du marché & métiers en tension',v:4.0},{label:'Développement de l\'alternance & liens écoles',v:3.9},{label:'Attractivité du territoire & communication',v:3.3},{label:'Transition numérique & Industrie 4.0',v:3.3},{label:'Mutualisation inter-entreprises',v:3.0},{label:'Gestion des seniors & transmission',v:2.9},{label:'Développement de l\'offre de formation locale',v:2.6},{label:'Aide au recrutement & sourcing',v:2.3}],analysis:`Priorité n°1 : la <b>connaissance du marché (4,0)</b>. Les OF demandent eux-mêmes l'observatoire qui les aiderait à mieux calibrer leur offre — ce qui réduirait l'écart d'adéquation pointé plus haut.`},
+  {type:'gridStart',cols:'g2'},
+  {type:'bars',q:'Q9.2',n:7,title:'Rôles que les OF peuvent jouer dans la GPECT',note:'% de répondants — choix multiple',items:[{label:'Informer sur l\'offre existante',v:71},{label:'Contribuer à l\'attractivité (lycées)',v:71},{label:'Co-construire des parcours',v:57},{label:'Adapter l\'offre aux besoins',v:43},{label:'Accueillir alternance / VAE',v:43},{label:'Participer aux groupes de travail',v:43}]},
+  {type:'bars',q:'Q10.2',n:7,title:'Freins territoriaux vus auprès des publics',note:'% de répondants — choix multiple',items:[{label:'Image du territoire peu attractive',v:71},{label:'Transports / mobilité',v:57},{label:'Soins et santé insuffisants',v:43},{label:'Logement insuffisant / cher',v:29},{label:'Emploi du conjoint',v:14}],analysis:`Les OF confirment le diagnostic territorial : <b>image (71%)</b> et <b>mobilité (57%)</b>, vus du côté des publics en formation et en insertion.`},
+  {type:'gridEnd'},
+  {type:'verbatims',q:'Q11.1',n:7,title:"« Une seule action utile pour votre organisme » — verbatims",quotes:["Communication sur les atouts du territoire","Bien lister les besoins en formation / recrutement","Établir des partenariats pérennes avec les entreprises","Comment on embarque les entreprises du territoire ?","Que l'animateur GPECT se rende directement en entreprise pour vulgariser la démarche — « prendre son bâton de pèlerin » — en commençant par des outils simples : pyramide des âges, compétences clés"],analysis:`Un fil rouge : <b>la mobilisation des entreprises</b> comme condition de tout. Le dernier verbatim trace une méthode concrète d'animation de terrain — à reprendre dans le plan d'action.`},
+ ]
+};
+const ACT={label:"Acteurs de l'emploi", n:7,
+ headline:"Le regard le plus sévère sur la qualification et l'offre de formation locale",
+ sub:"3 agences d'intérim + 4 opérateurs publics (France Travail, Mission Locale, Cap Emploi, APEC). Au contact des publics éloignés de l'emploi, ce collège pointe un déficit de <b>qualification (4,3/5)</b> et juge l'offre de formation locale la plus durement de tous (<b>2,3/5</b>).",
+ blocks:[
+  {type:'html',html:`<div class="note-box" style="margin-bottom:6px"><b>Prudence — n=7.</b> L'éclairage <b>Intérim (n=3)</b> vs <b>Opérateurs publics (n=4)</b> est <b>purement indicatif</b> (effectifs très faibles) : il sert à repérer des tendances de divergence, jamais à conclure.</div>`},
+  {type:'kpis',items:[
+    {v:'4,9/5',l:'Difficulté à trouver : maintenance & prog. CNC',s:'tension technique maximale (Q3.1)',tone:'coral'},
+    {v:'4,3/5',l:'Manque de compétences techniques',s:'1er facteur d\'inadéquation (Q2.2)',tone:'coral'},
+    {v:'2,3/5',l:'Offre de formation locale adaptée',s:'note la plus basse inter-collèges (Q6.1)',tone:'amber'},
+    {v:'4,1/5',l:'Durée / stabilité des emplois obtenus',s:'les sorties tiennent dans le temps (Q5.3)',tone:'emer'},
+  ]},
+
+  {type:'section',num:'0-1',title:"Profil & publics accompagnés",desc:"Des structures de petite taille mais à fort volume, centrées sur les publics jeunes et seniors."},
+  {type:'gridStart',cols:'g3'},
+  {type:'doughnut',q:'Q0.1',n:7,title:'Type de structure',items:[{label:'Agence d\'intérim',v:43},{label:'France Travail',v:14},{label:'Mission Locale',v:14},{label:'Cap Emploi',v:14},{label:'APEC',v:14}]},
+  {type:'doughnut',q:'Q0.3',n:7,title:'Personnes accompagnées / an',items:[{label:'500 à 1000',v:43},{label:'100 à 500',v:29},{label:'1000 à 3000',v:14},{label:'< 100',v:14}]},
+  {type:'doughnut',q:'Q1.3',n:7,title:'Niveau de qualification dominant des publics',items:[{label:'CAP / BEP',v:57},{label:'Bac',v:14},{label:'Sans diplôme',v:14},{label:'Bac +3 et plus',v:14}]},
+  {type:'gridEnd'},
+  {type:'scale',q:'Q1.2',n:7,title:"Importance accordée aux publics — lecture intérim / public",note:'note moyenne 1→5 · n sous-groupes très faibles, indicatif',leg:'Intérim (n=3)',leg2:'Public (n=4)',items:[{label:'Seniors de 50 ans et +',v:4.3,v2:3.5},{label:'Jeunes de moins de 26 ans',v:4.7,v2:2.8},{label:'Personnes en reconversion',v:3.7,v2:2.8},{label:'Travailleurs handicapés',v:2.7,v2:3.0},{label:'Demandeurs d\'emploi longue durée',v:2.3,v2:3.0},{label:'Réfugiés / primo-arrivants',v:2.3,v2:2.2}],analysis:`Division du travail visible : l'<b>intérim</b> priorise les <b>jeunes (4,7)</b> employables vite ; les <b>opérateurs publics</b> portent davantage les <b>publics fragiles</b> (TH, longue durée). Complémentarité utile, mais qui suppose une coordination — pas toujours présente (voir Q7.1).`},
+
+  {type:'section',num:'2-3',title:"Adéquation & tensions de compétences",desc:"Le diagnostic technique le plus tranché du panel."},
+  {type:'gridStart',cols:'g3'},
+  {type:'kpis',items:[{v:'2,9/5',l:'Adéquation profils disponibles / besoins entreprises',s:'Q2.1 · faible',tone:'amber'}]},
+  {type:'kpis',items:[{v:'4,3/5',l:'« Manque de compétences techniques »',s:'Q2.2 · facteur n°1 d\'inadéquation',tone:'coral'}]},
+  {type:'kpis',items:[{v:'4,3/5',l:'« Niveau de qualification insuffisant »',s:'Q4.1 · frein n°1 d\'accès à l\'emploi',tone:'coral'}]},
+  {type:'gridEnd'},
+  {type:'scale',q:'Q3.1',n:7,title:"Difficulté des entreprises à trouver la compétence",note:'note moyenne 1→5',items:[{label:'Maintenance industrielle',v:4.9},{label:'Programmation machines CNC / robots',v:4.9},{label:'Usinage & mécanique industrielle',v:4.4},{label:'CAO / DAO & lecture de plans',v:4.3},{label:'Numérique industriel (ERP, GPAO, data)',v:4.0},{label:'Compétences transition énergétique',v:4.0},{label:'Qualité industrielle & métrologie',v:3.9},{label:'Sécurité & prévention',v:3.3},{label:'Management d\'équipe',v:3.1},{label:'Logistique & supply chain',v:3.0},{label:'Conduite véhicules / engins (CACES, SPL)',v:2.4}],analysis:`<b>Maintenance et programmation CNC/robots à 4,9/5</b> : la tension technique est jugée presque maximale et homogène (écart-type 0,4). Ce sont les mêmes familles que les entreprises (Q3.1) et les syndicats (Q10) citent : <b>triple convergence</b> sur le cœur technique industriel.`},
+  {type:'scale',q:'Q4.1',n:7,title:"Freins à l'accès à l'emploi industriel",note:'note moyenne 1→5',items:[{label:'Niveau de qualification insuffisant',v:4.3},{label:'Mobilité & accès aux transports',v:3.7},{label:'Difficulté d\'intégration en entreprise',v:3.3},{label:'Image des métiers industriels',v:3.0},{label:'Compétences de base (lecture, calcul, numérique)',v:2.9},{label:'Accès aux soins & à la santé',v:2.7},{label:'Accès au logement',v:2.3},{label:'Garde d\'enfants',v:1.7}],analysis:`Le frein n°1 est le <b>niveau de qualification (4,3)</b>, devant la mobilité (3,7). Là où les entreprises voient une « pénurie » (quantité), les acteurs voient un <b>déficit d'employabilité</b> (qualité) : c'est l'écart de diagnostic central du territoire.`},
+
+  {type:'section',num:'5-6',title:"Dispositifs & offre de formation",desc:"Des outils jugés efficaces, mais une offre locale très critiquée."},
+  {type:'gridStart',cols:'g2'},
+  {type:'scale',q:'Q5.2',n:7,title:"Efficacité perçue des dispositifs",note:'note moyenne 1→5',items:[{label:'Formation qualifiante',v:4.3},{label:'Parcours individualisés',v:4.3},{label:'PMSMP (immersion)',v:3.6},{label:'POEI',v:3.3}],analysis:`Les dispositifs <b>qualifiants et individualisés</b> sont jugés les plus efficaces (4,3) — ce qui plaide pour des <b>parcours de pré-qualification sur mesure</b> plutôt que des actions de masse.`},
+  {type:'kpis',items:[{v:'2,3/5',l:"« L'offre de formation locale répond aux besoins »",s:'Q6.1 · intérim 2,3 / public 2,2 — consensus négatif',tone:'coral'}]},
+  {type:'gridEnd'},
+  {type:'insight',tone:'gap',title:"Offre de formation : le verdict le plus dur vient de ceux qui placent les candidats",text:`À <b>2,3/5</b>, les acteurs de l'emploi — qui orientent quotidiennement vers la formation — donnent la note d'adéquation la plus basse du diagnostic, à l'opposé de l'auto-évaluation des OF (4,0/5). Comme ils sont au point de contact offre/demande, leur signal mérite un poids particulier dans le plan d'action.`},
+  {type:'scale',q:'Q6.2',n:7,title:"Manque de formation par domaine",note:'note moyenne 1 (faible) → 5 (fort manque)',items:[{label:'Robotique / cobotique',v:4.6},{label:'Maintenance industrielle',v:4.4},{label:'Usinage / mécanique',v:4.1},{label:'Industrie 4.0 / intelligence artificielle',v:4.1},{label:'Exploitation transport',v:4.0},{label:'Management industriel',v:3.4},{label:'Savoir-être',v:2.9},{label:'Sécurité industrielle',v:2.9}],analysis:`Le manque se concentre sur la <b>robotique (4,6)</b>, la <b>maintenance (4,4)</b> et l'<b>IA/Industrie 4.0 (4,1)</b> — exactement les domaines où les OF se disent les moins capables (Q2.2). Offre et demande pointent le même trou : preuve forte pour financer ces filières.`},
+
+  {type:'section',num:'7',title:"Coopération avec les entreprises",desc:"L'écart intérim / public le plus spectaculaire — un enjeu de circulation de l'information."},
+  {type:'scale',q:'Q7.1',n:7,title:"Qualité de la coopération avec les entreprises",note:'lecture Intérim (n=3) vs Public (n=4) · indicatif',leg:'Intérim (n=3)',leg2:'Public (n=4)',items:[{label:'Suivi des candidats après intégration',v:4.0,v2:4.0},{label:'Qualité des relations avec les entreprises',v:5.0,v2:2.8},{label:'Partage d\'infos sur les compétences attendues',v:4.7,v2:3.0},{label:'Anticipation des besoins de recrutement',v:4.7,v2:2.0},{label:'Construction de parcours sur mesure',v:3.0,v2:2.0}],analysis:`Écart béant sur l'<b>anticipation des besoins : 4,7 (intérim) vs 2,0 (public)</b>. L'information sur les besoins des entreprises <b>existe</b> — elle circule via l'intérim, au contact direct des employeurs — mais <b>ne remonte pas</b> vers les opérateurs publics. <span class="hyp">Hypothèse</span> : un observatoire partagé et des temps d'échange réguliers combleraient ce déficit de circulation, sans créer d'information nouvelle.`},
+
+  {type:'section',num:'8',title:"Actions territoriales & mobilisation",desc:"Un collège très volontaire, surtout sur la communication et la mobilité."},
+  {type:'scale',q:'Q8.1',n:7,title:"Importance des actions territoriales",note:'note moyenne 1→5',items:[{label:'Formations courtes pour les métiers en tension',v:4.4},{label:'Solutions territoriales de mobilité',v:4.4},{label:'Parcours de pré-qualification industrielle',v:4.3},{label:'Mutualisation d\'actions entre entreprises',v:4.1},{label:'Campagnes de communication métiers',v:4.0},{label:'Plateforme de recrutement mutualisée',v:2.1}],analysis:`Le triptyque <b>formations courtes + mobilité + pré-qualification</b> (≥4,3) dessine la réponse opérationnelle attendue. La plateforme de recrutement (2,1) séduit beaucoup moins — l'enjeu n'est pas un outil de plus, mais des <b>parcours</b>.`},
+  {type:'gridStart',cols:'g2'},
+  {type:'scale',q:'Q8.2',n:7,title:"Disposition à participer aux actions collectives",note:'note moyenne 1→5',items:[{label:'Campagne de communication commune',v:4.7},{label:'Ateliers inter-entreprises RH',v:4.3},{label:'Visites d\'entreprises coordonnées',v:3.9},{label:'Promotion des métiers (lycéens/collégiens)',v:3.3},{label:'Groupement d\'employeurs',v:3.1},{label:'Aucune participation envisagée',v:1.4}],analysis:`Disposition <b>très forte (4,7)</b> sur la communication commune, « aucune participation » à 1,4 : ce collège est un <b>moteur</b> de la dynamique collective.`},
+  {type:'scale',q:'Q8.3',n:7,title:"Intérêt pour les ateliers GPECT",note:'note moyenne 1→5',items:[{label:'Atelier métiers sensibles',v:4.3},{label:'Atelier attractivité & recrutement',v:4.3},{label:'Atelier transmission des savoir-faire',v:4.0},{label:'Atelier ingénierie pédagogique',v:3.4},{label:'Atelier Industrie 4.0',v:3.4}],analysis:`Intérêt marqué pour les ateliers <b>métiers sensibles</b> et <b>attractivité</b> (4,3) — alignés avec les priorités des entreprises.`},
+  {type:'gridEnd'},
+ ]
+};
+const SYN={label:'Syndicats & organisations professionnelles', n:7,
+ headline:"La voix « système » du territoire : qualification, mobilité et mobilisation",
+ sub:"3 organisations patronales (CPME / UIMM / MEDEF), 2 syndicats de salariés (CGT / CFE-CGC), 2 consulaires (CCI / CMA). Lecture transversale qui relie compétences, mobilité rurale, image des métiers manuels et difficulté à mobiliser les entreprises.",
+ blocks:[
+  {type:'html',html:`<div class="note-box" style="margin-bottom:6px"><b>Prudence — n=7, dominante qualitative.</b> Ce collège est analysé par <b>thèmes et verbatims</b> (anonymisés). Aucun chiffrage par famille d'acteur (anonymat à n=2-3). Les pourcentages comptent des répondants sur 7.</div>`},
+  {type:'kpis',items:[
+    {v:'86%',l:'citent la mobilité rurale comme frein structurant',s:'frein n°1 à l\'emploi (Q17)',tone:'coral'},
+    {v:'57%',l:'« qualification / main d\'œuvre absente »',s:'1er frein au développement (Q09)',tone:'coral'},
+    {v:'57%',l:'engagement des entreprises jugé « faible »',s:'dans les démarches collectives (Q20)',tone:'amber'},
+    {v:'71%',l:'jugent la transmission-reprise (très) prioritaire',s:'Q24 — à rebours des entreprises',tone:'petrol'},
+  ]},
+
+  {type:'section',num:'1',title:"Diagnostic du territoire",desc:"Une dynamique économique jugée moyenne, une coordination perfectible, des atouts logistiques réels mais des fragilités structurelles."},
+  {type:'gridStart',cols:'g3'},
+  {type:'kpis',items:[{v:'2,9/5',l:'Dynamique économique du bassin',s:'Q06 · médiane 3, resserré [2-3]',tone:'amber'}]},
+  {type:'kpis',items:[{v:'2,9/5',l:'Coordination entre acteurs économiques',s:'Q07 · marge de progrès claire',tone:'amber'}]},
+  {type:'kpis',items:[{v:'3,3/5',l:'Mobilité comme frein à l\'emploi',s:'Q18 · jusqu\'à 5/5 selon les acteurs',tone:'coral'}]},
+  {type:'gridEnd'},
+  {type:'verbatims',q:'Q08',n:7,base:'syndicats',title:"Atouts du territoire pour l'industrie et les TPE/PME",themes:[{label:'Foncier disponible / prix',n:43,cls:'warm'},{label:'Axes routiers / logistique',n:43,cls:'warm'},{label:'Tissu industriel implanté',n:29},{label:'Proximité pouvoirs publics',n:29},{label:'Data center / numérique',n:14}],quotes:["Capacité foncière professionnelle, axe routier nord-sud gratuit, aéroport","Proximité entre pouvoirs publics et entreprises ; tissu industriel fortement implanté","Tissu d'entreprises plus diversifié qu'il n'y paraît au-delà des deux grands donneurs d'ordre (équipementiers, mécanique, plasturgie, agro…) ; bons résultats d'insertion en apprentissage dans l'automobile"],analysis:`Les atouts sont <b>fonciers et logistiques</b> (43%) : un argument d'attractivité économique à mieux exploiter dans la communication territoriale. La diversité réelle du tissu, au-delà des deux grands noms, est un message à porter.`},
+  {type:'verbatims',q:'Q09',n:7,base:'syndicats',title:"Freins & fragilités au développement industriel",themes:[{label:'Qualification / main d\'œuvre absente',n:57,cls:'hot'},{label:'Transport / accessibilité',n:43,cls:'warm'},{label:'Logement',n:29},{label:'Désertification médicale',n:29},{label:'Orientation / image des métiers',n:29},{label:'Énergie (puissance électrique)',n:14}],quotes:["Dévalorisation des métiers manuels / fermeture des AFPA / niveau global de formation des demandeurs d'emploi","Accessibilité du territoire (train, voiture) ; puissance électrique insuffisante (coupures fréquentes, nouvelle ligne HT nécessaire) ; ressources humaines","Orientation scolaire (Éducation nationale et parents freinant l'accès aux métiers manuels)"],analysis:`La <b>qualification de la main d'œuvre (57%)</b> domine, devant le transport. Deux signaux faibles à ne pas perdre : la <b>puissance électrique insuffisante</b> (frein direct à l'Industrie 4.0) et le rôle de l'<b>orientation scolaire</b> dans la dévalorisation des métiers manuels.`},
+
+  {type:'section',num:'2',title:"Métiers en tension & compétences",desc:"Une lecture convergente avec les entreprises et les acteurs de l'emploi, complétée par l'enjeu des savoirs de base."},
+  {type:'gridStart',cols:'g2'},
+  {type:'verbatims',q:'Q10',n:7,base:'syndicats',title:"Métiers aux plus fortes tensions",themes:[{label:'Usinage / fraiseur / tourneur / ajusteur',n:43,cls:'hot'},{label:'Qualité / méthodes / contrôle',n:43,cls:'hot'},{label:'Maintenance',n:29},{label:'Encadrement / management',n:29},{label:'Restauration / services',n:29}],quotes:["Usinage / chaudronnerie / tech maintenance / tech méthode / contrôleur / tech qualité","Sous-traitance aéronautique/défense (CATIA) ; tourneur-fraiseur ; automobile ; restauration collective"],analysis:`Mêmes familles que les autres collèges : <b>usinage, qualité/méthodes, maintenance</b>. Originalité : la <b>restauration / services</b> (29%), frein indirect d'attractivité (cf. signal « cantine » plus bas).`},
+  {type:'verbatims',q:'Q13',n:7,base:'syndicats',title:"Compétences transversales / socles à renforcer",themes:[{label:'Savoirs de base (lire / écrire / compter)',n:57,cls:'hot'},{label:'Savoir-être',n:29},{label:'Motivation / valeur travail',n:14},{label:'Anglais',n:14},{label:'Mobilité (permis, véhicule)',n:14}],quotes:["Savoir de base : lire, écrire, compter","Niveau scolaire de base parfois insuffisant (ex. apprenti mineur avec lacunes en calcul)","Manque d'engagement et de motivation ; pas d'effort face à la difficulté ; manque de valeur travail"],analysis:`Signal majeur et rarement formulé aussi nettement : <b>57% pointent les savoirs de base (lire-écrire-compter)</b>. C'est en amont de toute compétence technique — un enjeu de <b>remise à niveau / lutte contre l'illettrisme</b> qui conditionne l'employabilité industrielle.`},
+  {type:'gridEnd'},
+  {type:'doughnut',q:'Q11',n:7,title:"Les besoins en compétences des entreprises sont aujourd'hui…",items:[{label:'Partiellement identifiés',v:57},{label:'Bien identifiés & formalisés',v:29},{label:'Peu formalisés',v:14}],analysis:`<b>71% jugent les besoins « partiellement » ou « peu » formalisés</b> : le diagnostic GPECT répond directement à ce manque de formalisation — première brique de légitimité de la démarche.`},
+
+  {type:'section',num:'3',title:"Offre de formation",desc:"Un regard critique, centré sur l'orientation, l'intégration et la concertation amont."},
+  {type:'gridStart',cols:'g2'},
+  {type:'doughnut',q:'Q14',n:7,title:"L'offre de formation est-elle adaptée aux besoins ?",items:[{label:'Peu adaptée',v:43},{label:'Partiellement adaptée',v:29},{label:'Globalement adaptée',v:29}],analysis:`<b>71% « peu » ou « partiellement » adaptée.</b> Converge avec les acteurs de l'emploi (2,3/5) et les entreprises (3,1/5) — et contraste avec l'auto-évaluation des OF (4,0/5).`},
+  {type:'verbatims',q:'Q15',n:7,base:'syndicats',title:"Freins rencontrés par les structures de formation",themes:[{label:'Intégration / maintien en formation',n:29},{label:'Débouchés / concurrence CFA',n:29},{label:'Orientation (Éducation nationale)',n:14},{label:'Disparition AFPA → AFPI',n:14}],quotes:["Éducation nationale qui ne présente pas les métiers ; formations qui ne débouchent pas sur des emplois","Maintenir les effectifs sur la durée du cursus (sections sous 5-7 élèves que la Région cesse d'accompagner)","Travailler le tutorat, la concertation amont entre entreprises et organismes de formation"],analysis:`Le frein n'est pas que pédagogique : il est <b>systémique</b> (orientation, viabilité des sections, concertation amont). La concertation entreprises ⇄ OF revient comme la clé.`},
+  {type:'gridEnd'},
+
+  {type:'section',num:'4',title:"Accès à l'emploi & mobilité",desc:"La mobilité rurale, frein le plus structurant — avec des solutions très concrètes proposées."},
+  {type:'bars',q:'Q17',n:7,title:"Freins les plus structurants pour l'accès à l'emploi",note:'% de répondants — choix multiple',items:[{label:'Mobilité rurale',v:86},{label:'Logement cher / mauvais état',v:43},{label:'Compétences de base',v:43},{label:'Orientation',v:29},{label:'Motivation des personnes',v:14},{label:'Niveau scolaire faible (jeunes)',v:14}],analysis:`La <b>mobilité rurale (86%)</b> écrase tout. Là où les entreprises la jugent secondaire (transport 2,5/5), les acteurs au contact des publics la voient comme le verrou n°1 — un <b>écart de perception</b> majeur à arbitrer dans le plan d'action.`},
+  {type:'verbatims',q:'Q19',n:7,base:'syndicats',title:"Solutions concrètes proposées pour lever les freins de mobilité",themes:[{label:'Transport adapté / navette gare-zones',n:43,cls:'warm'},{label:'Hébergement / colocation',n:29},{label:'Aides financières mobilité',n:29}],quotes:["Adaptation des horaires de transport en commun aux horaires des entreprises","Navette gare → zones d'entreprises ; restauration","Habitat partagé type « auberge de jeunesse » / colocation dans des bâtiments vacants des communautés de communes ; réaffectation de bus pour le transport des salariés"],analysis:`Des solutions <b>pragmatiques et peu coûteuses</b> émergent : navettes calées sur les horaires d'équipe, habitat partagé dans le bâti vacant. Matière directe pour une fiche-action « mobilité » à résultat rapide.`},
+
+  {type:'section',num:'5',title:"Mobilisation des entreprises",desc:"Le nœud de la démarche : pourquoi les entreprises s'engagent peu, et comment les embarquer."},
+  {type:'gridStart',cols:'g2'},
+  {type:'doughnut',q:'Q20',n:7,title:"Engagement des entreprises dans les démarches collectives",items:[{label:'Faible',v:57},{label:'Plutôt satisfaisant',v:29},{label:'Moyen',v:14}],analysis:`<b>57% « faible »</b> : converge avec la « difficulté à mobiliser les entreprises » des OF (71%) et le frein « libérer les salariés » des entreprises. Le verrou est partagé et reconnu de tous.`},
+  {type:'verbatims',q:'Q22',n:7,base:'syndicats',title:"Formats susceptibles de mobiliser les entreprises",themes:[{label:'Ateliers courts / par thème',n:57,cls:'hot'},{label:'Avec représentants institutionnels / élus',n:29},{label:'Conditionné à un résultat concret',n:14}],quotes:["Ateliers courts (2h), par thématique ciblée (logement, compétences…), avec représentants techniques et élus selon le sujet","Nécessité que les entreprises voient un résultat concret","Ateliers courts et intenses, avec représentants institutionnels"],analysis:`La méthode d'animation est dictée par les acteurs eux-mêmes : <b>ateliers de 2h, thématiques, à résultat concret, avec un portage institutionnel</b>. À intégrer tel quel dans la gouvernance du plan d'action.`},
+  {type:'gridEnd'},
+  {type:'verbatims',q:'Q21',n:7,base:'syndicats',title:"Freins à la mobilisation des entreprises",themes:[{label:'Manque de temps / sursollicitation',n:43,cls:'warm'},{label:'Réunions sans résultat',n:14},{label:'Concurrence inter-entreprises',n:14},{label:'Autarcie / méfiance historique',n:14}],quotes:["Temps, saturation des évènements, et réunions qui ne mènent à rien","Manque de collaboration entre entreprises / concurrence entre elles","Perception d'autarcie historique du tissu industriel d'Issoudun ; sentiment de « mainmise » institutionnelle de longue date"],analysis:`Au-delà du temps, un <b>frein culturel</b> affleure : une « autarcie historique » et une méfiance envers les démarches institutionnelles. Le plan devra <b>prouver par les actes</b> (quick wins) avant de demander de l'engagement.`},
+
+  {type:'section',num:'6',title:"Transmission-reprise & ouverture",desc:"Un sujet jugé prioritaire — contrairement aux entreprises — et des attentes d'actions très concrètes."},
+  {type:'gridStart',cols:'g2'},
+  {type:'doughnut',q:'Q24',n:7,title:"La transmission-reprise d'entreprise vous semble…",items:[{label:'Prioritaire',v:43},{label:'Très prioritaire',v:29},{label:'Secondaire',v:29}],analysis:`<b>71% (très) prioritaire</b>, alors que seules 19% des entreprises déclarent un projet de transmission et que 5% en font une préoccupation. <b>Écart de perception</b> entre la vision « système » des partenaires sociaux et la vision individuelle des dirigeants.`},
+  {type:'verbatims',q:'Q25',n:7,base:'syndicats',title:"Besoins identifiés sur la transmission-reprise",themes:[{label:'Accompagnement',n:71,cls:'hot'},{label:'Viviers de repreneurs / détection',n:29},{label:'Formation gestion / RH',n:29}],quotes:["Accompagnement pour la montée en compétences afin d'assurer la transmission","Vivier de repreneurs constitué via la détection URSSAF des micro-entrepreneurs (≈30% de bascule réussie) ; accompagnement gestion/RH pour rassurer les banques"],analysis:`Des <b>dispositifs concrets existent déjà</b> (détection URSSAF, ARDAN) : le rôle de la GPECT est de les <b>orchestrer et faire connaître</b>, pas de tout réinventer.`},
+  {type:'gridEnd'},
+  {type:'insight',tone:'signal',title:"Signaux faibles à ne pas perdre",text:`Trois alertes issues des verbatims, à valeur stratégique : <b>(1)</b> la <b>puissance électrique insuffisante</b> (coupures, ligne HT à créer) freine directement la modernisation industrielle ; <b>(2)</b> l'<b>absence de restauration collective</b> chez les grands employeurs (2 000+ salariés) pèse sur l'attractivité, avec une tension entre offre collective et artisans-traiteurs ; <b>(3)</b> les <b>passerelles artisanat ⇄ industrie</b> (sous-traitance) sont à intégrer au diagnostic, souvent oubliées au profit des seuls donneurs d'ordre.`},
+  {type:'verbatims',q:'Q26',n:7,title:"« Une seule action prioritaire » & résultats attendus",quotes:["Valorisation des métiers manuels et techniques","Formation avant de faire de l'attractivité","Refonte de l'orientation ; simplification des démarches administratives de financement","Restitution « électro-choc » : identifier besoins entreprises, offre de formation et main d'œuvre disponible","Ateliers thématiques (2h) après la collecte, avec présence impérative d'entreprises « ressortissantes » du territoire pour légitimer la démarche"],analysis:`Tension féconde entre deux écoles : « <b>former d'abord</b> » vs « <b>attractivité d'abord</b> ». Le plan d'action les concilie en séquençant : quick wins d'attractivité + montée en compétences en parallèle. La demande d'une restitution « électro-choc » est une opportunité de communication.`},
+ ]
+};
+const PAGES_EXTRA={};
+function gapBars(rows){return `<div class="gapviz">`+rows.map(r=>`<div class="gaprow"><div class="gl">${r.l}</div><div class="gaptrack"><div class="gapfill" style="width:${(r.v/5*100).toFixed(0)}%;background:${r.c}"></div></div><div class="gv" style="color:${r.c}">${r.v.toFixed(1)}</div></div>`).join('')+`</div>`;}
+function cdList(rows){return `<div class="card">`+rows.map(r=>`<div class="cd"><div class="ic ${r.t}">${r.t==='cv'?'✓':'≠'}</div><div><h4>${r.h}</h4><p>${r.p}</p></div></div>`).join('')+`</div>`;}
+
+PAGES_EXTRA.croise=function(host){
+  host.appendChild((()=>{const h=el('div','page-head fade');h.innerHTML=`<div class="kicker">Synthèse territoriale</div><h2>Analyse croisée des 4 collèges</h2><div class="sub">Là où les regards convergent, le diagnostic est solide. Là où ils divergent — les <b>écarts de perception</b> — se trouvent les vrais sujets d'arbitrage de la GPECT.</div><div class="nbadge"><span class="dot"></span>42 répondants · lecture inter-collèges</div>`;return h;})());
+  renderBlocks(host,[
+    {type:'section',num:'1',title:"Ce sur quoi tout le monde est d'accord",desc:"Quatre convergences fortes, vues simultanément par les entreprises, les organismes de formation, les acteurs de l'emploi et les partenaires sociaux. Ce sont les fondations non négociables du plan d'action."},
+    {type:'html',html:cdList([
+      {t:'cv',h:'Les métiers techniques industriels sont en tension aiguë',p:"Usinage, maintenance, qualité/méthodes, programmation CNC/robotique. Entreprises : 95% en tension. Acteurs de l'emploi : 4,9/5 sur maintenance et CNC. Syndicats : usinage et qualité cités à 43%. Triple convergence sur le cœur technique."},
+      {t:'cv',h:"L'offre de formation locale n'est pas pleinement adaptée",p:"Acteurs de l'emploi 2,3/5, entreprises 3,1/5, 71% des partenaires sociaux « peu/partiellement adaptée ». Trois collèges utilisateurs convergent vers l'insuffisance."},
+      {t:'cv',h:"L'attractivité et l'image du territoire sont le frein partagé n°1",p:"Image citée par 95% des entreprises (frein n°1), note de 2,3/5 auprès des candidats, « attractivité » 1er thème ouvert des syndicats, disposition des acteurs à 4,7/5 pour une campagne commune."},
+      {t:'cv',h:"Un besoin massif de connaissance fine du marché du travail",p:"Priorité n°1 des OF (4,0/5) et levier n°1 (observatoire, 71%), 2e priorité des entreprises (3,3/5), besoins « partiellement formalisés » pour 71% des syndicats. Consensus pour un observatoire territorial."},
+    ])},
+    {type:'section',num:'2',title:"Les écarts de perception — le cœur du diagnostic",desc:"Cinq divergences structurantes. Elles ne sont pas des erreurs : elles disent que chaque collège voit le même territoire depuis sa position. Les arbitrer, c'est faire la GPECT."},
+
+    {type:'html',html:`<div class="card"><div class="ch-q"><span class="qn">Écart 1</span><span>Adéquation de l'offre de formation · note /5</span></div><div class="ch-title">L'offreur se juge bien plus adéquat que ses utilisateurs</div>`+
+      gapBars([{l:'Organismes de formation (auto-éval.)',v:4.0,c:PAL.corail},{l:'Entreprises',v:3.1,c:PAL.ambre},{l:"Acteurs de l'emploi",v:2.3,c:PAL.petrole}])+
+      `<div class="analysis"><b>Écart de 1,7 point</b> entre les OF (4,0/5) et les acteurs de l'emploi (2,3/5), qui placent pourtant les candidats au quotidien. Les OF ne connaissent leurs « clients » qu'à 3,0/5 (Q3.1) : difficile de bien couvrir ce qu'on connaît moyennement. <span class="hyp">hypothèse : angle mort sur compétences émergentes & publics infra-CAP</span></div></div>`},
+
+    {type:'html',html:`<div class="card"><div class="ch-q"><span class="qn">Écart 2</span><span>Nature du déficit de recrutement</span></div><div class="ch-title">« Pénurie de candidats » (entreprises) vs « déficit de qualification » (acteurs & syndicats)</div>
+      <div class="grid g2" style="margin-top:6px">
+       <div style="background:var(--cream);border-radius:12px;padding:14px 16px;border-left:3px solid var(--ambre)"><b style="color:var(--petrole-3)">Vision entreprises — un problème de quantité</b><div style="font-size:13.4px;color:#33433f;margin-top:6px">Pénurie de candidats sur le marché local : <b>4,5/5</b> (cause n°1). Manque de candidats au recrutement : <b>4,3/5</b>. Inadéquation des compétences reléguée à 2,8-3,1.</div></div>
+       <div style="background:var(--cream);border-radius:12px;padding:14px 16px;border-left:3px solid var(--petrole)"><b style="color:var(--petrole-3)">Vision acteurs & syndicats — un problème de qualité</b><div style="font-size:13.4px;color:#33433f;margin-top:6px">Manque de compétences techniques : <b>4,3/5</b>. Niveau de qualification insuffisant : <b>4,3/5</b>. Savoirs de base (lire/écrire/compter) : <b>57%</b> des syndicats.</div></div>
+      </div>
+      <div class="analysis"><b>Conséquence opérationnelle majeure :</b> agir seulement sur le <b>sourcing</b> (vision entreprise) ne suffira pas. Il faut aussi de la <b>pré-qualification et de la remise à niveau des socles</b> (vision acteurs/syndicats). Le plan d'action doit tenir les deux bouts.</div></div>`},
+
+    {type:'html',html:`<div class="card"><div class="ch-q"><span class="qn">Écart 3</span><span>Poids de la mobilité comme frein · note /5</span></div><div class="ch-title">La mobilité rurale : verrou n°1 pour les uns, sujet secondaire pour les autres</div>`+
+      gapBars([{l:'Syndicats (frein structurant)',v:4.3,c:PAL.corail},{l:"Acteurs de l'emploi",v:3.7,c:PAL.ambre},{l:'Entreprises (contrainte transport)',v:2.5,c:PAL.petrole}])+
+      `<div class="ch-note" style="margin-top:8px">Syndicats : 86% citent la mobilité rurale comme frein structurant (équivalent ≈4,3/5) · Acteurs Q4.1 : 3,7 · Entreprises Q3.3 : 2,5.</div>
+      <div class="analysis">Ceux qui accompagnent les <b>publics éloignés</b> voient la mobilité comme bloquante ; les entreprises, qui voient surtout des candidats déjà mobiles, la sous-estiment. <b>L'arbitrage : la mobilité est un frein réel d'accès à l'emploi, même si les employeurs ne la ressentent pas.</b></div></div>`},
+
+    {type:'html',html:`<div class="card"><div class="ch-q"><span class="qn">Écart 4</span><span>Priorité accordée à la transmission / aux seniors</span></div><div class="ch-title">Les partenaires sociaux alertent ; les dirigeants ne la voient pas encore</div>
+      <div class="grid g2" style="margin-top:6px">
+       <div style="background:var(--cream);border-radius:12px;padding:14px 16px;border-left:3px solid var(--petrole)"><b style="color:var(--petrole-3)">Syndicats & réalité démographique</b><div style="font-size:13.4px;color:#33433f;margin-top:6px">Transmission-reprise (très) prioritaire : <b>71%</b>. Réalité entreprises : <b>47% de seniors</b>, <b>136 départs retraite à 5 ans</b>, départs concentrés à 60% sur la production.</div></div>
+       <div style="background:var(--cream);border-radius:12px;padding:14px 16px;border-left:3px solid var(--ambre)"><b style="color:var(--petrole-3)">Perception des dirigeants</b><div style="font-size:13.4px;color:#33433f;margin-top:6px">Transmission = préoccupation pour <b>5%</b> seulement (Q2.1), priorité GPECT la plus basse (2,5/5), AFEST à <b>1,0/5</b>, 67% jugent leurs dispositifs « suffisants ».</div></div>
+      </div>
+      <div class="analysis">Le <b>turnover faible (81%)</b> rassure et masque le mur des départs. C'est l'angle mort le plus coûteux du diagnostic : un savoir-faire technique perdu ne se rachète pas. <span class="hyp">à objectiver en atelier via la pyramide des âges par métier</span></div></div>`},
+
+    {type:'html',html:`<div class="card"><div class="ch-q"><span class="qn">Écart 5</span><span>Mobilisation des entreprises dans le collectif</span></div><div class="ch-title">Disponibilité déclarée forte vs engagement perçu faible</div>
+      <div class="grid g2" style="margin-top:6px">
+       <div style="background:var(--cream);border-radius:12px;padding:14px 16px;border-left:3px solid var(--emeraude)"><b style="color:var(--petrole-3)">Ce que disent les entreprises</b><div style="font-size:13.4px;color:#33433f;margin-top:6px">Prêtes à une campagne commune : <b>76%</b> · ateliers RH inter-entreprises : <b>62%</b> · visites coordonnées : 57%. Mais <b>33% « ne souhaitent pas participer »</b> aux ateliers.</div></div>
+       <div style="background:var(--cream);border-radius:12px;padding:14px 16px;border-left:3px solid var(--ambre)"><b style="color:var(--petrole-3)">Ce que perçoivent les partenaires</b><div style="font-size:13.4px;color:#33433f;margin-top:6px">Engagement des entreprises « faible » : <b>57%</b> (syndicats) · « difficulté à mobiliser les entreprises » : <b>71%</b> (OF, frein n°1).</div></div>
+      </div>
+      <div class="analysis"><b>L'explication tient au format.</b> Les entreprises ne refusent pas d'agir — elles refusent les réunions sans résultat. Les syndicats le disent : <b>ateliers de 2h, thématiques, à résultat concret</b>. Le frein est résoluble par la méthode d'animation, pas par la contrainte.</div></div>`},
+
+    {type:'section',num:'3',title:"Matrice de synthèse inter-collèges",desc:"Une lecture en un coup d'œil : ce que chaque collège dit des grands enjeux. Les écarts apparaissent ligne par ligne."},
+    {type:'table',numCols:false,headers:['Enjeu','🏭 Entreprises','🎓 Organismes formation',"🤝 Acteurs emploi",'⚖️ Syndicats'],rows:[
+      ['<b>Tension métiers techniques</b>','95% en tension','Reconnue (offre solide)','Maintenance/CNC 4,9','Usinage/qualité 43%'],
+      ['<b>Offre formation locale</b>','3,1/5','<b>4,0/5</b> (auto-éval.)','<b>2,3/5</b>','71% peu/part. adaptée'],
+      ['<b>Cause du déficit RH</b>','Pénurie 4,5','—','Qualification 4,3','Savoirs de base 57%'],
+      ['<b>Mobilité</b>','Transport 2,5','Mobilité 57%','3,7/5','<b>Rurale 86%</b>'],
+      ['<b>Attractivité / image</b>','Frein 95% · 2,3/5','Image 71%','Campagne 4,7','Attractivité 43%'],
+      ['<b>Transmission / seniors</b>','Priorité 2,5 · AFEST 1,0','Transmission 3,3','Atelier 4,0','<b>(Très) prio. 71%</b>'],
+      ['<b>Compétences émergentes (IA)</b>','À développer 38%','Capacité 2,3 · cyber 1,1','Manque IA 4,1','IA/digital. 14%'],
+      ['<b>Mobilisation collective</b>','76% campagne · 33% refus','Difficile 71%','Disposition 4,7','Engagement faible 57%'],
+    ]},
+
+    {type:'section',num:'4',title:"Risques à 3-5 ans",desc:"Quatre risques structurants si le territoire n'agit pas. Présentés comme trajectoires probables, à valider collectivement."},
+    {type:'gridStart',cols:'g2'},
+    {type:'insight',tone:'risk',title:'Choc démographique sur le cœur technique',text:"47% de seniors, 136 départs en retraite à 5 ans concentrés sur la production (60%), sans AFEST ni transmission structurée. Risque : <b>perte irréversible de savoir-faire</b> d'usinage, réglage et maintenance — précisément les métiers déjà en tension à 4,9/5."},
+    {type:'insight',tone:'risk',title:'Inadéquation croissante investissement / compétences',text:"71% des entreprises investissent (robots, ERP), mais 56% jugent leurs compétences « suffisantes ». Risque : <b>des outils sous-exploités</b> et des projets Industrie 4.0 qui patinent faute de montée en compétences anticipée."},
+    {type:'insight',tone:'risk',title:'Décrochage sur les compétences d\'avenir',text:"Demande IA/cyber/robotique reconnue par tous, mais capacité locale à former à 2,3/5 (IA) et 1,1/5 (cyber). Risque : <b>devoir importer ces compétences</b> ou délocaliser les projets, faute d'offre de proximité."},
+    {type:'insight',tone:'risk',title:"Spirale de l'attractivité",text:"Image 2,3/5 → difficulté de recrutement → tension accrue → menace sur la compétitivité (1ère préoccupation à 67%). Aggravée par la désertification médicale (67%) et la mobilité rurale. Risque : <b>cercle vicieux auto-entretenu</b>."},
+    {type:'gridEnd'},
+
+    {type:'section',num:'5',title:"Signaux faibles",desc:"Peu cités mais à fort potentiel stratégique. À surveiller et à intégrer aux ateliers."},
+    {type:'gridStart',cols:'g3'},
+    {type:'insight',tone:'signal',title:'AFEST inexploitée',text:"1,0/5 chez les entreprises (écart-type nul), 2,6/5 de maîtrise chez les OF. Or c'est l'outil idéal pour transmettre les gestes en situation. <b>Levier immédiat et finançable.</b>"},
+    {type:'insight',tone:'signal',title:'Puissance électrique insuffisante',text:"Coupures fréquentes, ligne HT à créer (verbatim syndicat). Frein direct à la robotisation et à l'Industrie 4.0 — à porter au niveau infrastructures."},
+    {type:'insight',tone:'signal',title:'Savoirs de base',text:"57% des syndicats pointent lire/écrire/compter. Enjeu d'illettrisme en amont de toute technicité, souvent tabou — à traiter sans stigmatiser."},
+    {type:'insight',tone:'signal',title:'Restauration collective',text:"Absence de cantine chez les grands employeurs (2 000+ salariés) : frein indirect d'attractivité, avec une tension à arbitrer avec les artisans-traiteurs."},
+    {type:'insight',tone:'signal',title:'Autarcie historique du tissu',text:"Méfiance culturelle envers les démarches institutionnelles. Impose de <b>prouver par des quick wins</b> avant de demander de l'engagement."},
+    {type:'insight',tone:'signal',title:'Passerelles artisanat ⇄ industrie',text:"La sous-traitance relie artisans et industrie (CMA). À intégrer au diagnostic, au-delà des seuls grands donneurs d'ordre."},
+    {type:'gridEnd'},
+    {type:'html',html:`<div class="card" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between"><div style="font-size:14px;color:var(--petrole-3)"><b>Des constats aux solutions →</b> Les écarts et convergences ci-dessus alimentent directement les 8 leviers stratégiques.</div><button onclick="go('leviers')" style="background:var(--petrole-3);color:#fff;border:none;padding:11px 20px;border-radius:30px;font-family:'Hanken Grotesk';font-weight:600;font-size:13.5px;cursor:pointer">Voir les leviers →</button></div>`}
+  ]);
+};
+
+PAGES_EXTRA.leviers=function(host){
+  const L=[
+    {n:1,t:'Observatoire territorial emploi-compétences',d:"Une donnée partagée, actualisée, sur les métiers en tension, la pyramide des âges et les besoins — alimentée par tous les collèges.",ev:"Priorité n°1 des OF (4,0/5 ; observatoire 71%), 2e des entreprises (3,3/5) ; comble l'écart intérim 4,7 / public 2,0 sur l'anticipation des besoins.",tags:['Tous collèges','Connaître']},
+    {n:2,t:'Attractivité & marque employeur de bassin',d:"Campagne de communication territoriale commune + valorisation des métiers industriels auprès des scolaires et du grand public.",ev:"Image 2,3/5 et frein n°1 (95%) ; 76% des entreprises et 4,7/5 des acteurs prêts à s'engager ; 1er thème ouvert des syndicats.",tags:['Entreprises','Acteurs','Attirer']},
+    {n:3,t:'Pré-qualification & remise à niveau des socles',d:"Parcours sur mesure d'employabilité : savoirs de base (lire/écrire/compter), savoir-être et pré-qualification industrielle.",ev:"Qualification insuffisante 4,3/5 (acteurs), savoirs de base 57% (syndicats) ; répond à la « pénurie » entreprises par la qualité.",tags:['Acteurs','Syndicats','Qualifier']},
+    {n:4,t:'Filières des compétences émergentes',d:"Construire localement l'offre IA, cybersécurité, robotique/cobotique et maintenance prédictive : ingénierie + formation de formateurs.",ev:"Capacité OF : IA 2,3/5, cyber 1,1/5 ; demande : IA 38% (entreprises), robotique 4,6/5 (acteurs), IA 100% (OF prospective).",tags:['OF','Entreprises','Former']},
+    {n:5,t:'Transmission des savoir-faire & seniors',d:"Déployer l'AFEST, le tutorat junior-senior et la cartographie des compétences critiques avant les départs en retraite.",ev:"47% de seniors, 136 départs à 5 ans (60% en production), AFEST 1,0/5 ; transmission (très) prioritaire pour 71% des syndicats.",tags:['Entreprises','Transmettre']},
+    {n:6,t:'Mobilité territoriale',d:"Navettes gare ↔ zones d'activité calées sur les horaires d'équipe, aides à la mobilité, habitat partagé dans le bâti vacant.",ev:"Mobilité rurale frein n°1 pour 86% des syndicats, 3,7/5 acteurs ; solutions concrètes déjà proposées par le terrain.",tags:['Syndicats','Acteurs','Attirer']},
+    {n:7,t:'Animation GPECT « format court, résultat concret »',d:"Gouvernance par ateliers de 2h, thématiques, à livrable concret, avec portage institutionnel — pour embarquer durablement les entreprises.",ev:"Engagement « faible » 57% (syndicats), mobilisation difficile 71% (OF), 33% de refus côté entreprises : le frein est le format, pas la volonté.",tags:['Tous collèges','Gouvernance']},
+    {n:8,t:'Mutualisation inter-entreprises',d:"Groupement d'employeurs (temps partagé), formations groupées, plateaux techniques mutualisés et viviers partagés.",ev:"Entreprises favorables : plateforme 52%, ateliers RH 62%, groupement 29% ; plateaux mutualisés 43% (OF) ; libère du temps RH.",tags:['Entreprises','OF','Mutualiser']},
+  ];
+  host.appendChild((()=>{const h=el('div','page-head fade');h.innerHTML=`<div class="kicker">Synthèse territoriale</div><h2>8 leviers stratégiques</h2><div class="sub">Chaque levier traduit un constat chiffré du diagnostic en orientation d'action. Ils structurent le plan opérationnel de la page suivante.</div>`;return h;})());
+  const wrap=el('div','grid g2');
+  wrap.innerHTML=L.map(l=>`<div class="levier"><div class="lh"><div class="ln">Levier ${l.n}</div><h4>${l.t}</h4></div><div class="lb"><p>${l.d}</p><div class="tagrow">${l.tags.map(t=>`<span class="minitag">${t}</span>`).join('')}</div><div class="ev"><b>Ancrage données :</b> ${l.ev}</div></div></div>`).join('');
+  host.appendChild(wrap);
+  host.appendChild((()=>{const d=el('div','card');d.style.marginTop='18px';d.style.display='flex';d.style.flexWrap='wrap';d.style.gap='14px';d.style.alignItems='center';d.style.justifyContent='space-between';d.innerHTML=`<div style="font-size:14px;color:var(--petrole-3)"><b>Du levier à l'action →</b> 4 axes, 12 fiches-actions détaillées, prêtes à instruire pour le financeur.</div><button onclick="go('plan')" style="background:var(--petrole-3);color:#fff;border:none;padding:11px 20px;border-radius:30px;font-family:'Hanken Grotesk';font-weight:600;font-size:13.5px;cursor:pointer">Voir le plan d'action →</button>`;return d;})());
+};
+
+PAGES_EXTRA.plan=function(host){
+  host.appendChild((()=>{const h=el('div','page-head fade');h.innerHTML=`<div class="kicker">Synthèse territoriale · livrable financeur</div><h2>Plan d'action GPECT du bassin d'Issoudun</h2><div class="sub">Quatre axes, douze fiches-actions opérationnelles. Chaque fiche précise l'objectif, le public, le pilote, les partenaires, les livrables, les indicateurs et les <b>financements mobilisables</b>. Séquencé en trois temps pour produire des résultats visibles dès les 6 premiers mois.</div>`;return h;})());
+
+  renderBlocks(host,[
+    {type:'section',num:'⏱',title:'Feuille de route en 3 temps',desc:"Une logique « preuve par les actes » : des victoires rapides pour crédibiliser la démarche, puis des chantiers structurants, puis la transformation de fond. Hypothèse de lancement : second semestre 2026 — calendrier à caler sur la date de validation du plan."},
+    {type:'html',html:`<div class="grid g3">
+      <div class="card" style="border-top:4px solid var(--emeraude)"><div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--emeraude)">Temps 1 · 0-6 mois · dès S2 2026</div><div class="ch-title" style="margin:6px 0 8px">Quick wins</div><p style="font-size:13.3px;color:#33433f">Observatoire v1, navette d'essai gare-zones, premier job dating de bassin, lancement de la campagne d'image. <b>Objectif : crédibiliser.</b></p></div>
+      <div class="card" style="border-top:4px solid var(--ambre)"><div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ambre)">Temps 2 · 6-18 mois · 2027</div><div class="ch-title" style="margin:6px 0 8px">Chantiers structurants</div><p style="font-size:13.3px;color:#33433f">Parcours de pré-qualification, déploiement AFEST/tutorat, cartographie de l'offre, plan mobilité pérenne. <b>Objectif : outiller.</b></p></div>
+      <div class="card" style="border-top:4px solid var(--petrole)"><div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--petrole)">Temps 3 · 18-36 mois · 2028</div><div class="ch-title" style="margin:6px 0 8px">Transformation</div><p style="font-size:13.3px;color:#33433f">Filières compétences émergentes (IA, cyber, robotique), groupement d'employeurs, marque employeur de bassin installée. <b>Objectif : transformer.</b></p></div>
+    </div>`},,
+
+    {type:'html',html:`<div class="note-box" style="margin-top:10px"><b>Lecture financeur.</b> Les 12 fiches sont mobilisables via des dispositifs existants — <b>EDEC/ADEC</b> (ingénierie GPECT, DREETS), <b>FSE+</b>, <b>France Travail</b> (POEI, POEC/AFPR, PMSMP, Prépa compétences, AFEST), <b>OPCO</b>, <b>Région Centre-Val de Loire</b> (CARED, ARDAN), <b>France 2030</b> et <b>Territoires d'industrie</b>. Le séquençage en 3 temps permet un démarrage à coût maîtrisé (quick wins) avant l'engagement des chantiers structurants. Tous les chiffres cités sont traçables vers les rapports d'analyse par collège.</div>`},
+
+    {type:'section',num:'💶',title:`Dispositifs de financement mobilisables — vue d'ensemble`,desc:"Synthèse des guichets identifiés fiche par fiche (rappel des champs « financement » ci-dessus). Les montants seront arrêtés action par action, en phase de contractualisation avec chaque financeur."},
+    {type:'table',numCols:false,headers:[`Action`,`Dispositifs mobilisables`],rows:[
+      [`A1 · Observatoire territorial des métiers & compétences`,`FSE+ (ingénierie), EDEC/ADEC (DREETS Centre-Val de Loire), crédits Région, Territoires d'industrie.`],
+      [`A2 · Cartographie partagée de l'offre de formation`,`FSE+, Région CVL (CARED), ingénierie OPCO.`],
+      [`B1 · Campagne de communication & marque employeur de bassin`,`Région CVL, CC Pays d'Issoudun, contributions entreprises, État (Territoires d'industrie).`],
+      [`B2 · Valorisation des métiers auprès des scolaires`,`Région (orientation), appel à projets Département/DDETSPP, mécénat entreprises.`],
+      [`B3 · Plan mobilité de bassin`,`AOM/Région (mobilité), Action Logement, France Travail (aides mobilité), employeurs.`],
+      [`C1 · Parcours de pré-qualification & socles`,`France Travail (Prépa compétences, POEC/AFPR, PMSMP), Région (CARED/qualif), FSE+, OPCO.`],
+      [`C2 · Filières des compétences émergentes (IA, cyber, robotique)`,`France 2030, Région CVL, EDEC numérique/industrie, OPCO, plateaux mutualisés.`],
+      [`C3 · Adaptation de l'offre & déploiement de l'AFEST`,`OPCO (ingénierie AFEST), FSE+, Région.`],
+      [`D1 · Dispositif transmission des savoir-faire & seniors`,`OPCO, France Travail (POEI/tutorat), Carsat (seniors/pénibilité), FSE+.`],
+      [`D2 · Transmission-reprise d'entreprises`,`Région CVL (ARDAN), CMA/CCI, dispositifs nationaux transmission.`],
+      [`D3 · Mutualisation inter-entreprises`,`Région, OPCO, autofinancement entreprises, FSE+.`],
+      [`D4 · Gouvernance & animation GPECT`,`EDEC/ADEC, FSE+, Région, co-financement collectivités.`]
+    ]},
+
+    {type:'section',num:'✅',title:`Décisions attendues des partenaires`,desc:"Trois engagements pour passer du diagnostic à l'action."},
+    {type:'gridStart',cols:'g2'},
+    {type:'html',html:`<div class="card keep" style="border-top:3px solid #0C3B43"><div style="font-size:24px;margin-bottom:6px">🗳️</div><div style="font-weight:800;color:#0C3B43;font-size:14px;margin-bottom:6px">1 · Valider la feuille de route</div><div style="font-size:12.6px;color:#5a6b64;line-height:1.5">Adopter le plan d'action GPECT 2026–2030 et ses 12 fiches comme <b>cadre commun</b> des politiques emploi-compétences du bassin.</div></div>`},
+    {type:'html',html:`<div class="card keep" style="border-top:3px solid #0FA37F"><div style="font-size:24px;margin-bottom:6px">🧭</div><div style="font-weight:800;color:#0FA37F;font-size:14px;margin-bottom:6px">2 · Installer la gouvernance</div><div style="font-size:12.6px;color:#5a6b64;line-height:1.5">Constituer le <b>comité de pilotage emploi–formation–entreprises</b> et désigner un référent par institution (fiche D4), pour un lancement dès le second semestre 2026.</div></div>`},
+    {type:'html',html:`<div class="card keep" style="border-top:3px solid #E0A22B"><div style="font-size:24px;margin-bottom:6px">💶</div><div style="font-weight:800;color:#b9831c;font-size:14px;margin-bottom:6px">3 · Mandater l'ingénierie financière</div><div style="font-size:12.6px;color:#5a6b64;line-height:1.5">Instruire, action par action, les <b>dispositifs identifiés ci-dessus</b> en vue du chiffrage et de la contractualisation avec chaque financeur.</div></div>`},
+    {type:'html',html:`<div class="card keep" style="border-top:3px solid #D2562F"><div style="font-size:24px;margin-bottom:6px">🚀</div><div style="font-weight:800;color:#D2562F;font-size:14px;margin-bottom:6px">Et dès maintenant</div><div style="font-size:12.6px;color:#5a6b64;line-height:1.5">Engager les <b>quick wins du Temps 1</b> (0-6 mois) — restitution « électro-choc », premiers ateliers courts, préfiguration de l'observatoire — pour transformer l'essai sans attendre.</div></div>`},
+    {type:'gridEnd'}
+  ]);
+
+  const AX=[
+    {ax:'A',titre:'Connaître & piloter',sous:"Doter le territoire d'une intelligence emploi-compétences partagée — socle de toutes les autres actions.",fiches:[
+      {code:'A1',t:'Observatoire territorial des métiers & compétences',pri:'p1',hz:'0-6 mois puis continu',obj:"Produire et actualiser une vision partagée des métiers en tension, de la pyramide des âges et des besoins de recrutement à l'échelle du bassin.",pub:"Tous les acteurs économiques et emploi-formation du bassin.",pilote:"Animateur GPECT + chambre consulaire référente.",part:"France Travail, OPCO, agences d'intérim, Mission Locale, Cap Emploi, OF, Région CVL.",liv:"Tableau de bord trimestriel ; fiches métiers en tension ; pyramide des âges par filière (anonymisée).",ind:"Mise à jour trimestrielle effective ; ≥ 15 métiers suivis ; données intérim + public consolidées ; ≥ 80% des partenaires contributeurs.",fin:"FSE+ (ingénierie), EDEC/ADEC (DREETS Centre-Val de Loire), crédits Région, Territoires d'industrie.",anc:"Priorité n°1 des OF (4,0/5), 2e des entreprises (3,3/5) ; comble l'écart intérim 4,7 / public 2,0 sur l'anticipation des besoins."},
+      {code:'A2',t:"Cartographie partagée de l'offre de formation",pri:'p2',hz:'0-9 mois',obj:"Recenser l'offre locale (initiale, alternance, continue, AFEST) et la confronter aux besoins réels pour réduire l'écart d'adéquation.",pub:"OF, entreprises, prescripteurs.",pilote:"Réseau des OF + GRETA/CAFOC.",part:"OPCO, France Travail, Région, lycées professionnels.",liv:"Cartographie en ligne de l'offre ; liste des « trous » de formation priorisés.",ind:"100% des OF du bassin recensés ; ≥ 5 manques de formation identifiés et instruits ; outil consultable par les prescripteurs.",fin:"FSE+, Région CVL (CARED), ingénierie OPCO.",anc:"Écart d'adéquation : OF 4,0/5 vs acteurs 2,3/5 ; observatoire = levier n°1 des OF (71%)."},
+    ]},
+    {ax:'B',titre:'Attirer & valoriser',sous:"S'attaquer au frein n°1 du territoire — l'image — et lever les obstacles concrets d'accès à l'emploi.",fiches:[
+      {code:'B1',t:'Campagne de communication & marque employeur de bassin',pri:'p1',hz:'3-12 mois',obj:"Construire et diffuser une image positive du bassin industriel et de ses métiers, mutualisée entre employeurs.",pub:"Candidats régionaux et nationaux, jeunes, personnes en reconversion.",pilote:"CC Pays d'Issoudun + collectif d'entreprises.",part:"Région, CCI/CMA, France Travail, OF, presse locale.",liv:"Plateforme de marque ; kit employeurs ; contenus réseaux sociaux ; site « travailler à Issoudun ».",ind:"Image candidats > 2,3/5 (mesure de suivi) ; ≥ 15 entreprises engagées ; portée des contenus ; nb de candidatures entrantes.",fin:"Région CVL, CC Pays d'Issoudun, contributions entreprises, État (Territoires d'industrie).",anc:"Image 2,3/5 et frein n°1 (95%) ; 76% des entreprises et 4,7/5 des acteurs prêts à s'engager."},
+      {code:'B2',t:'Valorisation des métiers auprès des scolaires',pri:'p1',hz:'Continu (rentrées)',obj:"Réconcilier jeunes, familles et orientation avec les métiers industriels et manuels du territoire.",pub:"Collégiens, lycéens, familles, enseignants.",pilote:"Éducation nationale + UIMM/branches.",part:"Entreprises (visites), OF, CMA, Département (collèges).",liv:"Visites d'entreprises coordonnées ; interventions de professionnels ; outils immersifs (réalité augmentée, portraits métiers).",ind:"Nb de collèges/lycées touchés ; nb d'élèves en immersion ; évolution des vœux vers les filières industrielles.",fin:"Région (orientation), appel à projets Département/DDETSPP, mécénat entreprises.",anc:"Orientation/image des métiers : frein cité par 29% des syndicats ; promotion scolaire plébiscitée (entreprises 67%)."},
+      {code:'B3',t:'Plan mobilité de bassin',pri:'p1',hz:'3-18 mois',obj:"Lever la mobilité comme frein d'accès à l'emploi : transport, aides, hébergement.",pub:"Demandeurs d'emploi, alternants, salariés sans véhicule.",pilote:"CC Pays d'Issoudun (AOM) + entreprises.",part:"Région, France Travail, Action Logement, agences d'intérim.",liv:"Navette(s) gare ↔ zones calée(s) sur horaires d'équipe ; aides à la mobilité ; pilote d'habitat partagé.",ind:"Navette opérationnelle (quick win) ; nb d'usagers/mois ; nb de bénéficiaires d'aides ; places d'hébergement créées.",fin:"AOM/Région (mobilité), Action Logement, France Travail (aides mobilité), employeurs.",anc:"Mobilité rurale frein n°1 pour 86% des syndicats ; solutions concrètes déjà proposées par le terrain."},
+    ]},
+    {ax:'C',titre:'Qualifier & former',sous:"Répondre au déficit de qualification — par l'amont (socles) et par l'avenir (compétences émergentes).",fiches:[
+      {code:'C1',t:'Parcours de pré-qualification & socles',pri:'p1',hz:'6-18 mois',obj:"Créer des parcours d'employabilité combinant savoirs de base, savoir-être et découverte industrielle, vers les métiers en tension.",pub:"Publics infra-CAP, DELD, jeunes sans qualification, personnes en reconversion.",pilote:"France Travail + OF + Mission Locale.",part:"Entreprises (immersions/PMSMP), OPCO, Cap Emploi.",liv:"Parcours type « pré-qualif industrie » ; modules de remise à niveau des socles ; sas savoir-être.",ind:"Nb de bénéficiaires ; taux de sortie en emploi/formation qualifiante ; durée des emplois obtenus (cible : maintenir 4,1/5).",fin:"France Travail (Prépa compétences, POEC/AFPR, PMSMP), Région (CARED/qualif), FSE+, OPCO.",anc:"Qualification insuffisante 4,3/5 (acteurs), savoirs de base 57% (syndicats) ; dispositifs qualifiants jugés efficaces (4,3/5)."},
+      {code:'C2',t:'Filières des compétences émergentes (IA, cyber, robotique)',pri:'p2',hz:'6-24 mois',obj:"Construire localement l'offre sur l'IA, la cybersécurité industrielle, la robotique/cobotique et la maintenance prédictive.",pub:"Salariés en poste, techniciens, OF (formateurs).",pilote:"OF chefs de file + IUT/lycées techniques.",part:"Entreprises pilotes, OPCO, Région, pôles techno régionaux.",liv:"Formation de formateurs ; modules courts IA/cyber/robotique ; plateaux techniques actualisés.",ind:"Capacité OF à former à l'IA > 2,3/5 (suivi) ; nb de modules créés ; nb de salariés formés ; nb d'entreprises bénéficiaires.",fin:"France 2030, Région CVL, EDEC numérique/industrie, OPCO, plateaux mutualisés.",anc:"Capacité OF : IA 2,3/5, cyber 1,1/5 ; demande : robotique 4,6/5 (acteurs), IA 38% (entreprises), 100% (OF prospective)."},
+      {code:'C3',t:"Adaptation de l'offre & déploiement de l'AFEST",pri:'p2',hz:'6-18 mois',obj:"Outiller les OF et les entreprises sur l'ingénierie AFEST et le sur-mesure intra pour coller aux besoins réels.",pub:"Entreprises (production), OF, salariés.",pilote:"OF + OPCO.",part:"DREETS, entreprises, branches.",liv:"Sessions de sensibilisation AFEST ; modèle économique partagé ; parcours intra co-construits.",ind:"Maîtrise AFEST des OF > 2,6/5 ; nb d'entreprises ayant déployé une AFEST ; nb de parcours sur mesure créés.",fin:"OPCO (ingénierie AFEST), FSE+, Région.",anc:"AFEST 1,0/5 (entreprises), 2,6/5 maîtrise (OF) ; frein = méconnaissance entreprises (43%)."},
+    ]},
+    {ax:'D',titre:'Transmettre & mutualiser',sous:"Sécuriser les savoir-faire face au choc démographique et installer une coopération durable.",fiches:[
+      {code:'D1',t:'Dispositif transmission des savoir-faire & seniors',pri:'p1',hz:'0-12 mois',obj:"Cartographier les compétences critiques et organiser leur transmission avant les départs en retraite (tutorat, AFEST, binômes).",pub:"Seniors détenteurs de savoir-faire, juniors, entreprises de production.",pilote:"Entreprises + OPCO, appui animateur GPECT.",part:"France Travail, Carsat, OF, branches.",liv:"Cartographie des compétences critiques par entreprise volontaire ; binômes junior-senior ; plans de transmission.",ind:"Nb d'entreprises engagées ; nb de binômes ; nb de compétences critiques sécurisées ; usage AFEST en hausse.",fin:"OPCO, France Travail (POEI/tutorat), Carsat (seniors/pénibilité), FSE+.",anc:"47% de seniors, 136 départs à 5 ans (60% production), AFEST 1,0/5 ; transmission prioritaire syndicats 71%."},
+      {code:'D2',t:'Transmission-reprise d\'entreprises',pri:'p2',hz:'Continu',obj:"Constituer des viviers de repreneurs et accompagner la reprise des TPE/PME et artisans sous-traitants.",pub:"Dirigeants 55+, repreneurs potentiels, artisans.",pilote:"CMA + CCI.",part:"URSSAF (détection), banques, experts-comptables, Région (ARDAN).",liv:"Vivier de repreneurs ; parcours d'accompagnement gestion/RH ; mise en relation cédants-repreneurs.",ind:"Nb de cédants accompagnés ; nb de reprises abouties ; nb de repreneurs détectés.",fin:"Région CVL (ARDAN), CMA/CCI, dispositifs nationaux transmission.",anc:"29% des dirigeants ont 55 ans et + ; transmission (très) prioritaire 71% ; dispositifs URSSAF/ARDAN déjà cités."},
+      {code:'D3',t:'Mutualisation inter-entreprises',pri:'p3',hz:'6-24 mois',obj:"Mettre en place groupement d'employeurs (temps partagé), formations groupées et plateaux techniques mutualisés.",pub:"PME/TPE du bassin.",pilote:"Collectif d'entreprises + chambre consulaire.",part:"OF, OPCO, Région.",liv:"Étude de faisabilité d'un GE ; premières formations groupées ; convention de partage de plateaux.",ind:"GE créé ou préfiguré ; nb de salariés en temps partagé ; nb de formations mutualisées ; nb d'entreprises participantes.",fin:"Région, OPCO, autofinancement entreprises, FSE+.",anc:"Entreprises favorables : plateforme 52%, ateliers RH 62% ; plateaux mutualisés 43% (OF)."},
+      {code:'D4',t:'Gouvernance & animation GPECT',pri:'p1',hz:'Continu (transverse)',obj:"Animer la démarche par des ateliers courts à résultat concret et un portage institutionnel pour mobiliser durablement les entreprises.",pub:"Tous les collèges, entreprises « ressortissantes » en priorité.",pilote:"Animateur GPECT (Escale Digitale Solutions) + comité de pilotage.",part:"État (DDETSPP), Région, CC Pays d'Issoudun, consulaires, partenaires sociaux.",liv:"Comité de pilotage ; cycle d'ateliers thématiques de 2h ; restitution « électro-choc » du diagnostic.",ind:"Nb d'ateliers tenus ; nb d'entreprises participantes (cible : réduire les 33% de refus) ; livrable concret par atelier.",fin:"EDEC/ADEC, FSE+, Région, co-financement collectivités.",anc:"Engagement « faible » 57% (syndicats), mobilisation difficile 71% (OF) ; format demandé : ateliers 2h à résultat concret."},
+    ]},
+  ];
+  AX.forEach(a=>{
+    const axEl=el('div','axis');
+    let html=`<div class="ax-head"><div class="axn">${a.ax}</div><div><h3>Axe ${a.ax} — ${a.titre}</h3><div class="axs">${a.sous}</div></div></div>`;
+    a.fiches.forEach(f=>{
+      const priLab={p1:'Priorité 1',p2:'Priorité 2',p3:'Priorité 3'}[f.pri];
+      html+=`<div class="fiche"><div class="ft"><span class="fcode">${f.code}</span><h4>${f.t}</h4><span class="pri ${f.pri}">${priLab}</span><span class="horizon">${f.hz}</span></div>
+        <div class="obj">${f.obj}</div>
+        <div class="meta-grid">
+          <div class="mline"><span class="mk">Public cible</span><span class="mv">${f.pub}</span></div>
+          <div class="mline"><span class="mk">Pilote</span><span class="mv">${f.pilote}</span></div>
+          <div class="mline"><span class="mk">Partenaires</span><span class="mv">${f.part}</span></div>
+          <div class="mline"><span class="mk">Livrables</span><span class="mv">${f.liv}</span></div>
+          <div class="mline"><span class="mk">Indicateurs</span><span class="mv">${f.ind}</span></div>
+          <div class="mline"><span class="mk">Financements</span><span class="mv">${f.fin}</span></div>
+        </div>
+        <div class="mline" style="margin-top:11px;padding-top:11px;border-top:1px dashed var(--line)"><span class="mk">Ancrage données</span><span class="mv" style="font-style:italic">${f.anc}</span></div>
+      </div>`;
+    });
+    axEl.innerHTML=html;host.appendChild(axEl);
+  });
+
+
+};
+
+/* ===================== PAGE BUILDERS ===================== */
+function pageAccueil(host){
+  renderBlocks(host,[
+    {type:'html',html:`<div class="hero fade">
+      <div class="eyebrow">Diagnostic territorial emploi · compétences</div>
+      <h1>Bassin d'Issoudun&nbsp;: anticiper les métiers et compétences de demain</h1>
+      <p class="lead">Une lecture transversale de quatre collèges d'acteurs du territoire — entreprises, organismes de formation, acteurs de l'emploi et partenaires sociaux — pour transformer les constats en plan d'action partagé et finançable.</p>
+      <div class="hero-meta">
+        <span class="chip"><b>42</b> répondants</span>
+        <span class="chip"><b>4</b> collèges</span>
+        <span class="chip">Collecte <b>2026</b></span>
+        <span class="chip">Données <b>anonymisées</b></span>
+      </div></div>`},
+    {type:'html',html:`<div style="display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 6px">${[
+      ['🏭','Le territoire','sec-territoire'],['★','Résultats clés','sec-messages'],['🧭','La démarche','sec-demarche'],['👥','L\'équipe','sec-equipe'],['ⓘ','Cadre de lecture','sec-methodo']
+    ].map(t=>`<button onclick="goAnchor('${t[2]}')" style="background:#fff;border:1px solid #E4DECF;border-radius:24px;padding:8px 16px;font-family:'Hanken Grotesk';font-size:12.6px;font-weight:600;color:#27433d;cursor:pointer;display:flex;align-items:center;gap:7px;transition:all .15s" onmouseover="this.style.borderColor='#0FA37F';this.style.color='#0C3B43'" onmouseout="this.style.borderColor='#E4DECF';this.style.color='#27433d'"><span>${t[0]}</span>${t[1]}</button>`).join('')}</div>`},
+    {type:'section',aid:'sec-territoire',num:'❶',title:`Le territoire & l'ambition`,desc:`Pourquoi cette démarche GPECT, et ce qu'elle vise pour le bassin d'Issoudun.`},
+    {type:'html',html:`<div class="card"><p style="font-size:14px;line-height:1.6;color:#27433d;margin:0 0 10px">Le territoire d'Issoudun repose sur un <b>socle industriel solide</b>, structuré autour de grands donneurs d'ordres (Safran Seats, Louis Vuitton) et d'un <b>tissu dense de PME et TPE sous-traitantes</b> — mécanique de précision, maroquinerie, agroalimentaire, logistique. Aéronautique, armement et logistique portent le dynamisme et l'ancrage industriel local.</p><p style="font-size:14px;line-height:1.6;color:#27433d;margin:0">Ce dynamisme s'accompagne de <b>fragilités structurelles</b> bien identifiées :</p></div>`},
+    {type:'html',html:`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px">${[
+      ['🔧','#D2562F','Pénurie de compétences techniques','Maintenance, usinage, qualité, logistique, management de proximité.'],
+      ['⏳','#E0A22B','Choc démographique','Pyramide des âges déséquilibrée, départs massifs en retraite, transmission des savoir-faire en jeu.'],
+      ['🧲','#0C3B43','Attractivité & fidélisation','Difficultés de recrutement, image des métiers industriels, rétention des salariés.'],
+      ['🤖','#0FA37F','Industrie 4.0','Automatisation, digitalisation, robotisation : les compétences doivent évoluer vite.'],
+      ['🤝','#114E58','Insertion & QPV','Mieux articuler dispositifs d\'insertion, publics des quartiers prioritaires et besoins des entreprises.'],
+      ['🛡️','#D2562F','Sécurisation de l\'emploi','Faire évoluer les compétences au rythme de la démographie du territoire.'],
+    ].map(f=>`<div style="background:#fff;border:1px solid #E4DECF;border-left:3px solid ${f[1]};border-radius:11px;padding:12px 14px"><div style="font-size:19px;margin-bottom:4px">${f[0]}</div><div style="font-weight:700;color:#11302c;font-size:13.2px;margin-bottom:3px">${f[2]}</div><div style="font-size:12.1px;color:#5a6b64;line-height:1.45">${f[3]}</div></div>`).join('')}</div>`},
+    {type:'html',html:`<div class="card" style="margin-top:4px;background:linear-gradient(110deg,#0FA37F,#0C3B43);border:none;color:#fff;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between"><div style="font-size:13.4px;line-height:1.55;color:#eafaf5;flex:1;min-width:260px">Dans le cadre de <b style="color:#fff">Territoires d'Industrie</b> et du <b style="color:#fff">Contrat de Plan État–Région</b>, la Communauté de communes du Pays d'Issoudun et ses partenaires engagent une <b style="color:#fff">GPECT à dominante industrielle</b> : consolider le tissu local, sécuriser les emplois, accompagner les transitions et renforcer l'attractivité du territoire.</div><button onclick="goAnchor('sec-demarche')" style="background:#fff;color:#0C3B43;border:none;padding:10px 18px;border-radius:30px;font-family:'Hanken Grotesk';font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap">Découvrir la démarche →</button></div>`},
+
+    {type:'section',num:'📊',title:'Les résultats en un coup d\'œil',desc:"Quatre chiffres qui résument l'urgence — issus des réponses des 42 acteurs interrogés."},
+    {type:'kpis',items:[
+      {v:'95%',l:'des entreprises en tension de recrutement',s:'difficultés majeures ou ponctuelles (Q3.2)',tone:'coral'},
+      {v:'2,3/5',l:"Image du bassin auprès des candidats",s:'note la plus basse du diagnostic (Ent. Q8.2)',tone:'amber'},
+      {v:'47%',l:"de seniors (45 ans et +)",s:'dans la pyramide des âges entreprises',tone:'petrol'},
+      {v:'1,0/5',l:"Recours à l'AFEST",s:'dispositif de transmission quasi inexistant',tone:'emer'},
+    ]},
+    {type:'section',aid:'sec-messages',num:'★',title:'Les 5 messages clés du diagnostic',desc:"Ce que les données confirment — et chiffrent — des fragilités pressenties ci-dessus."},
+    {type:'gridStart',cols:'g2'},
+    {type:'insight',tone:'risk',title:'Une tension de recrutement quasi générale sur les métiers techniques',text:"Usinage, maintenance, qualité/méthodes et programmation CNC/robotique sont cités par les quatre collèges. Les acteurs de l'emploi notent la difficulté à <b>4,9/5</b> sur la maintenance et la programmation machines. <b>95%</b> des entreprises se déclarent en tension."},
+    {type:'insight',tone:'gap',title:"Un écart majeur sur l'adéquation de l'offre de formation",text:"Les organismes de formation jugent couvrir les besoins à <b>4,0/5</b>, mais les acteurs de l'emploi à <b>2,3/5</b>, les entreprises à <b>3,1/5</b> et 71% des partenaires sociaux la trouvent « peu » ou « partiellement » adaptée. <span class='hyp'>hypothèse à creuser</span>"},
+    {type:'insight',tone:'risk',title:'Un choc démographique sous-estimé',text:"47% de seniors, 136 départs en retraite déclarés à 5 ans (concentrés à 60% sur la production), mais 67% des entreprises jugent leurs dispositifs de transmission suffisants et l'AFEST est à <b>1,0/5</b>. Le turnover faible (81%) masque le risque."},
+    {type:'insight',tone:'signal',title:"Une demande forte sur l'IA et les compétences émergentes, sans offre locale",text:"L'IA est citée comme l'évolution n°1 par 100% des organismes de formation, mais leur capacité à former y est de <b>2,3/5</b> et la cybersécurité à <b>1,1/5</b>. Trou structurant entre demande et offre."},
+    {type:'gridEnd'},
+    {type:'insight',tone:'lever',title:"Un territoire prêt à agir collectivement — sur les bons formats",text:"76% des entreprises sont prêtes à une campagne de communication territoriale, 62% à des ateliers RH inter-entreprises, et les acteurs de l'emploi se disent disposés à <b>4,7/5</b>. Le frein n'est pas la volonté mais le <b>format</b> : ateliers courts (2h), à résultat concret, comme le soulignent les partenaires sociaux."},
+
+    {type:'html',html:`<div style="margin-top:6px"><div style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a978f;margin-bottom:10px">Explorer le diagnostic collège par collège</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:11px">${[
+      ['🏭','Entreprises','21 répondants','95% en tension de recrutement','entreprises','#0C3B43'],
+      ['🎓','Organismes de formation','7 répondants','IA citée à 100%, capacité 2,3/5','of','#0FA37F'],
+      ['🤝','Acteurs de l\'emploi','7 répondants','Difficulté maintenance : 4,9/5','acteurs','#E0A22B'],
+      ['⚖️','Syndicats & org. pro.','7 répondants','71% jugent l\'offre peu adaptée','syndicats','#D2562F'],
+    ].map(c=>`<div onclick="go('${c[4]}')" style="background:#fff;border:1px solid #E4DECF;border-radius:13px;padding:15px 16px;cursor:pointer;transition:all .15s;border-bottom:3px solid ${c[5]}" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 18px rgba(12,59,67,.10)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><div style="font-size:23px;margin-bottom:6px">${c[0]}</div><div style="font-weight:800;color:#11302c;font-size:14px;line-height:1.25">${c[1]}</div><div style="font-size:11.3px;color:#8a978f;margin:3px 0 8px">${c[2]}</div><div style="font-size:12.2px;color:#27433d;line-height:1.4">${c[3]}</div><div style="margin-top:9px;font-size:12px;font-weight:700;color:${c[5]}">Consulter →</div></div>`).join('')}</div></div>`},
+
+
+    {type:'section',aid:'sec-demarche',num:'🧭',title:`La démarche — comment ce diagnostic a été construit`,desc:`Mission, méthode, ateliers, partenaires et équipe. Dépliez chaque volet pour le détail.`},
+    {type:'accStart',icon:'🎯',title:`Objectif de la mission`,sub:`Sécuriser l'emploi, anticiper les mutations, accompagner les compétences — 7 objectifs spécifiques`},
+    {type:'html',html:`<div class="card" style="border-left:4px solid #0FA37F"><div style="font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#0FA37F;margin-bottom:6px">Objectif global</div><p style="font-size:14.5px;line-height:1.55;color:#27433d;margin:0"><b>Sécuriser l'emploi, anticiper les mutations économiques et technologiques, et accompagner l'évolution des compétences</b> sur le territoire d'Issoudun — en cohérence avec la démographie, les projets de l'écosystème (dont les QPV) et les besoins des entreprises industrielles.</p></div>`},
+    {type:'html',html:`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:11px;margin-top:6px">${[
+      ['Diagnostic complet','Cartographier les dynamiques d\'emploi industriel, quantitatives et qualitatives.'],
+      ['Métiers & compétences','Identifier les métiers en tension, sensibles et émergents, et les compétences clés à 2–5 ans.'],
+      ['Adéquation formation','Confronter l\'offre de formation (initiale, continue, alternance) aux besoins réels des entreprises.'],
+      ['Écosystème territorial','Intégrer les projets en cours : QPV, insertion, mobilité, investissements industriels.'],
+      ['Plan d\'actions 2026–2030','Co-construire une feuille de route opérationnelle : priorités, pilotes, indicateurs.'],
+      ['Gouvernance durable','Structurer un pilotage emploi–formation–entreprises associant tous les acteurs.'],
+      ['Attractivité & parcours','Renforcer l\'attractivité des métiers et sécuriser les parcours (salariés, jeunes, demandeurs d\'emploi, reconversions).'],
+    ].map(o=>`<div style="background:#FAF8F2;border-radius:11px;padding:12px 14px"><div style="font-weight:700;color:#11302c;font-size:13.3px;margin-bottom:3px">${o[0]}</div><div style="font-size:12.2px;color:#5a6b64;line-height:1.45">${o[1]}</div></div>`).join('')}</div>`},
+
+    {type:'accEnd'},
+    {type:'accStart',icon:'🧩',title:`Cinq approches combinées`,sub:`DATA · Terrain · Participative · Prospective · Facteur humain`},
+    {type:'html',html:`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px">${[
+      ['DATA','#0C3B43','📊','Diagnostic quantitatif, analyses statistiques, projections à partir des bases publiques (INSEE, DARES, France Travail, OPCO2i…).'],
+      ['TERRAIN','#0FA37F','🏭','Entretiens, questionnaires administrés en entreprise, visites de sites, ateliers.'],
+      ['PARTICIPATIVE','#E0A22B','🤝','Co-construction des constats et des solutions avec les acteurs du territoire.'],
+      ['PROSPECTIVE','#D2562F','🔭','Scénarios d\'évolution à 2–5 ans pour anticiper les besoins futurs.'],
+      ['FACTEUR HUMAIN','#114E58','👥','Conditions de travail, attractivité, transmission, parcours, démographie.'],
+    ].map(a=>`<div style="background:#fff;border:1px solid #E4DECF;border-top:4px solid ${a[1]};border-radius:12px;padding:13px 14px"><div style="font-size:21px;margin-bottom:5px">${a[2]}</div><div style="font-weight:800;color:${a[1]};font-size:12.5px;letter-spacing:.04em;margin-bottom:5px">${a[0]}</div><div style="font-size:12px;color:#5a6b64;line-height:1.45">${a[3]}</div></div>`).join('')}</div>`},
+    {type:'html',html:`<div class="note-box" style="margin-top:10px"><b>Principe clé — questionnaires administrés en rendez-vous.</b> Les questionnaires ne sont pas envoyés en ligne : ils sont remplis <b>en présence de l'équipe</b>, lors de rendez-vous dans les entreprises. Cette modalité garantit un fort taux de complétude, la fiabilité des données et la possibilité d'approfondir les réponses.</div>`},
+
+    {type:'accEnd'},
+    {type:'accStart',icon:'📆',title:`Une démarche en 4 phases`,sub:`Janvier → juin 2026 : cadrage, diagnostic, formation, plan d'action — et leurs livrables`},
+    {type:'html',html:`<div style="display:grid;gap:11px">${[
+      ['Phase 1','Janvier 2026','Cadrage stratégique & mobilisation','Réunion de lancement avec les parties prenantes, périmètre et filières ciblées, co-construction des 4 questionnaires et des trames d\'entretien, installation du comité technique.<br><b style=\'font-size:11.4px\'>Livrables : note de cadrage, planning terrain.</b>','#0C3B43'],
+      ['Phase 2','Février → mi-avril 2026','Diagnostic quantitatif, qualitatif & participatif','Analyse DATA (structure de l\'emploi, pyramides des âges, métiers en tension, projections 2–5 ans) + diagnostic terrain via les 4 questionnaires administrés en entreprise + 4 ateliers participatifs.<br><b style=\'font-size:11.4px\'>Livrables : tableaux de bord, synthèses qualitatives, comptes rendus d\'ateliers.</b>','#0FA37F'],
+      ['Phase 3','Mai 2026','Offre de formation & ingénierie pédagogique','Inventaire des formations du territoire, confrontation besoins / offre, repérage des manques (industrie 4.0, maintenance, robotique, qualité, logistique…), pistes d\'évolution (modules courts, blocs de compétences, alternance).<br><b style=\'font-size:11.4px\'>Livrable : tableau d\'adéquation besoins–formations.</b>','#E0A22B'],
+      ['Phase 4','Juin 2026','Plan d\'actions GPECT & restitutions','Élaboration de la feuille de route 2026–2030 (priorités, pilotes, financements, indicateurs), proposition de gouvernance, et deux restitutions : publique et dédiée aux entreprises participantes.<br><b style=\'font-size:11.4px\'>Livrables : plan d\'actions final, supports de restitution.</b>','#D2562F'],
+    ].map(p=>`<div style="background:#fff;border:1px solid #E4DECF;border-radius:12px;padding:14px 16px;display:flex;gap:14px;align-items:flex-start"><div style="flex-shrink:0;width:74px"><div style="font-weight:800;color:${p[4]};font-size:14px">${p[0]}</div><div style="font-size:10.7px;color:#8a978f;font-weight:600;line-height:1.25;margin-top:2px">${p[1]}</div></div><div style="border-left:2px solid ${p[4]};padding-left:14px"><div style="font-weight:700;color:#11302c;font-size:13.8px;margin-bottom:3px">${p[2]}</div><div style="font-size:12.4px;color:#5a6b64;line-height:1.5">${p[3]}</div></div></div>`).join('')}</div>`},
+
+    {type:'accEnd'},
+    {type:'accStart',icon:'🛠️',title:`Quatre ateliers participatifs`,sub:`Métiers sensibles · Attractivité · Formation · Prospective 2026–2030`},
+    {type:'gridStart',cols:'g2'},
+    {type:'html',html:`<div class="card keep" style="border-top:3px solid #0C3B43"><div style="font-weight:800;color:#0C3B43;font-size:13.5px;margin-bottom:7px">Atelier 1 · Métiers sensibles & compétences clés</div><div style="font-size:12.3px;color:#5a6b64;line-height:1.5;margin-bottom:9px">Identifier les métiers en tension, sensibles ou critiques ; repérer les compétences indispensables ; anticiper les évolutions à 2–5 ans (industrie 4.0, automatisation) ; prioriser les métiers à traiter.</div><div style="background:#FAF8F2;border-radius:8px;padding:8px 11px;font-size:11.6px;color:#27433d"><b>Livrables :</b> matrice métiers/compétences sensibles, liste des métiers prioritaires, cartographie des compétences clés.</div></div>`},
+    {type:'html',html:`<div class="card keep" style="border-top:3px solid #0FA37F"><div style="font-weight:800;color:#0FA37F;font-size:13.5px;margin-bottom:7px">Atelier 2 · Attractivité & sécurisation des parcours</div><div style="font-size:12.3px;color:#5a6b64;line-height:1.5;margin-bottom:9px">Analyser les freins à l'attractivité (image, conditions, rémunération, mobilité) ; identifier les leviers auprès des jeunes, demandeurs d'emploi et publics QPV ; sécuriser les parcours ; définir des actions de communication.</div><div style="background:#FAF8F2;border-radius:8px;padding:8px 11px;font-size:11.6px;color:#27433d"><b>Livrables :</b> plan d'actions attractivité 2026–2030, pistes de communication commune, réseau d'ambassadeurs des métiers.</div></div>`},
+    {type:'html',html:`<div class="card keep" style="border-top:3px solid #E0A22B"><div style="font-weight:800;color:#b9831c;font-size:13.5px;margin-bottom:7px">Atelier 3 · Formation & adéquation besoins–offre</div><div style="font-size:12.3px;color:#5a6b64;line-height:1.5;margin-bottom:9px">Objectiver l'adéquation besoins / offre de formation ; identifier les formations à faire évoluer, créer ou mieux articuler ; travailler des dispositifs souples (blocs, modularisation, alternance) ; renforcer les coopérations entreprises ⇄ OF.</div><div style="background:#FAF8F2;border-radius:8px;padding:8px 11px;font-size:11.6px;color:#27433d"><b>Livrables :</b> tableau d'adéquation besoins–formations, priorités d'ajustement, pistes d'ingénierie pédagogique partagée.</div></div>`},
+    {type:'html',html:`<div class="card keep" style="border-top:3px solid #D2562F"><div style="font-weight:800;color:#D2562F;font-size:13.5px;margin-bottom:7px">Atelier 4 · Prospective 2026–2030 & feuille de route</div><div style="font-size:12.3px;color:#5a6b64;line-height:1.5;margin-bottom:9px">Élaborer des scénarios d'évolution (croissance, stabilisation, tensions) ; analyser leurs impacts sur l'emploi et les compétences ; co-construire la feuille de route GPECT ; définir gouvernance et suivi.</div><div style="background:#FAF8F2;border-radius:8px;padding:8px 11px;font-size:11.6px;color:#27433d"><b>Livrables :</b> scénarios 2026–2030, feuille de route opérationnelle, recommandations de gouvernance.</div></div>`},
+    {type:'gridEnd'},
+
+    {type:'accEnd'},
+    {type:'accStart',icon:'🤝',title:`Partenaires mobilisés`,sub:`Institutionnels, acteurs de l'emploi, formation, partenaires sociaux, consulaires`},
+    {type:'html',html:`<div style="display:grid;gap:10px">${[
+      ['Institutionnels','#0C3B43',['Communauté de communes du Pays d\'Issoudun','Département de l\'Indre','Région Centre-Val de Loire','Préfecture & Sous-préfecture','DREETS']],
+      ['Acteurs de l\'emploi','#E0A22B',['France Travail','Agences d\'intérim','Humando','Mission Locale','Cap Emploi','Structures d\'insertion']],
+      ['Formation','#0FA37F',['AFPI','AFPA','Lycée professionnel','IUT','GRETA','CFA','OF spécialisés']],
+      ['Organisations professionnelles & syndicales','#D2562F',['MEDEF','CPME','UIMM','CGT','CFE-CGC','Force Ouvrière']],
+      ['Chambres consulaires','#114E58',['CCI de l\'Indre','CMA']],
+    ].map(g=>`<div style="background:#fff;border:1px solid #E4DECF;border-radius:11px;padding:11px 14px"><div style="font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:${g[1]};margin-bottom:8px">${g[0]}</div><div style="display:flex;flex-wrap:wrap;gap:7px">${g[2].map(p=>`<span style="background:#FAF8F2;border:1px solid #E9E3D5;border-radius:20px;padding:4px 12px;font-size:12px;color:#27433d">${p}</span>`).join('')}</div></div>`).join('')}</div>`},
+
+    {type:'accEnd'},
+    {type:'accStart',aid:'sec-equipe',icon:'👥',title:`L'équipe d'intervention`,sub:`Trois experts de l'Indre — groupement Ceterha & La Fabrique RH`},
+    {type:'html',html:`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">${[
+      ['Sophie Kirsch','Consultante RH — Ceterha','Châteauroux (Indre)','#0C3B43','Spécialisée en GEPP/GPEC et diagnostics RH territoriaux, elle accompagne les entreprises industrielles (métallurgie, aéronautique, logistique, agroalimentaire, maroquinerie) dans l\'anticipation des métiers et la transformation des organisations. Expérience reconnue en animation d\'entretiens, conduite d\'ateliers et co-construction de plans d\'actions.','sophie.kirsch@ceterha.fr','',''],
+      ['Sabrina Alamargot','Consultante RH — La Fabrique RH','Rosnay (Indre)','#0FA37F','Spécialiste de l\'emploi, de la formation et des parcours professionnels, avec une connaissance fine des dispositifs publics et des acteurs de l\'insertion (France Travail, Mission Locale, Cap Emploi). Solides compétences en analyse qualitative, conduite d\'entretiens, enquêtes de terrain et animation de temps collectifs multi-acteurs.','lafabriquerh.conseil@gmail.com','',''],
+      ['Florian Rousseau','Consultant / Formateur IA & data — Escale Digitale Solutions','Issoudun (Indre)','#E0A22B','Met l\'intelligence artificielle et l\'analyse de données au service du développement local : structuration et visualisation des informations clés, transformation de données complexes en supports d\'aide à la décision lisibles pour tous. Assure le lien entre analyse quantitative rigoureuse et réalités humaines du terrain.','','','EDS-Formation.fr'],
+    ].map(m=>`<div style="background:#fff;border:1px solid #E4DECF;border-radius:13px;padding:15px 16px"><div style="font-weight:800;color:#11302c;font-size:15px">${m[0]}</div><div style="font-weight:600;color:${m[3]};font-size:12.3px;margin:2px 0 1px">${m[1]}</div><div style="font-size:11.4px;color:#8a978f;margin-bottom:9px">📍 ${m[2]}</div><div style="font-size:12.1px;color:#5a6b64;line-height:1.5;margin-bottom:11px">${m[4]}</div><div style="border-top:1px solid #EFEADD;padding-top:9px;font-size:11.8px;color:#27433d;display:flex;flex-direction:column;gap:3px">${m[5]?`<span>✉️ ${m[5]}</span>`:''}${m[6]?`<span>📞 ${m[6]}</span>`:''}${m[7]?`<span>🌐 ${m[7]}</span>`:''}</div></div>`).join('')}</div>`},
+    {type:'html',html:`<div class="card" style="margin-top:6px;background:linear-gradient(110deg,#0C3B43,#114E58);border:none;color:#fff"><div style="font-weight:800;font-size:13.5px;margin-bottom:7px;color:#fff">Un groupement solidaire Ceterha &amp; La Fabrique RH</div><div style="font-size:12.6px;line-height:1.55;color:#d9e6e3">Les deux structures s'associent pour porter cette mission : engagement total et indivisible, complémentarité d'expertises (ingénierie formation + diagnostic/stratégie RH territoriale) et qualité certifiée — <b style="color:#fff">double certification Qualiopi, CPF éligible</b>. Ceterha pilote le groupement et coordonne l'équipe projet.</div></div>`},
+
+    {type:'accEnd'},
+    {type:'section',aid:'sec-methodo',num:'ⓘ',title:'Méthodologie & cadre de lecture'},
+    {type:'gridStart',cols:'g2'},
+    {type:'text',title:'Une donnée traçable, anonymisée, produite par script',html:`<p style="font-size:13.8px;color:#33433f">Chaque chiffre de ce tableau de bord provient d'un <b>fichier de résultats unique</b> produit par des scripts d'analyse (pandas), question par question, colonne par colonne. Aucune valeur n'est recalculée à la main, aucune entreprise n'est nommée. Les identifiants restent agrégés.</p><div class="legend" style="margin-top:12px"><span><i style="background:var(--petrole)"></i>Impact / fréquence fort</span><span><i style="background:var(--emeraude)"></i>Moyen-fort</span><span><i style="background:var(--ambre)"></i>Moyen</span><span><i style="background:#b9c7c2"></i>Faible</span></div>`},
+    {type:'text',title:'Prudence sur les petits effectifs',html:`<p style="font-size:13.8px;color:#33433f">Trois collèges comptent <b>n=7 répondants</b>. Les pourcentages y sont des <b>ordres de grandeur</b> : nous affichons systématiquement l'effectif brut (n) à côté. Les croisements fins et corrélations sont présentés comme des <b>hypothèses à vérifier</b>, jamais comme des faits. Le collège Entreprises (n=21) supporte une lecture plus assurée.</p>`},
+    {type:'gridEnd'},
+
+    {type:'section',num:'⚠',title:'Limites & biais — à porter à la connaissance du financeur',desc:"Les huit points à énoncer en restitution pour une lecture honnête et défendable des résultats."},
+    {type:'html',html:`<div class="card"><div style="display:grid;gap:10px">
+      <div class="mline"><span class="mk" style="min-width:160px">Taille d'échantillon</span><span class="mv">42 répondants. <b>Trois collèges à n=7</b> : résultats en <b>ordres de grandeur</b>, sans valeur de généralisation statistique. Seul le collège Entreprises (n=21) autorise une lecture plus assurée.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Poids du plus gros employeur</span><span class="mv">Un établissement d'environ <b>1 550 salariés</b> pèse fortement sur les agrégats d'effectifs et la pyramide des âges → calculs sensibles présentés systématiquement <b>avec ET sans</b> cet employeur.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Données déclaratives</span><span class="mv">Réponses auto-déclarées et auto-évaluées (ex. les organismes notant leur propre offre) : biais de perception et de désirabilité possibles.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Écarts de perception</span><span class="mv">Les divergences entre collèges sont un <b>résultat</b> à interpréter, non une mesure objective d'une réalité unique.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Collecte par vagues</span><span class="mv">Photographie à un instant T, à consolider à mesure des retours complémentaires.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Sous-groupes</span><span class="mv">Les éclairages intérim (n=3) / public (n=4) et « hors financeur » (n=6) sont <b>purement indicatifs</b>.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Lecture des %</span><span class="mv">Choix multiple = « % de répondants » (somme &gt; 100% normale). Arrondis à l'entier : un total peut afficher 99 ou 101%.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Verbatims & hypothèses</span><span class="mv">Verbatims cités à titre <b>illustratif</b> et anonymisé ; les corrélations sont signalées comme <b>hypothèses à vérifier</b>, jamais comme des faits.</span></div>
+    </div></div>`},
+
+    {type:'section',num:'A‑Z',title:'Lexique des sigles',desc:"Tous les sigles employés dans le diagnostic, explicités pour une lecture sans présupposé technique."},
+    {type:'html',html:`<div class="card" style="columns:310px;column-gap:32px;font-size:12.6px;line-height:1.5;color:#33433f">
+      <div style="break-inside:avoid;margin-bottom:13px"><div style="font-weight:800;color:var(--emeraude);text-transform:uppercase;font-size:10.5px;letter-spacing:.09em;margin-bottom:5px">Acteurs & institutions</div>
+        <b>GPECT</b> — Gestion Prévisionnelle des Emplois et des Compétences, Territoriale<br>
+        <b>OPCO</b> — Opérateur de Compétences (finance la formation des entreprises d'une branche)<br>
+        <b>France Travail</b> — service public de l'emploi (ex-Pôle emploi)<br>
+        <b>Mission Locale</b> — accompagnement des jeunes de 16 à 25 ans<br>
+        <b>Cap Emploi</b> — insertion des personnes en situation de handicap<br>
+        <b>APEC</b> — Association Pour l'Emploi des Cadres<br>
+        <b>CCI / CMA</b> — Chambre de Commerce et d'Industrie / de Métiers et de l'Artisanat<br>
+        <b>UIMM</b> — Union des Industries et Métiers de la Métallurgie<br>
+        <b>CPME / MEDEF</b> — organisations patronales<br>
+        <b>CGT / CFE-CGC</b> — organisations syndicales de salariés<br>
+        <b>DREETS / DDETSPP</b> — services de l'État (emploi-travail, régional / départemental)<br>
+        <b>Carsat</b> — Caisse d'assurance retraite et de la santé au travail<br>
+        <b>AOM</b> — Autorité Organisatrice de la Mobilité
+      </div>
+      <div style="break-inside:avoid;margin-bottom:13px"><div style="font-weight:800;color:var(--emeraude);text-transform:uppercase;font-size:10.5px;letter-spacing:.09em;margin-bottom:5px">Formation & dispositifs</div>
+        <b>OF</b> — Organisme de Formation<br>
+        <b>CFA</b> — Centre de Formation d'Apprentis<br>
+        <b>GRETA / CAFOC</b> — réseau de formation continue de l'Éducation nationale<br>
+        <b>IUT</b> — Institut Universitaire de Technologie<br>
+        <b>AFPA / AFPI</b> — organismes de formation (AFPI : industrie)<br>
+        <b>Qualiopi</b> — certification qualité obligatoire des organismes de formation<br>
+        <b>CPF</b> — Compte Personnel de Formation<br>
+        <b>VAE</b> — Validation des Acquis de l'Expérience<br>
+        <b>CQP</b> — Certificat de Qualification Professionnelle (titre de branche)<br>
+        <b>AFEST</b> — Action de Formation En Situation de Travail (formation au poste)<br>
+        <b>PMSMP</b> — Période de Mise en Situation en Milieu Professionnel (immersion)<br>
+        <b>POEI / POEC</b> — Préparation Opérationnelle à l'Emploi, Individuelle / Collective<br>
+        <b>AFPR</b> — Action de Formation Préalable au Recrutement<br>
+        <b>Prépa compétences</b> — parcours France Travail de remise à niveau / orientation
+      </div>
+      <div style="break-inside:avoid;margin-bottom:13px"><div style="font-weight:800;color:var(--emeraude);text-transform:uppercase;font-size:10.5px;letter-spacing:.09em;margin-bottom:5px">Financements mobilisables</div>
+        <b>EDEC / ADEC</b> — Engagement / Action de Développement de l'Emploi et des Compétences (cofinancement État–branches)<br>
+        <b>FSE+</b> — Fonds Social Européen Plus<br>
+        <b>CARED</b> — aide Région Centre-Val de Loire à la formation des demandeurs d'emploi<br>
+        <b>ARDAN</b> — dispositif Région d'appui au recrutement d'un chargé de projet<br>
+        <b>France 2030</b> — plan national d'investissement (innovation, industrie)<br>
+        <b>Territoires d'industrie</b> — programme national de réindustrialisation<br>
+        <b>Action Logement</b> — financeur du logement des salariés (aides mobilité/hébergement)
+      </div>
+      <div style="break-inside:avoid"><div style="font-weight:800;color:var(--emeraude);text-transform:uppercase;font-size:10.5px;letter-spacing:.09em;margin-bottom:5px">Technique, industrie & publics</div>
+        <b>CAO / DAO</b> — Conception / Dessin Assisté(e) par Ordinateur<br>
+        <b>CNC</b> — Commande Numérique (machines-outils pilotées par programme)<br>
+        <b>GPAO / ERP</b> — Gestion de Production Assistée par Ordinateur / progiciel de gestion intégré<br>
+        <b>QHSE / HSE</b> — Qualité, Hygiène, Sécurité, Environnement<br>
+        <b>CACES</b> — Certificat d'Aptitude à la Conduite En Sécurité (engins)<br>
+        <b>SPL</b> — permis poids lourd « super lourd » (transport)<br>
+        <b>Industrie 4.0</b> — usine connectée : automatisation, données, IA<br>
+        <b>PME / ETI / TPE</b> — Petite et Moyenne / de Taille Intermédiaire / Très Petite Entreprise<br>
+        <b>DELD</b> — Demandeur d'Emploi de Longue Durée<br>
+        <b>QPV</b> — Quartier Prioritaire de la politique de la Ville<br>
+        <b>TH</b> — Travailleur Handicapé
+      </div>
+    </div>`},
+
+    {type:'html',html:`<div class="card" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        ${[['Entreprises','n=21','var(--petrole)'],['Organismes de formation','n=7','var(--emeraude)'],["Acteurs de l'emploi",'n=7','var(--ambre)'],['Syndicats & org. pro.','n=7','var(--corail)']].map(c=>`<div style="display:flex;align-items:center;gap:9px"><span style="width:11px;height:11px;border-radius:50%;background:${c[2]}"></span><b style="font-size:13.5px;color:var(--petrole-3)">${c[0]}</b><span style="font-size:12px;color:var(--ink-soft)">${c[1]}</span></div>`).join('')}
+      </div>
+      <button onclick="go('croise')" style="background:var(--petrole-3);color:#fff;border:none;padding:11px 20px;border-radius:30px;font-family:'Hanken Grotesk';font-weight:600;font-size:13.5px;cursor:pointer">Voir l'analyse croisée →</button>
+    </div>`}
+  ]);
+}
+function pageCollege(host,C){
+  host.appendChild((()=>{const h=el('div','page-head fade');h.innerHTML=`<div class="kicker">Collège · ${esc(C.label)}</div><h2>${esc(C.headline||C.label)}</h2>`+(C.sub?`<div class="sub">${C.sub}</div>`:'')+`<div class="nbadge"><span class="dot"></span>${C.n} répondants · analyse question par question</div>`;return h;})());
+  renderBlocks(host,C.blocks);
+}
+PAGES_EXTRA.national=function(host){
+  const LEGBF=[{c:PAL.petrole,t:`Pays d'Issoudun`},{c:PAL.ambre,t:`France`}];
+  host.appendChild((()=>{const h=el('div','page-head fade');h.innerHTML=`<div class="kicker">Synthèse territoriale</div><h2>Le bassin d'emploi en chiffres — Pays d'Issoudun face à la France</h2><div class="sub">Le marché du travail du <b>Pays d'Issoudun</b> (la communauté de communes = le bassin de la GPECT) comparé à la <b>France entière</b>, à partir du portail officiel <b>Data Emploi de France Travail</b>. Lecture simple, en deux couleurs : <b style="color:#0C3B43">bleu = le bassin</b>, <b style="color:#b9831c">orange = la France</b>.</div><div class="nbadge"><span class="dot"></span>France Travail · Data Emploi — panorama EPCI 243600236 · INSEE, France Travail, Acoss &amp; MSA · consulté le 30/06/2026</div>`;return h;})());
+  renderBlocks(host,[
+    {type:'html',html:`<div class="note-box" style="margin-bottom:4px"><b>Source officielle.</b> Toutes les données de cette page proviennent du portail public <b>Data Emploi de France Travail</b> (territoire : CC du Pays d'Issoudun, comparé à la France). Les chiffres « emploi salarié » portent sur les salariés du territoire — ils diffèrent volontairement des « effectifs des 21 entreprises » de l'onglet Entreprises (bases et périmètres différents).</div>`},
+
+    {type:'section',num:'1',title:`L'essentiel en 6 repères`,desc:`Ce qui distingue le bassin d'emploi d'Issoudun de la moyenne nationale, en moins de 30 secondes.`},
+    {type:'kpis',items:[
+      {v:'7,2%',l:`taux de chômage (Indre)`,s:`France : 7,9% — un peu plus bas (T4 2025)`,tone:'emer'},
+      {v:'43%',l:`des habitants ont 55 ans et plus`,s:`France : 33% — population plus âgée`,tone:'coral'},
+      {v:'63%',l:`des salariés dans l'industrie`,s:`France : 19% — plus de 3× la moyenne`,tone:'petrol'},
+      {v:'66%',l:`de la population a un niveau ≤ CAP/BEP`,s:`France : 50% — territoire moins diplômé`,tone:'amber'},
+      {v:'18 899',l:`habitants (Pays d'Issoudun)`,s:`−2,1% depuis 2020 · 8 153 actifs · 7 151 salariés`,tone:'petrol'},
+      {v:'Faible',l:`dynamisme de l'emploi local`,s:`évaluation France Travail — national plus élevé`,tone:'coral'},
+    ]},
+
+    {type:'section',num:'2',title:`Une population nettement plus âgée`,desc:`Répartition des habitants par tranche d'âge : beaucoup moins de jeunes, beaucoup plus de 55 ans et plus.`},
+    {type:'bars',q:`INSEE 2021`,title:`Répartition des habitants par âge (%)`,note:`bleu = Pays d'Issoudun · orange = France`,unit:'%',max:50,leg:`Pays d'Issoudun`,leg2:`France`,color:PAL.petrole,color2:PAL.ambre,legend:LEGBF,
+      items:[{label:`15–24 ans`,v:9.4,v2:12},{label:`25–34 ans`,v:9.2,v2:12},{label:`35–49 ans`,v:16,v2:19},{label:`50–54 ans`,v:8.2,v2:6.7},{label:`55 ans et plus`,v:43,v2:33}],
+      analysis:`<b>43% des habitants ont 55 ans et plus</b> (33% en France) et seulement <b>9,4% de jeunes de 15–24 ans</b> (12% en France). Côté actifs, les <b>55–64 ans pèsent 20%</b> des effectifs (France : 17%). Pour la GPECT : un vivier qui vieillit, et un enjeu de renouvellement et de transmission d'autant plus pressant.`,src:`France Travail — Data Emploi (INSEE 2021 habitants ; INSEE 2022 actifs)`},
+
+    {type:'section',num:'3',title:`Un territoire moins qualifié`,desc:`Niveau de diplôme : sur-représentation des niveaux CAP/BEP et infra, sous-représentation du supérieur.`},
+    {type:'bars',q:`INSEE 2021`,title:`Niveau de diplôme de la population (%)`,note:`bleu = Pays d'Issoudun · orange = France`,unit:'%',max:35,leg:`Pays d'Issoudun`,leg2:`France`,color:PAL.petrole,color2:PAL.ambre,legend:LEGBF,
+      items:[{label:`Sans diplôme / < CAP-BEP`,v:33,v2:26},{label:`CAP / BEP`,v:33,v2:24},{label:`Baccalauréat`,v:16,v2:18},{label:`Bac+2`,v:8.5,v2:11},{label:`Bac+3 / +4`,v:5.8,v2:9.7},{label:`Bac+5 et plus`,v:4.4,v2:12}],
+      analysis:`<b>Deux personnes sur trois (66%)</b> ont un niveau ≤ CAP/BEP, contre <b>50% en France</b>. À l'autre bout, <b>4,4% seulement de bac+5 et plus</b>, contre <b>12% en France</b>. Ce déficit de profils qualifiés et d'encadrement est cohérent avec les manques pointés par les entreprises (qualité, méthodes, management) et justifie les actions de <b>montée en compétences</b>.`,src:`France Travail — Data Emploi (INSEE 2021)`},
+
+    {type:'section',num:'4',title:`Une économie hyper-industrielle`,desc:`Poids de chaque grand secteur dans l'emploi salarié du territoire, comparé à la France. La signature d'Issoudun saute aux yeux.`},
+    {type:'bars',q:`INSEE 2023`,title:`Poids des secteurs dans l'emploi salarié (%)`,note:`bleu = Pays d'Issoudun · orange = France`,unit:'%',max:70,leg:`Pays d'Issoudun`,leg2:`France`,color:PAL.petrole,color2:PAL.ambre,legend:LEGBF,
+      items:[{label:`Industrie`,v:63,v2:19},{label:`Services`,v:20,v2:55},{label:`Commerce`,v:11,v2:17},{label:`Construction`,v:4,v2:8},{label:`Agriculture`,v:2,v2:1}],
+      analysis:`<b>63% des salariés du bassin relèvent de l'industrie</b>, contre <b>19% en France</b> : un territoire <b>plus de 3× plus industriel</b> que la moyenne. À l'inverse, les services n'y pèsent que 20% (55% en France). Une force et une identité — mais une dépendance sectorielle à sécuriser (transmission, diversification).`,src:`France Travail — Data Emploi (INSEE, Établissements/Salariés 2023)`},
+
+    {type:'section',num:'5',title:`Le marché du travail en chiffres`,desc:`Les volumes clés du bassin : demandeurs, offres, embauches et établissements (derniers chiffres disponibles).`},
+    {type:'kpis',items:[
+      {v:'1 610',l:`demandeurs d'emploi (cat. A, B, C)`,s:`dont 910 en catégorie A · +8,8% sur un an`,tone:'amber'},
+      {v:'3 570',l:`offres diffusées sur 12 mois`,s:`−6,8% sur un an · 51% en CDI`,tone:'emer'},
+      {v:'2 030',l:`embauches par trimestre`,s:`+22% sur un an · dont 30% de plus d'un mois`,tone:'petrol'},
+      {v:'575',l:`établissements sur le territoire`,s:`+1,6% sur un an (INSEE 2023)`,tone:'petrol'},
+    ]},
+
+    {type:'section',num:'6',title:`Le grand décalage : l'offre et la demande ne se rencontrent pas`,desc:`Les métiers que cherchent les candidats locaux ne sont pas ceux que cherchent les recruteurs. C'est le cœur du problème territorial.`},
+    {type:'gridStart',cols:'g2'},
+    {type:'table',title:`① Métiers les plus cherchés par les candidats`,numCols:true,headers:[`Métier`,`Demand.`,`Offres`],rows:[
+      [`Employé(e) libre-service`,`180`,`20`],
+      [`Préparateur(trice) commandes`,`130`,`20`],
+      [`Manutentionnaire`,`80`,`20`],
+      [`Agent de service hospitalier`,`60`,`0`],
+      [`Employé(e) familial(e)`,`60`,`20`],
+    ]},
+    {type:'table',title:`② Métiers les plus cherchés par les recruteurs`,numCols:true,headers:[`Métier`,`Offres`,`Demand.`],rows:[
+      [`Infirmier(ère) — IDE`,`190`,`0`],
+      [`Tourneur-fraiseur`,`160`,`20`],
+      [`Technicien(ne) méthodes`,`110`,`0`],
+      [`Ingénieur(e) R&D industrie`,`100`,`10`],
+      [`Assembleur(se) monteur(se)`,`80`,`40`],
+    ]},
+    {type:'gridEnd'},
+    {type:'insight',tone:'gap',title:`Un problème de qualité, pas seulement de quantité`,text:`Les candidats locaux cherchent surtout des postes <b>peu qualifiés</b> (libre-service, manutention, préparation de commandes) où les offres sont rares. Les recruteurs, eux, cherchent des profils <b>techniques et qualifiés</b> (infirmier, tourneur-fraiseur, technicien méthodes, ingénieur R&D) pour lesquels il n'y a presque <b>aucun candidat</b>. C'est exactement l'écart « pénurie de candidats » (vu par les entreprises) vs « déficit de qualification » (vu par les acteurs de l'emploi) — objectivé par France Travail.`},
+
+    {type:'section',num:'7',title:`Qui embauche, et comment ?`,desc:`Les secteurs qui recrutent le plus sur le bassin, et la nature (souvent précaire) de ces embauches.`},
+    {type:'gridStart',cols:'g2'},
+    {type:'bars',q:`Acoss & MSA · T3 2025`,title:`Secteurs qui embauchent le plus`,note:`nombre d'embauches trimestrielles`,unit:'nb',color:PAL.petrole2,
+      items:[{label:`Services admin. & soutien`,v:670},{label:`Santé & action sociale`,v:490},{label:`Commerce & répar. auto`,v:280},{label:`Industrie manufacturière`,v:210},{label:`Hébergement & restauration`,v:110}],
+      analysis:`Les plus gros volumes d'embauches sont dans les <b>services administratifs (+40%)</b> et la <b>santé (+44%)</b>, en forte hausse. L'industrie manufacturière reste un employeur clé (210) mais recule légèrement (−4,6%).`,src:`France Travail — Data Emploi, Acoss & MSA (T3 2025)`},
+    {type:'doughnut',q:`Acoss & MSA`,title:`Nature des embauches`,items:[{label:`CDD de moins d'1 mois`,v:70},{label:`CDI`,v:17},{label:`CDD de plus de 6 mois`,v:9},{label:`CDD de 1 à 6 mois`,v:4}],analysis:`<b>70% des embauches sont des CDD de moins d'un mois</b> (65% en France) : un marché du travail local très rotatif, où les contrats stables (CDI : 17%) restent minoritaires. La tension ne vient pas d'un manque d'embauches, mais de leur précarité et de l'inadéquation des profils.`,src:`France Travail — Data Emploi (T3 2025)`},
+    {type:'gridEnd'},
+
+    {type:'section',num:'8',title:`Formation et profil social`,desc:`Deux signaux qui pèsent sur l'accès durable à l'emploi.`},
+    {type:'gridStart',cols:'g2'},
+    {type:'kpis',items:[{v:'47%',l:`d'accès à l'emploi après formation`,s:`France : 62% — 15 points d'écart`,tone:'coral'}]},
+    {type:'kpis',items:[{v:'45%',l:`de ménages fiscaux imposés`,s:`France : 53% — des revenus plus modestes`,tone:'amber'}]},
+    {type:'gridEnd'},
+    {type:'insight',tone:'signal',title:`La formation, maillon à renforcer`,text:`Seuls <b>47% des demandeurs formés retrouvent un emploi dans les 6 mois</b>, contre <b>62% en France</b> : à volume de formation égal, le territoire convertit moins bien. Couplé à une population à revenus plus modestes (45% de ménages imposés contre 53%), cela renforce la priorité d'une offre de formation <b>mieux ciblée sur les métiers réellement en tension</b> du bassin.`},
+
+    {type:'section',num:'9',title:`Ce qu'il faut retenir`,desc:`Quatre enseignements qui relient ces repères officiels au diagnostic GPECT local.`},
+    {type:'gridStart',cols:'g2'},
+    {type:'insight',tone:'risk',title:`Une population qui vieillit et se contracte`,text:`43% des habitants ont 55 ans et plus (33% en France), 20% des actifs ont 55–64 ans, et la population recule (−2,1% depuis 2020). Le renouvellement des compétences ne se fera pas tout seul : transmission et attractivité des jeunes deviennent prioritaires.`},
+    {type:'insight',tone:'gap',title:`Une inadéquation offre / demande`,text:`Les candidats cherchent des postes peu qualifiés, les recruteurs des profils techniques et qualifiés. 66% de la population est ≤ CAP/BEP et 4,4% seulement bac+5. Le sujet n'est pas le volume d'emplois, mais l'adéquation des compétences.`},
+    {type:'insight',tone:'lever',title:`Une identité industrielle forte`,text:`63% des salariés dans l'industrie (19% en France) : une spécialisation qui fait l'emploi et la fierté du territoire, mais qui appelle une stratégie de sécurisation des savoir-faire et de diversification.`},
+    {type:'insight',tone:'signal',title:`Un marché précaire malgré un chômage bas`,text:`7,2% de chômage (mieux que la France) mais un dynamisme « faible », 70% d'embauches en CDD de moins d'un mois et seulement 47% d'accès à l'emploi après formation : la fluidité du marché local reste à construire.`},
+    {type:'gridEnd'},
+
+    {type:'section',num:'ⓘ',title:`Sources & méthode`},
+    {type:'html',html:`<div class="card"><div style="display:grid;gap:10px">
+      <div class="mline"><span class="mk" style="min-width:150px">Portail</span><span class="mv"><b>Data Emploi de France Travail</b> — panorama EPCI « CC du Pays d'Issoudun » (243600236) comparé à la France. Consulté le <b>30/06/2026</b> ; données 2021 → T1 2026 selon les indicateurs.</span></div>
+      <div class="mline"><span class="mk" style="min-width:150px">Sources citées</span><span class="mv"><b>INSEE</b> (population, démographie, diplômes, secteurs) · <b>France Travail</b> (demandeurs, offres, métiers, formation) · <b>Acoss & MSA</b> (embauches).</span></div>
+      <div class="mline"><span class="mk" style="min-width:150px">Périmètre</span><span class="mv">Le <b>Pays d'Issoudun</b> (communauté de communes, 18 899 hab.) est le bassin de la GPECT. Le taux de chômage et certaines tensions sont donnés au niveau <b>départemental (Indre)</b>, comme l'indique le portail.</span></div>
+      <div class="mline"><span class="mk" style="min-width:150px">Lecture</span><span class="mv">Cette page présente des <b>repères statistiques officiels</b>. Elle ne les superpose pas aux <b>perceptions</b> du questionnaire GPECT (notes /5, %), de nature différente.</span></div>
+    </div></div>`},
+    {type:'html',html:`<div class="card" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between"><div style="font-size:14px;color:var(--petrole-3)"><b>Du repère à l'action →</b> Ces écarts structurels nourrissent directement les leviers et le plan d'action territorial.</div><button onclick="go('plan')" style="background:var(--petrole-3);color:#fff;border:none;padding:11px 20px;border-radius:30px;font-family:'Hanken Grotesk';font-weight:600;font-size:13.5px;cursor:pointer">Voir le plan d'action →</button></div>`}
+  ]);
+};
+
+
+/* ===================== ROUTER / NAV ===================== */
+const NAV=[
+  {id:'accueil',label:"Vue d'ensemble",ic:'◆',group:'Synthèse'},
+  {id:'national',label:"Bassin d'emploi vs France",ic:'📍',group:'Synthèse'},
+  {id:'entreprises',label:'Entreprises',ic:'🏭',badge:'21',group:'Les 4 collèges'},
+  {id:'of',label:'Organismes de formation',ic:'🎓',badge:'7',group:'Les 4 collèges'},
+  {id:'acteurs',label:"Acteurs de l'emploi",ic:'🤝',badge:'7',group:'Les 4 collèges'},
+  {id:'syndicats',label:'Syndicats & org. pro.',ic:'⚖️',badge:'7',group:'Les 4 collèges'},
+  {id:'croise',label:'Analyse croisée',ic:'🔀',group:'Synthèse territoriale'},
+  {id:'leviers',label:'Leviers stratégiques',ic:'🗝️',group:'Synthèse territoriale'},
+  {id:'plan',label:"Plan d'action",ic:'🎯',group:'Synthèse territoriale'},
+];
+function buildNav(){const nav=document.getElementById('nav');let lastG=null;NAV.forEach(it=>{if(it.group!==lastG){nav.appendChild(el('div','nav-group',it.group));lastG=it.group;}
+  const a=el('div','nav-item');a.id='nav-'+it.id;a.innerHTML=`<span class="ni-ic">${it.ic}</span><span>${it.label}</span>`+(it.badge?`<span class="ni-badge">n=${it.badge}</span>`:'')+(it.soon?`<span class="soon">à venir</span>`:'');a.onclick=()=>go(it.id);nav.appendChild(a);});}
+function go(id){location.hash=id;}
+function goAnchor(id){const t=document.getElementById(id);if(!t)return;if(t.tagName==='DETAILS')t.open=true;t.scrollIntoView({behavior:'smooth'});}
+function render(){
+  const id=(location.hash||'#accueil').slice(1);
+  const page=document.getElementById('page');destroyCharts();page.innerHTML='';window.scrollTo(0,0);
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  const navi=document.getElementById('nav-'+id);if(navi)navi.classList.add('active');
+  const host=el('div','fade');host._cur=null;page.appendChild(host);
+  if(id==='accueil')pageAccueil(host);
+  else if(id==='entreprises')pageCollege(host,ENT);
+  else if(id==='of')pageCollege(host,OF);
+  else if(id==='acteurs')pageCollege(host,ACT);
+  else if(id==='syndicats')pageCollege(host,SYN);
+  else if(id==='croise'&&PAGES_EXTRA.croise)PAGES_EXTRA.croise(host);
+  else if(id==='leviers'&&PAGES_EXTRA.leviers)PAGES_EXTRA.leviers(host);
+  else if(id==='plan'&&PAGES_EXTRA.plan)PAGES_EXTRA.plan(host);
+  else if(id==='national'&&PAGES_EXTRA.national)PAGES_EXTRA.national(host);
+  else pageAccueil(host);
+  window.scrollTo(0,0);
+  document.getElementById('sidebar').classList.remove('open');document.getElementById('backdrop').classList.remove('show');
+}
+window.addEventListener('hashchange',render);
+document.getElementById('hamb').onclick=()=>{document.getElementById('sidebar').classList.toggle('open');document.getElementById('backdrop').classList.toggle('show');};
+document.getElementById('backdrop').onclick=()=>{document.getElementById('sidebar').classList.remove('open');document.getElementById('backdrop').classList.remove('show');};
+try{buildNav();}catch(e){console.error('buildNav',e);}
+try{render();}catch(e){console.error('render',e);var _p=document.getElementById('page');if(_p)_p.innerHTML='<div style="padding:24px;margin:18px;border:2px solid #D2562F;border-radius:12px;background:#fff;font:13px/1.6 ui-monospace,monospace;color:#b00;white-space:pre-wrap">⚠ Erreur de rendu : '+((e&&e.message)||e)+'</div>';}
+</script>
+<button id="toTop" title="Remonter" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+(function(){var b=document.getElementById('toTop');window.addEventListener('scroll',function(){(window.scrollY>500)?b.classList.add('show'):b.classList.remove('show');},{passive:true});})();
+</script>
+<button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Haut de page" style="position:fixed;bottom:22px;right:22px;width:44px;height:44px;border-radius:50%;border:none;background:#0C3B43;color:#fff;font-size:18px;cursor:pointer;box-shadow:0 4px 14px rgba(12,59,67,.35);opacity:0;pointer-events:none;transition:opacity .25s;z-index:60">↑</button>
+<script>window.addEventListener('scroll',()=>{const b=document.getElementById('toTop');if(!b)return;const s=window.scrollY>600;b.style.opacity=s?'1':'0';b.style.pointerEvents=s?'auto':'none';},{passive:true});</script>
+</body>
+</html>

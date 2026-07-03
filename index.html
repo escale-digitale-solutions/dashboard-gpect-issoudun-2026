@@ -333,7 +333,7 @@ button:active{transform:translateY(0)}
     <div class="side-foot">
       <b>Escale Digitale Solutions</b><br>F. Rousseau · Ceterha · La Fabrique RH<br>
       <span style="opacity:.7">42 répondants · 4 collèges · données anonymisées</span><br>
-      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v16 · précautions de lecture neutralisées ✓</span>
+      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v17 · source secteurs précisée (champ privé) ✓</span>
     </div>
   </aside>
   <div class="backdrop" id="backdrop"></div>
@@ -1132,7 +1132,7 @@ PAGES_EXTRA.national=function(host){
     {type:'section',num:'4',title:`Une économie hyper-industrielle`,desc:`Poids de chaque grand secteur dans l'emploi salarié du territoire, comparé à la France. La signature d'Issoudun saute aux yeux.`},
     {type:'bars',q:`INSEE 2023`,title:`Poids des secteurs dans l'emploi salarié (%)`,note:`bleu = Pays d'Issoudun · orange = France`,unit:'%',max:70,leg:`Pays d'Issoudun`,leg2:`France`,color:PAL.petrole,color2:PAL.ambre,legend:LEGBF,
       items:[{label:`Industrie`,v:63,v2:19},{label:`Services`,v:20,v2:55},{label:`Commerce`,v:11,v2:17},{label:`Construction`,v:4,v2:8},{label:`Agriculture`,v:2,v2:1}],
-      analysis:`<b>63% des salariés du bassin relèvent de l'industrie</b>, contre <b>19% en France</b> : un territoire <b>plus de 3× plus industriel</b> que la moyenne. À l'inverse, les services n'y pèsent que 20% (55% en France). Une force et une identité — mais une dépendance sectorielle à sécuriser (transmission, diversification).`,src:`France Travail — Data Emploi (INSEE, Établissements/Salariés 2023)`},
+      analysis:`<b>63% des salariés du bassin relèvent de l'industrie</b>, contre <b>19% en France</b> : un territoire <b>plus de 3× plus industriel</b> que la moyenne. À l'inverse, les services n'y pèsent que 20% (55% en France). Une force et une identité — mais une dépendance sectorielle à sécuriser (transmission, diversification).`,src:`France Travail — Data Emploi (INSEE, Établissements/Salariés 2023) · champ : salariés du secteur privé — l'INSEE sur l'emploi total (public et indépendants inclus) donne ~13% d'industrie en France`},
 
     {type:'section',num:'5',title:`Le marché du travail en chiffres`,desc:`Les volumes clés du bassin : demandeurs, offres, embauches et établissements (derniers chiffres disponibles).`},
     {type:'kpis',items:[

@@ -333,7 +333,7 @@ button:active{transform:translateY(0)}
     <div class="side-foot">
       <b>Escale Digitale Solutions</b><br>F. Rousseau · Ceterha · La Fabrique RH<br>
       <span style="opacity:.7">42 répondants · 4 collèges · données anonymisées</span><br>
-      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v13 · audit 810 chiffres vs exports 30/06 · analyse croisée recalée ✓</span>
+      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v14 · accueil épuré (4 blocs retirés) · renommage nav ✓</span>
     </div>
   </aside>
   <div class="backdrop" id="backdrop"></div>
@@ -943,44 +943,8 @@ function pageAccueil(host){
         <span class="chip">Données <b>anonymisées</b></span>
       </div></div>`},
     {type:'html',html:`<div style="display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 6px">${[
-      ['🏭','Le territoire','sec-territoire'],['★','Résultats clés','sec-messages'],['🧭','La démarche','sec-demarche'],['👥','L\'équipe','sec-equipe'],['ⓘ','Cadre de lecture','sec-methodo']
+      ['🧭','La démarche','sec-demarche'],['👥','L\'équipe','sec-equipe'],['ⓘ','Cadre de lecture','sec-methodo']
     ].map(t=>`<button onclick="goAnchor('${t[2]}')" style="background:#fff;border:1px solid #E4DECF;border-radius:24px;padding:8px 16px;font-family:'Hanken Grotesk';font-size:12.6px;font-weight:600;color:#27433d;cursor:pointer;display:flex;align-items:center;gap:7px;transition:all .15s" onmouseover="this.style.borderColor='#0FA37F';this.style.color='#0C3B43'" onmouseout="this.style.borderColor='#E4DECF';this.style.color='#27433d'"><span>${t[0]}</span>${t[1]}</button>`).join('')}</div>`},
-    {type:'section',aid:'sec-territoire',num:'❶',title:`Le territoire & l'ambition`,desc:`Pourquoi cette démarche GPECT, et ce qu'elle vise pour le bassin d'Issoudun.`},
-    {type:'html',html:`<div class="card"><p style="font-size:14px;line-height:1.6;color:#27433d;margin:0 0 10px">Le territoire d'Issoudun repose sur un <b>socle industriel solide</b>, structuré autour de deux grands donneurs d'ordres (aéronautique et maroquinerie de luxe) et d'un <b>tissu dense de PME et TPE sous-traitantes</b> — mécanique de précision, maroquinerie, agroalimentaire, logistique. Aéronautique, armement et logistique portent le dynamisme et l'ancrage industriel local.</p><p style="font-size:14px;line-height:1.6;color:#27433d;margin:0">Ce dynamisme s'accompagne de <b>fragilités structurelles</b> bien identifiées :</p></div>`},
-    {type:'html',html:`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px">${[
-      ['🔧','#D2562F','Pénurie de compétences techniques','Maintenance, usinage, qualité, logistique, management de proximité.'],
-      ['⏳','#E0A22B','Choc démographique','Pyramide des âges déséquilibrée, départs massifs en retraite, transmission des savoir-faire en jeu.'],
-      ['🧲','#0C3B43','Attractivité & fidélisation','Difficultés de recrutement, image des métiers industriels, rétention des salariés.'],
-      ['🤖','#0FA37F','Industrie 4.0','Automatisation, digitalisation, robotisation : les compétences doivent évoluer vite.'],
-      ['🤝','#114E58','Insertion & QPV','Mieux articuler dispositifs d\'insertion, publics des quartiers prioritaires et besoins des entreprises.'],
-      ['🛡️','#D2562F','Sécurisation de l\'emploi','Faire évoluer les compétences au rythme de la démographie du territoire.'],
-    ].map(f=>`<div style="background:#fff;border:1px solid #E4DECF;border-left:3px solid ${f[1]};border-radius:11px;padding:12px 14px"><div style="font-size:19px;margin-bottom:4px">${f[0]}</div><div style="font-weight:700;color:#11302c;font-size:13.2px;margin-bottom:3px">${f[2]}</div><div style="font-size:12.1px;color:#5a6b64;line-height:1.45">${f[3]}</div></div>`).join('')}</div>`},
-    {type:'html',html:`<div class="card" style="margin-top:4px;background:linear-gradient(110deg,#0FA37F,#0C3B43);border:none;color:#fff;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between"><div style="font-size:13.4px;line-height:1.55;color:#eafaf5;flex:1;min-width:260px">Dans le cadre de <b style="color:#fff">Territoires d'Industrie</b> et du <b style="color:#fff">Contrat de Plan État–Région</b>, la Communauté de communes du Pays d'Issoudun et ses partenaires engagent une <b style="color:#fff">GPECT à dominante industrielle</b> : consolider le tissu local, sécuriser les emplois, accompagner les transitions et renforcer l'attractivité du territoire.</div><button onclick="goAnchor('sec-demarche')" style="background:#fff;color:#0C3B43;border:none;padding:10px 18px;border-radius:30px;font-family:'Hanken Grotesk';font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap">Découvrir la démarche →</button></div>`},
-
-    {type:'section',num:'📊',title:'Les résultats en un coup d\'œil',desc:"Quatre chiffres qui résument l'urgence — issus des réponses des 42 acteurs interrogés."},
-    {type:'kpis',items:[
-      {v:'95%',l:'des entreprises en tension de recrutement',s:'difficultés majeures ou ponctuelles (Q3.2)',tone:'coral'},
-      {v:'2,3/5',l:"Image du bassin auprès des candidats",s:'parmi les plus basses du diagnostic (Ent. Q8.2)',tone:'amber'},
-      {v:'47%',l:"de seniors (45 ans et +)",s:'dans la pyramide des âges entreprises',tone:'petrol'},
-      {v:'1,0/5',l:"Recours à l'AFEST",s:'dispositif de transmission quasi inexistant',tone:'emer'},
-    ]},
-    {type:'section',aid:'sec-messages',num:'★',title:'Les 5 messages clés du diagnostic',desc:"Ce que les données confirment — et chiffrent — des fragilités pressenties ci-dessus."},
-    {type:'gridStart',cols:'g2'},
-    {type:'insight',tone:'risk',title:'Une tension de recrutement quasi générale sur les métiers techniques',text:"Usinage, maintenance, qualité/méthodes et programmation CNC/robotique sont cités par les quatre collèges. Les acteurs de l'emploi notent la difficulté à <b>4,9/5</b> sur la maintenance et la programmation machines. <b>95%</b> des entreprises se déclarent en tension."},
-    {type:'insight',tone:'gap',title:"Un écart majeur sur l'adéquation de l'offre de formation",text:"Les organismes de formation jugent couvrir les besoins à <b>4,0/5</b>, mais les acteurs de l'emploi à <b>2,3/5</b>, les entreprises à <b>3,1/5</b> et 71% des partenaires sociaux la trouvent « peu » ou « partiellement » adaptée. <span class='hyp'>hypothèse à creuser</span>"},
-    {type:'insight',tone:'risk',title:'Un choc démographique sous-estimé',text:"47% de seniors, 136 départs en retraite déclarés à 5 ans (la production citée par 60% des entreprises), mais 67% des entreprises jugent leurs dispositifs de transmission suffisants et l'AFEST est à <b>1,0/5</b>. Le turnover faible (81%) masque le risque."},
-    {type:'insight',tone:'signal',title:"Une demande forte sur l'IA et les compétences émergentes, sans offre locale",text:"L'IA est citée comme l'évolution n°1 par 100% des organismes de formation, mais leur capacité à former y est de <b>2,3/5</b> et la cybersécurité à <b>1,1/5</b>. Trou structurant entre demande et offre."},
-    {type:'gridEnd'},
-    {type:'insight',tone:'lever',title:"Un territoire prêt à agir collectivement — sur les bons formats",text:"76% des entreprises sont prêtes à une campagne de communication territoriale, 62% à des ateliers RH inter-entreprises, et les acteurs de l'emploi notent à <b>4,7/5</b> leur disposition à une campagne de communication commune. Le frein n'est pas la volonté mais le <b>format</b> : ateliers courts (2h), à résultat concret, comme le soulignent les partenaires sociaux."},
-
-    {type:'html',html:`<div style="margin-top:6px"><div style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a978f;margin-bottom:10px">Explorer le diagnostic collège par collège</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:11px">${[
-      ['🏭','Entreprises','21 répondants','95% en tension de recrutement','entreprises','#0C3B43'],
-      ['🎓','Organismes de formation','7 répondants','IA citée à 100%, capacité 2,3/5','of','#0FA37F'],
-      ['🤝','Acteurs de l\'emploi','7 répondants','Difficulté maintenance : 4,9/5','acteurs','#E0A22B'],
-      ['⚖️','Syndicats & org. pro.','7 répondants','71% jugent l\'offre peu adaptée','syndicats','#D2562F'],
-    ].map(c=>`<div onclick="go('${c[4]}')" style="background:#fff;border:1px solid #E4DECF;border-radius:13px;padding:15px 16px;cursor:pointer;transition:all .15s;border-bottom:3px solid ${c[5]}" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 18px rgba(12,59,67,.10)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><div style="font-size:23px;margin-bottom:6px">${c[0]}</div><div style="font-weight:800;color:#11302c;font-size:14px;line-height:1.25">${c[1]}</div><div style="font-size:11.3px;color:#8a978f;margin:3px 0 8px">${c[2]}</div><div style="font-size:12.2px;color:#27433d;line-height:1.4">${c[3]}</div><div style="margin-top:9px;font-size:12px;font-weight:700;color:${c[5]}">Consulter →</div></div>`).join('')}</div></div>`},
-
-
     {type:'section',aid:'sec-demarche',num:'🧭',title:`La démarche — comment ce diagnostic a été construit`,desc:`Mission, méthode, ateliers, partenaires et équipe. Dépliez chaque volet pour le détail.`},
     {type:'accStart',icon:'🎯',title:`Objectif de la mission`,sub:`Sécuriser l'emploi, anticiper les mutations, accompagner les compétences — 7 objectifs spécifiques`},
     {type:'html',html:`<div class="card" style="border-left:4px solid #0FA37F"><div style="font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#0FA37F;margin-bottom:6px">Objectif global</div><p style="font-size:14.5px;line-height:1.55;color:#27433d;margin:0"><b>Sécuriser l'emploi, anticiper les mutations économiques et technologiques, et accompagner l'évolution des compétences</b> sur le territoire d'Issoudun — en cohérence avec la démographie, les projets de l'écosystème (dont les QPV) et les besoins des entreprises industrielles.</p></div>`},
@@ -1226,7 +1190,7 @@ PAGES_EXTRA.national=function(host){
 
 /* ===================== ROUTER / NAV ===================== */
 const NAV=[
-  {id:'accueil',label:"Vue d'ensemble",ic:'◆',group:'Synthèse'},
+  {id:'accueil',label:"Accueil",ic:'◆',group:'Synthèse'},
   {id:'national',label:"Bassin d'emploi vs France",ic:'📍',group:'Synthèse'},
   {id:'entreprises',label:'Entreprises',ic:'🏭',badge:'21',group:'Les 4 collèges'},
   {id:'of',label:'Organismes de formation',ic:'🎓',badge:'7',group:'Les 4 collèges'},

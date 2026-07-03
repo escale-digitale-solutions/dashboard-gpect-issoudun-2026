@@ -333,7 +333,7 @@ button:active{transform:translateY(0)}
     <div class="side-foot">
       <b>Escale Digitale Solutions</b><br>F. Rousseau · Ceterha · La Fabrique RH<br>
       <span style="opacity:.7">42 répondants · 4 collèges · données anonymisées</span><br>
-      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v18 · repère « dynamisme » corrigé (+2,2% sourcé) ✓</span>
+      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v19 · bandeau réduit à 5 repères ✓</span>
     </div>
   </aside>
   <div class="backdrop" id="backdrop"></div>
@@ -1109,14 +1109,13 @@ PAGES_EXTRA.national=function(host){
   renderBlocks(host,[
     {type:'html',html:`<div class="note-box" style="margin-bottom:4px"><b>Source officielle.</b> Toutes les données de cette page proviennent du portail public <b>Data Emploi de France Travail</b> (territoire : CC du Pays d'Issoudun, comparé à la France). Les chiffres « emploi salarié » portent sur les salariés du territoire — ils diffèrent volontairement des « effectifs des 21 entreprises » de l'onglet Entreprises (bases et périmètres différents).</div>`},
 
-    {type:'section',num:'1',title:`L'essentiel en 6 repères`,desc:`Ce qui distingue le bassin d'emploi d'Issoudun de la moyenne nationale, en moins de 30 secondes.`},
+    {type:'section',num:'1',title:`L'essentiel en 5 repères`,desc:`Ce qui distingue le bassin d'emploi d'Issoudun de la moyenne nationale, en moins de 30 secondes.`},
     {type:'kpis',items:[
       {v:'7,2%',l:`taux de chômage (Indre)`,s:`France : 7,9% — un peu plus bas (T4 2025)`,tone:'emer'},
       {v:'43%',l:`des habitants ont 55 ans et plus`,s:`France : 33% — population plus âgée`,tone:'coral'},
       {v:'63%',l:`des salariés dans l'industrie`,s:`France : 19% — plus de 3× la moyenne`,tone:'petrol'},
       {v:'66%',l:`de la population a un niveau ≤ CAP/BEP`,s:`France : 50% — territoire moins diplômé`,tone:'amber'},
       {v:'18 899',l:`habitants (Pays d'Issoudun)`,s:`−2,1% depuis 2020 · 8 153 actifs · 7 151 salariés`,tone:'petrol'},
-      {v:'+2,2%',l:`d'emploi salarié en un an (2022→2023)`,s:`l'emploi progresse malgré la baisse démographique`,tone:'emer'},
     ]},
 
     {type:'section',num:'2',title:`Une population nettement plus âgée`,desc:`Répartition des habitants par tranche d'âge : beaucoup moins de jeunes, beaucoup plus de 55 ans et plus.`},

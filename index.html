@@ -333,7 +333,7 @@ button:active{transform:translateY(0)}
     <div class="side-foot">
       <b>Escale Digitale Solutions</b><br>F. Rousseau · Ceterha · La Fabrique RH<br>
       <span style="opacity:.7">42 répondants · 4 collèges · données anonymisées</span><br>
-      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v15 · onglet Contexte ajouté (démarche) ✓</span>
+      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v16 · précautions de lecture neutralisées ✓</span>
     </div>
   </aside>
   <div class="backdrop" id="backdrop"></div>
@@ -842,11 +842,11 @@ PAGES_EXTRA.leviers=function(host){
   const wrap=el('div','grid g2');
   wrap.innerHTML=L.map(l=>`<div class="levier"><div class="lh"><div class="ln">Levier ${l.n}</div><h4>${l.t}</h4></div><div class="lb"><p>${l.d}</p><div class="tagrow">${l.tags.map(t=>`<span class="minitag">${t}</span>`).join('')}</div><div class="ev"><b>Ancrage données :</b> ${l.ev}</div></div></div>`).join('');
   host.appendChild(wrap);
-  host.appendChild((()=>{const d=el('div','card');d.style.marginTop='18px';d.style.display='flex';d.style.flexWrap='wrap';d.style.gap='14px';d.style.alignItems='center';d.style.justifyContent='space-between';d.innerHTML=`<div style="font-size:14px;color:var(--petrole-3)"><b>Du levier à l'action →</b> 4 axes, 12 fiches-actions détaillées, prêtes à instruire pour le financeur.</div><button onclick="go('plan')" style="background:var(--petrole-3);color:#fff;border:none;padding:11px 20px;border-radius:30px;font-family:'Hanken Grotesk';font-weight:600;font-size:13.5px;cursor:pointer">Voir le plan d'action →</button>`;return d;})());
+  host.appendChild((()=>{const d=el('div','card');d.style.marginTop='18px';d.style.display='flex';d.style.flexWrap='wrap';d.style.gap='14px';d.style.alignItems='center';d.style.justifyContent='space-between';d.innerHTML=`<div style="font-size:14px;color:var(--petrole-3)"><b>Du levier à l'action →</b> 4 axes, 12 fiches-actions détaillées, prêtes à instruire avec les partenaires financeurs.</div><button onclick="go('plan')" style="background:var(--petrole-3);color:#fff;border:none;padding:11px 20px;border-radius:30px;font-family:'Hanken Grotesk';font-weight:600;font-size:13.5px;cursor:pointer">Voir le plan d'action →</button>`;return d;})());
 };
 
 PAGES_EXTRA.plan=function(host){
-  host.appendChild((()=>{const h=el('div','page-head fade');h.innerHTML=`<div class="kicker">Synthèse territoriale · livrable financeur</div><h2>Plan d'action GPECT du bassin d'Issoudun</h2><div class="sub">Quatre axes, douze fiches-actions opérationnelles. Chaque fiche précise l'objectif, le public, le pilote, les partenaires, les livrables, les indicateurs et les <b>financements mobilisables</b>. Séquencé en trois temps pour produire des résultats visibles dès les 6 premiers mois.</div>`;return h;})());
+  host.appendChild((()=>{const h=el('div','page-head fade');h.innerHTML=`<div class="kicker">Synthèse territoriale · plan d'action 2026–2030</div><h2>Plan d'action GPECT du bassin d'Issoudun</h2><div class="sub">Quatre axes, douze fiches-actions opérationnelles. Chaque fiche précise l'objectif, le public, le pilote, les partenaires, les livrables, les indicateurs et les <b>financements mobilisables</b>. Séquencé en trois temps pour produire des résultats visibles dès les 6 premiers mois.</div>`;return h;})());
 
   renderBlocks(host,[
     {type:'section',num:'⏱',title:'Feuille de route en 3 temps',desc:"Une logique « preuve par les actes » : des victoires rapides pour crédibiliser la démarche, puis des chantiers structurants, puis la transformation de fond. Hypothèse de lancement : second semestre 2026 — calendrier à caler sur la date de validation du plan."},
@@ -856,7 +856,7 @@ PAGES_EXTRA.plan=function(host){
       <div class="card" style="border-top:4px solid var(--petrole)"><div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--petrole)">Temps 3 · 18-36 mois · 2028</div><div class="ch-title" style="margin:6px 0 8px">Transformation</div><p style="font-size:13.3px;color:#33433f">Filières compétences émergentes (IA, cyber, robotique), groupement d'employeurs, marque employeur de bassin installée. <b>Objectif : transformer.</b></p></div>
     </div>`},,
 
-    {type:'html',html:`<div class="note-box" style="margin-top:10px"><b>Lecture financeur.</b> Les 12 fiches sont mobilisables via des dispositifs existants — <b>EDEC/ADEC</b> (ingénierie GPECT, DREETS), <b>FSE+</b>, <b>France Travail</b> (POEI, POEC/AFPR, PMSMP, Prépa compétences, AFEST), <b>OPCO</b>, <b>Région Centre-Val de Loire</b> (CARED, ARDAN), <b>France 2030</b> et <b>Territoires d'industrie</b>. Le séquençage en 3 temps permet un démarrage à coût maîtrisé (quick wins) avant l'engagement des chantiers structurants. Tous les chiffres cités sont traçables vers les rapports d'analyse par collège.</div>`},
+    {type:'html',html:`<div class="note-box" style="margin-top:10px"><b>Financements mobilisables.</b> Les 12 fiches s'appuient sur via des dispositifs existants — <b>EDEC/ADEC</b> (ingénierie GPECT, DREETS), <b>FSE+</b>, <b>France Travail</b> (POEI, POEC/AFPR, PMSMP, Prépa compétences, AFEST), <b>OPCO</b>, <b>Région Centre-Val de Loire</b> (CARED, ARDAN), <b>France 2030</b> et <b>Territoires d'industrie</b>. Le séquençage en 3 temps permet un démarrage à coût maîtrisé (quick wins) avant l'engagement des chantiers structurants. Tous les chiffres cités sont traçables vers les rapports d'analyse par collège.</div>`},
 
     {type:'section',num:'💶',title:`Dispositifs de financement mobilisables — vue d'ensemble`,desc:"Synthèse des guichets identifiés fiche par fiche (rappel des champs « financement » ci-dessus). Les montants seront arrêtés action par action, en phase de contractualisation avec chaque financeur."},
     {type:'table',numCols:false,headers:[`Action`,`Dispositifs mobilisables`],rows:[
@@ -1025,17 +1025,13 @@ function pageAccueil(host){
     {type:'text',title:'Prudence sur les petits effectifs',html:`<p style="font-size:13.8px;color:#33433f">Trois collèges comptent <b>n=7 répondants</b>. Les pourcentages y sont des <b>ordres de grandeur</b> : nous affichons systématiquement l'effectif brut (n) à côté. Les croisements fins et corrélations sont présentés comme des <b>hypothèses à vérifier</b>, jamais comme des faits. Le collège Entreprises (n=21) supporte une lecture plus assurée.</p>`},
     {type:'gridEnd'},
 
-    {type:'section',num:'⚠',title:'Limites & biais — à porter à la connaissance du financeur',desc:"Les huit points à énoncer en restitution pour une lecture honnête et défendable des résultats."},
+    {type:'section',num:'ⓘ',title:'Précautions de lecture',desc:"Quelques repères méthodologiques pour interpréter correctement les chiffres de ce diagnostic."},
     {type:'html',html:`<div class="card"><div style="display:grid;gap:10px">
-      <div class="mline"><span class="mk" style="min-width:160px">Taille d'échantillon</span><span class="mv">42 répondants. <b>Trois collèges à n=7</b> : résultats en <b>ordres de grandeur</b>, sans valeur de généralisation statistique. Seul le collège Entreprises (n=21) autorise une lecture plus assurée.</span></div>
-      <div class="mline"><span class="mk" style="min-width:160px">Poids du plus gros employeur</span><span class="mv">Un établissement d'environ <b>1 550 salariés</b> pèse fortement sur les agrégats d'effectifs et la pyramide des âges → calculs sensibles présentés systématiquement <b>avec ET sans</b> cet employeur.</span></div>
-      <div class="mline"><span class="mk" style="min-width:160px">Données déclaratives</span><span class="mv">Réponses auto-déclarées et auto-évaluées (ex. les organismes notant leur propre offre) : biais de perception et de désirabilité possibles.</span></div>
-      <div class="mline"><span class="mk" style="min-width:160px">Écarts de perception</span><span class="mv">Les divergences entre collèges sont un <b>résultat</b> à interpréter, non une mesure objective d'une réalité unique.</span></div>
-      <div class="mline"><span class="mk" style="min-width:160px">Collecte par vagues</span><span class="mv">Photographie à un instant T, à consolider à mesure des retours complémentaires.</span></div>
-      <div class="mline"><span class="mk" style="min-width:160px">Sous-groupes</span><span class="mv">Les éclairages intérim (n=3) / public (n=4) et « hors financeur » (n=6) sont <b>purement indicatifs</b>.</span></div>
-      <div class="mline"><span class="mk" style="min-width:160px">Lecture des %</span><span class="mv">Choix multiple = « % de répondants » (somme &gt; 100% normale). Arrondis à l'entier : un total peut afficher 99 ou 101%.</span></div>
-      <div class="mline"><span class="mk" style="min-width:160px">Pyramide & items</span><span class="mv">Pyramide des âges calculée hors saisies incohérentes (3 031 salariés ; base brute : 3 155, soit 46% de seniors). Les graphiques affichent les <b>principaux items</b> de chaque question.</span></div>
-      <div class="mline"><span class="mk" style="min-width:160px">Verbatims & hypothèses</span><span class="mv">Verbatims cités à titre <b>illustratif</b> et anonymisé ; les corrélations sont signalées comme <b>hypothèses à vérifier</b>, jamais comme des faits.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Échantillon</span><span class="mv">42 répondants. Trois collèges sont à <b>n=7</b> : leurs résultats se lisent en <b>ordres de grandeur</b> (1 répondant ≈ 14 points de %). Le collège Entreprises (n=21) autorise une lecture plus assurée.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Plus gros employeur</span><span class="mv">Un établissement d'environ <b>1 550 salariés</b> pèse fortement sur les agrégats : les calculs sensibles sont présentés <b>avec et sans</b> cet employeur. Pyramide des âges calculée hors saisies incohérentes.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Perceptions</span><span class="mv">Réponses déclaratives et auto-évaluées ; les <b>écarts entre collèges</b> sont un résultat à interpréter, non la mesure d'une réalité unique.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Lecture des %</span><span class="mv">Choix multiples = « % de répondants » (somme &gt; 100% normale) ; arrondis à l'entier (un total peut afficher 99 ou 101%) ; les graphiques affichent les <b>principaux items</b> de chaque question.</span></div>
+      <div class="mline"><span class="mk" style="min-width:160px">Verbatims & hypothèses</span><span class="mv">Citations <b>anonymisées</b>, à titre illustratif ; les rapprochements et corrélations sont des <b>hypothèses à vérifier</b>, jamais des faits établis.</span></div>
     </div></div>`},
 
     {type:'section',num:'A‑Z',title:'Lexique des sigles',desc:"Tous les sigles employés dans le diagnostic, explicités pour une lecture sans présupposé technique."},

@@ -333,7 +333,7 @@ button:active{transform:translateY(0)}
     <div class="side-foot">
       <b>Escale Digitale Solutions</b><br>F. Rousseau · Ceterha · La Fabrique RH<br>
       <span style="opacity:.7">42 répondants · 4 collèges · données anonymisées</span><br>
-      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v19 · bandeau réduit à 5 repères ✓</span>
+      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v20 · colonne % hommes ajoutée (pyramide) ✓</span>
     </div>
   </aside>
   <div class="backdrop" id="backdrop"></div>
@@ -509,9 +509,9 @@ const ENT={label:'Entreprises', n:21,
     {v:'81%',l:'turnover faible & maîtrisé',s:'ancienneté élevée (Q4.5)',tone:'emer'},
     {v:'1,0/5',l:'recours à l\'AFEST',s:'écart-type nul (Q4.8)',tone:'petrol'},
   ]},
-  {type:'table',title:"Pyramide des âges — effet de poids du plus gros employeur (Q4.1)",headers:['Base','Têtes','<30 ans','31-44','45-59','60+','Seniors 45+','% femmes'],numCols:true,rows:[
-    ['Avec plus gros employeur','3 031','18,0%','35,0%','41,7%','5,3%','<b>47,0%</b>','36,5%'],
-    ['Sans plus gros employeur','1 506','20,9%','33,5%','39,5%','6,1%','<b>45,6%</b>','46,5%'],
+  {type:'table',title:"Pyramide des âges — effet de poids du plus gros employeur (Q4.1)",headers:['Base','Têtes','<30 ans','31-44','45-59','60+','Seniors 45+','% femmes','% hommes'],numCols:true,rows:[
+    ['Avec plus gros employeur','3 031','18,0%','35,0%','41,7%','5,3%','<b>47,0%</b>','36,5%','63,5%'],
+    ['Sans plus gros employeur','1 506','20,9%','33,5%','39,5%','6,1%','<b>45,6%</b>','46,5%','53,5%'],
   ]},
   {type:'gridStart',cols:'g2'},
   {type:'doughnut',q:'Q4.5',n:21,title:"Situation en matière de turnover",items:[{label:'Faible & maîtrisé',v:81},{label:'En augmentation sur certains postes',v:19}],analysis:`Un turnover faible est un <b>atout de fidélisation</b>… mais aussi un <b>piège cognitif</b> : il rassure et masque le mur des départs en retraite. C'est précisément cette stabilité qui explique le faible sentiment d'urgence sur la transmission.`},

@@ -333,7 +333,7 @@ button:active{transform:translateY(0)}
     <div class="side-foot">
       <b>Escale Digitale Solutions</b><br>F. Rousseau · Ceterha · La Fabrique RH<br>
       <span style="opacity:.7">42 répondants · 4 collèges · données anonymisées</span><br>
-      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v14 · accueil épuré (4 blocs retirés) · renommage nav ✓</span>
+      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v15 · onglet Contexte ajouté (démarche) ✓</span>
     </div>
   </aside>
   <div class="backdrop" id="backdrop"></div>
@@ -945,7 +945,19 @@ function pageAccueil(host){
     {type:'html',html:`<div style="display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 6px">${[
       ['🧭','La démarche','sec-demarche'],['👥','L\'équipe','sec-equipe'],['ⓘ','Cadre de lecture','sec-methodo']
     ].map(t=>`<button onclick="goAnchor('${t[2]}')" style="background:#fff;border:1px solid #E4DECF;border-radius:24px;padding:8px 16px;font-family:'Hanken Grotesk';font-size:12.6px;font-weight:600;color:#27433d;cursor:pointer;display:flex;align-items:center;gap:7px;transition:all .15s" onmouseover="this.style.borderColor='#0FA37F';this.style.color='#0C3B43'" onmouseout="this.style.borderColor='#E4DECF';this.style.color='#27433d'"><span>${t[0]}</span>${t[1]}</button>`).join('')}</div>`},
-    {type:'section',aid:'sec-demarche',num:'🧭',title:`La démarche — comment ce diagnostic a été construit`,desc:`Mission, méthode, ateliers, partenaires et équipe. Dépliez chaque volet pour le détail.`},
+    {type:'section',aid:'sec-demarche',num:'🧭',title:`La démarche — comment ce diagnostic a été construit`,desc:`Contexte, mission, méthode, ateliers, partenaires et équipe. Dépliez chaque volet pour le détail.`},
+    {type:'accStart',icon:'📍',title:`Contexte & ambition du territoire`,sub:`Socle industriel, fragilités structurelles et cadre « Territoires d'Industrie »`},
+    {type:'html',html:`<div class="card"><p style="font-size:14px;line-height:1.6;color:#27433d;margin:0 0 10px">Le territoire d'Issoudun repose sur un <b>socle industriel solide</b>, structuré autour de deux grands donneurs d'ordres (aéronautique et maroquinerie de luxe) et d'un <b>tissu dense de PME et TPE sous-traitantes</b> — mécanique de précision, peinture industrielle, maroquinerie, agroalimentaire, logistique. Les secteurs de l'<b>aéronautique</b>, de l'<b>armement</b> et de la <b>logistique</b> portent le dynamisme économique et l'ancrage industriel local.</p><p style="font-size:14px;line-height:1.6;color:#27433d;margin:0">Ce dynamisme s'accompagne cependant de <b>fragilités structurelles</b> bien identifiées :</p></div>`},
+    {type:'html',html:`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px">${[
+      ['🔧','#D2562F','Pénurie de compétences techniques','Maintenance, usinage, qualité, logistique, management de proximité.'],
+      ['⏳','#E0A22B','Choc démographique','Pyramide des âges déséquilibrée, départs massifs en retraite, transmission des savoir-faire en jeu.'],
+      ['🧲','#0C3B43','Attractivité & fidélisation','Difficultés de recrutement, image des métiers industriels, rétention des salariés.'],
+      ['🤖','#0FA37F','Industrie 4.0','Automatisation, digitalisation, robotisation : les compétences doivent évoluer vite.'],
+      ['🤝','#114E58','Insertion & QPV','Mieux articuler dispositifs d\'insertion, publics des quartiers prioritaires et besoins des entreprises.'],
+      ['🛡️','#D2562F','Sécurisation de l\'emploi','Faire évoluer les compétences au rythme de la démographie du territoire.'],
+    ].map(f=>`<div style="background:#fff;border:1px solid #E4DECF;border-left:3px solid ${f[1]};border-radius:11px;padding:12px 14px"><div style="font-size:19px;margin-bottom:4px">${f[0]}</div><div style="font-weight:700;color:#11302c;font-size:13.2px;margin-bottom:3px">${f[2]}</div><div style="font-size:12.1px;color:#5a6b64;line-height:1.45">${f[3]}</div></div>`).join('')}</div>`},
+    {type:'html',html:`<div class="card" style="margin-top:4px;background:linear-gradient(110deg,#0FA37F,#0C3B43);border:none;color:#fff"><div style="font-size:13.4px;line-height:1.55;color:#eafaf5">Dans le cadre de la dynamique nationale <b style="color:#fff">« Territoires d'Industrie »</b> et des orientations du <b style="color:#fff">Contrat de Plan État–Région (CPER)</b>, la <b style="color:#fff">Communauté de communes du Pays d'Issoudun</b> et ses partenaires engagent une démarche de <b style="color:#fff">GPECT à dominante industrielle</b> : consolider le tissu industriel local, sécuriser les emplois, accompagner les transitions professionnelles et renforcer l'attractivité du territoire — en tenant compte des projets de l'écosystème (dont les actions QPV) et de la démographie locale.</div></div>`},
+    {type:'accEnd'},
     {type:'accStart',icon:'🎯',title:`Objectif de la mission`,sub:`Sécuriser l'emploi, anticiper les mutations, accompagner les compétences — 7 objectifs spécifiques`},
     {type:'html',html:`<div class="card" style="border-left:4px solid #0FA37F"><div style="font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#0FA37F;margin-bottom:6px">Objectif global</div><p style="font-size:14.5px;line-height:1.55;color:#27433d;margin:0"><b>Sécuriser l'emploi, anticiper les mutations économiques et technologiques, et accompagner l'évolution des compétences</b> sur le territoire d'Issoudun — en cohérence avec la démographie, les projets de l'écosystème (dont les QPV) et les besoins des entreprises industrielles.</p></div>`},
     {type:'html',html:`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:11px;margin-top:6px">${[

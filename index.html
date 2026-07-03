@@ -337,7 +337,7 @@ button:active{transform:translateY(0)}
     <div class="side-foot">
       <b>Escale Digitale Solutions</b><br>F. Rousseau · Ceterha · La Fabrique RH<br>
       <span style="opacity:.7">42 répondants · 4 collèges · données anonymisées</span><br>
-      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v26 · encadré prudence retiré (page Acteurs) ✓</span>
+      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v27 · couleurs corrigées (graphiques double série) ✓</span>
     </div>
   </aside>
   <div class="backdrop" id="backdrop"></div>
@@ -373,7 +373,7 @@ function hbar(container,{labels,values,values2,leg,leg2,unit='%',color,color2,ma
   const h=Math.max(120,labels.length*(values2?40:30)+(values2?44:34));
   const wrap=el('div','chart-wrap');wrap.style.height=h+'px';
   const cv=el('canvas');wrap.appendChild(cv);container.appendChild(wrap);
-  const ds=[{label:leg||'',data:values,backgroundColor:color||grad(cv,values,max),borderRadius:6,barPercentage:.78,categoryPercentage:.82}];
+  const ds=[{label:leg||'',data:values,backgroundColor:color||(values2?PAL.petrole:grad(cv,values,max)),borderRadius:6,barPercentage:.78,categoryPercentage:.82}];
   if(values2)ds.push({label:leg2||'',data:values2,backgroundColor:color2||PAL.ambre,borderRadius:6,barPercentage:.78,categoryPercentage:.82});
   const fmt=unit==='%'?(v=>String(v).replace('.',',')+'%'):(unit==='/5'?(v=>Number(v).toFixed(1).replace('.',',')):(v=>v));
   const c=new Chart(cv,{type:'bar',data:{labels,datasets:ds},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,layout:{padding:{right:38}},

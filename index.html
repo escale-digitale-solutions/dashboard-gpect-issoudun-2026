@@ -333,7 +333,7 @@ button:active{transform:translateY(0)}
     <div class="side-foot">
       <b>Escale Digitale Solutions</b><br>F. Rousseau · Ceterha · La Fabrique RH<br>
       <span style="opacity:.7">42 répondants · 4 collèges · données anonymisées</span><br>
-      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v20 · colonne % hommes ajoutée (pyramide) ✓</span>
+      <span style="opacity:.45;font-size:10px;letter-spacing:.04em">build 2026-07-02 v21 · matrice croisée clarifiée (unités, n=, mobilité 3,3) ✓</span>
     </div>
   </aside>
   <div class="backdrop" id="backdrop"></div>
@@ -796,15 +796,16 @@ PAGES_EXTRA.croise=function(host){
 
     {type:'section',num:'3',title:"Matrice de synthèse inter-collèges",desc:"Une lecture en un coup d'œil : ce que chaque collège dit des grands enjeux. Les écarts apparaissent ligne par ligne."},
     {type:'table',numCols:false,headers:['Enjeu','🏭 Entreprises','🎓 Organismes formation',"🤝 Acteurs emploi",'⚖️ Syndicats'],rows:[
-      ['<b>Tension métiers techniques</b>','95% en tension','Reconnue (offre solide)','Maintenance/CNC 4,9','Usinage/qualité 43%'],
-      ['<b>Offre formation locale</b>','3,1/5','<b>4,0/5</b> (auto-éval.)','<b>2,3/5</b>','71% peu/part. adaptée'],
-      ['<b>Cause du déficit RH</b>','Pénurie 4,5','—','Qualification 4,3','Savoirs de base 57%'],
-      ['<b>Mobilité</b>','Transport 2,5','Mobilité 57%','3,7/5','<b>Rurale 86%</b>'],
-      ['<b>Attractivité / image</b>','Frein 95% · 2,3/5','Image 71%','Campagne 4,7','Attractivité 43%'],
-      ['<b>Transmission / seniors</b>','Priorité 2,5 · AFEST 1,0','Transmission 3,3','Atelier 4,0','<b>(Très) prio. 71%</b>'],
-      ['<b>Compétences émergentes (IA)</b>','À développer 38%','Capacité 2,3 · cyber 1,1','Manque IA 4,1','IA/digital. 14%'],
-      ['<b>Mobilisation collective</b>','76% campagne · 33% refus','Difficile 71%','Disposition 4,7','Engagement faible 57%'],
+      ['<b>Tension métiers techniques</b>','en tension : <b>95%</b>','tension reconnue (offre jugée solide)','difficulté maintenance/CNC : <b>4,9/5</b>','usinage/qualité cités : <b>43%</b>'],
+      ['<b>Offre de formation locale</b>','notée <b>3,1/5</b>','auto-évaluée <b>4,0/5</b>','notée <b>2,3/5</b>','peu/partiellement adaptée : <b>71%</b>'],
+      ['<b>Cause du déficit RH</b>','pénurie de candidats : <b>4,5/5</b>','—','déficit de qualification : <b>4,3/5</b>','savoirs de base cités : <b>57%</b>'],
+      ['<b>Mobilité (frein)</b>','transport : <b>2,5/5</b>','frein des publics : <b>57%</b>','<b>3,7/5</b>','<b>3,3/5</b> · citée par 86%'],
+      ['<b>Attractivité / image</b>','frein : <b>95%</b> · image notée 2,3/5','frein des publics : <b>71%</b>','campagne commune : <b>4,7/5</b>','thème cité : <b>43%</b>'],
+      ['<b>Transmission / seniors</b>','priorité <b>2,5/5</b> · AFEST 1,0/5','capacité tutorat : <b>3,3/5</b>','atelier souhaité : <b>4,0/5</b>','(très) prioritaire : <b>71%</b>'],
+      ['<b>Compétences émergentes (IA)</b>','à développer : <b>38%</b>','capacité IA <b>2,3/5</b> · cyber 1,1/5','manque IA constaté : <b>4,1/5</b>','thème cité : <b>14%</b>'],
+      ['<b>Mobilisation collective</b>','campagne : <b>76%</b> · refus ateliers : 33%','mobiliser les entreprises : difficile pour <b>71%</b>','disposition : <b>4,7/5</b>','engagement jugé faible : <b>57%</b>'],
     ]},
+    {type:'html',html:`<div class="note-box" style="margin-top:8px"><b>Lecture du tableau.</b> Les notes <b>x/5</b> sont des moyennes d'échelles (1 = faible, 5 = fort) ; les <b>%</b> sont des parts de répondants. Bases : Entreprises n=21 · Organismes de formation, Acteurs de l'emploi et Syndicats n=7 (1 répondant ≈ 14 points). Les questions diffèrent d'un collège à l'autre : on compare des <b>regards</b>, pas un même indicateur.</div>`},
 
     {type:'section',num:'4',title:"Risques à 3-5 ans",desc:"Quatre risques structurants si le territoire n'agit pas. Présentés comme trajectoires probables, à valider collectivement."},
     {type:'gridStart',cols:'g2'},

@@ -1,6 +1,6 @@
 # Synthèse exécutive — Diagnostic GPECT du bassin d'Issoudun 2026
 
-*Gestion prévisionnelle des emplois et des compétences territoriale. Démarche pilotée par Escale Digitale Solutions, avec Ceterha et La Fabrique RH. Base : 42 répondants répartis en 4 collèges — Entreprises (n=21), Organismes de formation (n=7), Acteurs de l'emploi (n=7), Syndicats & organisations professionnelles (n=7). Chiffres recalculés par scripts sur les exports du 30/06/2026. Les trois collèges à n=7 se lisent en ordres de grandeur : un répondant y pèse 14 points de pourcentage — les résultats correspondants sont des signaux à consolider, pas des mesures statistiques.*
+*Gestion prévisionnelle des emplois et des compétences territoriale. Démarche portée par Ceterha, en collaboration avec La Fabrique RH et Escale Digitale Solutions. Base : 42 répondants répartis en 4 collèges — Entreprises (n=21), Organismes de formation (n=7), Acteurs de l'emploi (n=7), Syndicats & organisations professionnelles (n=7). Chiffres recalculés par scripts sur les exports du 30/06/2026. Les trois collèges à n=7 se lisent en ordres de grandeur : un répondant y pèse 14 points de pourcentage — les résultats correspondants sont des signaux à consolider, pas des mesures statistiques.*
 
 ---
 

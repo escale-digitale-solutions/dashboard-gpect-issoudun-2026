@@ -1,5 +1,5 @@
 # Recommandations opérationnelles — Diagnostic GPECT Bassin d'Issoudun 2026
-*Document extrait du compte rendu stratégique GPECT. Escale Digitale Solutions · Ceterha · La Fabrique RH. Chaque recommandation est adossée aux données recalculées du diagnostic (42 répondants). Livrable à lire avec le rapport complet et le dashboard de pilotage.*
+*Document extrait du compte rendu stratégique GPECT. Ceterha · La Fabrique RH · Escale Digitale Solutions. Chaque recommandation est adossée aux données recalculées du diagnostic (42 répondants). Livrable à lire avec le rapport complet et le dashboard de pilotage.*
 
 ## Synthèse des recommandations
 
@@ -14,7 +14,7 @@ Les huit recommandations qui suivent découlent directement des constats du diag
 - **Données / constats qui justifient l'action** : frein « image du territoire peu attractive » cité par **95 % des entreprises** (20/21, Q8.1 — le taux le plus élevé de toute l'enquête) ; note d'image du bassin auprès des candidats **2,3/5** (Q8.2) ; « attractivité & communication » = priorité GPECT n°1 à **3,9/5** (Q9.1) et 1er thème des attentes ouvertes (**43 %**, 9/21). Côté organismes de formation : image du territoire en frein pour les publics **71 %** (5/7) et **71 %** prêts à contribuer via les lycées (Q9.2). Côté acteurs de l'emploi : atelier « attractivité & recrutement » plébiscité à **4,3/5** (Q8.3). Côté syndicats : **foncier = atout n°1 du territoire, 57 %** (4/7, Q08), argument d'attractivité disponible. Signal à consolider vu les effectifs n=7.
 - **Action proposée** : campagne territoriale coordonnée « métiers & territoire » (portraits de métiers, valorisation du foncier et du cadre industriel, présence dans les lycées), assortie d'un volet intégration des nouveaux arrivants.
 - **Partenaires possibles** : intercommunalité et élus, France Travail, Mission Locale, Cap Emploi, CCI/CMA, UIMM, lycées professionnels et CFA, agences d'intérim.
-- **Modalités de mise en œuvre** : pilotage par la démarche GPECT (Escale Digitale Solutions, Ceterha, La Fabrique RH) ; mobilisation de l'intérim comme relais (canal de confiance — relations entreprises notées 5,0/5 par les 3 agences, Q7.1) ; format court et concret plutôt que réunions récurrentes.
+- **Modalités de mise en œuvre** : pilotage par la démarche GPECT (Ceterha, La Fabrique RH, Escale Digitale Solutions) ; mobilisation de l'intérim comme relais (canal de confiance — relations entreprises notées 5,0/5 par les 3 agences, Q7.1) ; format court et concret plutôt que réunions récurrentes.
 - **Livrable attendu** : kit de communication territoriale (portraits métiers, supports lycées) et un événement de lancement.
 - **Impact attendu** : amélioration mesurable de la perception de l'image et augmentation du flux de candidatures sur les métiers en tension.
 - **Indicateur de suivi** : évolution de la note d'image du bassin (base 2,3/5) sur mesure répétée ; nombre de candidatures reçues sur les métiers ciblés ; nombre d'interventions en lycée.

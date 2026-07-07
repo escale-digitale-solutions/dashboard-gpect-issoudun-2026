@@ -8,7 +8,7 @@
 
 - **Titre :** Diagnostic GPECT du bassin d'Issoudun — Emploi, compétences et attractivité d'un territoire industriel (2026)
 - **Objectif :** Poser l'identité institutionnelle du document et signer la démarche partenariale.
-- **Contenu narratif :** Titre, sous-titre, mention de la démarche pilotée par Escale Digitale Solutions avec Ceterha et La Fabrique RH. Mention « Diagnostic partagé — 42 répondants, 4 collèges ». Date : juillet 2026. Logos partenaires et financeurs.
+- **Contenu narratif :** Titre, sous-titre, mention de la démarche portée par Ceterha, en collaboration avec La Fabrique RH et Escale Digitale Solutions. Mention « Diagnostic partagé — 42 répondants, 4 collèges ». Date : juillet 2026. Logos partenaires et financeurs.
 - **Visuel prévu :** > [VISUEL : bandeau de couverture — vue industrielle stylisée du bassin, aplat pétrole #0C3B43, filets émeraude/ambre] — Signe visuellement un territoire industriel, sobre et institutionnel.
 - **Message clé :** Un diagnostic territorial partagé, chiffré et traçable.
 - **Encadré éventuel :** —
